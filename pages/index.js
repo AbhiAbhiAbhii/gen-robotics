@@ -3,10 +3,43 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import Hero from '../components/Hero/Hero'
+import { useEffect, useRef } from 'react'
+
+import {Swiper, SwiperSlide} from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { useSwiper } from 'swiper/react';
+import 'swiper/css';
+import "swiper/css/free-mode";
+import 'swiper/css/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const divRef = useRef();
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', () => {
+
+  //     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  //     const scrolled = window.scrollY;   
+
+  //     if(Math.ceil(scrolled) === scrollable) {
+  //        divRef.current.style.transform = 'translateX(0%)';
+  //     }
+
+  //     console.log('scrollable',scrollable);
+  //     console.log('scrolled', Math.ceil(scrolled))
+  //   })
+  // })
+
+  useEffect(() => {
+
+
+
+  })
+
   return (
     <>
       <Head>
@@ -15,27 +48,83 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='hero'>
-        <div className='heroContainer'>
-          <div style={{color:'#FFF', width:'52%'}}>
-            <div style={{fontSize:'5rem', lineHeight:'', padding:'1.2rem 0'}}><p>The new revolution of robotics is here</p></div>
-            <div style={{display:'flex', alignItems:'center'}}>
-              <span style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem'}}>
-                <img style={{height:'100%', width:'100%', objectFit:'contain'}} src='/heroArrow.svg' alt='arrow' />
-              </span>
-              <p style={{fontSize:'1rem'}}>Scroll to explore</p>
-            </div>
-          </div>
-          <div style={{width:'40%', display:'flex', alignItems:'center', justifyContent:'flex-end'}}>
-            <div style={{height:'13.6rem', width:'21rem', position:'relative' }}>
-              <img style={{height:'100%', width:'100%', objectFit:'cover'}} src='/tinyImg.svg' alt='img' />
-              <div style={{height:'3.7rem', width:'3.7rem', position:'absolute', top:'50%', left:'50%', transform:'translate(-50%, -50%)', cursor:'pointer'}}>
-                <img style={{height:'100%', width:'100%', objectFit:'contain'}} src='/playBtn.svg' alt='playBtn' />
+      <Hero />
+      <section className='showCaseText'>
+        <div className='showCaseTextContainer'>
+          <div className='MAIN' style={{}}>
+            <div className='A' style={{display:'flex', alignItems:'flex-start', justifyContent:'space-between', padding:'4rem 0'}}>
+              <div className='showCaseTextA' style={{width:'48%', fontSize:'2.6rem', lineHeight:'120%'}}>
+                <p>Machine engineered for cleaning any type of sewer manholes.</p>
               </div>
+              <div className='showCaseTextB' style={{width:'50%', color:'#666666', fontSize:'1.6rem', lineHeight:'120%'}}>
+                <p>Continuous Innovation at the core for developing tailor-made
+                  robotic technologies that ensure safety and empowerment to 
+                  uplift the lives of people.
+                </p>
+              </div>
+            </div>
+            <div className='B' style={{display:'flex', alignItems:'center', justifyContent:'flex-end', padding:'4rem 0'}}>
+
+              <div style={{display:'flex', flexDirection:'column', alignItems:'center', marginRight:'10rem'}}>
+                <div style={{fontSize:'7rem'}}><p>125kg</p></div>
+                <div style={{fontSize:'1.7rem'}}><p>Lifting capacity</p></div>
+              </div>
+
+              <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                <div style={{fontSize:'7rem'}}><p>10m</p></div>
+                <div style={{fontSize:'1.7rem'}}><p>Diving capacity</p></div>
+              </div>
+
             </div>
           </div>
         </div>
-      </main>
+      </section>
+
+      <section className='showCaseDummy' style={{padding:'2rem 0'}}>
+        <div className='showCaseDummyContainer' style={{padding:'2rem 0'}}>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'0 4rem 4rem 4rem'}}>
+              <div style={{fontSize:'1rem'}}><p>Introducing</p></div>
+              <div style={{fontSize:'7rem'}}><p>Bandicoot II</p></div>
+            </div>
+            <div className='genroDummy' style={{ height:'61rem', width:'100%'}}>
+              <img style={{height:'100%', width:"100%", objectFit:'cover'}} src='/showCaseDummy.svg' alt='' />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style={{padding:'2rem'}}>
+        <div style={{padding:'0 0'}}>
+          <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <div ref={divRef} style={{fontSize:'9rem', transform:'translateX(0)', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
+              <p>Making your everyday</p>
+            </div>
+          </div>
+
+          <div style={{padding:'6rem 4rem'}}>
+            <div style={{background:'rgba(0, 0, 0, 0.85)', borderRadius:'0.2rem', padding:'2rem'}}>
+              <div style={{color:'rgba(221, 199, 88, 1)', fontSize:'0.7rem', display:'flex', justifyContent:'space-between'}}>
+                <div><p>FEATURES</p></div>
+                <div><p>BLUEPRINT</p></div>
+                <div><p>BANDICOOT II</p></div>
+              </div>
+            </div>
+            <div style={{height:'20vh'}}>
+              <Swiper style={{border:'1px red solid', height:'100%'}}
+                direction={'vertical'}
+                slidesPerView={1}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)} 
+                > 
+                <SwiperSlide style={{display:'flex', alignItems:'center', justifyContent:'center'}}><p style={{border:'1px red solid'}}>BOX 1</p></SwiperSlide>
+                <SwiperSlide style={{display:'flex', alignItems:'center', justifyContent:'center'}}><p style={{border:'1px green solid'}}>BOX 2</p></SwiperSlide>
+                <SwiperSlide><p>BOX 3</p></SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
