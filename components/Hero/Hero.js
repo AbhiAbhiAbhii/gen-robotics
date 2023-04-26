@@ -3,15 +3,16 @@
 
 export default function Hero() {
     return(
-        <main className='hero'>
+        <main className='hero' style={{position:'relative'}}>
+            <video src="/heroVideo.mp4" autoPlay="true" muted="true" loop="true" height="100%" width="100%" style={{position:'absolute', top:'0', left:'0', height:'100%', width: '100%', objectFit:'cover'}} />
             <div className='heroContainer' style={{zIndex:'200000'}}>
-                <div style={{color:'#FFF', width:'52%'}}>
-                    <div style={{fontSize:'5rem', lineHeight:'', padding:'1.2rem 0'}}><p>The new revolution of robotics is here</p></div>
+                <div style={{color:'#FFF', width:'50%'}}>
+                    <div style={{fontSize:'5rem', lineHeight:'100%', letterSpacing:'-0.04em', padding:'1.2rem 0 4rem 0'}}><p>The new revolution of robotics is here</p></div>
                     <div style={{display:'flex', alignItems:'center'}}>
                     <span style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem'}}>
                         <img style={{height:'100%', width:'100%', objectFit:'contain'}} src='/heroArrow.svg' alt='arrow' />
                     </span>
-                    <p style={{fontSize:'1rem'}}>Scroll to explore</p>
+                    <p style={{fontSize:'1rem'}}>SCROLL TO EXPLORE</p>
                     </div>
                 </div>
                 <div style={{width:'40%', display:'flex', alignItems:'center', justifyContent:'flex-end'}}>

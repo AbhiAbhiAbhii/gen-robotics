@@ -43,9 +43,9 @@ a {
 }
 
 .hero {
-  padding: 34rem 3rem 2rem 3rem;  
-  background: url('/heroImg.svg') no-repeat center center / cover;
-  background-attachment: fixed;
+  padding: 25rem 3rem 2rem 3rem;  
+  /* background: url('/heroVideo.mp4') no-repeat center center / cover; */
+  /* background-attachment: fixed; */
   display: flex;
   position: relative;
 }
