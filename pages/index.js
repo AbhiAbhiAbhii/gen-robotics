@@ -35,6 +35,7 @@ export default function Home() {
   // })
 
   const [image, setImage] = useState(0);
+  const [solution, setSolution] = useState(0);
 
 
   let eyeBrowText = [
@@ -67,6 +68,24 @@ export default function Home() {
       title: 'More Reachablilty To Every Corner',
       description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
       src: '/BluePrint/m-r.svg'
+    }
+  ]
+
+  let swiperDataB = [
+    {
+      title: 'Willboar',
+      description: 'Offering a safe and efficient solution for maintaining the Sewer Treatment systems without risking human lives',
+      src:'/solutions/willBoar.svg'
+    },
+    {
+      title: 'G-Beetle',
+      description: 'Offering a safe and efficient solution for robotic skyscraper facade cleaning & maintenance work including storm water holes',
+      src:'/solutions/gBeetle.svg'
+    },
+    {
+      title: 'Willboar',
+      description:'Offering a safe and efficient solution for maintaining the Sewer Treatment systems without risking human lives',
+      src: '/solutions/willBoar.svg'
     }
   ]
 
@@ -128,7 +147,7 @@ export default function Home() {
       <section className='bluePrint' style={{padding:'2rem '}}>
         <div style={{padding:'0 0'}}>
           <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <div ref={divRef} style={{fontSize:'9rem', transform:'translateX(0)', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
+            <div ref={divRef} style={{fontSize:'9rem', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
               <p>Making your everyday</p>
             </div>
           </div>
@@ -150,10 +169,11 @@ export default function Home() {
                 <div style={{height:'80vh', width:'50%'}}>
                   <Swiper style={{height:'100%'}}
                     direction={'vertical'}
-                    // autoplay={{
-                    //   delay: 10,
-                    //   disableOnInteraction: false,
-                    // }}
+                    //  autoplay={{
+                    //    delay: 2000,
+                    //    disableOnInteraction: false,
+                    //  }}
+                    // loop="true"
                     modules={[Autoplay]}
                     slidesPerView={2.4}
                     onSlideChange={() => console.log('slide change')}
@@ -182,7 +202,8 @@ export default function Home() {
                 </div>
                 <div style={{width:'40%', padding:'0 0 6rem 0', display:'flex', alignItems:'flex-end'}}>
                   <div style={{border:'1px #656565 solid', width:'100%', height:'100%', borderRadius:'0.6rem', display:'flex', alignItems:'center', justifyContent:'center'}}>
-                    {/* {
+                    {/* <div>
+                    {
                       image === 0 ?
                       <div style={{height:'80%', width:'80%'}}>
                         <img
@@ -204,7 +225,8 @@ export default function Home() {
                         src='/BluePrint/m-r.svg' alt='bluePrnt' />
                       </div>
                       : null
-                    } */}
+                    }
+                    </div> */}
                     <div style={{position:'relative', display:'flex', flexWrap:'nowrap', whiteSpace:'nowrap', flexDirection:'column', alignItems:'center', justifyContent:'center', overflow:'hidden',  height:'100%', width:'100%'}}>
                       {
                         swiperData.map((data, i) => {
@@ -225,6 +247,50 @@ export default function Home() {
 
             
           </div>
+        </div>
+      </section>
+
+      <section className='solutions' style={{padding:'2rem'}}>
+        <div className='' style={{padding:'2rem 4rem'}}>
+            <div className='contentTop' style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
+              <div style={{fontSize:'5.6rem', width:"40%", color:'#010101'}}><p>Range <br />of solutions</p></div>
+              <div style={{fontSize:'1.5rem', width:'50%', color:'#666666', lineHeight:'140%'}}>
+                <p>
+                  Continuous Innovation at the core for developing tailor-made
+                  robotic technologies that ensure safety and empowerment to uplift
+                  the lives of people.
+                </p>
+              </div>
+            </div>
+            <div>
+              <Swiper style={{}}
+                slidesPerView={2.3}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}>
+                {
+                  swiperDataB.map((data, i) => {
+                    return(
+                      <SwiperSlide onClick={() => setSolution(i)}
+                       style={{padding:'2rem 0 0 0', width:'fit-content',cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px'}} 
+                       key={i}>
+                        <div style={{background: i == solution ? '#B6B6B6':'#F8F8F8' , transition:'all 0.6s ease',borderRadius:'.6rem', height:'30rem', width: '36rem', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-around', padding:'1.6rem 0 0 0'}}>
+                          <div style={{height:'50%', width:'54%'}}>
+                            <img style={{height:'100%', width:'100%', objectFit:'contain'}} src={data.src} alt='machine' />
+                          </div>
+                          <div style={{position:'relative', width:'90%', transition:'all 0.3s ease', padding:'1rem 0 1rem 1rem', borderBottomLeftRadius: i == solution ? '0.6rem':'', borderBottomRightRadius: i == solution ? '0.6rem':'', background: i == solution ? '#493E29': '', display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'center'}}>
+                            <div style={{fontSize:'1.8rem', fontWeight:'600', padding:'0.4rem 0', color: i == solution ? '#F8F8F8':'#100E0C', transition:'all 0.3s ease'}}><p>{data.title}</p></div>
+                            <div style={{fontSize:'1rem', width:'70%', color: i == solution ? '#F8F8F8':'#100E0C', transition:'all 0.3s ease'}}><p>{data.description}</p></div>
+                            <div style={{opacity: i == solution ? '1':'0', transition:'all 0.3s ease', position:'absolute', right:'10%', top:'50%', transform:'translate(0, -50%)', borderRadius:'50%', height:'3rem', width:'3rem', background:'#4D3300', display:'flex', alignItems:'center', justifyContent:'center'}}>
+                              <img style={{height:'50%', width:'50%', objectFit:'contain'}} src='/solutions/arrow.svg' alt='' />
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  })
+                }
+              </Swiper>
+            </div>
         </div>
       </section>
     </>
