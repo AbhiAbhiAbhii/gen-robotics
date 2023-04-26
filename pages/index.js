@@ -205,11 +205,11 @@ export default function Home() {
                       </div>
                       : null
                     } */}
-                    <div style={{ display:'flex', flexWrap:'nowrap', whiteSpace:'nowrap', flexDirection:'column', alignItems:'center', justifyContent:'center', overflow:'hidden',  height:'100%', width:'100%'}}>
+                    <div style={{position:'relative', display:'flex', flexWrap:'nowrap', whiteSpace:'nowrap', flexDirection:'column', alignItems:'center', justifyContent:'center', overflow:'hidden',  height:'100%', width:'100%'}}>
                       {
                         swiperData.map((data, i) => {
                           return(
-                            <div key={i} style={{height:'90%', width:'90%',  transition:' all 1s ease', display : image == i ? 'block':'none'}}>
+                            <div key={i} style={{height:'90%', width:'90%',  transition:' all 1s ease', opacity : image == i ? '1':'0', position:'absolute'}}>
                               <img
                               style={{height:'100%', width:'100%', objectFit:'contain'}}
                               src={data.src} alt='bluePrnt' />
