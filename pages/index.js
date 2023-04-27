@@ -36,7 +36,7 @@ export default function Home() {
 
   const [image, setImage] = useState(0);
   const [solution, setSolution] = useState(0);
-  const [modiDummy, setModiDummy] = useState(1);
+  const [modiDummy, setModiDummy] = useState(0);
 
 
   let eyeBrowText = [
@@ -110,10 +110,10 @@ export default function Home() {
       src: '/launch/dummyModi.svg'
     },
     {
-      src: '/dummyB.jpg'
+      src: '/launch/imgB.svg'
     },
     {
-      src: '/dummyA.jpg'
+      src: '/launch/imgC.svg'
     },
     
   ]
