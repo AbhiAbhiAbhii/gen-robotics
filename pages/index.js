@@ -36,7 +36,7 @@ export default function Home() {
 
   const [image, setImage] = useState(0);
   const [solution, setSolution] = useState(0);
-  const [modi, setmodi] = useState(0);
+  const [modi, setModi] = useState(0);
 
 
   let eyeBrowText = [
@@ -366,7 +366,7 @@ export default function Home() {
               imgData.map((data, i) => {
                 return(
                   <div key={i} style={{display:'flex', flexDirection:'column', justifyContent:'center'}}> {/* image-container */}
-                    <div onClick={() => setmodi(i)} style={{ width: i == modi ? '30rem':'20.3rem', height:'30.6rem', margin:'0 1rem', cursor:'pointer', transition:'all 1s ease'}} key={i}> {/* image */} 
+                    <div onClick={() => setModi(i)} style={{ width: i == modi ? '30rem':'20.3rem', height:'30.6rem', margin:'0 1rem', cursor:'pointer', transition:'all 1s ease'}} key={i}> {/* image */} 
                       <img style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.6rem'}} src={data.src} alt='img' />
                     </div> 
                   </div>
