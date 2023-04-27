@@ -4,7 +4,10 @@
 export default function Hero() {
     return(
         <main className='hero' style={{position:'relative'}}>
-            <video src="/heroVideo.mp4" autoPlay="true" muted="true" loop="true" height="100%" width="100%" style={{position:'absolute', top:'0', left:'0', height:'100%', width: '100%', objectFit:'cover'}} />
+            <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{position:'absolute', top:'0', left:'0', height:'100%', width: '100%', objectFit:'cover'}}>
+                <source src="/heroVideo.mp4"  type="video/mp4" />
+                <source src="/heroVideo.webm"  type="video/webm" />                
+            </video>
             <div className='heroContainer' style={{zIndex:'200000'}}>
                 <div style={{color:'#FFF', width:'50%'}}>
                     <div style={{fontSize:'5rem', lineHeight:'100%', letterSpacing:'-0.04em', padding:'1.2rem 0 4rem 0'}}><p>The new revolution of robotics is here</p></div>
