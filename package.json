@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.3.1",
+    "@studio-freight/lenis": "^1.0.11",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
     "next": "13.3.1",

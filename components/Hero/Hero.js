@@ -12,7 +12,7 @@ export default function Hero() {
                 <div style={{color:'#FFF', width:'50%'}}>
                     {[{quote:"Bandicoot the world's first robotic scavenger."}].map((data,i) => {
                         return(
-                            <div key={i} style={{fontSize:'5rem', lineHeight:'100%', letterSpacing:'-0.04em', padding:'1.2rem 0 4rem 0'}}>
+                            <div  key={i} style={{fontSize:'5rem', lineHeight:'100%', letterSpacing:'-0.04em', padding:'1.2rem 0 4rem 0', transition:'all 5s ease'}}>
                                 <p>{data.quote}</p>
                             </div>
                         )

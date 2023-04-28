@@ -126,10 +126,87 @@ export default function Home() {
     }
   ]
 
-  // const animRef = useRef();
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver
-  // })
+  const animRef = useRef();
+  const descriptA = useRef();
+  const blockA = useRef();
+  const blockB = useRef();
+
+  const bandiCootRef = useRef();
+  const saferRef = useRef();
+
+  const rangeRef = useRef();
+  const innovRef = useRef();
+
+  const launchRef = useRef();
+  const supportRef = useRef();
+   useEffect(() => {
+     const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if(entry.isIntersecting) {
+              console.log('intersecting')
+              setTimeout(() => {
+              animRef.current.style.opacity = '1';
+              }, 500)
+              setTimeout(() => {
+              descriptA.current.style.opacity = '1';
+              },1000)
+              setTimeout(() => {
+              blockA.current.style.opacity = '1';
+              }, 1500)
+              setTimeout(() => {
+              blockB.current.style.opacity = '1';
+              },2000)
+          }
+      })
+    })
+
+    observer.observe(document.getElementById("animRef"))
+
+    const observerB = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          bandiCootRef.current.style.opacity = '1';
+        }
+      })
+    },{threshold:0.3})
+    observerB.observe(document.getElementById("genro"))
+
+    const observerC = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+           saferRef.current.style.transform = 'translateX(0)';
+        }
+      }) 
+    })
+    observerC.observe(document.getElementById("safe"))
+
+    const observerD = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          rangeRef.current.style.opacity = '1';
+          setTimeout(() => {
+            innovRef.current.style.opacity = '1';
+          },500)
+        }
+      })
+    })
+    observerD.observe(document.getElementById("range"))
+
+    const observerE = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          launchRef.current.style.opacity = '1';
+          setTimeout(() => {
+            supportRef.current.style.opacity = '1';
+          },1000)
+        }
+      })
+    }, {threshold:0.2})
+    observerE.observe(document.getElementById("Launch"))
+
+   },[])
+
+
 
 
   return (
@@ -140,27 +217,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero />
+      <Hero  />
       <section className='showCaseText'>
         <div className='showCaseTextContainer'>
           <div className='MAIN' style={{}}>
             <div className='A' style={{display:'flex', alignItems:'flex-start', justifyContent:'space-between', padding:'4rem 0'}}>
-              <div className='showCaseTextA' style={{width:'48%', fontSize:'2.6rem', lineHeight:'120%'}}>
+              <div id='animRef' ref={animRef}  className='showCaseTextA' style={{width:'48%', fontSize:'2.6rem', lineHeight:'120%', opacity:'0', transition:'all 4s ease'}}>
                 <p>Engineered for Cleaning any type of sewer manholes.</p>
               </div>
-              <div className='showCaseTextB' style={{width:'50%', color:'#666666', fontSize:'1.6rem', lineHeight:'120%'}}>
+              <div className='showCaseTextB' ref={descriptA} style={{width:'50%', color:'#666666', fontSize:'1.6rem', lineHeight:'120%', opacity:'0', transition:'all 3s ease'}}>
                 <p>The bandicoot is a specialized robot designed to clean sewer manholes of any kind. With its advanced engineering, it can clean manholes efficiently and effectively and provide safety for the workers
                 </p>
               </div>
             </div>
             <div className='B' style={{display:'flex', alignItems:'center', justifyContent:'flex-end', padding:'4rem 0'}}>
 
-              <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start', textAlign:'left', marginRight:'10rem'}}>
+              <div ref={blockA} style={{display:'flex', flexDirection:'column', alignItems:'flex-start', textAlign:'left', marginRight:'10rem', opacity:'0', transition:'all 3s ease'}}>
                 <div style={{fontSize:'7rem', display:'flex', alignItems:'flex-start'}}><p>125kg</p></div>
                 <div style={{fontSize:'1.2rem',  padding:'0 0 0 2%'}}><p>Lifting capacity</p></div>
               </div>
 
-              <div style={{display:'flex', flexDirection:'column', alignItems:'flex-start'}}>
+              <div ref={blockB} style={{display:'flex', flexDirection:'column', alignItems:'flex-start', opacity:'0', transition:'all 3s ease'}}>
                 <div style={{fontSize:'7rem'}}><p>10m</p></div>
                 <div style={{fontSize:'1.2rem', padding:'0 0 0 2%'}}><p>Diving capacity</p></div>
               </div>
@@ -173,11 +250,11 @@ export default function Home() {
       <section className='showCaseDummy' style={{padding:'2rem 0'}}>
         <div className='showCaseDummyContainer' style={{padding:'2rem 0'}}>
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'0 4rem 4rem 4rem'}}>
+            <div ref={bandiCootRef} style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'0 4rem 4rem 4rem', transition:'all 2s ease', opacity:'0'}}>
               <div style={{fontSize:'1rem'}}><p>Introducing</p></div>
               <div style={{fontSize:'7rem'}}><p>Bandicoot 2.0</p></div>
             </div>
-            <div className='genroDummy' style={{ height:'61rem', width:'100%'}}>
+            <div className='genroDummy' id='genro' style={{ height:'61rem', width:'100%'}}>
               <img style={{height:'100%', width:"100%", objectFit:'cover'}} src='/showCaseDummy.svg' alt='' />
             </div>
           </div>
@@ -187,7 +264,7 @@ export default function Home() {
       <section className='bluePrint' style={{padding:'2rem'}}>
         <div style={{padding:'0 0'}}>
           <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <div ref={divRef} style={{fontSize:'6.2rem', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
+            <div ref={saferRef} id='safe' style={{fontSize:'6.2rem', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transform:'translateX(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
               <p>Safer ! Efficient ! and humanly</p>
             </div>
           </div>
@@ -292,9 +369,9 @@ export default function Home() {
 
       <section className='solutions' style={{padding:'2rem'}}>
         <div className='' style={{padding:'2rem 4rem'}}>
-            <div className='contentTop' style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
-              <div style={{fontSize:'5.6rem', width:"40%", color:'#010101'}}><p>Our Range <br />of solutions</p></div>
-              <div style={{fontSize:'1.5rem', width:'50%', color:'#666666', lineHeight:'140%'}}>
+            <div className='contentTop' id='range' style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
+              <div ref={rangeRef} style={{fontSize:'5.6rem', width:"40%", color:'#010101', opacity:'0', transition:'all 2s ease'}}><p>Our Range <br />of solutions</p></div>
+              <div ref={innovRef} style={{fontSize:'1.5rem', width:'50%', color:'#666666', lineHeight:'140%', opacity:'0', transition:'all 2s ease'}}>
                 <p>
                   Continuous Innovation at the core for developing tailor-made
                   robotic technologies that ensure safety and empowerment to uplift
@@ -335,11 +412,11 @@ export default function Home() {
       </section>
       
 
-      <section className="Launch" style={{padding:'2rem'}}>
+      <section className="Launch" id='Launch' style={{padding:'2rem'}}>
         <div className='LaunchContainer' style={{padding:'2rem 4rem'}}>
           <div className='textContainer' style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-            <div className='launchedText' style={{fontSize:'8rem', letterSpacing:'-0.04em', textAlign:'center', width:'60%', lineHeight:'100%', padding:'2rem 0'}}><p>Launched & Supported by</p></div>
-            <div style={{fontSize:'1.6rem', width:'50%', textAlign:'center', color:'#020202', letterSpacing:'-0.02em', lineHeight:'160%', padding:'1rem 0'}}>
+            <div className='launchedText' ref={launchRef} style={{fontSize:'8rem', letterSpacing:'-0.04em', textAlign:'center', width:'60%', lineHeight:'100%', padding:'2rem 0', opacity:'0', transition:'all 2s ease'}}><p>Launched & Supported by</p></div>
+            <div ref={supportRef} style={{fontSize:'1.6rem', width:'50%', textAlign:'center', color:'#020202', letterSpacing:'-0.02em', lineHeight:'160%', padding:'1rem 0', opacity:'0', transition:'all 2s ease'}}>
               <p>Committed to deliver our solutions
                 to work with extreme and unsafe 
                 environments universally.
