@@ -10,7 +10,13 @@ export default function Hero() {
             </video>
             <div className='heroContainer' style={{zIndex:'200000'}}>
                 <div style={{color:'#FFF', width:'50%'}}>
-                    <div style={{fontSize:'5rem', lineHeight:'100%', letterSpacing:'-0.04em', padding:'1.2rem 0 4rem 0'}}><p>The new revolution of robotics is here</p></div>
+                    {[{quote:"Bandicoot the world's first robotic scavenger."}].map((data,i) => {
+                        return(
+                            <div key={i} style={{fontSize:'5rem', lineHeight:'100%', letterSpacing:'-0.04em', padding:'1.2rem 0 4rem 0'}}>
+                                <p>{data.quote}</p>
+                            </div>
+                        )
+                    })}
                     <div style={{display:'flex', alignItems:'center'}}>
                     <span style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem'}}>
                         <img style={{height:'100%', width:'100%', objectFit:'contain'}} src='/heroArrow.svg' alt='arrow' />

@@ -126,6 +126,11 @@ export default function Home() {
     }
   ]
 
+  // const animRef = useRef();
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver
+  // })
+
 
   return (
     <>
@@ -141,12 +146,10 @@ export default function Home() {
           <div className='MAIN' style={{}}>
             <div className='A' style={{display:'flex', alignItems:'flex-start', justifyContent:'space-between', padding:'4rem 0'}}>
               <div className='showCaseTextA' style={{width:'48%', fontSize:'2.6rem', lineHeight:'120%'}}>
-                <p>Machine engineered for cleaning any type of sewer manholes.</p>
+                <p>Engineered for Cleaning any type of sewer manholes.</p>
               </div>
               <div className='showCaseTextB' style={{width:'50%', color:'#666666', fontSize:'1.6rem', lineHeight:'120%'}}>
-                <p>Continuous Innovation at the core for developing tailor-made
-                  robotic technologies that ensure safety and empowerment to 
-                  uplift the lives of people.
+                <p>The bandicoot is a specialized robot designed to clean sewer manholes of any kind. With its advanced engineering, it can clean manholes efficiently and effectively and provide safety for the workers
                 </p>
               </div>
             </div>
@@ -172,7 +175,7 @@ export default function Home() {
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'0 4rem 4rem 4rem'}}>
               <div style={{fontSize:'1rem'}}><p>Introducing</p></div>
-              <div style={{fontSize:'7rem'}}><p>Bandicoot II</p></div>
+              <div style={{fontSize:'7rem'}}><p>Bandicoot 2.0</p></div>
             </div>
             <div className='genroDummy' style={{ height:'61rem', width:'100%'}}>
               <img style={{height:'100%', width:"100%", objectFit:'cover'}} src='/showCaseDummy.svg' alt='' />
@@ -181,11 +184,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='bluePrint' style={{padding:'2rem '}}>
+      <section className='bluePrint' style={{padding:'2rem'}}>
         <div style={{padding:'0 0'}}>
           <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <div ref={divRef} style={{fontSize:'9rem', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
-              <p>Making your everyday</p>
+            <div ref={divRef} style={{fontSize:'6.2rem', textAlign:'center', lineHeight:'120%', letterSpacing:'-0.04em', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)', transitionDelay:'0.3s'}}>
+              <p>Safer ! Efficient ! and humanly</p>
             </div>
           </div>
 
@@ -290,7 +293,7 @@ export default function Home() {
       <section className='solutions' style={{padding:'2rem'}}>
         <div className='' style={{padding:'2rem 4rem'}}>
             <div className='contentTop' style={{display:'flex', flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
-              <div style={{fontSize:'5.6rem', width:"40%", color:'#010101'}}><p>Range <br />of solutions</p></div>
+              <div style={{fontSize:'5.6rem', width:"40%", color:'#010101'}}><p>Our Range <br />of solutions</p></div>
               <div style={{fontSize:'1.5rem', width:'50%', color:'#666666', lineHeight:'140%'}}>
                 <p>
                   Continuous Innovation at the core for developing tailor-made
