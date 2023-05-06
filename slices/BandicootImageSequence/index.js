@@ -69,13 +69,13 @@ export default function BandicootImageSequence({slice}) {
 
   return(
     <>
-      <section className='bandicootImageSequence' style={{background:'#0E0E0E', display:'none'}}>
+      {/* <section className='bandicootImageSequence' style={{background:'#0E0E0E', display:'none'}}>
         <div className='bandicootImageSequence_Container'>
 
           <canvas className="bandicoot-scrolling"></canvas>
 
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

@@ -20,7 +20,6 @@ export default function Hero({ slice }){
   const arrowRef = useRef();
   const descriptRef = useRef();
 
-  console.log("tesssst", titleRef)
 
   useEffect(() => {
 
