@@ -1,0 +1,77 @@
+/* parent div */
+.prodShowcase {
+    font-size: 1rem;
+
+    padding: 2rem;
+}
+.prodShowcase_Container {
+    padding: 2em;
+}
+/* product showcase header */
+.prodShowcase_Header_Container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2em 0 8em 0;
+}
+.prodShowcase_Header_Title {
+    width: 35%;
+}
+.prodShowcase_Header_Title > p {
+    font-size: 5.6em;
+    color: #010101;
+}
+.prodShowcase_Header_Description {
+    width: 50%;   
+}
+.prodShowcase_Header_Description > p {
+    font-size: 1.5em;
+    color: #666;
+
+    line-height: 140%;
+}
+/* product showcase swiper */
+.prodShowcase_SwiperSlide {
+    padding: 2em 0 0 0;
+}
+.prodShowcase_AssetDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 1.6em 0 0 0;
+    border-radius: 0.6em;
+
+    height: 30em;
+    width: 36em;
+}
+.prodShowcase_AssetModel {
+    height: 50%;
+    width: 54%;
+}
+.prodShowcase_Asset_DetailsDiv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 1em 0 1em 1em;
+    width: 90%;
+}
+.prodShowcase_Asset_TitleDiv {
+    padding: 0.4em 0;
+}
+.prodShowcase_Asset_TitleDiv > p {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.prodShowcase_Asset_DescriptionDiv {
+    width: 70%;
+}
+.prodShowcase_Asset_DescriptionDiv > p {
+    font-size: 1em;
+}

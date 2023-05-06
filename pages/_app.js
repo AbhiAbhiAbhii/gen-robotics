@@ -1,18 +1,30 @@
 import { useEffect } from 'react'
-import Header from '../components/Header/header'
-import '../styles/globals.css'
-import '../styles/Landing/showCase.css'
-import Lenis from '@studio-freight/lenis'
+import Head from 'next/head'
 
+import '../styles/globals.css'
+import '../styles/Landing/hero.css'
+import '../styles/Landing/heroAbout.css'
+import '../styles/Landing/bluePrint.css'
+import '../styles/Landing/productShowcase.css'
+import '../styles/Landing/ourSupport.css'
+import '../styles/Landing/imgSequence.css'
+
+
+import Lenis from '@studio-freight/lenis'
+import Layout from '../components/Layout/layout'
+import Link from 'next/link'
+import { PrismicProvider } from '@prismicio/react'
+import { PrismicPreview } from '@prismicio/next'
+import { linkResolver, repositoryName } from '../prismicio'
 
 export default function App({ Component, pageProps }) {
 
   let lenis;
 
+
   useEffect(()=>{
 
     if (typeof window !== "undefined") {
-
       lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
@@ -31,12 +43,20 @@ export default function App({ Component, pageProps }) {
       requestAnimationFrame(raf)
     }
 
+    console.log("lenis", lenis.virtualScroll)
+    // 
+
+
+
   }, [])
 
-  return(
-    <>
-    <Header />
-    <Component {...pageProps} />
-    </>
+  return (
+    <PrismicProvider linkResolver={linkResolver} internalLinkComponent={(props) => <Link {...props} />}>
+      <PrismicPreview repositoryName={repositoryName}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+      </PrismicPreview>
+    </PrismicProvider>
   )
 }

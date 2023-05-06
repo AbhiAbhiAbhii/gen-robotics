@@ -1,0 +1,127 @@
+/* parent div */
+.support {
+    padding: 2rem;
+
+    font-size: 1rem;
+}
+.support_Container {
+    padding: 2em 4em;
+}
+.support_Text_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.support_Title_Div {
+    padding: 2em 0;
+    width: 60%;
+}
+.support_Title_Div > p {
+    font-size: 8em;
+    letter-spacing: -0.04em;
+    line-height: 100%;
+    text-align: center;
+
+    background: linear-gradient(180deg, #010101 0%, rgba(77, 51, 0, 0.46) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.support_Description_Div {
+    padding: 1em 0;
+    width: 50%;
+}
+.support_Description_Div > p {
+    font-size: 1.6em;
+    letter-spacing: -0.02em;
+    line-height: 160%;
+    text-align: center;
+
+    color: #020202;
+}
+/* logo showcase */
+.support_LogoShowcase_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 6em 0;
+    width: 100%;
+}
+.support_LogoShowcase_Container_Inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+}
+/* individual logo item */
+.support_Logo_Item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    height: 4em;
+    width: 20%;
+}
+/* supporters showcase */
+.support_Supporters_Container {
+    /* -- */
+}
+.support_Supporters_Showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+.support_Supporters_ImgContainer {
+    flex-direction: column;
+    justify-content: center;
+}
+/* our support news */
+.support_News {
+    padding: 2em 4em;
+}
+.support_News_Container {
+    padding: 2em 6em;
+}
+.support_News_DateDiv > p {
+    font-size: 0.6em;
+    font-weight: bold;
+
+    color: #000;
+
+}
+.support_News_TitleDiv {
+    padding: 0.4em 0 1em 0;
+    width: 30%;
+}
+.support_News_TitleDiv > p {
+    font-size: 2.3em;
+    font-weight: 700;
+    line-height: 110%;
+}
+.support_News_DescriptionDiv {
+    padding: 0 0 1em 0;
+    width: 38%;
+}
+.support_News_DescriptionDiv > p {
+    font-size: 0.8em;
+    line-height: 150%;
+}
+.support_News_Read_Container {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+.support_News_ReadDiv {
+    margin: 0 1em 0 0;
+}
+.support_News_ReadDiv > p {
+    font-weight: 600;
+}

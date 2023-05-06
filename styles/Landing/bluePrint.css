@@ -1,0 +1,128 @@
+/* parent div */
+.bluePrint {
+    padding: 2rem;
+    
+    font-size: 1rem;
+}
+.bluePrint_Container {
+    /* nil */
+}
+.bluePrint_TitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bluePrint_Title {
+    padding: 3em 0 8em 0;
+}
+.bluePrint_Title > p {
+    font-size: 6.2em;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+
+    text-align: center;
+}
+/* feature carousel */
+.bluePrint_FeatureCarousel_Container {
+    padding: 5em 4em;
+}
+.featureCarousel_Div {
+    padding: 2em 2em 0 2em;
+    border-radius: 0.2em;
+        
+    background: rgba(0, 0, 0, 0.85);
+}
+/* feature carousel eyebrow */
+.eyebrow_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.eyebrow_Div > p {
+    color: rgba(211, 199, 88, 1);
+    font-size: 0.7em;
+}
+/* feature carousel container */
+.featureCarousel_ContentContainer {
+    display:  flex;
+    justify-content: space-between;
+
+    padding: 4em 4em 2em 0;
+}
+.featureCarousel_SliderContainer {
+    height: 80vh;
+    width: 50%;
+}
+.featureCarousel_Swiper_TextContainer {
+    display: flex;
+}
+.featureCarousel_Swiper_idDiv {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 0.2em 1em 0 0;
+}
+.featureCarousel_Swiper_idDiv > p {
+    font-size: 1.6em;
+}
+.featureCarousel_Swiper_DetailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding:  0 1em;
+}
+.featureCarousel_Swiper_TitleDiv {
+    width: 60%;
+}
+.featureCarousel_Swiper_TitleDiv > p {
+    font-size: 2em;   
+}
+.featureCarousel_Swiper_DescriptionDiv {
+    padding: 1em 0;
+    width: 80%;
+}
+.featureCarousel_Swiper_DescriptionDiv > p {
+    font-size: 1.2em;
+}
+/* feature carousel asset container */
+.featureCarousel_AssetContainer {
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 0 6em 0;
+    width: 40%; 
+}
+.featureCarousel_AssetContainer_Inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px #656565 solid;
+    border-radius: 0.6em;
+
+    height: 70vh;
+    width: 100%;
+}
+.featureCarousel_Asset {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+
+    height: 100%;
+    width: 100%;
+}
+.featureCarousel_AssetDiv {
+    /* position: absolute; */
+
+    margin: 2em 0;
+    height: 90%;
+    width: 90%;
+}

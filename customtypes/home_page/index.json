@@ -1,0 +1,33 @@
+{
+  "id": "home_page",
+  "label": "Home Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "hero": { "type": "SharedSlice" },
+            "blue_print": { "type": "SharedSlice" },
+            "product_showcase": { "type": "SharedSlice" },
+            "our_support": { "type": "SharedSlice" },
+            "hero_about": { "type": "SharedSlice" },
+            "bandicoot_image_sequence": { "type": "SharedSlice" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.heroAbout { /* PARENT- div */
+    padding: 2rem;
+    font-size: 1rem;
+}
+.heroAbout_Container {
+    padding: 2em 2em;
+}
+.heroAbout_Content {
+
+}
+/* hero-about-content-A */
+.heroAbout_ContentA { /* parent-div */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 4em 0;
+}
+.heroAbout_Title {
+    width: 48%;
+}
+.heroAbout_Title > p {
+    font-size: 2.8em;
+    line-height: 120%;
+}
+.heroAbout_Description {
+    width: 48%;
+}
+.heroAbout_Description > p {
+    font-size: 1.4em;
+    line-height: 120%;
+
+    color: #666666;
+}
+/* ----- */
+/* hero-about-content-B */
+.heroAbout_ContentB { /* parent-div */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 4em 0;
+}
+/* stats-container */
+.heroAbout_StatsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+    margin-right: 4em;
+}
+.heroAbout_StatsContainer:last-child {
+    margin-right: 0;
+}
+.heroAbout_Stats {
+    display: flex;
+    align-items: flex-start;
+}
+.heroAbout_Stats > p {
+    font-size: 7em;
+}
+.heroAbout_StatsDescription {
+    padding: 0 0 0 2em;
+}
+.heroAbout_StatsDescription > p {
+    font-size: 1.2em;
+}

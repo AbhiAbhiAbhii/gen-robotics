@@ -1,0 +1,80 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Anim non eiusmod dolor eiusmod. Velit do veniam laborum id aliqua."
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Cupidatat ullamco ullamco anim consequat. Occaecat officia irure minim aliquip enim nisi. Ea ea laboris minim anim minim deserunt ipsum duis."
+						}
+					}
+				]
+			},
+			"stats_a": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse enim ullamco laboris dolor aute aliquip tempor laboris nostrud magna incididunt sit adipisicing quis exercitation. Eiusmod amet sunt ex sunt Lorem consequat Lorem eiusmod minim cupidatat duis velit dolor irure."
+						}
+					}
+				]
+			},
+			"stats_a_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sit Lorem nisi ex nisi."
+						}
+					}
+				]
+			},
+			"stats_b": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Anim ut ut consectetur Lorem laborum elit officia aute exercitation excepteur ea. Est eiusmod et aute eiusmod et nisi nisi aliqua dolore ad. Eiusmod consectetur anim ea aliqua cillum veniam ad est adipisicing esse adipisicing."
+						}
+					}
+				]
+			},
+			"stats_b_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure dolor incididunt laboris eiusmod non do velit cupidatat sunt magna. Et nostrud ex eiusmod in enim laborum voluptate cillum consequat quis elit dolore nostrud. Culpa cupidatat occaecat mollit nisi dolore reprehenderit Lorem et aute labore amet velit adipisicing quis minim."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
