@@ -39,7 +39,7 @@ export default function BandicootImageSequence({slice}) {
 
   // canvas setup 
   // height and width of the image
-  canvas.height = 1100;
+  canvas.height = 1080;
   canvas.width = 1920;
 
   //new code
