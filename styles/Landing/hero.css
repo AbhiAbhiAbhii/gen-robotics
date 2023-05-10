@@ -38,6 +38,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-transition: all 2.6s cubic-bezier(0.85, 0, 0.15, 1);
     transition: all 2.6s cubic-bezier(0.85, 0, 0.15, 1);
+    
 }
 .heroContainer_AnimatedBorder {
     z-index: 100;

@@ -50,19 +50,19 @@ export default function Hero({ slice }){
     <>
       <main id="observing" className='hero ag-reg'>
         <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{position:'absolute', top:'0', left:'0', height:'100%', width: '100%', objectFit:'cover'}}>
-            <source src="/heroVideo.mp4"  type="video/mp4" />
-            <source src="/heroVideo.webm"  type="video/webm" />                
+            <source src='/heroVideo.mp4'  type="video/mp4" />
+            <source src='/heroVideo.webm'  type="video/webm" />                
             {/* <source src={src} type={type} style={{border:'1px red solid'}} /> */}
         </video>
         <div id="heroContainer" className='heroContainer'>
           <div className='heroTextContainer' style={{color:'#FFF'}}>
             <div className='heroTitle' style={{ overflow:'hidden'}}>
-                <p ref={titleRef} style={{transition:'all 2.6s cubic-bezier(0.85, 0, 0.15, 1)', transform:'translateY(100%)'}}>
+                <p ref={titleRef} style={{transition:'all 2.6s cubic-bezier(0.85, 0, 0.15, 1)', transform:'translateY(100%)'}}> {/* QUINT BIG TEXT */}
                   { title }
                 </p>
             </div>
             <div className='heroScrollText' style={{overflow:'hidden'}}>
-              <span ref={arrowRef} style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem', transform:'translateY(-120%)', transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+              <span ref={arrowRef} style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem', transform:'translateY(-120%)', transition:'all 1.2s cubic-bezier(0.76, 0.00, 0.24, 1.00)'}}> {}
                   <img 
                     style={{height:'100%', width:'100%',
                     objectFit:'contain'}} 

@@ -35,7 +35,7 @@ export default function BandicootImageSequence({slice}) {
 
 
   // create variable for the number of frames/image
-  const frameCount = 100; // 100 frames/still images
+  const frameCount = 50; // 100 frames/still images
 
   // canvas setup 
   // height and width of the image

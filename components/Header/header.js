@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, useLayoutEffect } from "react"
 
 export default function Header({lenis}) {
 
@@ -93,7 +93,7 @@ export default function Header({lenis}) {
 
 
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.onscroll = () => {
             if(window.scrollY > 6){
                 navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';

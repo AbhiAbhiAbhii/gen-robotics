@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef, useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { useSwiper } from 'swiper/react';
@@ -27,7 +27,7 @@ export default function BluePrint({ slice }) {
   const saferRef = useRef();
 
   
-  useEffect(() => {
+  useLayoutEffect(() => {
     
     // first-observer
     const observer = new IntersectionObserver((entries) => { // anim for the main-title
