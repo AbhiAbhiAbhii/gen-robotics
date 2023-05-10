@@ -80,7 +80,7 @@
     text-transform: uppercase;
 }
 .heroMiniVideoContainer{
-    width: 40%;
+    width: fit-content;
 
     display: flex;
     align-items: center;
