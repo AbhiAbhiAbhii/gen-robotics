@@ -67,16 +67,24 @@ body {
 body {
   font-family: ag-reg;
   position: relative;
-  background: #EEEEEA;
+  background: #FFFF;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-.btn {
+.talkToUsBtn {
   background: none;
   outline: none;
+  color: #FFFF;
+  cursor: pointer;
+
+  transition: all 0.8s cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+.talkToUsBtn:hover {
+  background: #FFFF;
+  color: #000;
 }
 
 

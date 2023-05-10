@@ -34,11 +34,11 @@ export default function Hero({ slice }){
           setTimeout(() => {
             arrowRef.current.style.transform = 'translateY(0%)';
             descriptRef.current.style.transform = 'translateY(0%)'
-          }, 1000)
+          }, 2200)
 
           setTimeout(() => {
             document.getElementById("heroContainer").className = "heroContainer_AnimatedBorder";
-          }, 500)
+          }, 1000)
         }
       })
     })

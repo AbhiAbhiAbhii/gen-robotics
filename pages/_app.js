@@ -9,6 +9,10 @@ import '../styles/Landing/productShowcase.css'
 import '../styles/Landing/ourSupport.css'
 import '../styles/Landing/imgSequence.css'
 
+//nav css
+import '../styles/Header/header.css'
+import '../styles/Header/menu.css'
+
 
 import Lenis from '@studio-freight/lenis'
 import Layout from '../components/Layout/layout'
@@ -18,6 +22,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
 
 export default function App({ Component, pageProps }) {
+
 
   let lenis;
 

@@ -120,9 +120,9 @@
     width: 100%;
 }
 .featureCarousel_AssetDiv {
-    /* position: absolute; */
-
-    margin: 2em 0;
+    position: absolute;
+    
+    /* margin: 2em 0; */
     height: 90%;
     width: 90%;
 }

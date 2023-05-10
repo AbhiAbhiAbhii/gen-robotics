@@ -54,7 +54,7 @@ export default function ProductShowcase({ slice }){
   }, [])
 
   return(
-    <section className='prodShowcase'>
+    <section className='prodShowcase' id='globalObserver'>
       <div className='prodShowcase_Container'>
         <div className='prodShowcase_Header_Container' id='range'>
           <div className='prodShowcase_Header_Title' style={{overflow:'hidden'}}>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import Menu from '../../components/Menu/menu';
 
 
 /**
@@ -63,7 +64,7 @@ export default function HeroAbout({ slice }){
 
   return(
     <>
-      <section className='heroAbout'>
+      <section className='heroAbout' id='heroabout'>
         <div className='heroAbout_Container'>
           <div className='heroAbout_Content'>
             <div className='heroAbout_ContentA'>
@@ -105,8 +106,21 @@ export default function HeroAbout({ slice }){
                     </p>
                   </div>
               </div>
-
             </div>
+            {/* IMG-SEQ TITLE */}
+            <div className="bandicoot_TitleContainer" style={{zIndex:'2000'}}>
+              <div className="bandicoot_Title">
+                <p>
+                  Introducing
+                </p>
+              </div>
+              <div className="bandicoot_Bandicoot">
+                <p>
+                  Bandicoot II
+                </p>
+              </div>
+            </div>
+            <Menu />
           </div>
         </div>
       </section>

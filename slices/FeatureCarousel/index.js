@@ -45,30 +45,12 @@ export default function BluePrint({ slice }) {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
 
-          document.querySelectorAll(".featureCarousel_AssetDiv").forEach(assetDiv => {  // asset anim
 
-            assetDiv.style.transform = 'translateY(-115%)';
-              setImage(0);
 
-            let delay = 5500; // interval declaration
-              
-            setInterval(() => { // set it in a loop with setInterval after delay ms
-              
-              assetDiv.style.transform = 'translateY(-115%)';
-              setImage(0);
-              
-              setTimeout(() => {
-                assetDiv.style.transform = 'translateY(0%)';
-                 setImage(1);
-              }, 2000)
-             
-              setTimeout(() => {
-                assetDiv.style.transform = 'translateY(110%)';
-                setImage(2);
-              }, 4000)
-            }, delay)
+           document.querySelectorAll(".featureCarousel_AssetDiv").forEach(assetDiv => {  // asset anim
 
-            })
+              assetDiv.style.transform = 'translateY(0%)';
+             })
           
           document.querySelectorAll(".featureCarousel_Swiper_idDiv").forEach(div => {  // blue-print anim for id
             div.style.opacity = '1';
@@ -78,7 +60,7 @@ export default function BluePrint({ slice }) {
           })
           
           setTimeout(() => {
-            document.querySelectorAll(".featureCarousel_Swiper_DescriptionDiv").forEach(div => { // delayed anim for blue-print description
+            document.querySelectorAll(".featureCarousel_Swiper_DescriptionDiv").forEach(div => {  //delayed anim for blue-print description
               div.style.opacity = '1';
             })
           }, 500)
@@ -178,7 +160,7 @@ export default function BluePrint({ slice }) {
                         slice.items.map((data, i) => {
                           return(
                             <div className='featureCarousel_AssetDiv' key={i} 
-                              style={{transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)', transform:'translateY(-220%)'}}>
+                              style={{transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)', opacity: image == i ? '1':'0', transform:'translateY(-115%)'}}>
                                 <img
                                 style={{height:'100%', width:'100%', objectFit:'contain'}}
                                 src={data.blue_print_asset.url} alt={data.blue_print_asset.alt} />
