@@ -1,0 +1,91 @@
+.Innovation {
+    padding: 32rem 2rem 2rem 2rem;
+    font-size: 1rem;
+    background: #EEEEEA;
+}
+.Innovation_Container {
+    padding: 0 2em 4em 2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/* content-A */
+.Innovation_ContentA {
+    width: 50%;
+}
+.Innovation_ContentA_SmallTitle {
+    width: 60%;
+    margin: 4em 0 0 0;
+}
+.Innovation_ContentA_SmallTitle > p {
+    font-size: 1.2em;
+    text-align: left;
+    line-height: 155%;
+    color: #020202;
+}
+.Innovation_ContentA_MainTitle {
+    margin: 6em 0;
+}
+.Innovation_ContentA_MainTitle > p {
+    font-size: 5.8em;
+    line-height: 120%;
+    color: #020202;
+}
+/* content-B */
+.Innovation_ContentB {
+    width: 45%;
+}
+/* SwiperImg */
+.Innovation_SwiperImgContainer {
+    width: 38.81em;
+    height: 35.28em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* custom Line */
+.customLine {
+    border: 1px #020202 solid;
+    border-radius: 0.231em;
+    position: relative;
+}
+.customLine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    height: 100%;
+    width: 1px;
+    background-color: #020202;
+}
+/* customSwiperNav */
+.customSwipNav_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: -1.6em;
+
+    z-index: 100;
+
+    background: #FFFF;
+    border-radius: 20em;
+    width: 13%;
+    padding: 0.2em 0;
+    margin-inline: auto;
+}
+.customNext{
+    background: #020202;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}

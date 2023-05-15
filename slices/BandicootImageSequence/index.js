@@ -42,10 +42,10 @@ export default function BandicootImageSequence({slice}) {
   canvas.height = 1080;
   canvas.width = 1920;
 
-  //new code
+  //new code [DID NOT WORK AT ALL]
     // const images = []  image of empty array
     // const bandicoot ={ 
-    //   frame: 0        object of frame starting with 0
+    //   frame: 0        object of frame 0
     // };
 
     // for (let i = 0; i < frameCount; i++) {  rendering frames onto the canvas
@@ -113,7 +113,6 @@ export default function BandicootImageSequence({slice}) {
     })
 
   // pre-load the image and smoother animation
-
     const preloadImages = () => {
       for (let i = 1; i< frameCount; i++) {
         const img = new Image();
@@ -155,12 +154,9 @@ export default function BandicootImageSequence({slice}) {
      })
      universalObserver.observe(document.getElementById("safe"));
 
-
   }, [])
 
   
-
-
   return(
     <>
       <section className='bandicootImageSequence' id="blink" style={{backgroundColor:'#FFFFF'}}>

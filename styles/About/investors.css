@@ -1,0 +1,72 @@
+.Investors {
+    padding: 2rem;
+    font-size: 1rem;
+    background: #242423;
+}
+.Investors_Container {
+    padding: 2em 4em;
+}
+.Investors_Eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Investors_Eyebrow_Title > p {
+    font-size: 6.3em;
+    color: #EEEEEA;
+}
+.Investors_Eyebrow_Subtitle > p {
+    font-size: 1.5em;
+    color: rgba(102, 102, 102, 1);
+}
+.Investors_Showcase_Container {
+    margin: 4em 0;
+}
+.Investors_Showcase {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.Investors_Showcase_Item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 2em 0;
+}
+.Investors_Showcase_Img {
+    height: 15.625em;
+    width: 15.625em;
+    
+    border-radius: 50%;
+}
+.Investors_Showcase_Img > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+.Investors_Showcase_TextContainer {
+    margin: 0 0 0 2em;
+}
+.Investors_Showcase_Fullname {
+    padding: 1em 0 0.2em 0;
+}
+.Investors_Showcase_Fullname > p {
+    font-size: 1.2em;
+    color: #EEEEEA;
+}
+.Investors_Showcase_Position {
+    padding: 0.2em 0 0.2em 0;
+}
+.Investors_Showcase_Position > p {
+    font-size: 1em;
+    color: #EEEEEA;
+}
+.Investors_Showcase_CompanyName > p {
+    font-size: 0.8em;
+    color: #8C7024;
+}

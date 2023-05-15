@@ -1,7 +1,6 @@
 import { SliceZone } from '@prismicio/react'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
-import Menu from '../components/Menu/menu'
 
  
 const Home = ({ page, navigation, settings }) => {

@@ -1,0 +1,16 @@
+{
+  "id": "custom_innovation",
+  "type": "SharedSlice",
+  "name": "CustomInnovation",
+  "description": "CustomInnovation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}

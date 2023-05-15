@@ -13,6 +13,12 @@ import '../styles/Landing/imgSequence.css'
 import '../styles/Header/header.css'
 import '../styles/Header/menu.css'
 
+// About css
+import '../styles/About/aboutHero.css'
+import '../styles/About/innovation.css'
+import '../styles/About/team.css'
+import '../styles/About/investors.css'
+import '../styles/About/innovate.css'
 
 import Lenis from '@studio-freight/lenis'
 import Layout from '../components/Layout/layout'

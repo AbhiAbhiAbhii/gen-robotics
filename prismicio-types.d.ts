@@ -6,6 +6,54 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
+/** Content for About Page documents */
+interface AboutPageDocumentData {
+  /**
+   * Title field in *About Page*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_page.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Slice Zone field in *About Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<AboutPageDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *About Page → Slice Zone*
+ *
+ */
+type AboutPageDocumentDataSlicesSlice =
+  | CustomInnovationSlice
+  | TheTeamSlice
+  | InvestorsSlice;
+/**
+ * About Page document from Prismic
+ *
+ * - **API ID**: `about_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutPageDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithoutUID<
+    Simplify<AboutPageDocumentData>,
+    "about_page",
+    Lang
+  >;
 /** Content for Home Page documents */
 interface HomePageDocumentData {
   /**
@@ -57,7 +105,7 @@ export type HomePageDocument<Lang extends string = string> =
     "home_page",
     Lang
   >;
-export type AllDocumentTypes = HomePageDocument;
+export type AllDocumentTypes = AboutPageDocument | HomePageDocument;
 /**
  * Primary content in BandicootImageSequence → Primary
  *
@@ -207,6 +255,36 @@ export type BluePrintSlice = prismicT.SharedSlice<
   BluePrintSliceVariation
 >;
 /**
+ * Default variation for CustomInnovation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CustomInnovationSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+/**
+ * Slice variation for *CustomInnovation*
+ *
+ */
+type CustomInnovationSliceVariation = CustomInnovationSliceDefault;
+/**
+ * CustomInnovation Shared Slice
+ *
+ * - **API ID**: `custom_innovation`
+ * - **Description**: `CustomInnovation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CustomInnovationSlice = prismicT.SharedSlice<
+  "custom_innovation",
+  CustomInnovationSliceVariation
+>;
+/**
  * Primary content in Hero → Primary
  *
  */
@@ -354,6 +432,108 @@ type HeroAboutSliceVariation = HeroAboutSliceDefault;
 export type HeroAboutSlice = prismicT.SharedSlice<
   "hero_about",
   HeroAboutSliceVariation
+>;
+/**
+ * Primary content in Investors → Primary
+ *
+ */
+interface InvestorsSliceDefaultPrimary {
+  /**
+   * Title field in *Investors → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: investors.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * SubTitle field in *Investors → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: investors.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  subtitle: prismicT.RichTextField;
+}
+/**
+ * Item in Investors → Items
+ *
+ */
+export interface InvestorsSliceDefaultItem {
+  /**
+   * Image field in *Investors → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: investors.items[].image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
+  /**
+   * Name field in *Investors → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: investors.items[].name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  name: prismicT.RichTextField;
+  /**
+   * Role field in *Investors → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: investors.items[].role
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  role: prismicT.RichTextField;
+  /**
+   * Company Name field in *Investors → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: investors.items[].company_name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  company_name: prismicT.RichTextField;
+}
+/**
+ * Default variation for Investors Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InvestorsSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<InvestorsSliceDefaultPrimary>,
+  Simplify<InvestorsSliceDefaultItem>
+>;
+/**
+ * Slice variation for *Investors*
+ *
+ */
+type InvestorsSliceVariation = InvestorsSliceDefault;
+/**
+ * Investors Shared Slice
+ *
+ * - **API ID**: `investors`
+ * - **Description**: `Investors`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type InvestorsSlice = prismicT.SharedSlice<
+  "investors",
+  InvestorsSliceVariation
 >;
 /**
  * Primary content in OurSupport → Primary
@@ -559,6 +739,98 @@ export type ProductShowcaseSlice = prismicT.SharedSlice<
   "product_showcase",
   ProductShowcaseSliceVariation
 >;
+/**
+ * Primary content in TheTeam → Primary
+ *
+ */
+interface TheTeamSliceDefaultPrimary {
+  /**
+   * Title field in *TheTeam → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: the_team.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * SubTitle field in *TheTeam → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: the_team.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  subtitle: prismicT.RichTextField;
+}
+/**
+ * Item in TheTeam → Items
+ *
+ */
+export interface TheTeamSliceDefaultItem {
+  /**
+   * Image field in *TheTeam → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: the_team.items[].image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  image: prismicT.ImageField<never>;
+  /**
+   * Full Name field in *TheTeam → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: the_team.items[].full_name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  full_name: prismicT.RichTextField;
+  /**
+   * Position field in *TheTeam → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: the_team.items[].position
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  position: prismicT.RichTextField;
+}
+/**
+ * Default variation for TheTeam Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TheTeamSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<TheTeamSliceDefaultPrimary>,
+  Simplify<TheTeamSliceDefaultItem>
+>;
+/**
+ * Slice variation for *TheTeam*
+ *
+ */
+type TheTeamSliceVariation = TheTeamSliceDefault;
+/**
+ * TheTeam Shared Slice
+ *
+ * - **API ID**: `the_team`
+ * - **Description**: `TheTeam`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TheTeamSlice = prismicT.SharedSlice<
+  "the_team",
+  TheTeamSliceVariation
+>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -568,6 +840,9 @@ declare module "@prismicio/client" {
   }
   namespace Content {
     export type {
+      AboutPageDocumentData,
+      AboutPageDocumentDataSlicesSlice,
+      AboutPageDocument,
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
       HomePageDocument,
@@ -581,6 +856,9 @@ declare module "@prismicio/client" {
       BluePrintSliceDefault,
       BluePrintSliceVariation,
       BluePrintSlice,
+      CustomInnovationSliceDefault,
+      CustomInnovationSliceVariation,
+      CustomInnovationSlice,
       HeroSliceDefaultPrimary,
       HeroSliceDefault,
       HeroSliceVariation,
@@ -589,6 +867,11 @@ declare module "@prismicio/client" {
       HeroAboutSliceDefault,
       HeroAboutSliceVariation,
       HeroAboutSlice,
+      InvestorsSliceDefaultPrimary,
+      InvestorsSliceDefaultItem,
+      InvestorsSliceDefault,
+      InvestorsSliceVariation,
+      InvestorsSlice,
       OurSupportSliceDefaultPrimary,
       OurSupportSliceDefaultItem,
       OurSupportSliceDefault,
@@ -599,6 +882,11 @@ declare module "@prismicio/client" {
       ProductShowcaseSliceDefault,
       ProductShowcaseSliceVariation,
       ProductShowcaseSlice,
+      TheTeamSliceDefaultPrimary,
+      TheTeamSliceDefaultItem,
+      TheTeamSliceDefault,
+      TheTeamSliceVariation,
+      TheTeamSlice,
     };
   }
 }

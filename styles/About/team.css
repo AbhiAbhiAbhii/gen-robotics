@@ -1,0 +1,60 @@
+.Team {
+    padding: 2rem;
+    background: #242423;
+
+    font-size: 1rem;
+}
+.Team_Container {
+    padding: 2em;
+}
+.Team_Eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8em 0 0 0;
+}
+.Team_Eyebrow_Title > p {
+    font-size: 6.5em;
+    color: #EEEEEA;
+}
+.Team_Eyebrow_Subtitle {
+    width: 33%;
+    
+}
+.Team_Eyebrow_Subtitle > p {
+    font-size: 1.3em;
+    line-height: 150%;
+    color: #EEEEEA;
+}
+.Team_ShowcaseContainer {
+    margin: 6em 0 2em 0;
+}
+.Team_Showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Team_Showcase_Item {
+    margin: 2em 0;
+}
+.Team_Showcase_Img {
+    height: 32.68em;
+    width: 25.84em;
+}
+.Team_Showcase_Img > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.Team_Showcase_Fullname {
+    padding: 1em 0 0.2em 0;
+}
+.Team_Showcase_Fullname > p {
+    font-size: 1.3em;
+    color: #EEEEEA;
+}
+.Team_Showcase_Position > p {
+    font-size: 0.9em;
+    color: #EEEEEA;
+}

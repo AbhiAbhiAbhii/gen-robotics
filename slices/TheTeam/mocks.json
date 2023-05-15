@@ -1,0 +1,89 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ex Lorem laborum velit exercitation est duis. Ullamco pariatur anim Lorem exercitation qui ex est eu. Incididunt sit culpa mollit amet dolor voluptate dolore do ut exercitation eiusmod ullamco."
+						}
+					}
+				]
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolore aliquip ut qui in ullamco aliquip do enim minim. Esse sunt aute labore cillum."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+								"width": 6000,
+								"height": 4000
+							},
+							"url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+							"width": 6000,
+							"height": 4000,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"full_name",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Adipisicing dolor elit officia in do dolore in deserunt. Nisi nostrud officia laboris aliquip eu tempor velit id do reprehenderit nulla ipsum esse eu ex. Non fugiat aliquip minim incididunt reprehenderit aliqua proident occaecat exercitation ad ex irure."
+									}
+								}
+							]
+						}
+					],
+					[
+						"position",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ut pariatur deserunt nisi qui sint est nulla amet magna mollit excepteur velit id."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

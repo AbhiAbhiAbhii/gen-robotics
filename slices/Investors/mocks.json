@@ -1,0 +1,103 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Reprehenderit dolore eiusmod in duis veniam esse sit ex laboris ex ipsum excepteur tempor tempor do."
+						}
+					}
+				]
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Lorem et minim laboris ex officia magna qui duis reprehenderit amet consequat irure do deserunt. Enim amet enim mollit officia deserunt ad magna magna consectetur anim ipsum in. Reprehenderit eiusmod incididunt adipisicing exercitation commodo voluptate."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"image",
+						{
+							"__TYPE__": "ImageContent",
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+								"width": 6597,
+								"height": 4398
+							},
+							"url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+							"width": 6597,
+							"height": 4398,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"thumbnails": {}
+						}
+					],
+					[
+						"name",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Minim do in labore. Voluptate tempor consequat ea excepteur voluptate nisi fugiat veniam aliqua aliquip quis. Do culpa occaecat consequat anim est."
+									}
+								}
+							]
+						}
+					],
+					[
+						"role",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Cupidatat proident irure qui tempor eiusmod deserunt cupidatat Lorem do cupidatat aliquip laborum occaecat. Anim velit est ullamco consequat duis. Ea culpa nisi minim ea do elit enim esse fugiat ea excepteur."
+									}
+								}
+							]
+						}
+					],
+					[
+						"company_name",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Pariatur mollit magna est sit laborum magna fugiat fugiat deserunt mollit sunt cillum."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

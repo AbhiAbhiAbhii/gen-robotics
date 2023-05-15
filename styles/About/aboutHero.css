@@ -1,0 +1,179 @@
+.aboutHero {
+    padding: 0rem 2rem 0 2rem;
+    /* background: rgba(36, 36, 35, 1); */
+    background: #242423;
+    font-size: 1rem;
+    position: relative;
+
+}
+/* .aboutHero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background: rgba(228, 228, 228, 0.01);
+    z-index: -10;
+} */
+.aboutHero_Container {
+    padding: 2em 4em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    top: 12em;
+}
+.aboutHero_TextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutHero_Title {
+    width: 70%;
+    margin: 0 0 2em 0;
+}
+.aboutHero_Title > p {
+    font-size: 7em;
+    color: #E4E4E4;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+
+    text-align: center;
+}
+.aboutHero_Subtitle {
+    width: 55%;
+}
+.aboutHero_Subtitle > p {
+    font-size: 1.25em;
+    color: #E4E4E4;
+    line-height: 130%;
+
+    text-align: center;
+}
+
+.aboutHero_ImgContainer {
+    margin: 3em 0 2em 0;
+}
+.aboutHero_Img {
+    width: 50.56em;
+    height: 42.56em;
+}
+.aboutHero_Img > img {
+    height: 100%;
+    width: 100%;
+
+    object-fit: contain;
+}
+/* offset Section */
+.aboutInfo {
+    background: #8C7024;
+    border-radius: 0.625em;
+    padding: 0 0 8em 0;
+    position: relative;
+
+    top: 20em;
+}
+.aboutInfo_Container {
+    padding: 6em 4em;
+}
+.aboutInfo_MainTextContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.aboutInfo_MainText {
+    width: 56%;
+}
+.aboutInfo_MainText > p {
+    font-size: 3.8em;
+    line-height: 100%;
+    text-align: left;
+
+    color: #F3F6FE;
+}
+.aboutInfo_ContentContainer {
+    margin: 10em 0 0 0;
+    padding: 0 2em 0 2em;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+/* Content A */
+.aboutInfo_ContentA {
+    width: 50%;
+}
+.aboutInfo_ContentA_Descript {
+    width: 80%;
+}
+.aboutInfo_ContentA_Descript > p {
+    font-size: 1.4em;
+    color: #E9E9E9;
+    line-height: 130%;
+}
+.aboutInfo_GetTouchContainer {
+    margin: 4em 0;
+}
+.GetinTouchBtn {
+    background: #D1BD55;
+    padding: 0.5em 1em;
+
+    border-top-right-radius: 0.625em;
+    border-bottom-right-radius: 0.625em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrowContainer {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.arrowContainer > img {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+}
+/* Content B */
+.aboutInfo_ContentB {
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+}
+.aboutInfo_ContentBImg {
+    width: 90%;
+    height: 90%;
+}
+.aboutInfo_ContentBImg > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 0.625em;
+}
+.aboutInfo_BottomContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutInfo_BottomText {
+    width: 90%;
+}
+.aboutInfo_BottomText > p {
+    text-align: center;
+    font-size: 2.6em;
+    line-height: 140%;
+
+    color: #E4E4E4;
+}

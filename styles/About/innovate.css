@@ -1,0 +1,44 @@
+.Innovate {
+    padding: 2rem;
+    font-size: 1rem;
+}
+.Innovate_Container {
+    padding: 2em 0;
+}
+.Innovate_Wrapper {
+    display: flex;
+    align-items: center;
+}
+.Innovate_TextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Innovate_Title {
+    margin: 0 0 2em 0;
+}
+.Innovate_Title > p {
+    font-size: 4em;
+    color: #EEEEEA;
+
+    text-align: center;
+}
+.Innovate_Subtitle {
+    width: 90%;
+    margin: 0 0 2em 0;
+}
+.Innovate_Subtitle > p {
+    font-size: 1.5em;
+    color: #EEEEEA;
+
+    text-align: center;
+}
+.Innovate_AssetLeft {
+    position: relative;
+    left: -2em;
+}
+.Innovate_AssetRight {
+    position: relative;
+    right: -2em;
+}
