@@ -1,9 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Arrow from "../Arrow/arrow";
+import { useEffect, useRef } from "react";
 
 
 export default function AboutHero(){
+
+    // Transition
+    let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
+    let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
+
+    let hide = 'translateY(100%)';
+    let reveal = 'translateY(0%)';
 
     //Components
     let fill = "#FFAC05"
@@ -16,7 +24,7 @@ export default function AboutHero(){
     let src = '/About/AboutHero/aboutHeroImg.png';
     let alt = 'GENROBOTICS'
 
-    //OFFSET SECTION
+    // OFFSET SECTION
     let MainText = "We are working on developing tech assuring safety to the ones who face the extremities"
     let ContentADescript = "Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions to address the most relevant social issues, is headquartered in Trivandrum, Kerala."
     let ContentABrDescript = "The Company was founded in 2017."
@@ -26,18 +34,40 @@ export default function AboutHero(){
 
     let BottomText = "Developing tailor-made products and services have keen importance in a Nation’s prospering progression. It’s a great honour to be a part of India’s most prestigious initiatives “Swachh Bharat Abhiyan and MakeInIndia”."
 
+    // Animations
+
+    // refs target
+    const titleRef = useRef();
+    const subtitleRef = useRef();
+    useEffect(() => {
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+
+                    titleRef.current.style.transform = reveal;
+
+                    setTimeout(() => {
+                        subtitleRef.current.style.transform = reveal;
+                    }, 1000)
+                }
+            })
+        })
+        observer.observe(document.querySelector('.aboutHero'));
+    }, []) 
+
     return(
         <>
         <main className="aboutHero">
             <div className="aboutHero_Container">
                 <div className="aboutHero_TextContainer">
-                    <div className="aboutHero_Title">
-                        <p>
+                    <div className="aboutHero_Title ofh">
+                        <p ref={titleRef} style={{transform: hide, transition: `all 1s ${quart}`}}>
                             { Title }
                         </p>
                     </div>
-                    <div className="aboutHero_Subtitle">
-                        <p>
+                    <div className="aboutHero_Subtitle ofh">
+                        <p ref={subtitleRef} style={{transform: hide, transition: `all 1s ${quint}`}}>
                             { Subtitle }
                         </p>
                     </div>

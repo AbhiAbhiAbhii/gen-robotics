@@ -76,7 +76,7 @@ export default function Hero({ slice }){
                 </p>
             </div>
             <div className='heroScrollText' style={{overflow:'hidden'}}>
-              <span ref={arrowRef} style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem', transform:'translateY(-120%)', transition:'all 1.2s cubic-bezier(0.76, 0.00, 0.24, 1.00)'}}> {}
+              <span ref={arrowRef} style={{height:'1rem', width:'1.1rem', marginRight:'0.5rem', transform:'translateY(-120%)', transition:'all 1.2s cubic-bezier(0.76, 0.00, 0.24, 1.00)'}}> 
                   <img 
                     style={{height:'100%', width:'100%',
                     objectFit:'contain'}} 
