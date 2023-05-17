@@ -3,6 +3,11 @@ import Image from "next/image";
 import Arrow from "../Arrow/arrow";
 import { useEffect, useRef } from "react";
 
+//gsap
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
 
 export default function AboutHero(){
 
@@ -39,6 +44,11 @@ export default function AboutHero(){
     // refs target
     const titleRef = useRef();
     const subtitleRef = useRef();
+
+    const offsetTitle = useRef();
+    const ctaRef = useRef();
+    const ctaBRef = useRef();
+    
     useEffect(() => {
 
         const observer = new IntersectionObserver((entries) => {
@@ -54,6 +64,49 @@ export default function AboutHero(){
             })
         })
         observer.observe(document.querySelector('.aboutHero'));
+        //-----------------------------------------------------
+
+        const observeOffset = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    offsetTitle.current.style.transform = reveal;
+                    
+                    setTimeout(() => {
+                        ctaRef.current.style.transform = reveal;
+                    }
+                    , 200)
+                    setTimeout(() => {
+                        ctaBRef.current.style. transform = reveal;
+                    }, 1000)
+                }
+            })
+        }, {threshold: 0.3})
+        observeOffset.observe(document.querySelector('.aboutInfo'));
+
+
+        //gsap 
+        gsap.to('.aboutInfo_ContentA', {
+            scrollTrigger: {
+                trigger: '.aboutInfo_ContentA',
+                start: 'top center',
+                end: 'bottom center',
+                scrub: 1,
+                toggleActions: 'play none none reverse'
+            },
+            y: 230,
+            duration: 2,
+            ease: quart
+        })
+
+        gsap.to('.testRef', {
+            scrollTrigger: {
+                trigger: '.aboutInfo_ContentContainer',
+                start: 'top ',
+                end: 'top',
+            },
+            y: 0,
+        })
+
     }, []) 
 
     return(
@@ -67,7 +120,7 @@ export default function AboutHero(){
                         </p>
                     </div>
                     <div className="aboutHero_Subtitle ofh">
-                        <p ref={subtitleRef} style={{transform: hide, transition: `all 1s ${quint}`}}>
+                        <p ref={subtitleRef} style={{transform: hide, transition: `all 1s ${quart}`}}>
                             { Subtitle }
                         </p>
                     </div>
@@ -82,22 +135,22 @@ export default function AboutHero(){
             <div className="aboutInfo">
                 <div className="aboutInfo_Container">
                     <div className="aboutInfo_MainTextContainer">
-                        <div className="aboutInfo_MainText">
-                            <p>
+                        <div className="aboutInfo_MainText ofh">
+                            <p ref={offsetTitle} style={{transform: hide, transition: `all 1s ${quint}`}}>
                                 { MainText }
                             </p>
                         </div>
                     </div>
                     <div className="aboutInfo_ContentContainer">
-                        <div className="aboutInfo_ContentA">
-                            <div className="aboutInfo_ContentA_Descript">
-                                <p>
+                        <div className="aboutInfo_ContentA" style={{height:'fit-content'}}>
+                            <div className="aboutInfo_ContentA_Descript ofh">
+                                <p ref={ctaRef} style={{transform: hide, transition: `all 1.5s ${quint}`}}>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                                 { ContentADescript } <br /> <br /> { ContentABrDescript }
                                 </p>
                             </div>
-                            <div className="aboutInfo_GetTouchContainer">
-                                <div style={{display:'flex'}}>
+                            <div className="aboutInfo_GetTouchContainer ofh">
+                                <div ref={ctaBRef} style={{display:'flex',transform: hide, transition: `all 1s ${quint}`}}>
                                     <input type="text" placeholder="Get in touch" style={{padding:'0.5em 2em', border:'none', outline:'none', borderTopLeftRadius:'0.625em', borderBottomLeftRadius:'0.625em'}} />
                                     <div className="GetinTouchBtn">
                                         <div className="arrowContainer" style={{background: ArrowBg}}>
@@ -115,8 +168,8 @@ export default function AboutHero(){
                     </div>
                 </div>
                 <div className="aboutInfo_BottomContainer">
-                    <div className="aboutInfo_BottomText">
-                        <p>
+                    <div className="aboutInfo_BottomText ofh">
+                        <p className="testRef" style={{transform: 'translateY(150%)', transition: `all 1s ${quint}`}}>
                             { BottomText }
                         </p>
                     </div>
