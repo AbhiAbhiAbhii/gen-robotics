@@ -7,7 +7,7 @@ import 'swiper/css/effect-fade';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination'; 
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 /**
  * @typedef {import("@prismicio/client").Content.CustomInnovationSlice} CustomInnovationSlice
@@ -24,7 +24,6 @@ export default function CustomInnovation({slice}) {
       src: '/dummyB.jpg'
     }
   ]
-
   // data
   let SmallTitle = "Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic."
 
@@ -58,6 +57,39 @@ export default function CustomInnovation({slice}) {
       </div>
     )
    }
+
+   // Animation
+
+   // Transition
+   let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
+   let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
+
+   let hide = 'translateY(100%)';
+   let reveal = 'translateY(0%)';
+
+   useEffect(() => {
+
+    let mainTitle = document.querySelector('.Innovation_ContentA_MainTitle');
+    let smallTitle = document.querySelector('.Innovation_ContentA_SmallTitle');
+    
+    let innovAsset = document.querySelector('.Innovation_Asset');
+
+    const observe = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          smallTitle.style.opacity = '1';
+          innovAsset.style.transform = reveal;
+          setTimeout(() => {
+            mainTitle.style.opacity = '1'
+          }, 1000)
+        }
+      })
+    }, {threshold: 0.5})
+    observe.observe(document.querySelector('.Innovation'));
+
+   }, [])
+
+
    
 
   return(
@@ -65,12 +97,12 @@ export default function CustomInnovation({slice}) {
     <div className='Innovation'>
         <div className='Innovation_Container'>
           <div className='Innovation_ContentA'>
-            <div className='Innovation_ContentA_SmallTitle'>
+            <div className='Innovation_ContentA_SmallTitle' style={{opacity: '0', transition: `all 1s ${quart}`}}>
               <p>
                 { SmallTitle }
               </p>
             </div>
-            <div className='Innovation_ContentA_MainTitle'> 
+            <div className='Innovation_ContentA_MainTitle' style={{opacity: '0', transition: `all 1s ${quart}`}}> 
               <p>
                 Center<br /><span style={{display:'flex', alignItems:'center'}}><img src='/About/Innovation/tinyImg.png' alt='image' />&nbsp;of custom</span>Innovation
               </p>
@@ -79,7 +111,7 @@ export default function CustomInnovation({slice}) {
           <div className='Innovation_ContentB'>
               <div className='Innovation_ContentB_Container'>
                   {/* swiper */}
-                <Swiper className='customLine' style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'1.3em 0',
+                <Swiper className='customLine' style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'1.3em 0', overflow:'hidden',
                       "--swiper-navigation-size":'2rem'}}
                       spaceBetween={40}
                       speed={1000}
@@ -92,7 +124,7 @@ export default function CustomInnovation({slice}) {
                     {
                       dummyData.map((data, i) => {
                         return(
-                          <SwiperSlide style={{display:'flex', alignItems:'center', justifyContent:'center'}}  key={i}>
+                          <SwiperSlide className='Innovation_Asset' style={{display:'flex', alignItems:'center', justifyContent:'center', transform:'translateY(-120%)', transition: `all 1.2s ${quint}`}}  key={i}>
                               <div className='Innovation_SwiperImgContainer'>
                                 <img style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.231em'}} src={data.src} alt='dummy' />
                               </div>

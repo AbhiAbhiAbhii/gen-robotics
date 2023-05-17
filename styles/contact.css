@@ -1,0 +1,220 @@
+.contact {
+    padding: 2rem;
+    background: #FAFBFF;
+    font-size: 1rem;
+}
+.contact_Container {
+    padding: 8em 4em 3em 12em;
+}
+.contact_TitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+.contact_Title {
+    width: 80%;
+}
+.contact_Title > p {
+    font-size: 6.1em;
+    color: #000;
+
+    line-height: 110%;
+}
+.contact_SubTitle {
+    width: 40%;
+    margin: 3em 0 4em 0;
+}
+.contact_SubTitle > p {
+    font-size: 1.55em;
+    color: #000;
+}
+.contact_FormContainer {
+    background: #212226;
+    border-radius: 0.625em;
+
+    color: #FAFBFF;
+    padding: 4em 6em 2em 6em;
+}
+.contact_FormContainer_Pad {
+    padding: 0 8em 0 0;
+}
+.contact_Form {
+}
+input {
+    outline: none;
+    background: none;
+    padding: 2.2em 1em 2.2em 1em;
+
+    border-radius: 0.6875em;
+    margin: 0.8em 0 0.2em 0;
+    color: #FAFBFF;
+
+}
+textarea {
+    outline: none;
+    background: none;
+    padding: 2.2em 1em 2.2em 1em;
+    height: 200px;
+
+    resize: none;
+
+    border-radius: 0.6875em;
+    margin: 0.8em 0 0.2em 0;
+    color: #FAFBFF;
+
+}
+label {
+    font-size: 0.9em;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    outline: none;
+
+    margin: 1em 0;
+}
+.formFieldA {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input.form_FirstName {
+    width: 48%;
+} 
+.input.form_LastName {
+    width: 48%;
+}
+
+/* focus-css */
+.focused {
+    border: 1px #E5D161 solid;
+
+    transition: all 0.3s ease;
+}
+.notFocused {
+    border: 1px #737680 solid;
+    transition: all 0.3s ease;
+
+}
+.textFocused {
+    color: #FAFBFF;
+    transition: all 0.3s ease;
+
+}
+.textNotFocused {
+    color: #737680;
+    transition: all 0.3s ease;
+
+}
+/* Btn */
+.form_BtnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2em 0 1em 0;
+}
+.form_Btn {
+    border: none;
+    outline: none;
+    padding: 3em 6em;
+    width: 100%;
+    border-radius: 20em;
+    cursor: pointer;
+
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+}
+.form_Btn:hover {
+    opacity: 0.9;
+}
+.form_Btn > p {
+    /* font-size: 1.875rem; */
+    font-size: 2.7em;
+    color: #000;
+}
+.form_Terms {
+    padding: 2em 0;
+}
+.form_Terms > p {
+    font-size: 0.875em;
+}
+/* errors */
+.form_Error {
+    color: rgb(231, 47, 47);
+    margin: 0.4em 0 0 0.2em;
+    font-size: 0.9em;
+}
+
+/* Contact Bottom */
+.contact_BottomContainer {
+    margin: 12em 0 2em 0;
+    padding: 0 4em 0 4em;
+}
+.contact_BottomContent{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.contact_BottomContentA {
+    width: 35%;
+}
+.contact_BottomContentA > p {
+    font-size: 7em;
+    font-weight: 500;
+    color: #000;
+    line-height: 100%;
+}
+
+.contact_BottomContentB {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+}
+.contact_AddressItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45%;
+
+    margin: 0 0 6em 0;
+}
+.contact_AddressItemCountry {
+    padding:  0 0 0.5em 0;
+}
+.contact_AddressItemCountry > p {
+    font-size: 1.4em;
+    color: #000;
+}
+.contact_AddressItemAddress {
+    padding: 0.5em 0;
+    width: 60%;
+}
+.contact_AddressItemAddress > p {
+    font-size: 1em;
+    color: #000;
+
+    line-height: 130%;
+}
+.contact_AddressItemMail {
+    padding: 1em 0;
+    width: 70%;
+}
+.contact_AddressItemMail > p {
+    font-size: 0.9em;
+    color: #000;
+
+    line-height: 130%;
+}
+.contact_AddressItemTel > p {
+    font-size: 0.9em;
+    color: #000;
+}

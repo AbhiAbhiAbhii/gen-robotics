@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react"
 export default function Header({lenis}) {
 
 
-    let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/' }]
+    let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' }]
     let menuSocials = [{ socials: 'LI' },{ socials: 'FB' },{ socials: 'TW' },{ socials: 'IN' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
     let ourProducts = [{products: 'Bandicoot II'}, {products: 'Bandicoot I'}, {products: 'Willboar'},{products:'G-Beetle'}]

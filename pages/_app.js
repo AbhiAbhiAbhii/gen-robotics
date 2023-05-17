@@ -20,6 +20,9 @@ import '../styles/About/team.css'
 import '../styles/About/investors.css'
 import '../styles/About/innovate.css'
 
+// Contact css
+import '../styles/contact.css'
+
 import Lenis from '@studio-freight/lenis'
 import Layout from '../components/Layout/layout'
 import Link from 'next/link'
