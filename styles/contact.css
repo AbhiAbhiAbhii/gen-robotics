@@ -42,16 +42,10 @@
 }
 .contact_Form {
 }
-input {
-    outline: none;
-    background: none;
-    padding: 2.2em 1em 2.2em 1em;
+/* input {
+    
 
-    border-radius: 0.6875em;
-    margin: 0.8em 0 0.2em 0;
-    color: #FAFBFF;
-
-}
+} */
 textarea {
     outline: none;
     background: none;
@@ -90,12 +84,29 @@ label {
 /* focus-css */
 .focused {
     border: 1px #E5D161 solid;
-
+    background: none;
     transition: all 0.3s ease;
+
+    outline: none;
+    /* background: none; */
+    padding: 2.2em 1em 2.2em 1em;
+
+    border-radius: 0.6875em;
+    margin: 0.8em 0 0.2em 0;
+    color: #FAFBFF;
 }
 .notFocused {
     border: 1px #737680 solid;
     transition: all 0.3s ease;
+    background: none;
+
+    outline: none;
+    /* background: none; */
+    padding: 2.2em 1em 2.2em 1em;
+
+    border-radius: 0.6875em;
+    margin: 0.8em 0 0.2em 0;
+    color: #FAFBFF;
 
 }
 .textFocused {

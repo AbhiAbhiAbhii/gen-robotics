@@ -296,7 +296,7 @@ export default function RegistrationForm() {
                                 className={firstNameFocused ? 'textFocused' : 'textNotFocused'}>
                                     First Name*
                                 </label> {/* First Name */}
-                                <input
+                                <input 
                                 type="text"
                                 id="firstName"
                                 name="firstName"
