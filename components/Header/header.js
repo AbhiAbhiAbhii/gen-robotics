@@ -123,11 +123,11 @@ export default function Header({lenis}) {
                     </div>
                     <div style={{color:'#FFF'}}><p>Menu</p></div>
                 </div>
-                <div onClick={() => window.location.href='/'} style={{height:'2.73rem', width:'8.625rem', cursor:'pointer'}}>
+                <div onClick={() => window.location.href='/'} style={{height:'2.73rem', width:'12.625rem', cursor:'pointer'}}>
                     <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/logoGenRobo.svg" alt="logo" />
                 </div>
                 <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                    <button className="talkToUsBtn"  style={{border:'1px #FFF solid', padding:'1rem 2.4rem', borderRadius:'0.63rem'}}>Talk to us</button>
+                    <button onClick={() => window.location.href='/contact'} className="talkToUsBtn"  style={{border:'1px #FFF solid', padding:'1rem 2.4rem', borderRadius:'0.63rem'}}>Talk to us</button>
                 </div>
             </div>
         </nav>
