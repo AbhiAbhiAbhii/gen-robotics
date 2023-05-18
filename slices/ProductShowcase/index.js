@@ -85,20 +85,20 @@ export default function ProductShowcase({ slice }){
                             src={ data.product_image.url } 
                             alt={ data.product_image.alt } />
                         </div>
-                        <div className='prodShowcase_Asset_DetailsDiv' style={{transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)', borderBottomLeftRadius: i == solution ? '0.6rem':'', borderBottomRightRadius: i == solution ? '0.6rem':'', background: i == solution ? '#493E29': ''}}>
-                            <div className='prodShowcase_Asset_TitleDiv' style={{ color: i == solution ? '#F8F8F8':'#100E0C', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                        <div className='prodShowcase_Asset_DetailsDiv' style={{transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)', borderBottomLeftRadius: i == solution ? '0.6rem':'', borderBottomRightRadius: i == solution ? '0.6rem':'', background: i == solution ? '#D1BD55': ''}}>
+                            <div className='prodShowcase_Asset_TitleDiv' style={{ color: i == solution ? '#322712':'#100E0C', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                               <p>
                                 { data.product_title[0].text }
                               </p>
                             </div>
-                            <div className='prodShowcase_Asset_DescriptionDiv' style={{color: i == solution ? '#F8F8F8':'#100E0C', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                            <div className='prodShowcase_Asset_DescriptionDiv' style={{color: i == solution ? '#322712':'#100E0C', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                               <p>
                                 {data.product_description[0].text}
                               </p>
                             </div>
                             {/* arrow icon */}
-                            <div style={{opacity: i == solution ? '1':'0', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)', position:'absolute', right:'10%', top:'50%', transform:'translate(0, -50%)', borderRadius:'50%', height:'3rem', width:'3rem', background:'#4D3300', display:'flex', alignItems:'center', justifyContent:'center'}}>
-                            <img style={{height:'50%', width:'50%', objectFit:'contain'}} src='/solutions/arrow.svg' alt='' />
+                            <div style={{opacity: i == solution ? '1':'0', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)', position:'absolute', right:'10%', top:'50%', transform:'translate(0, -50%)', borderRadius:'50%', height:'3rem', width:'3rem', background:'#020202', display:'flex', alignItems:'center', justifyContent:'center'}}>
+                              <img style={{height:'50%', width:'50%', objectFit:'contain'}} src='/solutions/arrow.svg' alt='' />
                             </div>
                         </div>
                       </div>

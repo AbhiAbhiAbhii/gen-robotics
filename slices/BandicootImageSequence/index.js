@@ -29,13 +29,14 @@ export default function BandicootImageSequence({slice}) {
       // returning the url of the image
       // convert to string 
       //  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
-      // `/imgsequence/PNG SEQUENCE/${index.toString().padStart(4, '0')}.png`
-       `/imgsequence/jpgFormat/${index.toString().padStart(4, '0')}.jpg` 
+      //  `/imgsequence/PNG SEQUENCE/${index.toString().padStart(4, '0')}.png`
+      //  `/imgsequence/jpgFormat/${index.toString().padStart(4, '0')}.jpg`
+      `/imgsequence/original/${index.toString().padStart(4, '0')}.jpg` 
   )
 
 
   // create variable for the number of frames/image
-  const frameCount = 50; // 100 frames/still images
+  const frameCount = 125; // 100 frames/still images
 
   // canvas setup 
   // height and width of the image

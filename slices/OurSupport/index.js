@@ -69,6 +69,8 @@ export default function OurSupport({ slice }){
     
   }, [])
 
+  let tempTitle = "Supported By"
+
   return(
     <section className="support" id='Launch'>
             <div className='support_Container'>
@@ -76,7 +78,8 @@ export default function OurSupport({ slice }){
                     <div className='support_Title_Div' 
                         style={{ overflow:'hidden'}}>
                         <p ref={titleRef} style={{transform:'translateY(110%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                            { title }
+                            {/* { title } */}
+                            { tempTitle}
                         </p>
                     </div>
                     <div className='support_Description_Div'

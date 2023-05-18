@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from "next/link"
 import { useEffect, useRef, useState, useLayoutEffect } from "react"
 
 export default function Header({lenis}) {
@@ -154,9 +155,9 @@ export default function Header({lenis}) {
                                         {
                                             menuData.map((data, i) => {
                                                 return(
-                                                    <div onClick={() => window.location.href=data.link} key={i} className="menu_Item" style={{width:'50%'}}>
+                                                    <Link onClick={MenuTrigger} href={data.link}  key={i} className="menu_Item" style={{width:'50%'}}>
                                                         <p>{data.content}</p>
-                                                    </div>
+                                                    </Link>
                                                 )
                                             })
                                         }
