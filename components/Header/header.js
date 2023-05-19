@@ -15,6 +15,9 @@ export default function Header({lenis}) {
     // state for menu
     const [displayMenu, setDisplayMenu] = useState(false);
 
+
+
+
     const navRef = useRef();
     const menuRef = useRef();
 
@@ -71,6 +74,8 @@ export default function Header({lenis}) {
             document.querySelectorAll(".menu_Item").forEach(menuItemDiv => {
                 menuItemDiv.style.opacity = '0';
             })
+
+            // menuLine.classList.toggle(".menu_Left");
 
             // menu title
             document.querySelectorAll(".menu_title").forEach(menuTitleDiv => {
@@ -220,9 +225,16 @@ export default function Header({lenis}) {
                                         <div className="menu_Item_Container">
                                             {
                                                 ourProducts.map((data, i) => {
+
                                                     return(
-                                                        <div key={i} style={{padding:'0.2em 0', margin:'0.2em 0'}} className="menu_Item">
-                                                            <p>{data.products}</p>
+                                                        <div key={i} style={{padding:'0.2em 0', margin:'0.2em 0', display:'flex', alignItems:'center'}} className="menu_Item dataProd">
+                                                            <p>
+                                                                {data.products}
+                                                            </p>
+                                                            <span 
+                                                                style={{display: i != 0 ? 'none':'', marginLeft:'0.5em'}}>
+                                                                <img src="/menu/temp.svg" alt='img' />
+                                                            </span>
                                                         </div>
                                                     )
                                                 })
@@ -251,7 +263,6 @@ export default function Header({lenis}) {
                                             })
                                         }
                                     </div> */}
-
                                 </div>
                             </div>
                         </div>

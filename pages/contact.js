@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useRef, useState } from 'react';
 
 //gsap
@@ -157,27 +158,34 @@ export default function RegistrationForm() {
         Country: "India",
         Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
         Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012"
+        Tel: "+91 2346789012",
+        Dir: "Get Directions",
+        src:'/contact/india.svg'
     },
     {
         Country: "United Kingdom",
         Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
         Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012"
+        Tel: "+91 2346789012",
+        Dir: "Get Directions",
+        src:'/contact/uk.svg'
+    },
+    {
+        Country: "United Arab Emirates",
+        Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
+        Mail: "Media & support contact: info@genrobotics.org",
+        Tel: "+91 2346789012",
+        Dir: "Get Directions",
+        src:'/contact/uae.svg'
     },
     {
         Country: "South Korea",
         Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
         Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012"
+        Tel: "+91 2346789012",
+        Dir: "Get Directions",
+        src:'/contact/south-korea.svg'
     },
-    {
-        Country: "South Korea",
-        Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
-        Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012"
-    },
-
   ]
 
     // Animation
@@ -230,7 +238,7 @@ export default function RegistrationForm() {
         duration: 2,
         ease: quart
     })
-    gsap.to('.bottomContentAText', {
+    gsap.to('.bottomTextAnim', {
         scrollTrigger: {
             trigger: '.contact_BottomContentA',
             start: 'top bottom',
@@ -414,9 +422,21 @@ export default function RegistrationForm() {
         <div className='contact_BottomContainer'>
                 <div className='contact_BottomContent'>
                     <div className='contact_BottomContentA ofh' style={{height:'fit-content'}}>
-                        <p className='bottomContentAText' style={{transform: hide, transition: `all 1s ${quart}`}}>
-                            { BottomText }
-                        </p>
+                        <div className='bottomContentAText ofh' >
+                          <p className='bottomTextAnim' style={{transform: hide, transition: `all 1s ${quart}`}}>
+                              { BottomText }
+                          </p>
+                        </div>
+                        <div className='contactWhatsapp_Container'>
+                            <div className='contactWhatsapp'>
+                              <p style={{display:'flex', alignItems:'center'}}>Whatsapp Us <span style={{marginLeft:'1em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span></p>
+                            </div>
+                        </div>
+                        <div className='contactWhatsapp_Container callUs'>
+                            <div className='contactWhatsapp callUs'>
+                              <p style={{display:'flex', alignItems:'center'}}>Call us<span style={{marginLeft:'1em'}}><img src='/contact/phoneIcon.svg' alt='whatsapp' /></span></p>
+                            </div>
+                        </div>
                     </div>
                     <div className='contact_BottomContentB'>
                         {
@@ -425,8 +445,8 @@ export default function RegistrationForm() {
                                     <div className='contact_AddressItem' key={i}>
                                         <div className='contact_AddressItemContainer'>
                                             <div className='contact_AddressItemCountry ofh'>
-                                                <p className='AddressItemCountry' style={{transform: hide, transition: `all 1s ${quint}`}}>
-                                                    { data.Country }
+                                                <p className='AddressItemCountry' style={{transform: hide, transition: `all 1s ${quint}`, display:'flex', alignItems:'center'}}>
+                                                <span style={{marginRight:'0.25em'}}><img src={data.src} alt="country" /></span> { data.Country } 
                                                 </p>
                                             </div>
                                             <div className='contact_AddressItemAddress'>
@@ -442,6 +462,11 @@ export default function RegistrationForm() {
                                             <div className='contact_AddressItemTel'>
                                                 <p className='AddressItemTel' style={{opacity:'0', transition: `all 1s ${quint}`}}>
                                                     { data.Tel }
+                                                </p>
+                                            </div>
+                                            <div className='contact_AddressItemTel' style={{margin:'0.55em 0 0 0'}}>
+                                                <p className='AddressItemTel' style={{opacity:'0', transition: `all 1s ${quint}`}}>
+                                                    { data.Dir }
                                                 </p>
                                             </div>
                                         </div>

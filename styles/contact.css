@@ -173,7 +173,7 @@ label {
 .contact_BottomContentA {
     width: 35%;
 }
-.contact_BottomContentA > p {
+.bottomContentAText > p {
     font-size: 7em;
     font-weight: 500;
     color: #000;
@@ -228,4 +228,30 @@ label {
 .contact_AddressItemTel > p {
     font-size: 0.9em;
     color: #000;
+}
+
+/* whatsapp */
+.contactWhatsapp_Container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 4em 0 0 0;
+}
+.contactWhatsapp {
+    border-radius: 20em;
+    padding: 1.2em 2em;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px black solid;
+}
+/* Call us */
+.contactWhatsapp_Container.callUs {
+    margin: 1em 0 0 0;
+}
+.contactWhatsapp.callUs {
+    background: #484848;
+    color: #FFFF;
 }
