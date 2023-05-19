@@ -160,7 +160,8 @@ export default function RegistrationForm() {
         Mail: "Media & support contact: info@genrobotics.org",
         Tel: "+91 2346789012",
         Dir: "Get Directions",
-        src:'/contact/india.svg'
+        src:'/contact/india.svg',
+        link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
     },
     {
         Country: "United Kingdom",
@@ -168,7 +169,8 @@ export default function RegistrationForm() {
         Mail: "Media & support contact: info@genrobotics.org",
         Tel: "+91 2346789012",
         Dir: "Get Directions",
-        src:'/contact/uk.svg'
+        src:'/contact/uk.svg',
+        link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
     },
     {
         Country: "United Arab Emirates",
@@ -176,7 +178,8 @@ export default function RegistrationForm() {
         Mail: "Media & support contact: info@genrobotics.org",
         Tel: "+91 2346789012",
         Dir: "Get Directions",
-        src:'/contact/uae.svg'
+        src:'/contact/uae.svg',
+        link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
     },
     {
         Country: "South Korea",
@@ -184,7 +187,8 @@ export default function RegistrationForm() {
         Mail: "Media & support contact: info@genrobotics.org",
         Tel: "+91 2346789012",
         Dir: "Get Directions",
-        src:'/contact/south-korea.svg'
+        src:'/contact/south-korea.svg',
+        link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
     },
   ]
 
@@ -464,7 +468,7 @@ export default function RegistrationForm() {
                                                     { data.Tel }
                                                 </p>
                                             </div>
-                                            <div className='contact_AddressItemTel' style={{margin:'0.55em 0 0 0'}}>
+                                            <div onClick={() => window.location.href = data.link} className='contact_AddressItemTel' style={{margin:'0.55em 0 0 0', cursor:'pointer'}}>
                                                 <p className='AddressItemTel' style={{opacity:'0', transition: `all 1s ${quint}`}}>
                                                     { data.Dir }
                                                 </p>
