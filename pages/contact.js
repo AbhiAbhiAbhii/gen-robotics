@@ -238,7 +238,7 @@ export default function RegistrationForm() {
             scrub: 1,
             toggleActions: 'play none none reverse'
         },
-        y: 230,
+        y: 130,
         duration: 2,
         ease: quart
     })
@@ -433,12 +433,16 @@ export default function RegistrationForm() {
                         </div>
                         <div className='contactWhatsapp_Container'>
                             <div className='contactWhatsapp'>
-                              <p style={{display:'flex', alignItems:'center'}}>Whatsapp Us <span style={{marginLeft:'1em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span></p>
+                              <a href="https://api.whatsapp.com/send?phone=2346789012&text=Send20%a20%quote">
+                              <p style={{display:'flex', alignItems:'center'}}> <span style={{marginRight:'0.5em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span>Whatsapp Us</p>
+                              </a>
                             </div>
                         </div>
                         <div className='contactWhatsapp_Container callUs'>
                             <div className='contactWhatsapp callUs'>
-                              <p style={{display:'flex', alignItems:'center'}}>Call us<span style={{marginLeft:'1em'}}><img src='/contact/phoneIcon.svg' alt='whatsapp' /></span></p>
+                              <a href='tel: +91 2346789012'>
+                              <p style={{display:'flex', alignItems:'center'}}><span style={{marginRight:'0.5em'}}><img src='/contact/phoneIcon.svg' alt='whatsapp' /></span> Reach us Via Call</p>
+                              </a>
                             </div>
                         </div>
                     </div>
