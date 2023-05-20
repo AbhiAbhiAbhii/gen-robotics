@@ -148,7 +148,7 @@ export default function RegistrationForm() {
   let Title = "Need the world's best cleaning companion?"
   let Subtitle = "Let us know how we can reach you and we'll respond as soon as possible"
 
-  let terms = "By Submitting, you understand, and agree to Genrobotics's Privacy Policy and Terms and Conditions."
+  let terms = "By Submitting, you understand, and agree to Genrobotics's"
 
   // Contact Bottom
   let BottomText = "Come say hello to us." 
@@ -235,7 +235,7 @@ export default function RegistrationForm() {
             trigger: '.contact_BottomContentA',
             start: 'top center',
             end: 'bottom center',
-            scrub: 1,
+            scrub: 0.1,
             toggleActions: 'play none none reverse'
         },
         y: 130,
@@ -414,7 +414,7 @@ export default function RegistrationForm() {
                             <button className='form_Btn' type="submit"><p>Submit Enquiry</p></button> {/* Submit Enquiry */}
                             <div className='form_Terms'>
                                 <p>
-                                    { terms }
+                                    { terms }&nbsp; <span className='goldHover'>Privacy Policy</span> and <span className='goldHover'>Terms and Conditions.</span>
                                 </p>
                             </div>
                         </div>
@@ -474,7 +474,7 @@ export default function RegistrationForm() {
                                             </div>
                                             <div onClick={() => window.location.href = data.link} className='contact_AddressItemTel' style={{margin:'0.55em 0 0 0', cursor:'pointer'}}>
                                                 <p className='AddressItemTel' style={{opacity:'0', transition: `all 1s ${quint}`}}>
-                                                    { data.Dir }
+                                                    <span className='brwnHover'>{ data.Dir }</span>
                                                 </p>
                                             </div>
                                         </div>

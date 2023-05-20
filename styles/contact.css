@@ -255,3 +255,18 @@ label {
     background: #484848;
     color: #FFFF;
 }
+
+/* HOVER */
+.goldHover{
+    transition: all 0.3s cubic-bezier(0.76, 0.00, 0.24, 1.00);
+    cursor: pointer;
+}
+.goldHover:hover{
+    color: #E5D161;
+}
+.brwnHover {
+    transition: all 0.3s cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+.brwnHover:hover {
+    color: #8C7024;
+}
