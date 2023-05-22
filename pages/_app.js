@@ -13,6 +13,9 @@ import '../styles/Landing/imgSequence.css'
 import '../styles/Header/header.css'
 import '../styles/Header/menu.css'
 
+// footer css
+import '../styles/footer.css'
+
 // About css
 import '../styles/About/aboutHero.css'
 import '../styles/About/innovation.css'
