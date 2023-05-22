@@ -162,9 +162,9 @@ export default function Footer(){
                         }
                     </div>
                     <div className="footerBottom_rightItem_Container">
-                        <div className="footerBottom_rightItem">
+                        <div onClick={() => window.location.href="https://www.neovibe.in/"} style={{cursor:'pointer'}} className="footerBottom_rightItem">
                             <p>
-                                Website by Neovibe
+                                Powered by Neovibe
                             </p>
                         </div>
                     </div>
