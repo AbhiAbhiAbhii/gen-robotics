@@ -97,7 +97,7 @@ export default function ProductBottomShowcase(){
                             </div>
                             <div className="prodBtmSC_B_TextContainer_Title">
                                 <p>
-                                    <span className="textA">Now in</span><br /><span className="textB">16 states.</span>
+                                    <span className="textA">Now in</span><br /><span className="textB">18 states.</span>
                                 </p>
                             </div>
                         </div>
