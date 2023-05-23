@@ -89,6 +89,20 @@ a {
 .ofh {
   overflow: hidden;
 }
+/* colors */
+.mustard-dark {
+  color: rgba(140, 112, 36, 1);
+}
+.gold {
+  color: rgba(221, 199, 88, 1);
+}
+.dark-grey {
+  color: rgba(102, 102, 102, 1);
+}
+/* SWIPER */
+.swiper-pagination {
+  margin: 0 0 0 16em;
+}
 
 
 

@@ -70,7 +70,7 @@ export default function Hero({ slice }){
         </video>
         <div id="heroContainer" className='heroContainer'>
           <div className='heroTextContainer' style={{color:'#FFF'}}>
-            <div className='heroTitle' style={{ overflow:'hidden'}}>
+            <div className='heroTitle' style={{ overflow:'hidden'}}>  
                 <p ref={titleRef} style={{transition:'all 2.6s cubic-bezier(0.85, 0, 0.15, 1)', transform:'translateY(100%)'}}> {/* QUINT BIG TEXT */}
                   { title }
                 </p>

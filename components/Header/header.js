@@ -9,7 +9,7 @@ export default function Header({lenis}) {
     let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' }]
     let menuSocials = [{ socials: 'LI' },{ socials: 'FB' },{ socials: 'TW' },{ socials: 'IN' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
-    let ourProducts = [{products: 'Bandicoot II'}, {products: 'Bandicoot I'}, {products: 'Willboar'},{products:'G-Beetle'}]
+    let ourProducts = [{products: 'Bandicoot II', link:'/products/bandicootII'}, {products: 'Bandicoot I', link:'/'}, {products: 'Willboar', link:'/'},{products:'G-Beetle', link:'/'}]
 
 
     // state for menu
@@ -227,7 +227,7 @@ export default function Header({lenis}) {
                                                 ourProducts.map((data, i) => {
 
                                                     return(
-                                                        <div key={i} style={{padding:'0.2em 0', margin:'0.2em 0', display:'flex', alignItems:'center'}} className="menu_Item dataProd">
+                                                        <div onClick={() => window.location.href= data.link} key={i} style={{padding:'0.2em 0', margin:'0.2em 0', display:'flex', alignItems:'center'}} className="menu_Item dataProd">
                                                             <p>
                                                                 {data.products}
                                                             </p>

@@ -26,6 +26,12 @@ import '../styles/About/innovate.css'
 // Contact css
 import '../styles/contact.css'
 
+//Product Child css
+import '../styles/Products/prodHero.css'
+import '../styles/Products/prodOvEb.css'
+import '../styles/Products/featScale.css'
+import '../styles/Products/prodBtm.css'
+
 import Lenis from '@studio-freight/lenis'
 import Layout from '../components/Layout/layout'
 import Link from 'next/link'
