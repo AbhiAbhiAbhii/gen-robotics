@@ -104,5 +104,30 @@ a {
   margin: 0 0 0 16em;
 }
 
+/* PUT IN CORRECT FILE LATER dummy progress bar product child page */
+.dummyProgressBar {
+  position: relative;
+}
+.dummyProgressBar::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: rgba(238, 238, 234, 0.4);
+}
+.dummyProgressBar::before {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: 0;
+  height: 3px;
+  width: 30%;
+  background: #EAEAEAEA;
+  z-index: 20;
+}
+
+
 
 

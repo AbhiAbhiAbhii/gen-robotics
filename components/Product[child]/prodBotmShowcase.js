@@ -102,8 +102,8 @@ export default function ProductBottomShowcase(){
                             </div>
                         </div>
                     </div>
-                    <div className="prodBtmSC_B_ContainerB" style={{width:'45%', height:'100%', display:'flex', flexDirection:'column'}}>
-                        <div className="prodBtmSC_B_ImgB" style={{margin:'0 0 3em 0'}}>
+                    <div className="prodBtmSC_B_ContainerB" style={{width:'48%', height:'100%', display:'flex', flexDirection:'column'}}>
+                        <div className="prodBtmSC_B_ImgB" style={{margin:'0 0 0.6em 0'}}>
                             <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/imgA.png" alt="" />
                         </div>
                         {/* <div>
@@ -111,8 +111,8 @@ export default function ProductBottomShowcase(){
                         </div> */}
                         {/* Swiper */}
                         <div className="prodBtmSC_B_Swiper_Container">
-                            <Swiper style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0.2em 0 0 0',
-                                    "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "10%", "--swiper-theme-color": "white"}}
+                            <Swiper style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0 0 0 0',
+                                    "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "8%", "--swiper-theme-color": "white"}}
                                     spaceBetween={40}
                                     speed={1000}
                                     pagination={{ clickable: true }}
@@ -127,7 +127,7 @@ export default function ProductBottomShowcase(){
                                                 <div className='swiperImg_Div'>
                                                     <img src={ data.src } alt='image' />
                                                 </div>
-                                                <div style={{position:'absolute', bottom:'4%', left:'4%'}}>
+                                                <div style={{position:'absolute', bottom:'6%', left:'4%'}}>
                                                     <div><p style={{fontSize:'24px', color:'#FFFF'}}>Name here</p></div>
                                                     <div><p style={{color:'rgba(255,255,255,0.5)'}}>Location or roll can go here</p></div>
                                                 </div>

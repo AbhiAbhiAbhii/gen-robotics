@@ -7,9 +7,9 @@ export default function Header({lenis}) {
 
 
     let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' }]
-    let menuSocials = [{ socials: 'LI' },{ socials: 'FB' },{ socials: 'TW' },{ socials: 'IN' }]
+    let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
-    let ourProducts = [{products: 'Bandicoot II', link:'/products/bandicootII'}, {products: 'Bandicoot I', link:'/'}, {products: 'Willboar', link:'/'},{products:'G-Beetle', link:'/'}]
+    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'}, {products: 'Willboar', link:'/'},{products:'Mobility', link:'/'}]
 
 
     // state for menu
@@ -181,9 +181,9 @@ export default function Header({lenis}) {
                                         {
                                             menuSocials.map((data, i) => {
                                                 return(
-                                                    <div key={i} className="menu_Item" style={{display:'flex', alignItems:'center', marginRight:'2rem'}}>
+                                                    <a href={data.link} target="_blank"  key={i} className="menu_Item" style={{display:'flex', alignItems:'center', marginRight:'2rem'}}>
                                                         <p>{data.socials}</p>
-                                                    </div>
+                                                    </a>
                                                 )
                                             })
                                         }

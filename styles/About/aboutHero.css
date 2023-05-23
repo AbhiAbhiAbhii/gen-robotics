@@ -1,7 +1,7 @@
 .aboutHero {
     padding: 0rem 2rem 0 2rem;
     /* background: rgba(36, 36, 35, 1); */
-    background: #242423;
+    background: #000;
     font-size: 1rem;
     position: relative;
 
@@ -61,15 +61,16 @@
     margin: 3em 0 2em 0;
 }
 .aboutHero_Img {
-    width: 50.56em;
-    height: 42.56em;
+    width: 40.56em;
+    height: 40.56em;
+
 }
-.aboutHero_Img > img {
+/* .aboutHero_Img > img {
     height: 100%;
     width: 100%;
 
     object-fit: contain;
-}
+} */
 /* offset Section */
 .aboutInfo {
     background: #8C7024;

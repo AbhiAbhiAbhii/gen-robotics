@@ -24,11 +24,11 @@ export default function Footer(){
 
     let products = [
         {
-            name: 'Bandicoot II',
-            link:'/'
+            name: 'Bandicoot',
+            link:'/products/bandicootII'
         },
         {
-            name: 'Bandicoot I',
+            name: 'Bandicoot Mini',
             link:'/'
         },
         {
@@ -36,7 +36,7 @@ export default function Footer(){
             link:'/'
         },
         {
-            name: 'G-Beetle',
+            name: 'Mobility',
             link:'/'
         },
     ]
@@ -55,19 +55,19 @@ export default function Footer(){
     let socials = [
         {
             name: 'LI',
-            link: '/'
+            link: 'https://www.linkedin.com/company/genrobotics/'
         },
         {
             name: 'FB',
-            link: '/'
+            link: 'https://www.facebook.com/genrobotics.org/'
         },
         {
             name: 'TW',
-            link: '/'
+            link: 'https://twitter.com/genrobotic/'
         },
         {
             name: 'IN',
-            link: '/'
+            link: 'https://www.instagram.com/genroboticinnovations/?hl=en'
         },        
     ]
 
@@ -134,7 +134,7 @@ export default function Footer(){
                             socials.map((data, i) => {
                                 return(
                                     <div className="footer_rightItem" key={i}>
-                                        <a href={data.link}>{ data.name }</a>
+                                        <a href={data.link} target="_blank">{ data.name }</a>
                                     </div>
                                 )
                             })

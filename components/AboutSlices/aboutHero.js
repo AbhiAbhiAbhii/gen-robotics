@@ -127,7 +127,11 @@ export default function AboutHero(){
                 </div>
                 <div className="aboutHero_ImgContainer">
                     <div className="aboutHero_Img">
-                        <Image height={100} width={100} src={src} alt={alt} />
+                        <video 
+                            autoPlay="true" muted="true" disableRemotePlayback loop="true" 
+                            height="100%" playsInline="true" width="100%" style={{height:'100%', width:'100%', objectFit:'contain'}}>
+                                <source src="/About/AboutHero/about.mp4" disableRemotePlayback type="video/mp4" />
+                        </video>
                     </div>
                 </div>
             </div>
@@ -161,8 +165,12 @@ export default function AboutHero(){
                             </div>
                         </div>
                         <div className="aboutInfo_ContentB">
-                            <div className="aboutInfo_ContentBImg">
-                                <img src={srcC} alt="Image" />
+                            <div className="aboutInfo_ContentBImg" >
+                            <video 
+                                autoPlay="true" muted="true" disableRemotePlayback loop="true" 
+                                height="100%" playsInline="true" width="100%" style={{height:'100%', width:'100%', objectFit:'cover',borderRadius: '0.625em'}}>
+                                <source src="/About/AboutHero/about-2.mp4" disableRemotePlayback type="video/mp4" />
+                            </video>
                             </div>
                         </div>
                     </div>

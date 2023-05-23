@@ -34,7 +34,7 @@ export default function FeaturesScale(){
 
     return(
         <>
-        <section className="featureScale">
+        <section className="featureScale" style={{margin:'8em 0'}}>
             <div className="featureScale_Container">
                 <div className="featureScale_TitleContainer">
                     <div className="featureScale_Title">

@@ -102,7 +102,7 @@ export default function ProductImgSequence(){
                         <div style={{padding:'1em 0'}}>
                             <p style={{fontSize:'3.3em', color:'#FFF'}}>Camera</p>
                         </div>
-                        <div style={{width:'65%'}}>
+                        <div className="dummyProgressBar" style={{width:'62%'}}>
                             <p style={{color:'#FFF', fontSize:'1.1em', lineHeight:'130%'}}>
                             Bandicoot has handles of for the <span className="gold">top area</span> and the <span className="dark-grey">bottom area.</span>
                             </p>
@@ -112,7 +112,7 @@ export default function ProductImgSequence(){
                 {/* <div className="testDivvvvvvvv" style={{width:'60%',}}>
                     <canvas className="prodImg_Seq_Item" id="prodImg_Seq" />
                 </div> */} 
-                <div className="IMAGEDUMMY" style={{width:'60%'}}>
+                <div className="IMAGEDUMMY" style={{width:'50%'}}>
                     <div style={{height:'100%', width:'100%'}}>
                         <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/dummySeq.png" alt="image" />
                     </div>
