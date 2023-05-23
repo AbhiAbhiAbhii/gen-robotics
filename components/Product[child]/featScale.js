@@ -14,21 +14,9 @@ export default function FeaturesScale(){
         },
         {
             index: '02',
-            title: 'More Reachablilty To Every Corner',
-            description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
-            src: '/BluePrint/p-c.svg'
-        },
-        {
-            index: '03',
-            title: 'More Reachablilty To Every Corner',
-            description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
-            src: '/BluePrint/p-c.svg'
-        },
-        {
-            index: '04',
-            title: 'More Reachablilty To Every Corner',
-            description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
-            src: '/BluePrint/p-c.svg'
+            title: 'Precise and Surgical Cleaning',
+            description: "Powerful Precision: Bandicoot's Extendable Robotic Arm for Surgical Cleaning with Picking, Grabbing, and Shovelling Abilities",
+            src: '/Products/precise-cleaning.svg'
         },
     ]
 
@@ -68,7 +56,7 @@ export default function FeaturesScale(){
                                         </div>
                                         <div className="featureScale_Showcase_Item_AssetContainer" style={{justifyContent: i % 2 == 0 ? 'flex-end':'flex-start'}}>
                                             <div className="featureScale_Showcase_Item_AssetBg">
-                                                <Image height={100} width={100} src={data.src} alt="asset" />
+                                                <img src={data.src} alt="asset" />
                                             </div>
                                         </div>
                                     </div>

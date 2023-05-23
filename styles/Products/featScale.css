@@ -60,7 +60,7 @@
     justify-content: flex-end;
 }
 .featureScale_Showcase_Item_AssetBg {
-    height: 30em;
+    height: 40em;
     width: 90%;
     background: #322712;
     border-radius: 0.625em;
@@ -70,8 +70,8 @@
     justify-content: center;
 }
 .featureScale_Showcase_Item_AssetBg > img {
-    height: 90%;
-    width: 90%;
+    height: 70%;
+    width: 70%;
 
     object-fit: contain;
 }

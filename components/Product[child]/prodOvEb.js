@@ -3,11 +3,11 @@
 export default function ProductOverviewEB() {
 
       // Second section
-      let overviewEyebrow = "Mobility designed around"
-      let colorText = "you"
+      let overviewEyebrow = "When Engineering Meets"
+      let colorText = "Compassion!"
   
-      let ovEbDescA = "We’re reinventing personal transportation—making the future safer, cleaner, and more enjoyable for everyone. It's on-demand autonomous ride-hailing."
-      let ovEbDescB = "Let Bandicoot handle the traffic, while you enjoy a smooth, relaxing ride in a spacious cabin designed around you."
+      let ovEbDescA = "Bandicoot is an advanced robotic machine engineered for efficient cleaning of sewer manholes. Its customizable diving drone, nano coating, and flexible arm enable effective"
+      let ovEbDescB = "operation in hazardous environments. It surpasses human capabilities in time and efficiency, while sensor-based feedback ensures precise cleaning."
 
     return(
         <>

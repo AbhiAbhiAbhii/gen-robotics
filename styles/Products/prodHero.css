@@ -1,10 +1,10 @@
 .product {
-    padding: 8rem 2rem 6rem 2rem;
+    padding: 0 2rem 6rem 2rem;
     background: #FFF;
     font-size: 1rem;
 }
 .product_Container {
-    padding: 2em 4em 0 4em;
+    padding: 8em 4em 0 4em;
     background: #242423;
 
     border-radius: 0.625em;

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, useLayoutEffect } from "react"
 export default function Header({lenis}) {
 
 
-    let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' }]
+    let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
     let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
     let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'}, {products: 'Willboar', link:'/'},{products:'Mobility', link:'/'}]

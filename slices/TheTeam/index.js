@@ -50,22 +50,22 @@ export default function TheTeam({slice}){
   const ebTitleRef = useRef();
   const ebSubTitleRef = useRef();
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          ebTitleRef.current.style.transform =  reveal; 
-          setTimeout(() => {
-            ebSubTitleRef.current.style.transform = reveal; 
-          },500)
-        }
-      })
-    })
-  observer.observe(document.querySelector('.Team'));
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach(entry => {
+//         if(entry.isIntersecting) {
+//           ebTitleRef.current.style.transform =  reveal; 
+//           setTimeout(() => {
+//             ebSubTitleRef.current.style.transform = reveal; 
+//           },500)
+//         }
+//       })
+//     })
+//   observer.observe(document.querySelector('.Team'));
 
- // anim paused, building contact page
-  }, [])
+//  anim paused, building contact page
+//   }, [])
 
 
   return(

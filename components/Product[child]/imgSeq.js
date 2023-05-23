@@ -92,19 +92,22 @@ export default function ProductImgSequence(){
 
     // })
 
+    let Bandicoot = "Bandicoot's"
+
     return(
         <>
-        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'95vh', overflow:'hidden'}}>
+        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden'}}>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', height:'100%'}}>
-                <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 2em 2em', height:'100%'}}>
+                <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 4em 2em', height:'100%'}}>
                     <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions</p></div>
                     <div>
                         <div style={{padding:'1em 0'}}>
-                            <p style={{fontSize:'3.3em', color:'#FFF'}}>Camera</p>
+                            <p style={{fontSize:'2em', color:'#FFF'}}>Robotic Legs</p>
                         </div>
-                        <div className="dummyProgressBar" style={{width:'62%'}}>
-                            <p style={{color:'#FFF', fontSize:'1.1em', lineHeight:'130%'}}>
-                            Bandicoot has handles of for the <span className="gold">top area</span> and the <span className="dark-grey">bottom area.</span>
+                        <div className="dummyProgressBar" style={{width:'72%', margin:'0.5  em 0'}}>
+                            <p style={{color:'#FFF', fontSize:'1em', lineHeight:'130%'}}>
+                            Stability for Precision:<span className=""> { Bandicoot } Robotic Legs</span> Ensure Accurate Manhole Cleaning
+                            {/* <span className="dark-grey">bottom area.</span> */}
                             </p>
                         </div>
                     </div>

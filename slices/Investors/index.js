@@ -10,34 +10,16 @@ export default function Investors({slice}){
 
   let dummyData = [
     {
-      src:'/dummyA.jpg',
-      fullName: 'Neo',
-      position: 'CEO, Genrobotics'
+      src:'/About/Investors/sridhar.png',
+      fullName: 'Sridhar Vembu',
+      position: 'Chief Executive Officer',
+      companyName: 'Zoho Corp'
     },
     {
-      src:'/dummyA.jpg',
-      fullName: 'Mr.Anderson',
-      position: 'CEO, Genrobotics'
-    },
-    {
-      src:'/dummyA.jpg',
-      fullName: 'Morpheus',
-      position: 'CEO, Genrobotics'
-    },
-    {
-      src:'/dummyA.jpg',
-      fullName: 'Morpheus',
-      position: 'CEO, Genrobotics'
-    },
-    {
-      src:'/dummyA.jpg',
-      fullName: 'Morpheus',
-      position: 'CEO, Genrobotics'
-    },
-    {
-      src:'/dummyA.jpg',
-      fullName: 'Morpheus',
-      position: 'CEO, Genrobotics'
+      src:'/About/Investors/anand.png',
+      fullName: 'Anand Mahendra',
+      position: 'Chairman',
+      companyName: 'Mahindra Group'
     },
   ]
 
@@ -82,7 +64,7 @@ export default function Investors({slice}){
                       </div>
                       <div className="Investors_Showcase_CompanyName">
                         <p>
-                          Genrobotics
+                          { data.companyName }
                         </p>
                       </div>
                     </div>

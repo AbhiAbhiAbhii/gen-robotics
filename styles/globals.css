@@ -111,7 +111,7 @@ a {
 .dummyProgressBar::after {
   content: '';
   position: absolute;
-  bottom: -30%;
+  bottom: -60%;
   left: 0;
   height: 3px;
   width: 100%;
@@ -120,7 +120,7 @@ a {
 .dummyProgressBar::before {
   content: '';
   position: absolute;
-  bottom: -30%;
+  bottom: -60%;
   left: 0;
   height: 3px;
   width: 30%;
