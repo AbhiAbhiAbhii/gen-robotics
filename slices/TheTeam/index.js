@@ -70,7 +70,7 @@ export default function TheTeam({slice}){
 
   return(
     <>
-    <section className="Team">
+    {/* <section className="Team">
       <div className="Team_Container">
         <div className="Team_Eyebrow">
           <div className="Team_Eyebrow_Title ofh">
@@ -110,7 +110,7 @@ export default function TheTeam({slice}){
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     </>
   )
 }
