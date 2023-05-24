@@ -99,22 +99,56 @@ export default function Header({lenis}) {
 
 
 
+
     useEffect(() => {
-        window.onscroll = () => {
-            if(window.scrollY > 6){
-                navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
-                navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+
+
+        let target = document.getElementById("CONTACT");
+
+        // const observer = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //         if(entry.isIntersecting){
+        //             navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
+        //             navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+        //             navRef.current.style.backdropFilter = 'blur(15.2px)';
+        //             navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';    
+        //         }
+        //         else {
+        //             window.onscroll = () => {
+        //                 if(window.scrollY > 6){
+        //                     navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
+        //                     navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+        //                     navRef.current.style.backdropFilter = 'blur(15.2px)';
+        //                     navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
+        //                 }
+        //                 else{
+        //                     navRef.current.style.backgroundColor = 'transparent';
+        //                     navRef.current.style.backdropFilter = 'none';
+        //                     navRef.current.style.boxShadow = 'none';
+        //                     navRef.current.style.filter = 'none';
+        //                     navRef.current.style.border = 'none';
+        //                 }
+        //             }
+        //         }
+        //     })
+        // })
+        // observer.observe(document.getElementById('CONTACT'));
+
+         window.onscroll = () => {
+             if(window.scrollY > 6){
+                 navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
+                 navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
                 navRef.current.style.backdropFilter = 'blur(15.2px)';
-                navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
-            }
-            else{
-                navRef.current.style.backgroundColor = 'transparent';
-                navRef.current.style.backdropFilter = 'none';
-                navRef.current.style.boxShadow = 'none';
-                navRef.current.style.filter = 'none';
-                navRef.current.style.border = 'none';
-            }
-        }
+                 navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
+             }
+             else{
+                 navRef.current.style.backgroundColor = 'transparent';
+                 navRef.current.style.backdropFilter = 'none';
+                 navRef.current.style.boxShadow = 'none';
+                 navRef.current.style.filter = 'none';
+                 navRef.current.style.border = 'none';
+             }
+         }
 
 
         // const observer = new IntersectionObserver((entries) => {

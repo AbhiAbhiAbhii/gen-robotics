@@ -31,6 +31,11 @@
     height: 33em;
     width: 40em;
 }
+.prodBtmSC_A_BluePrint > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
 .prodBtmSC_A_Info {
     width: 50%;
 }
