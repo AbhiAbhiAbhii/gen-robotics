@@ -18,7 +18,7 @@ export default function CustomInnovation({slice}) {
 
   let dummyData = [
     {
-      src: '/About/Innovation/Accounts/ACCOUNTS.webp'
+      src: '/About/Innovation/Accounts/Accounts.webp'
     },
     {
       src: '/About/Innovation/Business/business.webp'
