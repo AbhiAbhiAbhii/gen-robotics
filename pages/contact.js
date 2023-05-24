@@ -318,7 +318,7 @@ export default function RegistrationForm() {
                                 onFocus={handleFirstNameFocus}
                                 onBlur={handleFirstNameBlur}
                                 className={firstNameFocused ? 'focused' : 'notFocused'}
-                                placeholder='First Name..'
+                                placeholder='First Name.'
                                 />
                                 {errors.firstName && <p className='form_Error'>{errors.firstName}</p>}
                             </div>
@@ -336,7 +336,7 @@ export default function RegistrationForm() {
                                 onFocus={handleLastNameFocus}
                                 onBlur={handleLastNameBlur}
                                 className={lastNameFocused ? 'focused' : 'notFocused'}
-                                placeholder='Last Name..'
+                                placeholder='Last Name.'
                                 />
                                 {errors.lastName && <p className='form_Error'>{errors.lastName}</p>}
                             </div>
@@ -355,7 +355,7 @@ export default function RegistrationForm() {
                             onFocus={handleEmailFocus}
                             onBlur={handleEmailBlur}
                             className={emailFocused ? 'focused' : 'notFocused'}
-                            placeholder='Email..'
+                            placeholder='Email.'
                             />
                             {errors.email && <p className='form_Error'>{errors.email}</p>}
                         </div>
@@ -373,7 +373,7 @@ export default function RegistrationForm() {
                             onFocus={handleMobileFocus}
                             onBlur={handleMobileBlur}
                             className={mobileFocused ? 'focused' : 'notFocused'}
-                            placeholder='Mobile Number..'
+                            placeholder='Mobile Number.'
                             />
                             {errors.mobileNumber && <p className='form_Error'>{errors.mobileNumber}</p>}
                         </div>
@@ -391,6 +391,7 @@ export default function RegistrationForm() {
                             onFocus={handleOrganizationFocus}
                             onBlur={handleOrganizationBlur}
                             className={organizationFocused ? 'focused' : 'notFocused'}
+                            placeholder='Acme inc'
                             />
                         </div>
                         <div className='input form_MobileNumber'>
@@ -475,7 +476,7 @@ export default function RegistrationForm() {
                                             </div>
                                             <div onClick={() => window.location.href = data.link} className='contact_AddressItemTel' style={{margin:'0.55em 0 0 0', cursor:'pointer'}}>
                                                 <p className='AddressItemTel' style={{opacity:'0', transition: `all 1s ${quint}`}}>
-                                                    <span className='brwnHover'>{ data.Dir }</span>
+                                                    <span className='whiteHover'>{ data.Dir }</span>
                                                 </p>
                                             </div>
                                         </div>

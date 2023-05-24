@@ -99,6 +99,13 @@ a {
 .dark-grey {
   color: rgba(102, 102, 102, 1);
 }
+.whiteHover {
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+.whiteHover:hover {
+  color: rgba(255, 255, 255, 1);
+}
 /* SWIPER */
 .swiper-pagination {
   margin: 0 0 0 16em;
