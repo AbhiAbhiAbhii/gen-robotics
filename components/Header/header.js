@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link"
-import { useEffect, useRef, useState, useLayoutEffect } from "react"
+import { useEffect, useRef, useState, } from "react"
 
 export default function Header({lenis}) {
 
@@ -9,7 +9,7 @@ export default function Header({lenis}) {
     let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
     let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
-    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'}, {products: 'Willboar', link:'/'},{products:'Mobility', link:'/'}]
+    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'}, {products: 'Willboar', link:'/'},{products:'Mobility+', link:'/'}]
 
 
     // state for menu
@@ -99,7 +99,7 @@ export default function Header({lenis}) {
 
 
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         window.onscroll = () => {
             if(window.scrollY > 6){
                 navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
@@ -115,6 +115,21 @@ export default function Header({lenis}) {
                 navRef.current.style.border = 'none';
             }
         }
+
+
+        // const observer = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //         if(entry.isIntersecting){
+        //             navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
+        //         navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+        //         navRef.current.style.backdropFilter = 'blur(15.2px)';
+        //         navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
+        //         }
+        //         else return;
+        //     })
+        // })
+        // observer.observe(document.getElementById('CONTACT'));
+
     }, [])
 
     return(

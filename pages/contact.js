@@ -284,7 +284,7 @@ export default function RegistrationForm() {
 
   return (
     <>
-    <section className='contact'>
+    <section className='contact' id='CONTACT'>
         <div className='contact_Container'>
             <div className='contact_TitleContainer'>
                 <div className='contact_Title ofh'>

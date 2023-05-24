@@ -36,7 +36,7 @@ export default function Footer(){
             link:'/'
         },
         {
-            name: 'Mobility',
+            name: 'Mobility+',
             link:'/'
         },
     ]
@@ -162,11 +162,11 @@ export default function Footer(){
                         }
                     </div>
                     <div className="footerBottom_rightItem_Container">
-                        <div onClick={() => window.location.href="https://www.neovibe.in/"} style={{cursor:'pointer'}} className="footerBottom_rightItem">
+                        <a href="https://www.neovibe.in/" target="_blank" style={{cursor:'pointer'}} className="footerBottom_rightItem">
                             <p>
                                 Powered by Neovibe
                             </p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
