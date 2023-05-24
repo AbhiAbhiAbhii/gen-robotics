@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function RegistrationForm() {
 
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -280,10 +281,10 @@ export default function RegistrationForm() {
     AddressObserver.observe(document.querySelector('.contact_BottomContainer'));
 
   }, [])
+
   
 
   return (
-    <>
     <section className='contact' id='CONTACT'>
         <div className='contact_Container'>
             <div className='contact_TitleContainer'>
@@ -486,7 +487,6 @@ export default function RegistrationForm() {
                 </div>
             </div>
     </section>
-    </>
-  );
+  )
 }
 

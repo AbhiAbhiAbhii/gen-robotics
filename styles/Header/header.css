@@ -9,7 +9,7 @@
     padding: 1.2rem 2rem;
 
     width: 90%;
-    z-index: 500;
+    z-index: 1200;
 
     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }

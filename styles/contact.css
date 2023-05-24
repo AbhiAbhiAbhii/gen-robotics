@@ -1,16 +1,17 @@
 .contact {
     padding: 2rem;
-    background: #FAFBFF;
+    background: #424741;
     font-size: 1rem;
 }
 .contact_Container {
-    padding: 8em 4em 3em 12em;
+    padding: 8em 4em 3em 4em;
 }
 .contact_TitleContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+
 
 }
 .contact_Title {
@@ -18,17 +19,22 @@
 }
 .contact_Title > p {
     font-size: 6.1em;
-    color: #000;
+    color: #FFF;
+    text-align: center;
 
     line-height: 110%;
 }
 .contact_SubTitle {
-    width: 40%;
     margin: 3em 0 4em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
 }
 .contact_SubTitle > p {
     font-size: 1.55em;
-    color: #000;
+    color: #FFFF;
+    text-align: center;
 }
 .contact_FormContainer {
     background: #212226;
@@ -38,7 +44,7 @@
     padding: 4em 6em 2em 6em;
 }
 .contact_FormContainer_Pad {
-    padding: 0 8em 0 0;
+    padding: 0 8em 0 12em;
 }
 .contact_Form {
 }
@@ -176,7 +182,7 @@ label {
 .bottomContentAText > p {
     font-size: 7em;
     font-weight: 500;
-    color: #000;
+    color: #FFFFFF;
     line-height: 100%;
 }
 
@@ -203,7 +209,7 @@ label {
 }
 .contact_AddressItemCountry > p {
     font-size: 1.4em;
-    color: #000;
+    color: #ffff;
 }
 .contact_AddressItemAddress {
     padding: 0.5em 0;
@@ -211,7 +217,7 @@ label {
 }
 .contact_AddressItemAddress > p {
     font-size: 1em;
-    color: #000;
+    color: #ffff;
 
     line-height: 130%;
 }
@@ -221,13 +227,13 @@ label {
 }
 .contact_AddressItemMail > p {
     font-size: 0.9em;
-    color: #000;
+    color: #FFFF;
 
     line-height: 130%;
 }
 .contact_AddressItemTel > p {
     font-size: 0.9em;
-    color: #000;
+    color: #FFF;
 }
 
 /* whatsapp */
@@ -245,15 +251,17 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px black solid;
+    background: #FFFF;
+    border: none;
 }
 /* Call us */
 .contactWhatsapp_Container.callUs {
     margin: 1em 0 0 0;
 }
 .contactWhatsapp.callUs {
-    background: #484848;
+    background: none;
     color: #FFFF;
+    border: 1px white solid;
 }
 
 /* HOVER */

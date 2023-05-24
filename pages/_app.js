@@ -66,9 +66,8 @@ export default function App({ Component, pageProps }) {
       requestAnimationFrame(raf)
     }
 
-    console.log("lenis", lenis.virtualScroll)
+    // console.log("lenis", lenis.virtualScroll)
     // 
-
 
 
   }, [])
@@ -76,7 +75,7 @@ export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider linkResolver={linkResolver} internalLinkComponent={(props) => <Link {...props} />}>
       <PrismicPreview repositoryName={repositoryName}>
-      <Layout>
+      <Layout >
         <Component {...pageProps} />
       </Layout>
       </PrismicPreview>

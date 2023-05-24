@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { useEffect, useRef, useState, } from "react"
 
-export default function Header({lenis}) {
+export default function Header({lenis, style, ref}) {
 
 
     let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
@@ -102,73 +102,28 @@ export default function Header({lenis}) {
 
     useEffect(() => {
 
+          window.onscroll = () => {
+              if(window.scrollY > 6){
+                  navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
+                  navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+                 navRef.current.style.backdropFilter = 'blur(15.2px)';
+                  navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
+              }
+              else{
+                  navRef.current.style.backgroundColor = 'transparent';
+                  navRef.current.style.backdropFilter = 'none';
+                  navRef.current.style.boxShadow = 'none';
+                  navRef.current.style.filter = 'none';
+                  navRef.current.style.border = 'none';
+              }
+          }
 
-        let target = document.getElementById("CONTACT");
-
-        // const observer = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //         if(entry.isIntersecting){
-        //             navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
-        //             navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-        //             navRef.current.style.backdropFilter = 'blur(15.2px)';
-        //             navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';    
-        //         }
-        //         else {
-        //             window.onscroll = () => {
-        //                 if(window.scrollY > 6){
-        //                     navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
-        //                     navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-        //                     navRef.current.style.backdropFilter = 'blur(15.2px)';
-        //                     navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
-        //                 }
-        //                 else{
-        //                     navRef.current.style.backgroundColor = 'transparent';
-        //                     navRef.current.style.backdropFilter = 'none';
-        //                     navRef.current.style.boxShadow = 'none';
-        //                     navRef.current.style.filter = 'none';
-        //                     navRef.current.style.border = 'none';
-        //                 }
-        //             }
-        //         }
-        //     })
-        // })
-        // observer.observe(document.getElementById('CONTACT'));
-
-         window.onscroll = () => {
-             if(window.scrollY > 6){
-                 navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
-                 navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-                navRef.current.style.backdropFilter = 'blur(15.2px)';
-                 navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
-             }
-             else{
-                 navRef.current.style.backgroundColor = 'transparent';
-                 navRef.current.style.backdropFilter = 'none';
-                 navRef.current.style.boxShadow = 'none';
-                 navRef.current.style.filter = 'none';
-                 navRef.current.style.border = 'none';
-             }
-         }
-
-
-        // const observer = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //         if(entry.isIntersecting){
-        //             navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
-        //         navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-        //         navRef.current.style.backdropFilter = 'blur(15.2px)';
-        //         navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
-        //         }
-        //         else return;
-        //     })
-        // })
-        // observer.observe(document.getElementById('CONTACT'));
 
     }, [])
 
     return(
         <>
-        <nav ref={navRef} className="nav" style={{zIndex:'1200'}}>
+        <nav ref={navRef} className="nav" style={style}>
             <div className="navContainer">
                 <div onClick={MenuTrigger} className="navMenu_Container">
                     <div className="navCircle">
