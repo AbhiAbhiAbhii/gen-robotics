@@ -138,7 +138,7 @@ export default function CustomInnovation({slice}) {
                         return(
                           <SwiperSlide className='Innovation_Asset' style={{display:'flex', alignItems:'center', justifyContent:'center', transition: `all 1.2s ${quint}`}}  key={i}>
                               <div className='Innovation_SwiperImgContainer'>
-                                <img style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.231em'}} src={data.src} alt='dummy' />
+                                <img style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.231em'}} src={data.src} alt='image' />
                               </div>
                           </SwiperSlide>
                         )
