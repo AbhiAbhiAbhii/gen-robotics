@@ -116,7 +116,7 @@ export default function HeroAbout({ slice }){
               </div>
               <div className="bandicoot_Bandicoot">
                 <p>
-                  Bandicoot II
+                  Bandicoot
                 </p>
               </div>
             </div>
