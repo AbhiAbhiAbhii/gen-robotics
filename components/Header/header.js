@@ -6,10 +6,10 @@ import { useEffect, useRef, useState, } from "react"
 export default function Header({lenis, style, ref}) {
 
 
-    let menuData = [{ content: 'About us', link:'/about' },{ content: 'Robotics & AI', link:'/' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
+    let menuData = [{ content: 'Robotics & AI', link:'/about' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
     let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
-    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'}, {products: 'Willboar', link:'/'},{products:'Mobility+', link:'/'}]
+    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'},{products:'Bandicoot Mobility+', link:'/'}, {products: 'Willboar', link:'/'}]
 
 
     // state for menu
@@ -109,7 +109,7 @@ export default function Header({lenis, style, ref}) {
                  navRef.current.style.backdropFilter = 'blur(15.2px)';
                   navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
               }
-              else{
+              else {
                   navRef.current.style.backgroundColor = 'transparent';
                   navRef.current.style.backdropFilter = 'none';
                   navRef.current.style.boxShadow = 'none';
@@ -132,7 +132,7 @@ export default function Header({lenis, style, ref}) {
                     </div>
                     <div style={{color:'#FFF'}}><p>Menu</p></div>
                 </div>
-                <div onClick={() => window.location.href='/'} style={{height:'2.73rem', width:'12.625rem', cursor:'pointer'}}>
+                <div onClick={() => window.location.href='/'} style={{height:'4rem', width:'14.625rem', cursor:'pointer'}}>
                     <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/logoGenRobo.svg" alt="logo" />
                 </div>
                 <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
@@ -236,7 +236,7 @@ export default function Header({lenis, style, ref}) {
                                                                 {data.products}
                                                             </p>
                                                             <span 
-                                                                style={{display: i != 0 ? 'none':'', marginLeft:'0.5em'}}>
+                                                                style={{display: i == 0 ? '': i == 1 ? '': 'none', marginLeft:'0.5em'}}>
                                                                 <img src="/menu/temp.svg" alt='img' />
                                                             </span>
                                                         </div>

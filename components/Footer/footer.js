@@ -13,7 +13,7 @@ export default function Footer(){
             link: '/'
         },
         {
-            name: 'About us',
+            name: 'Robotics & AI',
             link: '/about'
         },
         {
@@ -32,11 +32,11 @@ export default function Footer(){
             link:'/'
         },
         {
-            name: 'Willboar',
+            name: 'Bandicoot Mobility+',
             link:'/'
         },
         {
-            name: 'Mobility+',
+            name: 'Willboar',
             link:'/'
         },
     ]
@@ -107,7 +107,7 @@ export default function Footer(){
                                     <div className="footer_Item" style={{display:'flex', alignItems:'center'}} key={i}>
                                         <a href={data.link}>{ data.name }</a>
                                         <span 
-                                        style={{display: i != 0 ? 'none':'', marginLeft:'0.5em'}}>
+                                        style={{display: i == 0 ? '': i == 1 ? '': 'none', marginLeft:'0.5em'}}>
                                             <img src="/menu/temp.svg" alt='img' />
                                         </span>
                                     </div>

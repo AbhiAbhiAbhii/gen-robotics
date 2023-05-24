@@ -48,7 +48,7 @@
     width: 100%;
     border-radius: 50%;
 
-    object-fit: cover;
+    object-fit: contain;
 }
 .Investors_Showcase_TextContainer {
     margin: 0 0 0 2em;
@@ -69,5 +69,5 @@
 }
 .Investors_Showcase_CompanyName > p {
     font-size: 1em;
-    color: #8C7024;
+    color: #AF9347;
 }

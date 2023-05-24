@@ -73,7 +73,8 @@
 } */
 /* offset Section */
 .aboutInfo {
-    background: #8C7024;
+    /* background: #8C7024; */
+    background: #AF9347;
     border-radius: 0.625em;
     padding: 0 0 8em 0;
     position: relative;

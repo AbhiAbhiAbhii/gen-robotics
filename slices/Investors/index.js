@@ -21,6 +21,24 @@ export default function Investors({slice}){
       position: 'Chairman',
       companyName: 'Mahindra Group'
     },
+    {
+      src:'/About/Investors/Rajan Anandan Ex Vice President Google.png',
+      fullName: 'Rajan Anandan',
+      position: 'Ex Vice President',
+      companyName: 'Google'
+    },
+    {
+      src:'/About/Investors/Unicorn India Ventures.svg',
+      fullName: 'Unicorn India Ventures',
+      position: 'Trivandrum',
+      companyName: 'INDIA'
+    },
+    {
+      src:'/About/Investors/sea fund.svg',
+      fullName: 'Sea Fund',
+      position: 'Trivandrum',
+      companyName: 'INDIA'
+    },
   ]
 
   let EyebrowTitle = <PrismicRichText field={slice.primary.title} />
@@ -49,17 +67,17 @@ export default function Investors({slice}){
                 return(
                   <div className="Investors_Showcase_Item" key={i}>
                     <div className="Investors_Showcase_Img">
-                      <img src={data.src} alt="img" />
+                      <img src={ data.src } alt="img" />
                     </div>
                     <div className="Investors_Showcase_TextContainer">
                       <div className="Investors_Showcase_Fullname">
                         <p>
-                          {data.fullName}
+                          { data.fullName }
                         </p>
                       </div>
                       <div className="Investors_Showcase_Position">
                         <p>
-                          {data.position}
+                          { data.position }
                         </p>
                       </div>
                       <div className="Investors_Showcase_CompanyName">

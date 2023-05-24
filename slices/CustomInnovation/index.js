@@ -18,10 +18,22 @@ export default function CustomInnovation({slice}) {
 
   let dummyData = [
     {
-      src: '/dummyA.jpg'
+      src: '/About/Innovation/Accounts/ACCOUNTS.jpg'
     },
     {
-      src: '/dummyB.jpg'
+      src: '/About/Innovation/Business/Business.jpg'
+    },
+    {
+      src:'/About/Innovation/HR/HR.jpg'
+    },
+    {
+      src:'/About/Innovation/Marketing/Marketing.jpg'
+    },
+    {
+      src:'/About/Innovation/Production/Production.jpg'
+    },
+    {
+      src:'/About/Innovation/R _ D/R and D.jpg'
     }
   ]
   // data
@@ -124,7 +136,7 @@ export default function CustomInnovation({slice}) {
                     {
                       dummyData.map((data, i) => {
                         return(
-                          <SwiperSlide className='Innovation_Asset' style={{display:'flex', alignItems:'center', justifyContent:'center', transform:'translateY(-120%)', transition: `all 1.2s ${quint}`}}  key={i}>
+                          <SwiperSlide className='Innovation_Asset' style={{display:'flex', alignItems:'center', justifyContent:'center', transition: `all 1.2s ${quint}`}}  key={i}>
                               <div className='Innovation_SwiperImgContainer'>
                                 <img style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.231em'}} src={data.src} alt='dummy' />
                               </div>

@@ -125,20 +125,20 @@ export default function BluePrint({ slice }) {
                             style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', height:'fit-content'}}>
                               <div className='featureCarousel_Swiper_TextContainer' onClick={() => setImage(i)} >
                                 <div className='featureCarousel_Swiper_idDiv' 
-                                  style={{color: image == i ? '#F3F3F3':'#616161', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                                  style={{color: image == i ? '#D1BD55':'#616161', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                                   <p>
                                     { data.blue_print_id[0].text }
                                   </p>
                                 </div>
                                 <div className='featureCarousel_Swiper_DetailContainer'>
                                   <div className='featureCarousel_Swiper_TitleDiv' 
-                                    style={{color: image == i ? '#F3F3F3':'#616161', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                                    style={{color: image == i ? '#D1BD55':'#616161', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                                     <p>
                                       {  data.blue_print_title[0].text }
                                     </p>
                                   </div>
                                   <div className='featureCarousel_Swiper_DescriptionDiv' 
-                                    style={{color: image == i ? '#898989':'#3D3D3D', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                                    style={{color: image == i ? '#D1BD55':'#3D3D3D', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                                     <p>
                                       { data.blue_print_description[0].text }
                                     </p>
