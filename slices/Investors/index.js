@@ -22,7 +22,7 @@ export default function Investors({slice}){
       companyName: 'Mahindra Group'
     },
     {
-      src:'/About/Investors/Rajan Anandan Ex Vice President Google.png',
+      src:'/About/Investors/RajanAnandhan.jpg',
       fullName: 'Rajan Anandan',
       position: 'Ex Vice President',
       companyName: 'Google'
@@ -30,13 +30,13 @@ export default function Investors({slice}){
     {
       src:'/About/Investors/Unicorn India Ventures.svg',
       fullName: 'Unicorn India Ventures',
-      position: 'Trivandrum',
+      position: 'Mumbai',
       companyName: 'INDIA'
     },
     {
       src:'/About/Investors/sea fund.svg',
       fullName: 'Sea Fund',
-      position: 'Trivandrum',
+      position: 'Bangalore',
       companyName: 'INDIA'
     },
   ]
@@ -66,8 +66,9 @@ export default function Investors({slice}){
               dummyData.map((data, i) => {
                 return(
                   <div className="Investors_Showcase_Item" key={i}>
+                    <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:"center"}}>
                     <div className="Investors_Showcase_Img">
-                      <img src={ data.src } alt="img" />
+                      <img src={ data.src } style={{objectFit: i == 3 ? 'contain': i == 4 ? 'contain':'cover'}} alt="img" />
                     </div>
                     <div className="Investors_Showcase_TextContainer">
                       <div className="Investors_Showcase_Fullname">
@@ -85,6 +86,7 @@ export default function Investors({slice}){
                           { data.companyName }
                         </p>
                       </div>
+                    </div>
                     </div>
                   </div>
                 )

@@ -34,6 +34,7 @@
     align-items: flex-start;
 
     margin: 2em 0;
+
 }
 .Investors_Showcase_Img {
     height: 15.625em;
@@ -48,10 +49,10 @@
     width: 100%;
     border-radius: 50%;
 
-    object-fit: contain;
 }
 .Investors_Showcase_TextContainer {
-    margin: 0 0 0 2em;
+    /* margin: 0 0 0 2em; */
+
 }
 .Investors_Showcase_Fullname {
     padding: 1em 0 0.2em 0;
@@ -59,6 +60,7 @@
 .Investors_Showcase_Fullname > p {
     font-size: 1.2em;
     color: #EEEEEA;
+    text-align: center;
 }
 .Investors_Showcase_Position {
     padding: 0.4em 0 0.6em 0;
@@ -66,8 +68,11 @@
 .Investors_Showcase_Position > p {
     font-size: 1em;
     color: #EEEEEA;
+    text-align: center;
+
 }
 .Investors_Showcase_CompanyName > p {
     font-size: 1em;
     color: #AF9347;
+    text-align: center;
 }

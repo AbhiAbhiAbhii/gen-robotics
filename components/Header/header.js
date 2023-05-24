@@ -236,7 +236,7 @@ export default function Header({lenis, style, ref}) {
                                                                 {data.products}
                                                             </p>
                                                             <span 
-                                                                style={{display: i == 0 ? '': i == 1 ? '': 'none', marginLeft:'0.5em'}}>
+                                                                style={{display: i == 1 ? '': i == 2 ? '': 'none', marginLeft:'0.5em'}}>
                                                                 <img src="/menu/temp.svg" alt='img' />
                                                             </span>
                                                         </div>

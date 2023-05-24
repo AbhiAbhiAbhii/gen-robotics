@@ -94,6 +94,6 @@
 .menu_Left_Content {
     padding: 0.5em 0;
 }
-.menu_Item.dataProd:first-child > p {
+/* .menu_Item.dataProd:first-child > p {
     color: #ffff;
-}
+} */
