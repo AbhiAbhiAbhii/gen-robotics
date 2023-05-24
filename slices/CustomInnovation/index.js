@@ -18,22 +18,22 @@ export default function CustomInnovation({slice}) {
 
   let dummyData = [
     {
-      src: '/About/Innovation/Accounts/ACCOUNTS.jpg'
+      src: '/About/Innovation/Accounts/ACCOUNTS.webp'
     },
     {
-      src: '/About/Innovation/Business/Business.jpg'
+      src: '/About/Innovation/Business/business.webp'
     },
     {
-      src:'/About/Innovation/HR/HR.jpg'
+      src:'/About/Innovation/HR/hr.webp'
     },
     {
-      src:'/About/Innovation/Marketing/Marketing.jpg'
+      src:'/About/Innovation/Marketing/marketing.webp'
     },
     {
-      src:'/About/Innovation/Production/Production.jpg'
+      src:'/About/Innovation/Production/production.webp'
     },
     {
-      src:'/About/Innovation/R _ D/R and D.jpg'
+      src:'/About/Innovation/R _ D/r&d.webp'
     }
   ]
   // data
