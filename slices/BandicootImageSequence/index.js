@@ -7,6 +7,7 @@
 
 import ImagePlay from "../../components/ImgPlay/imgPlay";
 
+
 // /**
 //  * @typedef {import("@prismicio/client").Content.BandicootImageSequenceSlice} BandicootImageSequenceSlice
 //  * @typedef {import("@prismicio/react").SliceComponentProps<BandicootImageSequenceSlice>} BandicootImageSequenceProps
