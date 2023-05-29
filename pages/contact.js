@@ -436,7 +436,7 @@ export default function RegistrationForm() {
                         <div className='contactWhatsapp_Container'>
                             <div className='contactWhatsapp'>
                               <a href="https://api.whatsapp.com/send?phone=2346789012&text=Send20%a20%quote">
-                              <p style={{display:'flex', alignItems:'center'}}> <span style={{marginRight:'0.5em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span>Whatsapp Us</p>
+                              <p style={{display:'flex', alignItems:'center'}}><span style={{marginRight:'0.5em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span>Whatsapp Us</p>
                               </a>
                             </div>
                         </div>

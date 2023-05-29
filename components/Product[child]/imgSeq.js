@@ -92,11 +92,15 @@ export default function ProductImgSequence(){
 
     // })
 
+    // useEffect(() => {
+    //     document.querySelector('.prodVideo').playbackRate = '2.0'
+    // })
+
     let Bandicoot = "Bandicoot's"
 
     return(
         <>
-        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden'}}>
+        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden', background:'#000'}}>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', height:'100%'}}>
                 <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 4em 2em', height:'100%'}}>
                     <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions</p></div>
@@ -117,8 +121,12 @@ export default function ProductImgSequence(){
                 </div> */} 
                 <div className="IMAGEDUMMY" style={{width:'50%'}}>
                     <div style={{height:'100%', width:'100%'}}>
-                        <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/dummySeq.png" alt="image" />
+                        {/* <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/dummySeq.png" alt="image" /> */}
+                        <video className="prodVideo" id='video' autoPlay="true" muted="true" disableRemotePlayback loop="true" playsInline="true"  style={{height:'85%', width:'85%', objectFit:'contain'}}>
+                            <source src="/Products/prod-bandicoot-vid.mp4" disableRemotePlayback type="video/mp4" />
+                        </video>
                     </div>
+                    {/* video-insert-here */}
                 </div>
             </div>
         </section>
