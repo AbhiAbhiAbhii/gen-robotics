@@ -22,6 +22,9 @@ export default function ProductShowcase({ slice }){
   let title = `${ slice.primary.title[0].text }`;
   let description = `${ slice.primary.description[0].text }`;
 
+  let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
+  let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
+
   // refs
   const titleRef = useRef();
   const descRef = useRef();
@@ -53,10 +56,14 @@ export default function ProductShowcase({ slice }){
 
   }, [])
 
+  const [swipe, setSwipe] = useState(0)
+
+ 
+
   return(
     <section className='prodShowcase' id='globalObserver'>
       <div className='prodShowcase_Container'>
-        <div className='prodShowcase_Header_Container' id='range'>
+        <div className='prodShowcase_Header_Container' id='range' style={{position:'relative'}}>
           <div className='prodShowcase_Header_Title' style={{overflow:'hidden'}}>
             <p ref={titleRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
               { title }
@@ -67,16 +74,39 @@ export default function ProductShowcase({ slice }){
                 { description }
               </p>
           </div>
+          {/* PROGRESS BAR */}
+          <div className='prod_Progress_Bar_Outer'>
+            <div className='prod_Progress_Bar_Container'>
+              <div style={{position:'absolute', left:'0', top:'0', borderRadius:'20em', height:'100%', 
+              width: swipe === 0 ? '10%': swipe === 1 ? '50%': swipe === 2 ? '100%':null , 
+              background:'#242423', transition:`all 1s ${quart}`}}>
+              </div>
+            </div>
+          </div>
+          {/*  */}
         </div>
-        <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{opacity:'0', transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-          <Swiper
+        <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{opacity:'0', transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)', position:'relative'}}>
+          {/* Drag Component */}
+          <div className='DragContainer'>
+            <div className='DragArrow'> 
+              <img src='/DragArrow.svg' alt='arrow' />
+            </div>
+            <div className='DragText'>
+              <p>DRAG</p>
+            </div>
+            <div className='DragArrow'> 
+              <img src='/DragArrowReverse.svg' alt='arrow' />
+            </div>
+          </div>
+          <Swiper 
               slidesPerView={2.3}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}>
+              onSlideChange={(i) => setSwipe(i.activeIndex)}
+              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChangeTransitionStart={(i) => console.log("hii")}>
               {
               slice.items.map((data, i) => {
                   return(
-                  <SwiperSlide className='prodShowcase_SwiperSlide'  onClick={() => setSolution(i)}
+                  <SwiperSlide className='prodShowcase_SwiperSlide'   onClick={() => setSolution(i)}
                   style={{width:'fit-content',cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px'}} 
                   key={i}>
                       <div className='prodShowcase_AssetDiv' style={{background: i == solution ? '#B6B6B6':'#F8F8F8' , transition:'all 0.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>

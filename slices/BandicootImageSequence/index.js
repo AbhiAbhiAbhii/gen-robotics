@@ -5,6 +5,7 @@
 // gsap.registerPlugin(ScrollTrigger)
 // import { render } from "react-dom";
 
+
 import ImagePlay from "../../components/ImgPlay/ImgPlay";
 
 
