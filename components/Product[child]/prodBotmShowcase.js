@@ -11,16 +11,16 @@ export default function ProductBottomShowcase(){
 
     let info = [
         {
-            item: "IP68 Resistant"
+            item: "CFRP"
         },
         {
             item: "IP68 Resistant"
         },
         {
-            item: "IP68 Resistant"
+            item: "Machine Vision"
         },
         {
-            item: "IP68 Resistant"
+            item: "Pnemuatics"
         },
     ]
 
