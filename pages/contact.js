@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from 'react';
 //gsap
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Header from '../components/Header/header';
+import Footer from '../components/Footer/footer';
 gsap.registerPlugin(ScrollTrigger)
 
 export default function RegistrationForm() {
@@ -285,7 +287,9 @@ export default function RegistrationForm() {
   
 
   return (
-    <section className='contact' id='CONTACT'>
+    <>
+    <Header />
+      <section className='contact' id='CONTACT'>
         <div className='contact_Container'>
             <div className='contact_TitleContainer'>
                 <div className='contact_Title ofh'>
@@ -488,6 +492,8 @@ export default function RegistrationForm() {
                 </div>
             </div>
     </section>
+    <Footer />
+    </>
   )
 }
 

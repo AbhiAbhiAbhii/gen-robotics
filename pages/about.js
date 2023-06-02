@@ -3,17 +3,21 @@ import { createClient } from '../prismicio'
 import { components } from '../slices'
 import AboutHero from '../components/AboutSlices/aboutHero'
 import Innovate from '../components/AboutSlices/innovate'
+import Header from '../components/Header/header'
+import Footer from '../components/Footer/footer'
 
  
 const Home = ({ page, navigation, settings }) => {
 
   return(
     <>
-    <div>
-        <AboutHero />
-        <SliceZone  slices={page.data.slices} components={components} />
-        <Innovate />
-    </div>
+    <Header />
+      <div>
+          <AboutHero />
+          <SliceZone  slices={page.data.slices} components={components} />
+          <Innovate />
+      </div>
+    <Footer />
     </>
   )
 }

@@ -1,6 +1,11 @@
 import { SliceZone } from '@prismicio/react'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
+import { useEffect, useRef, useState } from 'react'
+import Loader from '../components/Loader'
+import Head from 'next/head'
+import Header from '../components/Header/header'
+import Footer from '../components/Footer/footer'
 // import ImagePlay from '../components/ImgPlay/imgPlay'
 
 // const imageLinks = [
@@ -131,12 +136,63 @@ import { components } from '../slices'
 const Home = ({ page, navigation, settings }) => {
 
 
+  const loaderLeftRef = useRef();
+  const loaderRightRef = useRef();
+  const loaderCurtainRef = useRef();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      
+      setTimeout(() => {
+          setLoading(false)
+        }, 6500)
+
+        setTimeout(() => {
+          loaderCurtainRef.current.style.opacity = "0";
+        }, 6600)
+        setTimeout(() => {
+          loaderCurtainRef.current.style.display = "none";
+        }, 7100)
+         setTimeout(() => {
+           loaderLeftRef.current.style.width = "0";
+           loaderRightRef.current.style.width = "0";
+         }, 6700)
+         setTimeout(() => {
+            loaderLeftRef.current.style.display = "none";
+            loaderRightRef.current.style.display = "none";
+         }, 8000)
+
+  }, [])
+
+  // Transition
+  let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
+  let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
 
 
   return(
     <>
-    <SliceZone  slices={page.data.slices} components={components} />
+    <Head />
+    {
+      loading ? (<Loader /> ):
+      (
+        <>
+       
+        <Header />
+        <div style={{position:'relative'}}>
+          {/* LOADER REVEAL OVERLAY */}
+          <div ref={loaderLeftRef} className='loaderLeft_Reveal' style={{transition:`all 1s ${quart}`}}></div>
+          <div ref={loaderRightRef} className='loaderRight_Reveal' style={{transition:`all 1s ${quart}`}}></div>
+          <div ref={loaderCurtainRef} style={{height:'100vh', width:'100vw', background:'#FFF', zIndex:'250', position:'absolute', top:'0', left:'0'}} />
+          {/*  */}
+          <SliceZone  slices={page.data.slices} components={components} />
+        </div>
+        <Footer />
     {/* <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} texts={texts} /> */}
+    </>
+      )
+    }
+        
     </>
   )
 }

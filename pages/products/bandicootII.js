@@ -1,3 +1,5 @@
+import Footer from "../../components/Footer/footer"
+import Header from "../../components/Header/header"
 import FeaturesScale from "../../components/Product[child]/featScale"
 import ProductImgSequence from "../../components/Product[child]/imgSeq"
 import ProductBottomShowcase from "../../components/Product[child]/prodBotmShowcase"
@@ -9,6 +11,7 @@ export default function BandicootII(){
 
     return(
         <>
+        <Header />
         <ProductHero />
         <ProductOverviewEB />
         {/* image-sequence */}
@@ -16,6 +19,7 @@ export default function BandicootII(){
         {/* ------------------- */}
         <FeaturesScale />
         <ProductBottomShowcase />
+        <Footer />
         </>
     )
 }

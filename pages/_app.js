@@ -75,9 +75,9 @@ export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider linkResolver={linkResolver} internalLinkComponent={(props) => <Link {...props} />}>
       <PrismicPreview repositoryName={repositoryName}>
-      <Layout >
+      {/* <Layout > */}
         <Component {...pageProps} />
-      </Layout>
+      {/* </Layout> */}
       </PrismicPreview>
     </PrismicProvider>
   )
