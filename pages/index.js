@@ -157,7 +157,7 @@ const Home = ({ page, navigation, settings }) => {
          setTimeout(() => {
            loaderLeftRef.current.style.width = "0";
            loaderRightRef.current.style.width = "0";
-         }, 6700)
+         }, 7000)
          setTimeout(() => {
             loaderLeftRef.current.style.display = "none";
             loaderRightRef.current.style.display = "none";
