@@ -42,7 +42,7 @@ export default function Header({lenis, style, ref}) {
         // Menu title anim via toggling class
         
         // menu middle line animation
-        let menuLine = document.querySelector(".menu_Left");
+        let menuLine = document.querySelector(".menu_Line");
 
         // if statment
 
@@ -57,7 +57,7 @@ export default function Header({lenis, style, ref}) {
 
             //menu line anim
             setTimeout(() => {
-                menuLine.classList.toggle("menu_Line_anim");
+                menuLine.style.height = "100%"
             }, 500)
             //menu text anim
              setTimeout(() => {
@@ -82,6 +82,8 @@ export default function Header({lenis, style, ref}) {
                 menuTitleDiv.style.opacity = '0';
             })
 
+            // menu line anim height 0
+            menuLine.style.height = "0"
             
 
             // delaying menu top until every animation occurs
@@ -151,7 +153,10 @@ export default function Header({lenis, style, ref}) {
                     {/* menu content */}
                     <div className="menu_Content" style={{ height:'100%', padding:'2em 0em 2em 3em', display:'flex', justifyContent:'space-between'}}>
                         {/* menuLeft */}
-                        <div className="menu_Left"> 
+                        <div className="menu_Left" style={{position:'relative'}}> 
+                        {/* middle line */}
+                        <div className="menu_Line" />
+                        {/* ---- */}
                             {/* company */}
                             <div className="menu_Left_Container">
                                 <div className="menu_title">
