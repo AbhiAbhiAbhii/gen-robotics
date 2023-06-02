@@ -83,13 +83,15 @@ export default function Header({lenis, style, ref}) {
             })
 
             // menu line anim height 0
-            menuLine.style.height = "0"
+            setTimeout(() => {
+                menuLine.style.height = "0"
+            }, 1000)
             
 
             // delaying menu top until every animation occurs
             setTimeout(() => {
                 menuRef.current.style.top = '-100vh';
-            }, 1000)
+            }, 1500)
         }
 
 
