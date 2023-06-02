@@ -59,7 +59,7 @@ export default function ProductBottomShowcase(){
         <section className="prodBtmSC">
             <div className="prodBtmSC_container">
                 <div className="prodBtmSC_Title">
-                    <p>Another title can go here, that is explaining the build items</p>
+                    <p>Engineered to Outperform, Setting a New Standard</p>
                 </div>
                 <div className="prodBtmSC_A">
                     <div className="prodBtmSC_A_BluePrint_Container">
@@ -97,7 +97,7 @@ export default function ProductBottomShowcase(){
                             </div>
                             <div className="prodBtmSC_B_TextContainer_Title">
                                 <p>
-                                    <span className="textA">Now in</span><br /><span className="textB">18 states.</span>
+                                    <span className="textA">Now in</span><br /><span className="textB">19 states.</span>
                                 </p>
                             </div>
                         </div>
@@ -147,11 +147,11 @@ export default function ProductBottomShowcase(){
                             <div>
                                 <p style={{fontSize:'2.5em'}}>Supported By</p>
                             </div>
-                            <div style={{width:'85%', padding:'1em 0'}}>
+                            {/* <div style={{width:'85%', padding:'1em 0'}}>
                                 <p style={{fontSize:'1.1em'}}>
                                     Commited to deliver our solutions to work with extreme and unsafe environments universally 
                                 </p>
-                            </div>
+                            </div> */}
                         </div>
                         {/* logos */}
                         <div style={{width:'60%', position:'relative', transform:'translateX(10%)'}}>
@@ -173,7 +173,8 @@ export default function ProductBottomShowcase(){
                 <div style={{display:'flex', flexDirection:'column', padding:'4rem 0', alignItems:'center', justifyContent:'center'}}>
                     <div >
                         <p style={{textAlign:'center', color:'#322712', fontSize:'4.6em'}}>
-                            Ready to <br /> Innovate with us?
+                            {/* Ready to <br /> Innovate with us? */}
+                            Bring<br /> Bandicoot to your City!
                         </p>
                     </div>
                     <div style={{display:'flex', alignItems:'center', margin:'2em 0 0 0'}}>

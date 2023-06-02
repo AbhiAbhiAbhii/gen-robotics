@@ -21,7 +21,7 @@ export default function OurSupport({ slice }){
 
   // refs
   const titleRef = useRef();
-  const descriptRef = useRef();
+//   const descriptRef = useRef();
 
   const dateRef = useRef();
   const newsTitleRef = useRef();
@@ -39,7 +39,7 @@ export default function OurSupport({ slice }){
 
               let logo = document.querySelector(".support_LogoShowcase_Container"); // instance of the logo-showcase
               setTimeout(() => {
-                descriptRef.current.style.transform = 'translateY(0%)'; // anim for description
+                // descriptRef.current.style.transform = 'translateY(0%)'; // anim for description
 
                 logo.style.opacity = '1'; // anim for logo-showcase
               },500)
@@ -82,12 +82,12 @@ export default function OurSupport({ slice }){
                             { tempTitle}
                         </p>
                     </div>
-                    <div className='support_Description_Div'
+                    {/* <div className='support_Description_Div'
                         style={{overflow:'hidden'}}>
                         <p ref={descriptRef} style={{transform:'translateY(110%)', transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                             { description }
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* logo showcase */}

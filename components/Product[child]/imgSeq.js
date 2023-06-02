@@ -98,12 +98,17 @@ export default function ProductImgSequence(){
 
     let Bandicoot = "Bandicoot's"
 
+    let title = "Experience effortless cleaning with the Bandicoot Robot, combining a perfect blend of design and functionality for seamless operation, it revolutionizes the cleaning process, ensuring a hassle-free and highly efficient solution."
+
     return(
         <>
         <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden', background:'#000'}}>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', height:'100%'}}>
                 <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 4em 2em', height:'100%'}}>
-                    <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions</p></div>
+                    <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>
+                        {/* Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions */}
+                        { title }
+                        </p></div>
                     <div>
                         <div style={{padding:'1em 0'}}>
                             <p style={{fontSize:'2em', color:'#FFF'}}>Robotic Legs</p>

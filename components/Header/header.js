@@ -29,16 +29,6 @@ export default function Header({lenis, style, ref}) {
         lineOne.classList.toggle("rotateLineOne"); // toggle LineOne
         lineTwo.classList.toggle("rotateLineTwo"); // toggle LineTwo
 
-
-        // if(displayMenu) {
-        //     menuRef.current.style.top = '0' check this later
-        // }
-        // else {
-        //     setTimeout(() => {
-        //         menuRef.current.style.top = '-100vh'
-        //     },2000)
-        // }
-
         // Menu title anim via toggling class
         
         // menu middle line animation
@@ -108,20 +98,19 @@ export default function Header({lenis, style, ref}) {
 
           window.onscroll = () => {
               if(window.scrollY > 6){
-                  navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
-                  navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
-                 navRef.current.style.backdropFilter = 'blur(15.2px)';
-                  navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
+                navRef.current.style.backgroundColor = 'rgba(70, 70, 70, 0.8)';
+                navRef.current.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+                navRef.current.style.backdropFilter = 'blur(15.2px)';
+                navRef.current.style.WebkitBackdropFilter = 'blur(15.2px)';
               }
               else {
-                  navRef.current.style.backgroundColor = 'transparent';
-                  navRef.current.style.backdropFilter = 'none';
-                  navRef.current.style.boxShadow = 'none';
-                  navRef.current.style.filter = 'none';
-                  navRef.current.style.border = 'none';
+                navRef.current.style.backgroundColor = 'transparent';
+                navRef.current.style.backdropFilter = 'none';
+                navRef.current.style.boxShadow = 'none';
+                navRef.current.style.filter = 'none';
+                navRef.current.style.border = 'none';
               }
           }
-
 
     }, [])
 

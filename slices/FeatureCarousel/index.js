@@ -121,6 +121,7 @@ export default function BluePrint({ slice }) {
                       slice.items.map((data, i) => {
                         return(
                           <SwiperSlide 
+                          
                             key={i} 
                             style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', height:'fit-content'}}>
                               <div className='featureCarousel_Swiper_TextContainer' onClick={() => setImage(i)} >

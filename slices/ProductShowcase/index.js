@@ -79,7 +79,7 @@ export default function ProductShowcase({ slice }){
             <div className='prod_Progress_Bar_Container'>
               <div style={{position:'absolute', left:'0', top:'0', borderRadius:'20em', height:'100%', 
               width: swipe === 0 ? '10%': swipe === 1 ? '50%': swipe === 2 ? '100%':null , 
-              background:'#242423', transition:`all 1s ${quart}`}}>
+              background:'#AF9347', transition:`all 1s ${quart}`}}>
               </div>
             </div>
           </div>

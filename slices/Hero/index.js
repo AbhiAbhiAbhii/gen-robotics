@@ -9,7 +9,8 @@ export default function Hero({ slice }){
 
   //data - prismic
 
-  let title = `${ slice.primary.title[0].text }`;   
+  // let title = `${ slice.primary.title[0].text }`;  
+  let title = "Let's change manholes to roboholes" 
 
   // let src = `${ slice.primary.hero_video.embed_url }`
 
@@ -20,8 +21,8 @@ export default function Hero({ slice }){
   const arrowRef = useRef();
   const descriptRef = useRef();
 
-  const miniVidRef = useRef();
-  const playBtnRef = useRef();
+  // const miniVidRef = useRef();
+  // const playBtnRef = useRef();
 
 
   useEffect(() => {
@@ -44,14 +45,14 @@ export default function Hero({ slice }){
           }, 1000)
 
           // Mini Video Grow
-          setTimeout(() => {
-            miniVidRef.current.style.transform = 'translateX(0%)';
-          }, 2000)
+          // setTimeout(() => {
+          //   miniVidRef.current.style.transform = 'translateX(0%)';
+          // }, 2000)
           // play btn anim bottom to top
-          setTimeout(() => {
-            playBtnRef.current.style.top = '50%';
-            playBtnRef.current.style.opacity = '1';
-          }, 3000)
+          // setTimeout(() => {
+          //   playBtnRef.current.style.top = '50%';
+          //   playBtnRef.current.style.opacity = '1';
+          // }, 3000)
 
         }
       })
@@ -89,9 +90,13 @@ export default function Hero({ slice }){
             </div>
           </div>
           <div className='heroMiniVideoContainer' style={{overflow:'hidden'}}>
-            <div className='miniVideoDiv' ref={miniVidRef} style={{transform:'translateX(-100%)', transition:'all 1.6s cubic-bezier(0.76, 0.00, 0.24, 1.00)'}}>
+            <div className='miniVideoDiv' 
+            // ref={miniVidRef} 
+            style={{transform:'translateX(-100%)', transition:'all 1.6s cubic-bezier(0.76, 0.00, 0.24, 1.00)', opacity:'0'}}>
               <img style={{height:'100%', width:'100%', objectFit:'cover'}} src='/tinyImg.svg' alt='img' />
-              <div className='playBtn' ref={playBtnRef} style={{top:'120%', opacity:'0', transition:'all 1s cubic-bezier(0.76, 0.00, 0.24, 1.00)'}}>
+              <div className='playBtn' 
+              // ref={playBtnRef} 
+              style={{top:'120%', opacity:'0', transition:'all 1s cubic-bezier(0.76, 0.00, 0.24, 1.00)'}}>
                   <img 
                   style={{height:'100%', width:'100%', objectFit:'contain'}} 
                   src='/playBtn.svg' alt='playBtn' />

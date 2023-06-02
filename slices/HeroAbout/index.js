@@ -30,6 +30,9 @@ export default function HeroAbout({ slice }){
   const statBRef = useRef();
   const statDescBRef = useRef();
 
+  const statCRef = useRef();
+  const statDescCRef = useRef();
+
   useEffect(() => {
 
     let target = document.getElementById("observingB");
@@ -55,6 +58,12 @@ export default function HeroAbout({ slice }){
                  setTimeout(() => {
                   statDescBRef.current.style.transform = 'translateY(0)';
                 }, 2200)
+                setTimeout(() => {
+                  statCRef.current.style.transform = 'translateY(0)';
+                }, 2500)
+                 setTimeout(() => {
+                  statDescCRef.current.style.transform = 'translateY(0)';
+                }, 2800)
               }
           })
         })
@@ -106,6 +115,20 @@ export default function HeroAbout({ slice }){
                     </p>
                   </div>
               </div>
+              {/* NEW CONTENT- CONNECT WITH PRISMIC LATER */}
+              <div className='heroAbout_StatsContainer'>
+                  <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
+                    <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                      300+
+                    </p>
+                  </div>
+                  <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
+                    <p ref={statDescCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                      Robots
+                    </p>
+                  </div>
+              </div>
+              {/*  */}
             </div>
             {/* IMG-SEQ TITLE */}
             <div className="bandicoot_TitleContainer" style={{zIndex:'2000'}}>

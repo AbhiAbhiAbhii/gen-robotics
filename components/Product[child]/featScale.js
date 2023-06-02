@@ -27,7 +27,8 @@ export default function FeaturesScale(){
                 <div className="featureScale_TitleContainer">
                     <div className="featureScale_Title">
                         <p>
-                            Introducing, <br />Features that scale.
+                            {/* Introducing, <br />Features that scale. */}
+                            Unmatched Features<br /> for Unbeatable Efficiency:<br /> Discover Bandicoot
                         </p>
                     </div>
                 </div>
