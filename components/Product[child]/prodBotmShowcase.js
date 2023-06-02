@@ -20,7 +20,7 @@ export default function ProductBottomShowcase(){
             item: "Machine Vision"
         },
         {
-            item: "Pnemuaticss"
+            item: "Pnemuatics"
         },
     ]
 
