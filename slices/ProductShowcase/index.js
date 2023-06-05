@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { useSwiper } from 'swiper/react';
-import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import {Mousewheel, FreeMode, Scrollbar } from 'swiper';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
@@ -16,6 +16,8 @@ export default function ProductShowcase({ slice }){
 
 
   const [solution, setSolution] = useState(0);
+  const [swipe, setSwipe] = useState(0)
+
 
   // data - prismic 
   
@@ -56,7 +58,6 @@ export default function ProductShowcase({ slice }){
 
   }, [])
 
-  const [swipe, setSwipe] = useState(0)
 
  
 
@@ -87,7 +88,7 @@ export default function ProductShowcase({ slice }){
         </div>
         <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{opacity:'0', transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)', position:'relative'}}>
           {/* Drag Component */}
-          <div className='DragContainer'>
+          {/* <div className='DragContainer'>
             <div className='DragArrow'> 
               <img src='/DragArrow.svg' alt='arrow' />
             </div>
@@ -97,9 +98,13 @@ export default function ProductShowcase({ slice }){
             <div className='DragArrow'> 
               <img src='/DragArrowReverse.svg' alt='arrow' />
             </div>
-          </div>
+          </div> */}
           <Swiper 
               slidesPerView={2.3}
+              // modules={[Mousewheel, FreeMode, Scrollbar]}
+              // freeMode={true}
+              // direction='horizontal'
+              // mousewheel={true}
               onSlideChange={(i) => setSwipe(i.activeIndex)}
               onSwiper={(swiper) => console.log(swiper)}
               onSlideChangeTransitionStart={(i) => console.log("hii")}>

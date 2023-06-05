@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { useSwiper } from 'swiper/react';
-import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Autoplay,Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
@@ -16,6 +16,10 @@ export default function BluePrint({ slice }) {
 
 
   const [image, setImage] = useState(0);
+
+  // Transition
+  let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
+  let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
 
   // data - prismic 
    let title = `${slice.primary.title[0].text}`;
@@ -73,7 +77,30 @@ export default function BluePrint({ slice }) {
 
   },[])
 
+  // const [slideCount, setSlideCount] = useState(0);
 
+  const slideRef = useRef();
+
+  // const test = () => {
+
+  //   let slide = document.querySelectorAll('.singleSlide')
+
+  //   let slideA = slide[0];
+  //   let slideB = slide[1];
+  //   let slideC = slide[2];
+
+  //   console.log("slideA", slideA)
+
+  //   slideRef.current.swiper.slideTo(1, 1000, false);
+  //   slideRef.current.swiper.slideTo(0, 1000, false)
+  //   slideA.swiper.slideTo(0,1000, false )
+  //   console.log("slideRef", slideRef.current.swiper.slideTo(1, 1000, false))
+
+  // }
+
+  // const testing = () => {
+  //   slideRef.current.swiperSlideIndex = `${slideRef.current.swiperSlideIndex} + 1`
+  // }
 
   return(
     <section className='bluePrint' id='safe'>
@@ -107,23 +134,35 @@ export default function BluePrint({ slice }) {
                 <div className='featureCarousel_SliderContainer'>
                   <Swiper style={{height:'100%'}}
                     direction={'vertical'}
+                    ref={slideRef}
                       // autoplay={{
                       //   delay: 2000,
                       //   disableOnInteraction: false,
                       // }}
                     //  loop='true'
-                    modules={[Autoplay]}
+                    modules={[Autoplay, Mousewheel ]}
+                    // mousewheel={true}
                     slidesPerView={2.4}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)} 
+                    onSlideChange={(i) => console.log('slide change',i.activeIndex)}
+                    onSwiper={(i) => console.log(i, "hiiii")} 
                     > 
                     {
                       slice.items.map((data, i) => {
                         return(
                           <SwiperSlide 
-                          
+                          // onClick={() =>setSlideCount(i,console.log("SET SLIDE COUNT", i) )} 
+                          className='singleSlide'
+                          onClick={() => {
+                            if(i === 0)  {
+                              slideRef.current.swiper.slideTo(0, 1000, `${quint}`)
+                            } else if(i === 1) {
+                              slideRef.current.swiper.slideTo(0, 1000, `${quint}`)
+                            } else if (i === 2) {
+                              slideRef.current.swiper.slideTo(1, 1000, `${quint}`)
+                            }
+                          }}
                             key={i} 
-                            style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', height:'fit-content'}}>
+                            style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', height:'fit-content', transition:'all 0.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                               <div className='featureCarousel_Swiper_TextContainer' onClick={() => setImage(i)} >
                                 <div className='featureCarousel_Swiper_idDiv' 
                                   style={{color: image == i ? '#D1BD55':'#616161', opacity:'0', transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)'}}>

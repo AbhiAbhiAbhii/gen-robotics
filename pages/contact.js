@@ -416,6 +416,13 @@ export default function RegistrationForm() {
                             cols={40} // Specify the number of columns for the textarea
                             />
                         </div>
+                        {/* <div>
+                          <a href='/DELLATER/github-AbhiAbhiAbhii-receipt-2023-05-23.pdf'>DOWNLOAD</a>
+                        </div>
+                        <div>
+                          <input type='file' id='file' />
+                          <label>UPLOAD FILE</label>
+                        </div> */}
                         <div className='form_BtnContainer'>
                             <button className='form_Btn' type="submit"><p>Submit Enquiry</p></button> {/* Submit Enquiry */}
                             <div className='form_Terms'>
