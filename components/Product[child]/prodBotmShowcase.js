@@ -12,16 +12,20 @@ export default function ProductBottomShowcase(){
 
     let info = [
         {
-            item: "CFRP"
+            item: "CFRP",
+            src:'/Products/cfrp.svg'
         },
         {
-            item: "IP68 Resistant"
+            item: "IP68 Resistant",
+            src:'/Products/ip68.svg'
         },
         {
-            item: "Machine Vision"
+            item: "Machine Vision",
+            src:'/Products/machinevision.svg'
         },
         {
-            item: "Pnemuatics"
+            item: "Pnemuatics",
+            src:'/Products/pneumatics.svg'
         },
     ]
 
@@ -65,7 +69,10 @@ export default function ProductBottomShowcase(){
                 <div className="prodBtmSC_A">
                     <div className="prodBtmSC_A_BluePrint_Container">
                         <div className="prodBtmSC_A_BluePrint">
-                            <img src="/Products/blueprint.svg" alt="image" />
+                            <img src="/Products/Bandicoot 1.svg" alt="image" />
+                        </div>
+                        <div className="prodBtmSC_A_BluePrint">
+                            <img src="/Products/Bandicoot 2.svg" alt="image" />
                         </div>
                     </div>
                     <div className="prodBtmSC_A_Info">
@@ -74,7 +81,9 @@ export default function ProductBottomShowcase(){
                                 info.map((data, i) => {
                                     return(
                                         <div className="prodBtmSC_A_Info_Item" key={i}>
-                                            <div style={{height:'4em', width:'4em', borderRadius:'50%', background:'#000', margin:'0 0 1em 0'}}></div>
+                                            <div style={{height:'4em', width:'4em', borderRadius:'50%', background:'#FFF', margin:'0 0 1em 0', display:'flex', alignItems:'center', justifyContent:'center'}}>
+                                                <img style={{height:'100%', width:'100%', objectFit:'contain'}} src={data.src} alt="logo" />
+                                            </div>
                                             <div>
                                                 <p>{data.item}</p>
                                             </div>
@@ -107,9 +116,6 @@ export default function ProductBottomShowcase(){
                         <div className="prodBtmSC_B_ImgB" style={{margin:'0 0 0.6em 0'}}>
                             <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/imgA.png" alt="" />
                         </div>
-                        {/* <div>
-                            <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/imgB.png" alt="" />
-                        </div> */}
                         {/* Swiper */}
                         <div className="prodBtmSC_B_Swiper_Container">
                             <Swiper style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0 0 0 0',
@@ -179,14 +185,6 @@ export default function ProductBottomShowcase(){
                         </p>
                     </div>
                     <div style={{display:'flex', alignItems:'center', margin:'2em 0 0 0'}}>
-                        {/* <div style={{display:'flex', alignItems:'center', margin:'0 4em 0 0'}}>
-                            <div style={{padding:'1.36em 3em 1.36em 3em', borderBottomLeftRadius:'0.6em', borderTopLeftRadius:'0.6em', background:'#EEEEEA'}}><p style={{fontSize:'1em'}}>Get in touch</p></div>
-                            <div style={{background:'#D1BD55', padding:'0.66em', borderTopRightRadius:'0.6em', borderBottomRightRadius:'0.6em'}}> 
-                                <div style={{borderRadius:'50%', height:'2.5em', width:'2.5em', background:'#322712', display:'flex', alignItems:'center', justifyContent:'center'}}>
-                                    <img style={{width:'40%', height:'40%', objectFit:'contain'}} src="/Products/arrow.svg" alt="logo" />
-                                </div>
-                            </div>
-                        </div> */}
                         <CTA height="5.5em" width="16em" widthB="6em" margin="0 2em 0 0" bg="#EEEEEA" />
                         <a href="https://mkp.gem.gov.in/advanced-manufacturing-robotics/bandicoot/p-5116877-4090503505-cat.html" target='_blank' style={{border:'1px rgba(50, 39, 18, 0.33) solid', display:'flex', alignItems:'center', padding:'0.4em 1em', borderRadius:'0.6em', cursor:'pointer'}}>
                             <div style={{height:'3em', width:'3em'}}><img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/purchaseBCoot.png" alt="image" /></div>

@@ -26,10 +26,17 @@
     margin: 10em 0 0 0;
 }
 .prodBtmSC_A_BluePrint_Container {
+    display: flex;
+    align-items: center;
+    width: 60%;
 }
 .prodBtmSC_A_BluePrint {
-    height: 33em;
-    width: 40em;
+    height: 30em;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .prodBtmSC_A_BluePrint > img {
     height: 100%;
@@ -37,7 +44,7 @@
     object-fit: contain;
 }
 .prodBtmSC_A_Info {
-    width: 50%;
+    width: 40%;
 }
 .prodBtmSC_A_Info > img {
     height: 100%;
