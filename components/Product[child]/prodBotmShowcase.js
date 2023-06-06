@@ -5,6 +5,7 @@ import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/pagination';
+import CTA from '../CTAComponent';
 
 
 export default function ProductBottomShowcase(){
@@ -178,14 +179,15 @@ export default function ProductBottomShowcase(){
                         </p>
                     </div>
                     <div style={{display:'flex', alignItems:'center', margin:'2em 0 0 0'}}>
-                        <div style={{display:'flex', alignItems:'center', margin:'0 4em 0 0'}}>
+                        {/* <div style={{display:'flex', alignItems:'center', margin:'0 4em 0 0'}}>
                             <div style={{padding:'1.36em 3em 1.36em 3em', borderBottomLeftRadius:'0.6em', borderTopLeftRadius:'0.6em', background:'#EEEEEA'}}><p style={{fontSize:'1em'}}>Get in touch</p></div>
                             <div style={{background:'#D1BD55', padding:'0.66em', borderTopRightRadius:'0.6em', borderBottomRightRadius:'0.6em'}}> 
                                 <div style={{borderRadius:'50%', height:'2.5em', width:'2.5em', background:'#322712', display:'flex', alignItems:'center', justifyContent:'center'}}>
                                     <img style={{width:'40%', height:'40%', objectFit:'contain'}} src="/Products/arrow.svg" alt="logo" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <CTA height="5.5em" width="16em" widthB="6em" margin="0 2em 0 0" bg="#EEEEEA" />
                         <a href="https://mkp.gem.gov.in/advanced-manufacturing-robotics/bandicoot/p-5116877-4090503505-cat.html" target='_blank' style={{border:'1px rgba(50, 39, 18, 0.33) solid', display:'flex', alignItems:'center', padding:'0.4em 1em', borderRadius:'0.6em', cursor:'pointer'}}>
                             <div style={{height:'3em', width:'3em'}}><img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/purchaseBCoot.png" alt="image" /></div>
                             <div><p>Purchase Bandicoot</p></div>

@@ -2,16 +2,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-import { useSwiper } from 'swiper/react';
-import {Mousewheel, FreeMode, Scrollbar } from 'swiper';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
-
-import { gsap } from "gsap/dist/gsap";
-import { TweenMax } from 'gsap/dist/gsap';
-import { TweenLite } from 'gsap/dist/gsap';
-import Drag from '../../components/DragComponent';
 /**
  * @typedef {import("@prismicio/client").Content.ProductShowcaseSlice} ProductShowcaseSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ProductShowcaseSlice>} ProductShowcaseProps
@@ -78,14 +71,34 @@ export default function ProductShowcase({ slice }){
         cursor.style.top = `${y}px`;
       }
 
-      let CursorContainer = document.querySelector('.prodShowcase_SwiperContainer') 
+      let CursorContainer = document.querySelector('.prodShowcase_SwiperContainer');
+      let DragText = document.querySelector('.DragTextDrag');
+
+      let DragArrow = document.querySelectorAll('.DragArrowImg');
+
+      let DragArrowLeft = DragArrow[0];
+      let DragArrowRight = DragArrow[1];
+
+      console.log(DragArrow,"DARROW")
 
       CursorContainer.addEventListener('mouseenter', () => {
         cursor.classList.add('CursorActive');
+        setTimeout(() => {
+          DragText.style.transform = 'translateY(0%)';
+          DragArrowLeft.style.transform = 'translateX(0%)';
+          DragArrowRight.style.transform = 'translateX(0%)';
+        }, 300)
       })
 
       CursorContainer.addEventListener('mouseleave', () => {
-        cursor.classList.remove('CursorActive');
+        DragText.style.transform = 'translateY(100%)'
+        DragArrowLeft.style.transform = 'translateX(-100%)';
+        DragArrowRight.style.transform = 'translateX(100%)';
+
+        setTimeout(() => {
+          cursor.classList.remove('CursorActive');
+        }, 500)
+
       })
   
     }, 9000)
@@ -122,7 +135,18 @@ export default function ProductShowcase({ slice }){
         </div>
         <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
           {/* Drag Component */}
-          <Drag className="DragContainer" />
+          {/* <Drag className="DragContainer" /> */}
+          <div className="DragContainer">
+            <div className='DragArrow ofh'> 
+                <img className='DragArrowImg' style={{transform:'translateX(100%)', transition:`all 0.5s ${quart}`}} src='/DragArrow.svg' alt='arrow' />
+            </div>
+            <div className='DragText ofh'>
+                <p className='DragTextDrag' style={{transform:'translateY(100%)', transition:`all 0.5s ${quart}`}}>DRAG</p>
+            </div>
+            <div className='DragArrow ofh'> 
+                <img className='DragArrowImg' style={{transform:'translateX(-100%)', transition:`all 0.5s ${quart}`}} src='/DragArrowReverse.svg' alt='arrow' />
+            </div>
+          </div>
           <Swiper
               slidesPerView={2.3}
               // modules={[Mousewheel, FreeMode, Scrollbar]}

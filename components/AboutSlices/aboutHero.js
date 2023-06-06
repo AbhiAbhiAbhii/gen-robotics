@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 //gsap
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import CTA from "../CTAComponent";
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -154,13 +155,8 @@ export default function AboutHero(){
                                 </p>
                             </div>
                             <div className="aboutInfo_GetTouchContainer ofh">
-                                <div ref={ctaBRef} style={{display:'flex',transform: hide, transition: `all 1s ${quint}`}}>
-                                    <input type="text" placeholder="Get in touch" style={{padding:'0.5em 2em', border:'none', outline:'none', borderTopLeftRadius:'0.625em', borderBottomLeftRadius:'0.625em'}} />
-                                    <div className="GetinTouchBtn">
-                                        <div className="arrowContainer" style={{background: ArrowBg}}>
-                                            <img src={ srcB } alt="arrow" />
-                                        </div>  
-                                    </div>
+                                <div ref={ctaBRef} style={{transform:'translateY(100%)', transition: `all 0.5s ${quart}`}}>
+                                    <CTA width='14em' widthB="5em" height='2em' bg="#FFF" />
                                 </div>
                             </div>
                         </div>

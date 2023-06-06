@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Contact from "../contact"
+import CTA from "../CTAComponent"
 
 
 export default function Innovate(){
@@ -26,9 +26,7 @@ export default function Innovate(){
                                 {Subtitle}
                             </p>
                         </div>
-                        <div className="Innovate_GetTouch">
-                            <Contact style={{background:ArrowBg }} />
-                        </div>
+                        <CTA width="14em" widthB="6em" height="2em" margin="1em 0 0 0" bg="#FFF" />
                     </div>
                     <div className="Innovate_AssetRight">
                         <img src="/About/assetRight.svg" alt="img" />
