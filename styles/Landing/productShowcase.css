@@ -47,6 +47,8 @@
 
     height: 26em;
     width: 36em;
+
+    position: relative;
 }
 .prodShowcase_AssetModel {
     height: 50%;
@@ -93,6 +95,12 @@
 
     border-radius: 20em;
 }
+.prodShowcase_SwiperContainer {
+    position: relative;
+    opacity: 0;
+    cursor: none;
+    /* cursor: help; */
+}
 /* DragComponent */
 .DragContainer {
     background:  rgba(79, 79, 79, 0.56);
@@ -103,10 +111,14 @@
     border-radius: 20em;
 
     z-index: 100;
-    position: absolute;
+    position: fixed;
 
-    top: 70%;
-    left: 80%;
+    scale: 0;
+    transition: scale 0.5s cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+.DragContainer.CursorActive {
+    scale: 1;
+    transition: scale 0.5s cubic-bezier(0.76, 0.00, 0.24, 1.00);
 }
 .DragArrow {
     height: 50%;

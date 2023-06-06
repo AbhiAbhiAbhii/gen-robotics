@@ -7,6 +7,11 @@ import {Mousewheel, FreeMode, Scrollbar } from 'swiper';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
+
+import { gsap } from "gsap/dist/gsap";
+import { TweenMax } from 'gsap/dist/gsap';
+import { TweenLite } from 'gsap/dist/gsap';
+import Drag from '../../components/DragComponent';
 /**
  * @typedef {import("@prismicio/client").Content.ProductShowcaseSlice} ProductShowcaseSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ProductShowcaseSlice>} ProductShowcaseProps
@@ -58,6 +63,35 @@ export default function ProductShowcase({ slice }){
 
   }, [])
 
+  useEffect(() => {
+
+    setTimeout(() => {
+      var cursor = document.querySelector(".DragContainer");
+
+      document.addEventListener("mousemove", moveCursor);
+
+      function moveCursor(e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        // console.log(x,y)
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+      }
+
+      let CursorContainer = document.querySelector('.prodShowcase_SwiperContainer') 
+
+      CursorContainer.addEventListener('mouseenter', () => {
+        cursor.classList.add('CursorActive');
+      })
+
+      CursorContainer.addEventListener('mouseleave', () => {
+        cursor.classList.remove('CursorActive');
+      })
+  
+    }, 9000)
+
+  })
+
 
  
 
@@ -86,24 +120,13 @@ export default function ProductShowcase({ slice }){
           </div>
           {/*  */}
         </div>
-        <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{opacity:'0', transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)', position:'relative'}}>
+        <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
           {/* Drag Component */}
-          {/* <div className='DragContainer'>
-            <div className='DragArrow'> 
-              <img src='/DragArrow.svg' alt='arrow' />
-            </div>
-            <div className='DragText'>
-              <p>DRAG</p>
-            </div>
-            <div className='DragArrow'> 
-              <img src='/DragArrowReverse.svg' alt='arrow' />
-            </div>
-          </div> */}
-          <Swiper 
+          <Drag className="DragContainer" />
+          <Swiper
               slidesPerView={2.3}
               // modules={[Mousewheel, FreeMode, Scrollbar]}
               // freeMode={true}
-              // direction='horizontal'
               // mousewheel={true}
               onSlideChange={(i) => setSwipe(i.activeIndex)}
               onSwiper={(swiper) => console.log(swiper)}
@@ -112,21 +135,47 @@ export default function ProductShowcase({ slice }){
               slice.items.map((data, i) => {
                   return(
                   <SwiperSlide className='prodShowcase_SwiperSlide'   onClick={() => setSolution(i)}
-                  style={{width:'fit-content',cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px'}} 
+                  style={{width:'fit-content',scrollSnapType:'x mandatory',scrollPadding:'0 24px'}} 
                   key={i}>
-                      <div className='prodShowcase_AssetDiv' style={{background: i == solution ? '#B6B6B6':'#F8F8F8' , transition:'all 0.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                      <div className='prodShowcase_AssetDiv' 
+                      style = {
+                          {
+                            background: i == solution ? '#B6B6B6':'#F8F8F8' , 
+                            transition:'all 0.6s cubic-bezier(0.85, 0, 0.15, 1)'
+                          }
+                        }>
                         <div className='prodShowcase_AssetModel'>
                             <img style={{height:'100%', width:'100%', objectFit:'contain'}} 
                             src={ data.product_image.url } 
                             alt={ data.product_image.alt } />
                         </div>
-                        <div className='prodShowcase_Asset_DetailsDiv' style={{transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)', borderBottomLeftRadius: i == solution ? '0.6rem':'', borderBottomRightRadius: i == solution ? '0.6rem':'', background: i == solution ? '#D1BD55': ''}}>
-                            <div className='prodShowcase_Asset_TitleDiv' style={{ color: i == solution ? '#322712':'#100E0C', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                        <div className='prodShowcase_Asset_DetailsDiv' 
+                        style={
+                            { 
+                              transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)', 
+                              borderBottomLeftRadius: i == solution ? '0.6rem':'', 
+                              borderBottomRightRadius: i == solution ? '0.6rem':'', 
+                              background: i == solution ? '#D1BD55': ''
+                            }
+                          }>
+                            <div className='prodShowcase_Asset_TitleDiv' 
+                            style = {
+                                { 
+                                  color: i == solution ? '#322712':'#100E0C', 
+                                  transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'
+                                }
+                              }>
                               <p>
                                 { data.product_title[0].text }
                               </p>
                             </div>
-                            <div className='prodShowcase_Asset_DescriptionDiv' style={{color: i == solution ? '#322712':'#100E0C', transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                            <div className='prodShowcase_Asset_DescriptionDiv' 
+                              style={
+                                  {
+                                  color: i == solution ? '#322712':'#100E0C', 
+                                  transition:'all 0.3s cubic-bezier(0.85, 0, 0.15, 1)'
+                                  }
+                                }>
                               <p>
                                 {data.product_description[0].text}
                               </p>
