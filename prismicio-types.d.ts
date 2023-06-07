@@ -404,6 +404,32 @@ interface HeroAboutSliceDefaultPrimary {
   stats_b_description: prismicT.RichTextField;
 }
 /**
+ * Item in HeroAbout → Items
+ *
+ */
+export interface HeroAboutSliceDefaultItem {
+  /**
+   * Stats field in *HeroAbout → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_about.items[].stats
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  stats: prismicT.RichTextField;
+  /**
+   * Stats Description field in *HeroAbout → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero_about.items[].stats_description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  stats_description: prismicT.RichTextField;
+}
+/**
  * Default variation for HeroAbout Slice
  *
  * - **API ID**: `default`
@@ -414,7 +440,7 @@ interface HeroAboutSliceDefaultPrimary {
 export type HeroAboutSliceDefault = prismicT.SharedSliceVariation<
   "default",
   Simplify<HeroAboutSliceDefaultPrimary>,
-  never
+  Simplify<HeroAboutSliceDefaultItem>
 >;
 /**
  * Slice variation for *HeroAbout*
@@ -864,6 +890,7 @@ declare module "@prismicio/client" {
       HeroSliceVariation,
       HeroSlice,
       HeroAboutSliceDefaultPrimary,
+      HeroAboutSliceDefaultItem,
       HeroAboutSliceDefault,
       HeroAboutSliceVariation,
       HeroAboutSlice,

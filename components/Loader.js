@@ -38,7 +38,7 @@ export default function Loader(){
         <div ref={LoaderFrameRef} className="LOADER" style={{height:'100vh', width:'100vw', background:'#FFFF', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', transition: `all 0.5s ${quint}` }}>
             <div style={{color:'black', overflow:'hidden'}}>
                 <p ref={loaderTextRef} style={{textAlign:'center', fontSize:'1.6em', transform:'translateY(100%)', transition:`all 1.4s ${quart}`}}>
-                    Continuous Innovation<br /> as the core principle
+                    Innovation Beyond Technology
                 </p>
             </div>
             <div ref={loaderBarRef} style={{height:'3px', background:'#D4D4D4',margin:'1em 0', width:'20%', transition:`all 1s ${quint}`, opacity:'0'}}>

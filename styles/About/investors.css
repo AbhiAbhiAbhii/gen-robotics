@@ -28,13 +28,12 @@
     align-items: center;
 }
 .Investors_Showcase_Item {
-    width: 25%;
+    width: 33.33%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     margin: 2em 0;
-
 }
 .Investors_Showcase_Img {
     height: 15.625em;

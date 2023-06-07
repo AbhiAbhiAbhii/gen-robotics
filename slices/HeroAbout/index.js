@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState } from 'react'
-import Menu from '../../components/Menu/menu';
 
 
 /**
@@ -8,6 +8,9 @@ import Menu from '../../components/Menu/menu';
  * @param {HeroAboutProps}
  */
 export default function HeroAbout({ slice }){
+
+  // Incrementing Count
+  const [count, setCount ] = useState("0")
 
   // data - prismic
 
@@ -131,19 +134,21 @@ export default function HeroAbout({ slice }){
               {/*  */}
             </div>
             {/* IMG-SEQ TITLE */}
-            <div className="bandicoot_TitleContainer" style={{zIndex:'2000'}}>
+            <div className="bandicoot_TitleContainer" style={{zIndex:'100'}}>
               <div className="bandicoot_Title">
                 <p>
                   Introducing
                 </p>
               </div>
               <div className="bandicoot_Bandicoot">
-                <p>
+                {/* <p>
                   Bandicoot
-                </p>
+                </p> */}
+                <div style={{ height:'10em',width:'40em', display:'flex', alignItems:'center', justifyContent:'center' }}>
+                  <img style={{height:'100%', width:'100%', objectFit:'contain'}} src='/imgsequence/introBandicoot.svg' alt='logo' />
+                </div>
               </div>
             </div>
-            <Menu />
           </div>
         </div>
       </section>

@@ -11,10 +11,14 @@
     align-items: center;
     justify-content: center;
 }
-.featureScale_Title > p{
-    font-size: 6em;
+.featureScale_Title > p {
+    font-size: 3em;
     letter-spacing: -0.01em;
     text-align: center;
+    line-height: 200%;
+}
+.featureScale_Title > p > span {
+    font-size: 2.4em;
 }
 /* featureScale_Showcase */
 .featureScale_Showcase {

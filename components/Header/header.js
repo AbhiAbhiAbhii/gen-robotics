@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, } from "react"
 export default function Header({lenis, style, ref}) {
 
 
-    let menuData = [{ content: 'Robotics & AI', link:'/about' },{ content: 'Medical & Mobility', link:'/' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
+    let menuData = [{ content: 'Robotics & AI', link:'/about' },{ content: 'Medical & Mobility', link:'https://genroboticsmedical.com/', target:'_blank' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
     let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
     let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
     let ourProducts = [{products: 'Bandicoot', link:'/products/bandicootII'}, {products: 'Bandicoot Mini', link:'/'},{products:'Bandicoot Mobility+', link:'/'}, {products: 'Willboar', link:'/'}]
@@ -160,7 +160,7 @@ export default function Header({lenis, style, ref}) {
                                         {
                                             menuData.map((data, i) => {
                                                 return(
-                                                    <Link onClick={MenuTrigger} href={data.link}  key={i} className="menu_Item" style={{width:'50%'}}>
+                                                    <Link onClick={MenuTrigger} href={data.link} target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
                                                         <p>{data.content}</p>
                                                     </Link>
                                                 )

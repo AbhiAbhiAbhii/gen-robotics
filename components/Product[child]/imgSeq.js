@@ -102,7 +102,7 @@ export default function ProductImgSequence(){
 
     return(
         <>
-        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden', background:'#000'}}>
+        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden', background:'#000', display:'none'}}>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', height:'100%'}}>
                 <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 4em 2em', height:'100%'}}>
                     <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>

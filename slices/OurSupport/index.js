@@ -50,22 +50,25 @@ export default function OurSupport({ slice }){
       observer.observe(document.getElementById("Launch"));
 
     //second-observer
-    const observerB = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                dateRef.current.style.transform = 'translateY(0%)'; // anim for date
+    // const observerB = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if(entry.isIntersecting) {
+    //             dateRef.current.style.transform = 'translateY(0%)'; 
+    //             anim for date
 
-                setTimeout(() => {
-                    newsTitleRef.current.style.transform = 'translateY(0%)'; // anim for news-title
-                }, 500);
+    //             setTimeout(() => {
+    //                 newsTitleRef.current.style.transform = 'translateY(0%)'; 
+    //                 anim for news-title
+    //             }, 500);
                 
-                setTimeout(() => {
-                    newsDescripRef.current.style.transform = 'translateY(0%)'; // anim for news-description
-                }, 1000);
-            }
-        })
-    })
-    observerB.observe(document.getElementById("modi"));
+    //             setTimeout(() => {
+    //                 newsDescripRef.current.style.transform = 'translateY(0%)'; 
+    //                 anim for news-description
+    //             }, 1000);
+    //         }
+    //     })
+    // })
+    // observerB.observe(document.getElementById("modi"));
     
   }, [])
 
@@ -111,14 +114,16 @@ export default function OurSupport({ slice }){
             </div>
                 
             {/* supporters showcase */}
-            <div className='support_Supporters_Container' >
+            {/* <div className='support_Supporters_Container' >
                 <div className='support_Supporters_Showcase'>
                     {
                     slice.items.map((data, i) => {
                         return(
                         <div className='support_Supporters_ImgContainer' key={i} 
-                            style={{display: data.image.url == null ? 'none' : 'flex', flexDirection:'column', justifyContent:'center'}}> {/* image-container */}
-                            <div onClick={() => setModi(i)} style={{ width: i == modi ? '30em':'20.3em', height:'30.6em', margin:'0 1em', cursor:'pointer', transition:'all 0.6s ease'}} key={i}> {/* image */} 
+                            style={{display: data.image.url == null ? 'none' : 'flex', flexDirection:'column', justifyContent:'center'}}> 
+                            image-container
+                            <div onClick={() => setModi(i)} style={{ width: i == modi ? '30em':'20.3em', height:'30.6em', margin:'0 1em', cursor:'pointer', transition:'all 0.6s ease'}} key={i}>
+                                 image 
                                 <img 
                                     style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.6rem'}} 
                                     src={data.image.url} 
@@ -132,7 +137,7 @@ export default function OurSupport({ slice }){
                 </div>
                 <div className='support_News' id='modi'>
                     <div className='support_News_Container'>
-                        {/* news */}
+                        news
                         <div className='support_News_Div'>
                             <div className='support_News_DateDiv' style={{overflow:'hidden'}}>
                                 <p ref={dateRef} style={{transition:'all 0.8s cubic-bezier(0.85, 0, 0.15, 1)', transform:'translateY(120%)'}}>
@@ -162,7 +167,7 @@ export default function OurSupport({ slice }){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
       </section>
   )
 }

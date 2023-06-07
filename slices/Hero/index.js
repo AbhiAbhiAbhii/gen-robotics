@@ -9,8 +9,8 @@ export default function Hero({ slice }){
 
   //data - prismic
 
-  // let title = `${ slice.primary.title[0].text }`;  
-  let title = "Let's change manholes to roboholes" 
+  let title = `${ slice.primary.title[0].text }`;  
+  // let title = "Let's change manholes to roboholes" 
 
   // let src = `${ slice.primary.hero_video.embed_url }`
 

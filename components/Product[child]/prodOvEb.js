@@ -22,7 +22,7 @@ export default function ProductOverviewEB() {
                 </div>
                 <div className="product_Overview_Eyebrow_Right">
                     <p>
-                        { ovEbDescA } <br /><br /> { ovEbDescB }
+                        { ovEbDescA }
                     </p>
                 </div>
             </div>

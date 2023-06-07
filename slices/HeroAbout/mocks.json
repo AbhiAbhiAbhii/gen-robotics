@@ -73,7 +73,36 @@
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
-				"value": []
+				"value": [
+					[
+						"stats",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Proident do velit minim aliqua nulla in non commodo esse."
+									}
+								}
+							]
+						}
+					],
+					[
+						"stats_description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Minim reprehenderit excepteur do id sunt voluptate non enim veniam consequat nostrud non eiusmod ea."
+									}
+								}
+							]
+						}
+					]
+				]
 			}
 		]
 	}

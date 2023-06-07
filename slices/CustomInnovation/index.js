@@ -116,7 +116,8 @@ export default function CustomInnovation({slice}) {
             </div>
             <div className='Innovation_ContentA_MainTitle' style={{opacity: '0', transition: `all 1s ${quart}`}}> 
               <p>
-                Center<br /><span style={{display:'flex', alignItems:'center'}}><img src='/About/Innovation/tinyImg.png' alt='image' />&nbsp;of custom</span>Innovation
+                {/* Center<br /><span style={{display:'flex', alignItems:'center'}}><img src='/About/Innovation/tinyImg.png' alt='image' />&nbsp;of custom</span>Innovation */}
+                Center<br />of custom Innovation
               </p>
             </div>
           </div>

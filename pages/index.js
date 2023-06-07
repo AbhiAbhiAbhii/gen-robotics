@@ -146,7 +146,7 @@ const Home = ({ page, navigation, settings }) => {
       
       setTimeout(() => {
           setLoading(false)
-        }, 6500)
+        }, 6200)
 
         setTimeout(() => {
           loaderCurtainRef.current.style.opacity = "0";

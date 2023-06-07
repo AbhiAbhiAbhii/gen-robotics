@@ -170,29 +170,29 @@ export default function RegistrationForm() {
         Country: "United Kingdom",
         Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
         Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012",
+        Tel: "1800-889-0316",
         Dir: "Get Directions",
         src:'/contact/uk.svg',
         link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
     },
-    {
-        Country: "United Arab Emirates",
-        Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
-        Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012",
-        Dir: "Get Directions",
-        src:'/contact/uae.svg',
-        link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
-    },
-    {
-        Country: "South Korea",
-        Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
-        Mail: "Media & support contact: info@genrobotics.org",
-        Tel: "+91 2346789012",
-        Dir: "Get Directions",
-        src:'/contact/south-korea.svg',
-        link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
-    },
+    // {
+    //     Country: "United Arab Emirates",
+    //     Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
+    //     Mail: "Media & support contact: info@genrobotics.org",
+    //     Tel: "+91 2346789012",
+    //     Dir: "Get Directions",
+    //     src:'/contact/uae.svg',
+    //     link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
+    // },
+    // {
+    //     Country: "South Korea",
+    //     Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
+    //     Mail: "Media & support contact: info@genrobotics.org",
+    //     Tel: "+91 2346789012",
+    //     Dir: "Get Directions",
+    //     src:'/contact/south-korea.svg',
+    //     link: 'https://www.google.com/maps/place/Genrobotic+Innovations+Pvt.+Ltd./@8.5557572,76.8812992,15z/data=!4m2!3m1!1s0x0:0x486c83afdd2a6d65?sa=X&ved=2ahUKEwiyyI2PuYH_AhWoTmwGHSyMBLQQ_BJ6BAh3EAg'
+    // },
   ]
 
     // Animation
@@ -241,7 +241,7 @@ export default function RegistrationForm() {
             scrub: 0.1,
             toggleActions: 'play none none reverse'
         },
-        y: 130,
+        y: 50,
         duration: 2,
         ease: quart
     })
@@ -446,14 +446,14 @@ export default function RegistrationForm() {
                         </div>
                         <div className='contactWhatsapp_Container'>
                             <div className='contactWhatsapp'>
-                              <a href="https://api.whatsapp.com/send?phone=2346789012&text=Send20%a20%quote">
+                              <a href="https://api.whatsapp.com/send?phone=9074558551&text=Send20%a20%quote">
                               <p style={{display:'flex', alignItems:'center'}}><span style={{marginRight:'0.5em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span>Whatsapp Us</p>
                               </a>
                             </div>
                         </div>
                         <div className='contactWhatsapp_Container callUs'>
                             <div className='contactWhatsapp callUs'>
-                              <a href='tel: +91 2346789012'>
+                              <a href='tel: 1800-889-0316'>
                               <p style={{display:'flex', alignItems:'center'}}><span style={{marginRight:'0.5em'}}><img src='/contact/phoneIcon.svg' alt='whatsapp' /></span> Reach us Via Call</p>
                               </a>
                             </div>
