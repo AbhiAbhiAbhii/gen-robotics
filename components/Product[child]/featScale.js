@@ -27,7 +27,7 @@ export default function FeaturesScale(){
         {
             index: '04',
             title: 'Compact Design for Portability',
-            description: "Bandicoot is the only solution that is portable and easy to manoeuvre in urban, gully regions and narrow roads, creating zero traffic congestion, making it the most accessible robotic scavenger in the world.",
+            description: "Bandicoot is the only solutionn that is portable and easy to manoeuvre in urban, gully regions and narrow roads, creating zero traffic congestion, making it the most accessible robotic scavenger in the world.",
             src: '/Products/compactDesign.svg'
         },
     ]
