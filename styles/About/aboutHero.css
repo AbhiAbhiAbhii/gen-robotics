@@ -82,7 +82,7 @@
     top: 20em;
 }
 .aboutInfo_Container {
-    padding: 6em 4em;
+    padding: 0em 4em 0 4em;
 }
 .aboutInfo_MainTextContainer {
     display: flex;
@@ -100,11 +100,13 @@
     color: #F3F6FE;
 }
 .aboutInfo_ContentContainer {
-    margin: 10em 0 0 0;
+    margin: 2em 0 0 0;
     padding: 0 2em 0 2em;
 
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-between; */
 
 }
 /* Content A */
@@ -152,13 +154,15 @@
 }
 /* Content B */
 .aboutInfo_ContentB {
-    width: 48%;
+    width: 80%;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: flex-end; */
 }
 .aboutInfo_ContentBImg {
     width: 90%;
-    height: 90%;
+    height: 70%;
 }
 .aboutInfo_ContentBImg > img {
     height: 100%;
@@ -177,7 +181,7 @@
 }
 .aboutInfo_BottomText > p {
     text-align: left;
-    font-size: 2em;
+    font-size: 1.6em;
     line-height: 140%;
 
     color: #E4E4E4;

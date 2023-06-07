@@ -35,7 +35,9 @@ export default function AboutHero(){
 
     // let ContentCDescript = "For a long time, Robots are on board to transform our lives, we are inclined to think of ways to simplifylife-risking situations and amplify livelihood through bringing the missing social space for Robots in oursociety. We are working on developing technologies assuring safety to the ones who face theextremities, through human-friendly robotic solutions."
 
-    let BottomText = "Developing tailor-made products and services have keen importance in a Nation’s prospering progression. It’s a great honour to be a part of India’s most prestigious initiatives “Swachh Bharat Abhiyan and MakeInIndia”. Our innovation “Bandicoot”- manhole cleaning robot, has been making transformative changes in many sanitation workers who were daring themselves every time without thinking of the extremities hidden in the manholes and ensuring cleanliness to all. We are spearheading the perseverance to create, develop and implement systems of change that are beneficial to all sentient beings and to the environment- by triggering off the distressed elements of the people and fostering a better place to live"
+    // let BottomText = "Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions to address the most relevant social issues, is headquartered in Trivandrum, Kerala. The Company was founded in 2017. Developing tailor-made products and services have keen importance in a Nation’s prospering progression. It’s a great honour to be a part of India’s most prestigious initiatives “Swachh Bharat Abhiyan and MakeInIndia”. Our innovation “Bandicoot”- manhole cleaning robot, has been making transformative changes in many sanitation workers who were daring themselves every time without thinking of the extremities hidden in the manholes and ensuring cleanliness to all. We are spearheading the perseverance to create, develop and implement systems of change that are beneficial to all sentient beings and to the environment- by triggering off the distressed elements of the people and fostering a better place to live"
+
+    let BottomText = "Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions to address the most relevant social issues, is headquartered in Trivandrum, Kerala. The Company was founded in 2017. For a long time, Robots are on board to transform our lives, we are inclined to think of ways to simplify life-risking situations and amplify livelihood through bringing the missing social space for Robots in our society. We are working on developing technologies assuring safety to the ones who face the extremities, through human-friendly robotic solutions. Developing tailor-made products and services have keen importance in a Nation’s prospering progression. It’s a great honour to be a part of India’s most prestigious initiatives “Swachh Bharat Abhiyan and MakeInIndia”. Our innovation “Bandicoot”- manhole cleaning robot, has been making transformative changes in many sanitation workers who were daring themselves every time without thinking of the extremities hidden in the manholes and ensuring cleanliness to all. We are spearheading the perseverance to create, develop and implement systems of change that are beneficial to all sentient beings and to the environment- by triggering off the distressed elements of the people and fostering a better place to live"
     // . Our innovation “Bandicoot”- manhole cleaning robot, has been making transformative changes in many sanitation workers who were daring themselves every time without thinking of the extremities hidden in the manholes and ensuring cleanliness to all. We are spearheading the perseverance to create, develop and implement systems of change that are beneficial to all sentient beings and to the environment- by triggering off the distressed elements of the people and fostering a better place to live."
 
     // Animations
@@ -44,9 +46,9 @@ export default function AboutHero(){
     const titleRef = useRef();
     const subtitleRef = useRef();
 
-    const offsetTitle = useRef();
-    const ctaRef = useRef();
-    const ctaBRef = useRef();
+    // const offsetTitle = useRef();
+    // const ctaRef = useRef();
+    // const ctaBRef = useRef();
     
     useEffect(() => {
 
@@ -65,22 +67,22 @@ export default function AboutHero(){
         observer.observe(document.querySelector('.aboutHero'));
         //-----------------------------------------------------
 
-        const observeOffset = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting){
-                    offsetTitle.current.style.transform = reveal;
+        // const observeOffset = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //         if(entry.isIntersecting){
+        //             offsetTitle.current.style.transform = reveal;
                     
-                    setTimeout(() => {
-                        ctaRef.current.style.transform = reveal;
-                    }
-                    , 200)
-                    setTimeout(() => {
-                        ctaBRef.current.style. transform = reveal;
-                    }, 1000)
-                }
-            })
-        }, {threshold: 0.3})
-        observeOffset.observe(document.querySelector('.aboutInfo'));
+        //             setTimeout(() => {
+        //                 ctaRef.current.style.transform = reveal;
+        //             }
+        //             , 200)
+        //             setTimeout(() => {
+        //                 ctaBRef.current.style. transform = reveal;
+        //             }, 1000)
+        //         }
+        //     })
+        // }, {threshold: 0.3})
+        // observeOffset.observe(document.querySelector('.aboutInfo'));
 
 
         //gsap 
@@ -137,15 +139,15 @@ export default function AboutHero(){
             {/* offsetSection */}
             <div className="aboutInfo">
                 <div className="aboutInfo_Container">
-                    <div className="aboutInfo_MainTextContainer">
+                    {/* <div className="aboutInfo_MainTextContainer">
                         <div className="aboutInfo_MainText ofh">
                             <p ref={offsetTitle} style={{transform: hide, transition: `all 1s ${quint}`}}>
                                 { MainText }
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="aboutInfo_ContentContainer">
-                        <div className="aboutInfo_ContentA" style={{height:'fit-content'}}>
+                        {/* <div className="aboutInfo_ContentA" style={{height:'fit-content'}}>
                             <div>
                                 <div className="aboutInfo_ContentA_Descript ofh">
                                     <p ref={ctaRef} style={{transform: hide, transition: `all 1.5s ${quint}`}}>
@@ -159,12 +161,7 @@ export default function AboutHero(){
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="aboutInfo_ContentA_Descript ofh">
-                                <p>
-                                    { ContentCDescript }
-                                </p>
-                            </div> */}
-                        </div>
+                        </div> */}
                         <div className="aboutInfo_ContentB">
                             <div className="aboutInfo_ContentBImg" >
                             <video 
@@ -182,6 +179,9 @@ export default function AboutHero(){
                             { BottomText }
                         </p>
                     </div>
+                </div>
+                <div style={{display:'flex', alignItems:'center', justifyContent:'center', margin:'4em 0 0 0'}}>
+                    <CTA bg="#FFF" height="5em" width="16em" widthB="6em" />
                 </div>
             </div>
         </main>

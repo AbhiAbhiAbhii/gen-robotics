@@ -18,6 +18,18 @@ export default function FeaturesScale(){
             description: "Powerful Precision: Bandicoot's Extendable Robotic Arm for Surgical Cleaning with Picking, Grabbing, and Shovelling Abilities",
             src: '/Products/precise.svg'
         },
+        {
+            index: '03',
+            title: 'More Grabbing Area',
+            description: "Bandicoot comes with the combination of expandable bucket system and robotic arm that can move to all the corners, enabling more grabbing area, resulting in 100% efficient cleaning.",
+            src: '/Products/moreGrabbingArea.svg'
+        },
+        {
+            index: '04',
+            title: 'Compact Design for Portability',
+            description: "Bandicoot is the only solution that is portable and easy to manoeuvre in urban, gully regions and narrow roads, creating zero traffic congestion, making it the most accessible robotic scavenger in the world.",
+            src: '/Products/compactDesign.svg'
+        },
     ]
 
     return(
