@@ -26,6 +26,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    /* alignment for the investors */
+    justify-content: center;
 }
 .Investors_Showcase_Item {
     width: 33.33%;

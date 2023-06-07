@@ -61,32 +61,32 @@ export default function Investors({slice}){
           </div>
         </div>
         <div className="Investors_Showcase_Container">
-          <div className="Investors_Showcase"> 
+          <div className="Investors_Showcase" > 
             {
               dummyData.map((data, i) => {
                 return(
                   <div className="Investors_Showcase_Item" key={i}>
                     <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:"center"}}>
-                    <div className="Investors_Showcase_Img">
-                      <img src={ data.src } style={{objectFit: i == 3 ? 'contain': i == 4 ? 'contain':'cover'}} alt="img" />
-                    </div>
-                    <div className="Investors_Showcase_TextContainer">
-                      <div className="Investors_Showcase_Fullname">
-                        <p>
-                          { data.fullName }
-                        </p>
+                      <div className="Investors_Showcase_Img">
+                        <img src={ data.src } style={{objectFit: i == 3 ? 'contain': i == 4 ? 'contain':'cover'}} alt="img" />
                       </div>
-                      <div className="Investors_Showcase_Position">
-                        <p>
-                          { data.position }
-                        </p>
+                      <div className="Investors_Showcase_TextContainer">
+                        <div className="Investors_Showcase_Fullname">
+                          <p>
+                            { data.fullName }
+                          </p>
+                        </div>
+                        <div className="Investors_Showcase_Position">
+                          <p>
+                            { data.position }
+                          </p>
+                        </div>
+                        <div className="Investors_Showcase_CompanyName">
+                          <p>
+                            { data.companyName }
+                          </p>
+                        </div>
                       </div>
-                      <div className="Investors_Showcase_CompanyName">
-                        <p>
-                          { data.companyName }
-                        </p>
-                      </div>
-                    </div>
                     </div>
                   </div>
                 )
