@@ -168,7 +168,7 @@ export default function RegistrationForm() {
     },
     {
         Country: "United Kingdom",
-        Addrress: 'Genrobotic Innovations, CDAC Building, Technopark Campus Thiruvananthapuram Kerala, 695581',
+        Addrress: 'Innovation Centre, Warwick Technology Park, Gallows Hill, Warwick CV34 6UW, United Kingdom',
         Mail: "Media & support contact: info@genrobotics.org",
         Tel: "1800-889-0316",
         Dir: "Get Directions",
