@@ -10,7 +10,8 @@ export default function Footer(){
         },
         {
             name: 'Medical & Mobility',
-            link: '/'
+            link: 'https://genroboticsmedical.com/',
+            target:'_blank'
         },
         {
             name: 'Robotics & AI',
@@ -25,7 +26,7 @@ export default function Footer(){
     let products = [
         {
             name: 'Bandicoot',
-            link:'/products/bandicootII'
+            link:'/products/bandicoot'
         },
         {
             name: 'Bandicoot Mini',
@@ -93,7 +94,7 @@ export default function Footer(){
                             nav.map((data, i) => {
                                 return(
                                     <div className="footer_Item" key={i}>
-                                        <a href={data.link}>{ data.name }</a>
+                                        <a href={data.link} target={data.target}>{ data.name }</a>
                                     </div>
                                 )
                             })
