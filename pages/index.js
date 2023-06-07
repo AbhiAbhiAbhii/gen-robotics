@@ -175,7 +175,7 @@ const Home = ({ page, navigation, settings }) => {
     <Head />
     {
       loading ? (<Loader /> ):
-      (
+      
         <>
         <Header />
         <div style={{position:'relative'}}>
@@ -189,7 +189,7 @@ const Home = ({ page, navigation, settings }) => {
         <Footer />
     {/* <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} texts={texts} /> */}
     </>
-      )
+      
     }
         
     </>
