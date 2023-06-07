@@ -80,6 +80,7 @@
     align-items: flex-start;
 
     width: 50%;
+
     background: #F7F1D7;
     border-radius: 0.65em;
 
@@ -112,6 +113,9 @@
 /* SWIPER */
 .prodBtmSC_B_Swiper_Container {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Testimonial Swiper */
@@ -140,6 +144,9 @@
 .testimonial_Title > p {
     color: #FFFF;
     font-size: 2.4em;
+}
+.testimonial_description {
+    width: 90%;
 }
 .testimonial_description > p {
     color: #FFF;

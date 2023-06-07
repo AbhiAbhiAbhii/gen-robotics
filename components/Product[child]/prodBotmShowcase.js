@@ -140,7 +140,7 @@ export default function ProductBottomShowcase(){
                         </div> */}
                         {/* Swiper */}
                         <div className="prodBtmSC_B_Swiper_Container">
-                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0 0 0 0',
+                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'8em 0 8.35em 0',
                                     "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "8%", "--swiper-theme-color": "white", background:'#8C7024', borderRadius:'0.625em'}}
                                     spaceBetween={40}
                                     speed={1000}
