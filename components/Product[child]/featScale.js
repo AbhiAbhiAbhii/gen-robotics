@@ -10,13 +10,13 @@ export default function FeaturesScale(){
             index: '01',
             title: 'More Reachablilty To Every Corner',
             description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
-            src: '/BluePrint/p-c.svg'
+            src: '/Products/moreReachability.svg'
         },
         {
             index: '02',
             title: 'Precise and Surgical Cleaning',
             description: "Powerful Precision: Bandicoot's Extendable Robotic Arm for Surgical Cleaning with Picking, Grabbing, and Shovelling Abilities",
-            src: '/Products/precise-cleaning.svg'
+            src: '/Products/precise.svg'
         },
     ]
 

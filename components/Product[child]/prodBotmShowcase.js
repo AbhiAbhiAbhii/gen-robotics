@@ -239,7 +239,7 @@ export default function ProductBottomShowcase(){
                         </p>
                     </div>
                     <div style={{display:'flex', alignItems:'center', margin:'2em 0 0 0'}}>
-                        <CTA height="5.5em" width="16em" widthB="6em" margin="0 2em 0 0" bg="#EEEEEA" />
+                        <CTA height="4.4em" width="12em" widthB="6em" margin="0 2em 0 0" bg="#EEEEEA" />
                         <a href="https://mkp.gem.gov.in/advanced-manufacturing-robotics/bandicoot/p-5116877-4090503505-cat.html" target='_blank' style={{border:'1px rgba(50, 39, 18, 0.33) solid', display:'flex', alignItems:'center', padding:'0.4em 1em', borderRadius:'0.6em', cursor:'pointer'}}>
                             <div style={{height:'3em', width:'3em'}}><img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/purchaseBCoot.png" alt="image" /></div>
                             <div><p>Purchase Bandicoot</p></div>
