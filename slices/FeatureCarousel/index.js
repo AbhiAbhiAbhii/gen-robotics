@@ -154,11 +154,13 @@ export default function BluePrint({ slice }) {
                           className='singleSlide'
                           onClick={() => {
                             if(i === 0)  {
-                              slideRef.current.swiper.slideTo(0, 1000, `${quint}`)
+                              slideRef.current.swiper.slideTo(0, 500, `${quint}`)
                             } else if(i === 1) {
-                              slideRef.current.swiper.slideTo(0, 1000, `${quint}`)
+                              slideRef.current.swiper.slideTo(0, 500, `${quint}`)
                             } else if (i === 2) {
-                              slideRef.current.swiper.slideTo(1, 1000, `${quint}`)
+                              slideRef.current.swiper.slideTo(1, 500, `${quint}`)
+                            } else if (i === 3) {
+                              slideRef.current.swiper.slideTo(2, 500, `${quint}`)
                             }
                           }}
                             key={i} 
