@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import { useEffect, useRef, useState } from 'react'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { useSwiper } from 'swiper/react';
-import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Pagination } from 'swiper';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/pagination';
@@ -9,6 +10,10 @@ import CTA from '../CTAComponent';
 
 
 export default function ProductBottomShowcase(){
+
+
+    const testRef = useRef();
+    const progressRef = useRef();
 
     let info = [
         {
@@ -47,17 +52,34 @@ export default function ProductBottomShowcase(){
         }
     ]
 
-    let dummyData = [
+    let testimonialData = [
         {
-            src:'/Products/dummyA.png'
+            src:'/Products/testImgA.png',
+            title: 'Startup India',
+            description: '“Genrobotics, the winner of the ‘National Startup Award’, offer human controlled robots are alternative to manual scavenging, with successful implementation in various of india”.'
         },
         {
-            src:'/Products/dummyB.png'
+            src:'/Products/testImgA.png',
+            title: 'Startup India',
+            description: '“Genrobotics, the winner of the ‘National Startup Award’, offer human controlled robots are alternative to manual scavenging, with successful implementation in various of india”.'
         },
         {
-            src:'/Products/dummyC.png'
-        }
+            src:'/Products/testImgA.png',
+            title: 'Startup India',
+            description: '“Genrobotics, the winner of the ‘National Startup Award’, offer human controlled robots are alternative to manual scavenging, with successful implementation in various of india”.'
+        },
+        {
+            src:'/Products/testImgA.png',
+            title: 'Startup India',
+            description: '“Genrobotics, the winner of the ‘National Startup Award’, offer human controlled robots are alternative to manual scavenging, with successful implementation in various of india”.'
+        },
+        {
+            src:'/Products/testImgA.png',
+            title: 'Startup India',
+            description: '“Genrobotics, the winner of the ‘National Startup Award’, offer human controlled robots are alternative to manual scavenging, with successful implementation in various of india”.'
+        },
     ]
+
 
     return(
         <>
@@ -113,31 +135,63 @@ export default function ProductBottomShowcase(){
                         </div>
                     </div>
                     <div className="prodBtmSC_B_ContainerB" style={{width:'48%', height:'100%', display:'flex', flexDirection:'column'}}>
-                        <div className="prodBtmSC_B_ImgB" style={{margin:'0 0 0.6em 0'}}>
+                        {/* <div className="prodBtmSC_B_ImgB" style={{margin:'0 0 0.6em 0'}}>
                             <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/imgA.png" alt="" />
-                        </div>
+                        </div> */}
                         {/* Swiper */}
                         <div className="prodBtmSC_B_Swiper_Container">
-                            <Swiper style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0 0 0 0',
-                                    "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "8%", "--swiper-theme-color": "white"}}
+                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0 0 0 0',
+                                    "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "8%", "--swiper-theme-color": "white", background:'#8C7024', borderRadius:'0.625em'}}
                                     spaceBetween={40}
                                     speed={1000}
-                                    pagination={{ clickable: true }}
+                                    // pagination={{ clickable: true }}
                                     modules={[Pagination]}
                                     slidesPerView={1}
-                                    onSlideChange={() => console.log('slide change')}
+                                    onSlideChange={() => {
+                                        if(testRef.current.swiper.activeIndex === 0) {
+                                            progressRef.current.style.width = "20%"
+                                        } else if(testRef.current.swiper.activeIndex === 1) {
+                                            progressRef.current.style.width = "40%"
+                                        } else if(testRef.current.swiper.activeIndex === 2) {
+                                            progressRef.current.style.width = "60%"
+                                        } else if(testRef.current.swiper.activeIndex === 3) {
+                                            progressRef.current.style.width = "80%"
+                                        } else if(testRef.current.swiper.activeIndex === 4) {
+                                            progressRef.current.style.width = "100%"
+                                        }
+                                    } }
                                     onSwiper={(swiper) => console.log(swiper)}>
+                                        {/* progress bar */}
+                                <div className='progressBar'>
+                                    <div className='progressBar_Inner' ref={progressRef} />
+                                </div>
                                 {
-                                    dummyData.map((data, i) => {
+                                    testimonialData.map((data, i) => {
                                         return(
-                                            <SwiperSlide style={{position:'relative'}} key={i}>
-                                                <div className='swiperImg_Div'>
+                                            <SwiperSlide style={{position:'relative', background:'#8C7024'}} key={i}>
+                                                {/* <div className='swiperImg_Div'>
                                                     <img src={ data.src } alt='image' />
                                                 </div>
                                                 <div style={{position:'absolute', bottom:'6%', left:'4%'}}>
                                                     <div><p style={{fontSize:'24px', color:'#FFFF'}}>Name here</p></div>
                                                     <div><p style={{color:'rgba(255,255,255,0.5)'}}>Location or roll can go here</p></div>
+                                                </div> */}
+                                                <div className='testimonial_Container'>
+                                                    <div className='testimonial_Img'>
+                                                        <img src={data.src} alt='image' />
+                                                    </div>
+                                                    <div className='testimonial_Title'>
+                                                        <p>
+                                                            { data.title }
+                                                        </p>
+                                                    </div>
+                                                    <div className='testimonial_description'>
+                                                        <p>
+                                                            { data.description }
+                                                        </p>
+                                                    </div>
                                                 </div>
+                                                
                                             </SwiperSlide>
                                         )
                                     })

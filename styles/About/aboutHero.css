@@ -114,6 +114,9 @@
 .aboutInfo_ContentA_Descript {
     width: 80%;
 }
+.aboutInfo_ContentA_Descript:last-child {
+    width: 100%;
+}
 .aboutInfo_ContentA_Descript > p {
     font-size: 1.4em;
     color: #E9E9E9;
@@ -173,8 +176,7 @@
     width: 90%;
 }
 .aboutInfo_BottomText > p {
-    text-align: center;
-    font-size: 2.6em;
+    font-size: 2.2em;
     line-height: 140%;
 
     color: #E4E4E4;

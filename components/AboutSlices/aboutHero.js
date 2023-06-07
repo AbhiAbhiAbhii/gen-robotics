@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import Arrow from "../Arrow/arrow";
 import { useEffect, useRef } from "react";
 
 //gsap
@@ -35,10 +33,9 @@ export default function AboutHero(){
     let ContentADescript = "Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic solutions to address the most relevant social issues, is headquartered in Trivandrum, Kerala."
     let ContentABrDescript = "The Company was founded in 2017."
 
-    let srcB = "/About/gTouchArrow.svg";
-    let srcC = '/About/dummyImg.png';
+    let ContentCDescript = "For a long time, Robots are on board to transform our lives, we are inclined to think of ways to simplifylife-risking situations and amplify livelihood through bringing the missing social space for Robots in oursociety. We are working on developing technologies assuring safety to the ones who face theextremities, through human-friendly robotic solutions."
 
-    let BottomText = "Developing tailor-made products and services have keen importance in a Nation’s prospering progression. It’s a great honour to be a part of India’s most prestigious initiatives “Swachh Bharat Abhiyan and MakeInIndia”."
+    let BottomText = "Developing tailor-made products and services have keen importance in a Nation’s prospering progression. It’s a great honour to be a part of India’s most prestigious initiatives “Swachh Bharat Abhiyan and MakeInIndia”. Our innovation “Bandicoot”- manhole cleaning robot, has been making transformative changes in many sanitation workers who were daring themselves every time without thinking of the extremities hidden in the manholes and ensuring cleanliness to all. We are spearheading the perseverance to create, develop and implement systems of change that are beneficial to all sentient beings and to the environment- by triggering off the distressed elements of the people and fostering a better place to live."
 
     // Animations
 
@@ -86,18 +83,18 @@ export default function AboutHero(){
 
 
         //gsap 
-        gsap.to('.aboutInfo_ContentA', {
-            scrollTrigger: {
-                trigger: '.aboutInfo_ContentA',
-                start: 'top center',
-                end: 'bottom center',
-                scrub: 1,
-                toggleActions: 'play none none reverse'
-            },
-            y: 230,
-            duration: 2,
-            ease: quart
-        })
+        // gsap.to('.aboutInfo_ContentA', {
+        //     scrollTrigger: {
+        //         trigger: '.aboutInfo_ContentA',
+        //         start: 'top center',
+        //         end: 'bottom center',
+        //         scrub: 1,
+        //         toggleActions: 'play none none reverse'
+        //     },
+        //     y: 230,
+        //     duration: 2,
+        //     ease: quart
+        // })
 
         gsap.to('.testRef', {
             scrollTrigger: {
@@ -148,16 +145,23 @@ export default function AboutHero(){
                     </div>
                     <div className="aboutInfo_ContentContainer">
                         <div className="aboutInfo_ContentA" style={{height:'fit-content'}}>
-                            <div className="aboutInfo_ContentA_Descript ofh">
-                                <p ref={ctaRef} style={{transform: hide, transition: `all 1.5s ${quint}`}}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                                { ContentADescript } <br /> <br /> { ContentABrDescript }
-                                </p>
-                            </div>
-                            <div className="aboutInfo_GetTouchContainer ofh">
-                                <div ref={ctaBRef} style={{transform:'translateY(100%)', transition: `all 0.5s ${quart}`}}>
-                                    <CTA width='14em' widthB="5em" height='2em' bg="#FFF" />
+                            <div>
+                                <div className="aboutInfo_ContentA_Descript ofh">
+                                    <p ref={ctaRef} style={{transform: hide, transition: `all 1.5s ${quint}`}}>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                    { ContentADescript } <br /> <br /> { ContentABrDescript }
+                                    </p>
                                 </div>
+                                <div className="aboutInfo_GetTouchContainer ofh">
+                                    <div ref={ctaBRef} style={{transform:'translateY(100%)', transition: `all 0.5s ${quart}`}}>
+                                        <CTA width='14em' widthB="5em" height='2em' bg="#FFF" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="aboutInfo_ContentA_Descript ofh">
+                                <p>
+                                    { ContentCDescript }
+                                </p>
                             </div>
                         </div>
                         <div className="aboutInfo_ContentB">
