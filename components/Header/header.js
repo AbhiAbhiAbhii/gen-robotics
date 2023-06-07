@@ -160,9 +160,9 @@ export default function Header({lenis, style, ref}) {
                                         {
                                             menuData.map((data, i) => {
                                                 return(
-                                                    <Link onClick={MenuTrigger} href={data.link} target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
+                                                    <a onClick={MenuTrigger} href={data.link} target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
                                                         <p>{data.content}</p>
-                                                    </Link>
+                                                    </a>
                                                 )
                                             })
                                         }
