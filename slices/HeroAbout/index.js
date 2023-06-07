@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState } from 'react'
+import CountUp from 'react-countup';
 
 
 /**
@@ -9,8 +10,9 @@ import { useEffect, useRef, useState } from 'react'
  */
 export default function HeroAbout({ slice }){
 
+
   // Incrementing Count
-  const [count, setCount ] = useState("0")
+  // const [count, setCount ] = useState("0")
 
   // data - prismic
 
@@ -36,7 +38,14 @@ export default function HeroAbout({ slice }){
   const statCRef = useRef();
   const statDescCRef = useRef();
 
+  // let Count = <CountUp start={0} end={30} duration={4} /> ;
+  const [visible, setVisible] = useState(true)
+  // let Coun = Count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+
+
   useEffect(() => {
+
 
     let target = document.getElementById("observingB");
 
@@ -67,6 +76,10 @@ export default function HeroAbout({ slice }){
                  setTimeout(() => {
                   statDescCRef.current.style.transform = 'translateY(0)';
                 }, 2800)
+
+                setTimeout(() => {
+                  setVisible(false)
+                }, 3500)
               }
           })
         })
@@ -95,9 +108,18 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow:'hidden'}}>
-                    <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    {/* <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       { statA }
-                    </p>
+                    </p> */}
+                    {
+                      visible ? 
+                        <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0</p> 
+                        :
+                        <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                          <CountUp start={0} end={19} duration={2} />
+                        </p>
+
+                    }
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow:'hidden'}}>
                     <p ref={statDescARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
@@ -108,9 +130,18 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
-                    <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    {/* <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       { statB }
-                    </p>
+                    </p> */}
+                    {
+                      visible ? 
+                        <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0+</p> 
+                        :
+                        <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                          <CountUp start={0} end={3000} duration={2} />+
+                        </p>
+
+                    }
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
                     <p ref={statDescBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
@@ -121,9 +152,20 @@ export default function HeroAbout({ slice }){
               {/* NEW CONTENT- CONNECT WITH PRISMIC LATER */}
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
-                    <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                      300+
-                    </p>
+                    {/* <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}> */}
+                    {/* {
+                      visible ? "0+" : <CountUp start={0} end={30} duration={2} /> 
+                    } */}
+                    {
+                      visible ? 
+                        <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0+</p> 
+                        :
+                        <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                          <CountUp start={0} end={30} duration={2.5} />+
+                        </p>
+
+                    }
+                    {/* </p> */}
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
                     <p ref={statDescCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
