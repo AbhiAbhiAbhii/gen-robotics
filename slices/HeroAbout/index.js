@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef, useState } from 'react'
-import CountUp from 'react-countup';
+import React, { useEffect, useRef, useState } from 'react'
+// import CountUp, { useCountUp } from 'react-countup';
+
 
 
 /**
@@ -9,6 +10,26 @@ import CountUp from 'react-countup';
  * @param {HeroAboutProps}
  */
 export default function HeroAbout({ slice }){
+
+
+
+  // const countUpRef = React.useRef(null)
+  const statARef = useRef();
+
+  // const { start, pauseResume, reset, update } = useCountUp({
+  //   ref: countUpRef,
+  //   start: 0,
+  //   end: 19,
+  //   delay: 1000,
+  //   duration: 4,
+  //   onReset: () => console.log('Resetted!'),
+  //   onUpdate: () => console.log('Updated!'),
+  //   onPauseResume: () => console.log('Paused or resumed!'),
+  //   onStart: ({ pauseResume }) => console.log(pauseResume),
+  //   onEnd: ({ pauseResume }) => console.log(pauseResume),
+  // });
+
+  // console.log(useCountUp,"UseCOUNT")
 
 
   // Incrementing Count
@@ -29,7 +50,6 @@ export default function HeroAbout({ slice }){
   const titleRef = useRef();
   const descriptARef = useRef();
 
-  const statARef = useRef();
   const statDescARef = useRef();
 
   const statBRef = useRef();
@@ -90,6 +110,14 @@ export default function HeroAbout({ slice }){
   return(
     <>
       <section className='heroAbout' id='heroabout'>
+
+      {/* <div>
+      <div ref={countUpRef} />
+      <button onClick={start}>Start</button>
+      <button onClick={reset}>Reset</button>
+      <button onClick={pauseResume}>Pause/Resume</button>
+      <button onClick={() => update(2000)}>Update to 2000</button>
+    </div> */}
         <div className='heroAbout_Container'>
           <div className='heroAbout_Content'>
             <div className='heroAbout_ContentA'>
@@ -108,18 +136,18 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow:'hidden'}}>
-                    {/* <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       { statA }
-                    </p> */}
-                    {
+                    </p>
+                    {/* {
                       visible ? 
                         <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0</p> 
                         :
                         <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                          <CountUp start={0} end={19} duration={2} />
+                          <CountUp start={0} end={19} duration={4} />
                         </p>
 
-                    }
+                    } */}
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow:'hidden'}}>
                     <p ref={statDescARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
@@ -130,10 +158,10 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
-                    {/* <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       { statB }
-                    </p> */}
-                    {
+                    </p>
+                    {/* {
                       visible ? 
                         <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0+</p> 
                         :
@@ -141,7 +169,7 @@ export default function HeroAbout({ slice }){
                           <CountUp start={0} end={3000} duration={2} />+
                         </p>
 
-                    }
+                    } */}
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
                     <p ref={statDescBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
@@ -152,11 +180,11 @@ export default function HeroAbout({ slice }){
               {/* NEW CONTENT- CONNECT WITH PRISMIC LATER */}
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
-                    {/* <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}> */}
+                    <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                     {/* {
                       visible ? "0+" : <CountUp start={0} end={30} duration={2} /> 
                     } */}
-                    {
+                    {/* {
                       visible ? 
                         <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0+</p> 
                         :
@@ -164,8 +192,8 @@ export default function HeroAbout({ slice }){
                           <CountUp start={0} end={30} duration={2.5} />+
                         </p>
 
-                    }
-                    {/* </p> */}
+                    } */}300+
+                    </p>
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
                     <p ref={statDescCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
