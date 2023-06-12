@@ -13,27 +13,8 @@ export default function HeroAbout({ slice }){
 
 
 
-  // const countUpRef = React.useRef(null)
   const statARef = useRef();
 
-  // const { start, pauseResume, reset, update } = useCountUp({
-  //   ref: countUpRef,
-  //   start: 0,
-  //   end: 19,
-  //   delay: 1000,
-  //   duration: 4,
-  //   onReset: () => console.log('Resetted!'),
-  //   onUpdate: () => console.log('Updated!'),
-  //   onPauseResume: () => console.log('Paused or resumed!'),
-  //   onStart: ({ pauseResume }) => console.log(pauseResume),
-  //   onEnd: ({ pauseResume }) => console.log(pauseResume),
-  // });
-
-  // console.log(useCountUp,"UseCOUNT")
-
-
-  // Incrementing Count
-  // const [count, setCount ] = useState("0")
 
   // data - prismic
 
@@ -41,6 +22,8 @@ export default function HeroAbout({ slice }){
   let description = `${ slice.primary.description[0].text }`;
 
   let statA = `${ slice.primary.stats_a[0].text }`;
+
+
   let statADescription = `${ slice.primary.stats_a_description[0].text }`;
 
   let statB = `${ slice.primary.stats_b[0].text }`;
@@ -58,66 +41,104 @@ export default function HeroAbout({ slice }){
   const statCRef = useRef();
   const statDescCRef = useRef();
 
-  // let Count = <CountUp start={0} end={30} duration={4} /> ;
-  const [visible, setVisible] = useState(true)
-  // let Coun = Count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // statA
+  const [visibleStat, setVisibleStat] = useState(false)
+  const [countStatA, setCountStatA] = useState(0)
 
+  // statB
+  const [countStatB, setCountStatB] = useState(0)
+  
+  // statC
+  const [countStatC, setCountStatC] = useState(0)
+  
 
 
   useEffect(() => {
 
-
     let target = document.getElementById("observingB");
 
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if(entry.isIntersecting) {
-                setTimeout(() => {
-                  titleRef.current.style.transform = 'translateY(0)';
-                }, 500)
-                setTimeout(() => {
-                  descriptARef.current.style.transform = 'translateY(0)';
-                },1000)
-                setTimeout(() => {
-                  statARef.current.style.transform = 'translateY(0)';
-                }, 1500)
-                setTimeout(() => {
-                   statDescARef.current.style.transform = 'translateY(0)';
-                 }, 1800)
-                 setTimeout(() => {
-                  statBRef.current.style.transform = 'translateY(0)';
-                }, 2000)
-                 setTimeout(() => {
-                  statDescBRef.current.style.transform = 'translateY(0)';
-                }, 2200)
-                setTimeout(() => {
-                  statCRef.current.style.transform = 'translateY(0)';
-                }, 2500)
-                 setTimeout(() => {
-                  statDescCRef.current.style.transform = 'translateY(0)';
-                }, 2800)
+    // increment count
+    let counter = countStatA;
 
+    let counterB = countStatB;
+
+    let counterC = countStatC;
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+
+              setTimeout(() => {
+                titleRef.current.style.transform = 'translateY(0)';
+              }, 500)
+              setTimeout(() => {
+                descriptARef.current.style.transform = 'translateY(0)';
+              },1000)
+              setTimeout(() => {     
+                statARef.current.style.transform = 'translateY(0)';
+              }, 1500)
+              setTimeout(() => {
+                  statDescARef.current.style.transform = 'translateY(0)';
+                }, 1800)
                 setTimeout(() => {
-                  setVisible(false)
-                }, 3500)
-              }
-          })
+                statBRef.current.style.transform = 'translateY(0)';
+              }, 2000)
+                setTimeout(() => {
+                statDescBRef.current.style.transform = 'translateY(0)';
+              }, 2200)
+              setTimeout(() => {
+                statCRef.current.style.transform = 'translateY(0)';
+              }, 2500)
+                setTimeout(() => {
+                statDescCRef.current.style.transform = 'translateY(0)';
+              }, 2800)
+
+              // Increment count
+              // Stat A
+
+              setTimeout(() => {
+                setVisibleStat(true)
+              }, 3500)
+            }  
         })
-        observer.observe(target);
+      })
+      observer.observe(target);
+
+      // Stat Increment
+
+      if(visibleStat == true) {
+        setTimeout(() => {
+          for(counter = countStatA; counter < statA ; counter++) {
+            setCountStatA(countStatA +1) 
+          }
+        }, 20)
+
+        setTimeout(() => {
+          for(counterB = countStatB; counterB < statB ; counterB++) {
+            setCountStatB(countStatB + 100) 
+          }
+        }, 40)
+
+        setTimeout(() => {
+          for(counterC = countStatC; counterC < 300 ; counterC++) {
+            setCountStatC(countStatC + 10) 
+          }
+        }, 70)
+      }
+
   })
+
+
+ 
+
+ 
+
 
 
   return(
     <>
       <section className='heroAbout' id='heroabout'>
-
-      {/* <div>
-      <div ref={countUpRef} />
-      <button onClick={start}>Start</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={pauseResume}>Pause/Resume</button>
-      <button onClick={() => update(2000)}>Update to 2000</button>
-    </div> */}
         <div className='heroAbout_Container'>
           <div className='heroAbout_Content'>
             <div className='heroAbout_ContentA'>
@@ -136,18 +157,11 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow:'hidden'}}>
-                    <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                      { statA }
+                    <p className='counterA' ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                      {
+                        countStatA
+                      }
                     </p>
-                    {/* {
-                      visible ? 
-                        <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0</p> 
-                        :
-                        <p ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                          <CountUp start={0} end={19} duration={4} />
-                        </p>
-
-                    } */}
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow:'hidden'}}>
                     <p ref={statDescARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
@@ -159,17 +173,10 @@ export default function HeroAbout({ slice }){
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
                     <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                      { statB }
+                      {
+                        countStatB 
+                      }+
                     </p>
-                    {/* {
-                      visible ? 
-                        <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0+</p> 
-                        :
-                        <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                          <CountUp start={0} end={3000} duration={2} />+
-                        </p>
-
-                    } */}
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
                     <p ref={statDescBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
@@ -181,18 +188,9 @@ export default function HeroAbout({ slice }){
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
                     <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                    {/* {
-                      visible ? "0+" : <CountUp start={0} end={30} duration={2} /> 
-                    } */}
-                    {/* {
-                      visible ? 
-                        <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>0+</p> 
-                        :
-                        <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                          <CountUp start={0} end={30} duration={2.5} />+
-                        </p>
-
-                    } */}300+
+                    {
+                      countStatC
+                    }+
                     </p>
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
