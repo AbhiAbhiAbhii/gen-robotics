@@ -1,0 +1,59 @@
+.carrBenefit {
+    background: #242423;
+    
+    padding: 13rem 2rem 2rem 2rem;
+    font-size: 1rem;
+}
+.carrBenefit_Container {
+    padding: 4rem;
+}
+.carrBenefit_Text_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.carrBenefit_Title {
+    padding: 2em 0 2em 0;
+}
+.carrBenefit_Title > h2 {
+    font-size: 5em;
+    letter-spacing: 0.02em;
+    color: #FFF;
+}
+.carrBenefit_Description {
+    width: 75%;
+    padding: 1.5em 0 1em 0;
+}
+.carrBenefit_Description> p {
+    font-size: 1.4em;
+    color: rgba(238, 238, 234, 0.72);
+    line-height: 150%;
+    letter-spacing: 0.01em;
+
+    text-align: center;
+}
+
+/* ICON-temporary */
+.carrBenefit_IconContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 6em auto 2em auto;
+}
+.carrBenefit_Icon_Main_Wrap {
+    width: 25%;
+}
+.carrBenefit_Icon_Item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.carrBenefit_Icon_Description {
+    padding: 1em 0;
+}
+.carrBenefit_Icon_Description> p {
+    color: #FFF;
+    font-size: 1.2em;
+}

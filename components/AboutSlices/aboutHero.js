@@ -116,9 +116,9 @@ export default function AboutHero(){
             <div className="aboutHero_Container">
                 <div className="aboutHero_TextContainer">
                     <div className="aboutHero_Title ofh">
-                        <p ref={titleRef} style={{transform: hide, transition: `all 1s ${quart}`}}>
+                        <h1 ref={titleRef} style={{transform: hide, transition: `all 1s ${quart}`}}>
                             { Title }
-                        </p>
+                        </h1>
                     </div>
                     <div className="aboutHero_Subtitle ofh">
                         <p ref={subtitleRef} style={{transform: hide, transition: `all 1s ${quart}`}}>

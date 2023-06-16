@@ -45,7 +45,7 @@ export default function Footer(){
     let contact = [
         {
             name: 'Careers',
-            link: '/'
+            link: '/career'
         },
         {
             name: 'Contact',
@@ -77,9 +77,11 @@ export default function Footer(){
     let privacy = [
         {
             name: 'Privacy Policy',
+            link:'/privacypolicy'
         },
         {
             name: 'Terms & Condition',
+            link:'/terms&condition'
         }
     ]
 
@@ -153,7 +155,7 @@ export default function Footer(){
                         {
                             privacy.map((data, i) => {
                                 return(
-                                    <div className="footerBottom_leftItem privacy" key={i}>
+                                    <div className="footerBottom_leftItem privacy" href={data.link} key={i}>
                                         <p>
                                             { data.name }
                                         </p>

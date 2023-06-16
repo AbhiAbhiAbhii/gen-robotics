@@ -1,0 +1,58 @@
+.carrMission {
+    background: #242423;
+    height: 100vh;
+
+    position: relative;
+    font-size: 1rem;
+}
+.carrMission_Container {
+    padding: 2rem 4rem;
+}
+.carrMission_Content_Container  {
+    background: #8C7024;
+    height: 100vh;
+    width: 95%;
+
+    padding: 6em 4em;
+    border-radius: 0.63em;
+
+    position: absolute;
+    top: -14%;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+}
+.carrMission_Content_Inner_Container {
+    position: relative;
+}
+.carrMission_Text_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.carrMission_Title{
+    width: 45%;
+}
+.carrMission_Title > p  {
+    color: #FFF;
+    font-size: 4em;
+    letter-spacing: 0.02em;
+}
+.carrMission_Description {
+    width: 50%;
+}
+.carrMission_Description > p {
+    color: #FFF;
+    font-size: 1.4em;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+}
+.carrMission_Img_Container {
+    position: absolute;
+    width: 40em;
+    height: 40em;
+    top: 145%;
+    left: 50%;
+    
+    transform: translate(-50%,0);
+}

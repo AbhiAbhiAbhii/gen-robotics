@@ -1,0 +1,77 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud duis consequat tempor. Ipsum nulla velit sint nulla deserunt sint exercitation."
+						}
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore aliquip Lorem ipsum ipsum exercitation nostrud amet qui id do irure ullamco est deserunt tempor."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+								"width": 5000,
+								"height": 4613
+							},
+							"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+							"width": 5000,
+							"height": 4613,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"icon_description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Officia sunt consequat ad elit. Nostrud laboris sint voluptate cupidatat enim minim sunt mollit adipisicing consectetur in cillum sit amet. Minim dolore pariatur esse esse mollit ea ipsum id dolore in in officia."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

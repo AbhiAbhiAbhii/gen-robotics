@@ -106,7 +106,6 @@ export default function HeroAbout({ slice }){
       observer.observe(target);
 
       // Stat Increment
-
       if(visibleStat == true) {
         setTimeout(() => {
           for(counter = countStatA; counter < statA ; counter++) {
@@ -124,7 +123,7 @@ export default function HeroAbout({ slice }){
           for(counterC = countStatC; counterC < 300 ; counterC++) {
             setCountStatC(countStatC + 10) 
           }
-        }, 70)
+        }, 60)
       }
 
   })

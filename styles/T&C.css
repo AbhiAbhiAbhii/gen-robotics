@@ -1,0 +1,110 @@
+.terms {
+    background: #242423;
+    padding: 2rem 4rem 2rem 6rem;
+    font-size: 1rem;
+}
+.terms_Container {
+    padding: 10em 10em 8em 10em;
+}
+.terms_Title {
+    margin: 0 0 2em 0;
+}
+.terms_Title > h1 {
+    color: #FFF;
+    font-size: 3em;
+    letter-spacing: 0.02em;
+}
+.terms_Para {
+    width: 85%;
+    padding: 2em 0 4em 0;
+}
+.terms_Para > p {
+    color: #EEEEEA;
+    font-size: 1.1em;
+    line-height: 160%;
+}
+/* text Component */
+.TC_Component_Container{
+    margin: 4em 0 2em 0;
+}
+.TC_Component_Title {
+    margin: 0 0 2em 0;
+}
+.TC_Component_Title > h3 {
+    color: #FFF;
+    font-size: 1.8em;
+    letter-spacing: 0.02em;
+}
+.TC_Component_Description > p {
+    color: #EEEEEA;
+    font-size: 1.1em;
+    line-height: 160%;
+}
+/* Bullet Component */
+.bullet_Container {
+    margin: 0 0 2em 0;
+}
+.bullet_MainText > p {
+    color: #FFF;
+    font-size: 1.1em;
+}
+.bullet_Point_Container {
+    margin: 1em 0 0 2em;
+}
+.bullet_Point_Container > ul {
+    list-style: none;
+}
+.bullet_Point_Container > ul > li {
+    display: flex;
+    align-items: center;
+}
+.bullet_Point_Container > ul > li::before {
+    content: "•";
+    color: #EEEEEA;
+}
+.bullet_Point_Container > ul > li > p {
+    color: #EEEEEA;
+    font-size: 1.1em;
+    line-height: 160%;
+    margin: 0 0 0 1em;
+}
+/* termsInnerPara */
+.terms_Para_Inner > p {
+    color: #EEEEEA;
+    font-size: 1.1em;
+    line-height: 160%;
+}
+/*  */
+.terms_Para_Pad {
+    margin: 2em 0 0 0;
+}
+
+
+
+/* Privacy Policy */
+.privacyPage {
+    background: #242423;
+    padding: 2rem 4rem 2rem 6rem;
+    font-size: 1rem;
+}
+.privacy_Container {
+    padding: 10em 10em 8em 10em;
+}
+/*  */
+.bullet_Point_Container > ul {
+    list-style: none;
+}
+.bullet_Point_Container > ul > a > li {
+    display: flex;
+    align-items: center;
+}
+.bullet_Point_Container > ul > a > li::before {
+    content: "•";
+    color: #EEEEEA;
+}
+.bullet_Point_Container > ul > a > li > p, .bullet_Point_Container > ul > a  > p   {
+    color: #EEEEEA;
+    font-size: 1.1em;
+    line-height: 160%;
+    margin: 0 0 0 1em;
+}

@@ -68,6 +68,28 @@
 						}
 					}
 				]
+			},
+			"stats_c": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Officia id anim ea dolore ad velit do quis nulla elit. Velit sit consectetur culpa elit anim quis ad aliqua nulla laborum eiusmod incididunt adipisicing labore. Culpa culpa anim cupidatat nisi."
+						}
+					}
+				]
+			},
+			"stats_c_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat voluptate do pariatur culpa velit."
+						}
+					}
+				]
 			}
 		},
 		"items": [

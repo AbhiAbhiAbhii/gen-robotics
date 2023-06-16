@@ -1,0 +1,35 @@
+.fOf {
+    padding: 2rem;
+    background: #EEEEEA;
+    font-size: 1rem;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fof_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fof_Title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 2.6em 0;
+}
+.fof_Number > p {
+    font-size: 12em;
+}
+.fof_Text {
+    position: relative;
+    transform: translateY(-15%);
+}
+.fof_Text > p {
+    font-size: 1.6em;
+}

@@ -3,12 +3,12 @@
 import Link from "next/link"
 import { useEffect, useRef, useState, } from "react"
 
-export default function Header({lenis, style, ref}) {
+export default function Header({lenis, style, ref, color, pageId}) {
 
 
-    let menuData = [{ content: 'Robotics & AI', link:'/about' },{ content: 'Medical & Mobility', link:'https://genroboticsmedical.com/', target:'_blank' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/' }]
+    let menuData = [{ content: 'Robotics & AI', link:'/about' },{ content: 'Medical & Mobility', link:'https://genroboticsmedical.com/', target:'_blank' },{ content: 'Newsroom', link:'/' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/career' }]
     let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
-    let legal = [{ legal: 'Terms & Condition' },{ legal: 'Privacy Policy' }]
+    let legal = [{ legal: 'Terms & Condition', link:'/terms&condition' },{ legal: 'Privacy Policy', link:'/privacypolicy' }]
     let ourProducts = [{products: 'Bandicoot', link:'/products/bandicoot'}, {products: 'Bandicoot Mini', link:'/'},{products:'Bandicoot Mobility+', link:'/'}, {products: 'Willboar', link:'/'}]
 
 
@@ -93,7 +93,6 @@ export default function Header({lenis, style, ref}) {
 
 
 
-
     useEffect(() => {
 
           window.onscroll = () => {
@@ -112,24 +111,27 @@ export default function Header({lenis, style, ref}) {
               }
           }
 
+
     }, [])
+
+   
 
     return(
         <>
         <nav ref={navRef} className="nav" style={style}>
             <div className="navContainer">
                 <div onClick={MenuTrigger} className="navMenu_Container">
-                    <div className="navCircle">
-                        <div className="lOne" /> {/* lineOne */}
-                        <div className="lTwo" /> {/* lineTwo */}
+                    <div className="navCircle" style={{border:`1px ${color} solid`}}>
+                        <div className="lOne" style={{backgroundColor:color}} /> {/* lineOne */}
+                        <div className="lTwo" style={{backgroundColor:color}} /> {/* lineTwo */}
                     </div>
-                    <div style={{color:'#FFF'}}><p>Menu</p></div>
+                    <div style={{color:'#FFF'}}><p style={{color:color}}>Menu</p></div>
                 </div>
                 <div onClick={() => window.location.href='/'} style={{height:'4rem', width:'14.625rem', cursor:'pointer'}}>
                     <img style={{height:'100%', width:'100%', objectFit:'cover'}} src="/logoGenRobo.svg" alt="logo" />
                 </div>
                 <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                    <button onClick={() => window.location.href='/contact'} className="talkToUsBtn"  style={{border:'1px #FFF solid', padding:'1rem 2.4rem', borderRadius:'0.63rem'}}>Talk to us</button>
+                    <button onClick={() => window.location.href='/contact'} className="talkToUsBtn"  style={{border:`1px ${color} solid`, padding:'1rem 2.4rem', borderRadius:'0.63rem', color:color}}>Talk to us</button>
                 </div>
             </div>
         </nav>
@@ -202,9 +204,9 @@ export default function Header({lenis, style, ref}) {
                                         {
                                             legal.map((data, i) => {
                                                 return(
-                                                    <div key={i} className="menu_Item" style={{marginRight:'2rem'}}>
+                                                    <a key={i} href={data.link} className="menu_Item" style={{marginRight:'2rem'}}>
                                                         <p>{data.legal}</p>
-                                                    </div>
+                                                    </a>
                                                 )
                                             })
                                         }

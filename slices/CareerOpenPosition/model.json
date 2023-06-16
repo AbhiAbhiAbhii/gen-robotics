@@ -1,0 +1,41 @@
+{
+  "id": "career_open_position",
+  "type": "SharedSlice",
+  "name": "CareerOpenPosition",
+  "description": "CareerOpenPosition",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "position_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Position Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "position_type": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Position Type",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": { "label": "CTA Link", "placeholder": "", "select": null }
+        }
+      }
+    }
+  ]
+}

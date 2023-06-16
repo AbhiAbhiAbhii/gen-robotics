@@ -5,6 +5,10 @@ import dynamic from "next/dynamic";
 export const components = {
   bandicoot_image_sequence: dynamic(() => import("./BandicootImageSequence")),
   blue_print: dynamic(() => import("./FeatureCarousel")),
+  career_benefits: dynamic(() => import("./CareerBenefits")),
+  career_hero: dynamic(() => import("./CareerHero")),
+  career_mission: dynamic(() => import("./CareerMission")),
+  career_open_position: dynamic(() => import("./CareerOpenPosition")),
   custom_innovation: dynamic(() => import("./CustomInnovation")),
   hero: dynamic(() => import("./Hero")),
   hero_about: dynamic(() => import("./HeroAbout")),

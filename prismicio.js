@@ -12,6 +12,8 @@ export function linkResolver(doc) {
       return '/'
     case 'about_page':
       return '/about'
+    case 'career_page':
+      return '/career'
     default:
       return null
   }

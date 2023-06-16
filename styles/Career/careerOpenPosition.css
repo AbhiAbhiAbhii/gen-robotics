@@ -1,0 +1,100 @@
+.carrOP {
+    background: #242423;
+    padding: 4rem 2rem 2rem 2rem;
+
+    font-size: 1rem;
+}
+.carrOP_Container {
+    padding: 2em;
+}
+.carrOP_Title > h2 {
+    color: #FFF;
+    font-size: 4em;
+}
+.carrOP_Items_Container{
+    margin: 4.4em 0 4em 0;
+}
+.carrOP_Item {
+
+    background: #666666;
+    margin: 2.4em 0;
+    padding: 2.4em 2em;
+    border-radius: 0.63em;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: all 0.3s cubic-bezier(0.76, 0.00, 0.24, 1.00);
+}
+.carrOP_Item:hover {
+    background: #8C7024;
+}
+.carrOP_Item_Position {
+    width: 25%;
+}
+.carrOP_Item_Position > p {
+    color: #FFF;
+    font-size: 1.1em;
+}
+.carrOP_Item_Position_Type {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrOP_Item_Position_Type > p {
+    color: #FFF;
+    font-size: 1.1em;
+}
+.carrOP_Item_Link {
+    width: 25%;
+}
+.carrOP_Item_CTA {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+
+
+    margin: 0 1em 0 0;
+}
+.carrOP_Item_InnerCTA_WRAP {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+.carrOP_Item_InnerCTA_WRAP > button{
+    color: #FFF;
+    font-size: 1em;
+
+}
+
+.carrOP_Item_InnerCTA_WRAP::after {
+    content: '';
+
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 1px;
+    width: 0%;
+
+    background: #FFF;
+    transition: all 0.3s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.carrOP_Item:hover .carrOP_Item_InnerCTA_WRAP::after {
+    content: '';
+
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+
+    background: #FFF;
+}
+
