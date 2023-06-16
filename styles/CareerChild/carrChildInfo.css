@@ -1,0 +1,45 @@
+.carrChildInfo {
+    background: #FFF;
+    
+    padding: 6rem 2rem;
+
+    font-size: 1rem;
+}
+.carrChildInfo_Container {
+    padding: 2em 4em;
+}
+.carrChildInfo_Para {
+    width: 80%;
+}
+.carrChildInfo_Para > h1 {
+    font-size: 4em;
+    color: #242424;
+    padding: 0.5em 0;
+}
+.carrChildInfo_Para > p {
+    font-size: 1.2em;
+    letter-spacing: 0.01em;
+    line-height: 180%;
+    color: #242423;
+}
+
+/* Carr Child Component */
+.carrChildInfo_Component {
+    margin: 4em 0 0 0;
+}
+.carrChildInfo_Component_Title {
+    padding: 1em 0 2em 0;
+}
+.carrChildInfo_Component_Title > h2 {
+    font-size: 2.6em;
+    color: #242423;
+}
+.carrChildInfo_Component_Points {
+    width: 70%;
+    padding: 0 0 0 2em;
+}
+.carrChildInfo_Component_Points > p {
+    font-size: 1.2em;
+    line-height: 180%;
+    color: #242424;
+}

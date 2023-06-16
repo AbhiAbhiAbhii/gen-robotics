@@ -54,6 +54,42 @@ export type AboutPageDocument<Lang extends string = string> =
     "about_page",
     Lang
   >;
+/** Content for Career Child Page documents */
+interface CareerChildPageDocumentData {
+  /**
+   * Slice Zone field in *Career Child Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<CareerChildPageDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Career Child Page → Slice Zone*
+ *
+ */
+type CareerChildPageDocumentDataSlicesSlice =
+  | CareerChildHeroSlice
+  | CareerChildInformationSlice;
+/**
+ * Career Child Page document from Prismic
+ *
+ * - **API ID**: `career_child_page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CareerChildPageDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<CareerChildPageDocumentData>,
+    "career_child_page",
+    Lang
+  >;
 /** Content for Career_page documents */
 interface CareerPageDocumentData {
   /**
@@ -156,6 +192,7 @@ export type HomePageDocument<Lang extends string = string> =
   >;
 export type AllDocumentTypes =
   | AboutPageDocument
+  | CareerChildPageDocument
   | CareerPageDocument
   | HomePageDocument;
 /**
@@ -387,6 +424,154 @@ type CareerBenefitsSliceVariation = CareerBenefitsSliceDefault;
 export type CareerBenefitsSlice = prismicT.SharedSlice<
   "career_benefits",
   CareerBenefitsSliceVariation
+>;
+/**
+ * Primary content in CareerChildHero → Primary
+ *
+ */
+interface CareerChildHeroSliceDefaultPrimary {
+  /**
+   * Position Title field in *CareerChildHero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_hero.primary.position_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  position_title: prismicT.RichTextField;
+  /**
+   * Position Type Tag field in *CareerChildHero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_hero.primary.position_type_tag
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  position_type_tag: prismicT.RichTextField;
+  /**
+   * Position Tag field in *CareerChildHero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_hero.primary.position_tag
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  position_tag: prismicT.RichTextField;
+}
+/**
+ * Default variation for CareerChildHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CareerChildHeroSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<CareerChildHeroSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *CareerChildHero*
+ *
+ */
+type CareerChildHeroSliceVariation = CareerChildHeroSliceDefault;
+/**
+ * CareerChildHero Shared Slice
+ *
+ * - **API ID**: `career_child_hero`
+ * - **Description**: `CareerChildHero`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CareerChildHeroSlice = prismicT.SharedSlice<
+  "career_child_hero",
+  CareerChildHeroSliceVariation
+>;
+/**
+ * Primary content in CareerChildInformation → Primary
+ *
+ */
+interface CareerChildInformationSliceDefaultPrimary {
+  /**
+   * Title field in *CareerChildInformation → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_information.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Description field in *CareerChildInformation → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_information.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+}
+/**
+ * Item in CareerChildInformation → Items
+ *
+ */
+export interface CareerChildInformationSliceDefaultItem {
+  /**
+   * Title field in *CareerChildInformation → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_information.items[].title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Bullet Points field in *CareerChildInformation → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_child_information.items[].bullet_points
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  bullet_points: prismicT.RichTextField;
+}
+/**
+ * Default variation for CareerChildInformation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CareerChildInformationSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<CareerChildInformationSliceDefaultPrimary>,
+  Simplify<CareerChildInformationSliceDefaultItem>
+>;
+/**
+ * Slice variation for *CareerChildInformation*
+ *
+ */
+type CareerChildInformationSliceVariation = CareerChildInformationSliceDefault;
+/**
+ * CareerChildInformation Shared Slice
+ *
+ * - **API ID**: `career_child_information`
+ * - **Description**: `CareerChildInformation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CareerChildInformationSlice = prismicT.SharedSlice<
+  "career_child_information",
+  CareerChildInformationSliceVariation
 >;
 /**
  * Primary content in CareerHero → Primary
@@ -1201,6 +1386,9 @@ declare module "@prismicio/client" {
       AboutPageDocumentData,
       AboutPageDocumentDataSlicesSlice,
       AboutPageDocument,
+      CareerChildPageDocumentData,
+      CareerChildPageDocumentDataSlicesSlice,
+      CareerChildPageDocument,
       CareerPageDocumentData,
       CareerPageDocumentDataSlicesSlice,
       CareerPageDocument,
@@ -1222,6 +1410,15 @@ declare module "@prismicio/client" {
       CareerBenefitsSliceDefault,
       CareerBenefitsSliceVariation,
       CareerBenefitsSlice,
+      CareerChildHeroSliceDefaultPrimary,
+      CareerChildHeroSliceDefault,
+      CareerChildHeroSliceVariation,
+      CareerChildHeroSlice,
+      CareerChildInformationSliceDefaultPrimary,
+      CareerChildInformationSliceDefaultItem,
+      CareerChildInformationSliceDefault,
+      CareerChildInformationSliceVariation,
+      CareerChildInformationSlice,
       CareerHeroSliceDefaultPrimary,
       CareerHeroSliceDefault,
       CareerHeroSliceVariation,

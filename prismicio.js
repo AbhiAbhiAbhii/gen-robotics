@@ -14,6 +14,8 @@ export function linkResolver(doc) {
       return '/about'
     case 'career_page':
       return '/career'
+    case 'career_child_page':
+      return `/career/${doc.uid}`
     default:
       return null
   }

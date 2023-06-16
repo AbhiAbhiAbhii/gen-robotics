@@ -1,0 +1,65 @@
+.carrChild_Form {
+    padding: 2rem;
+
+    font-size: 1rem;
+}
+.carrChild_Form_Container {
+    padding: 2em 4em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrChild_Form_Div {
+    background: #EEEEEA;
+    border-radius: 0.63em;
+    padding: 2em 5em;
+
+    margin: 0 4em 0 0;
+}
+/* .carrChildForm_Left_Text {
+} */
+.carrChildForm_Left_Text > p {
+    width: 60%;
+    font-size: 4em;
+    color: #322712;
+    
+}
+/* Form */
+.carrChild_Form_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrChild_Form_Input {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1em 0;
+}
+.carrChild_Form_Input > label {
+    padding: 0.5em 0;
+}
+.carrChild_Form_Input > input {
+    padding: 1.5em 12em 1.5em 2em;
+
+    border: none;
+    border-radius: 0.5em;
+}
+.carrChild_Form_Input.carrChild_Form_InputMobile > input {
+    padding: 1.5em 8em 1.5em 6em;
+}
+.carrChild_Form_Btn > button {
+    margin: 2em 0 1em 0;
+    padding: 2em 6em;
+
+    border-radius: 20em;
+    border: none;
+    cursor: pointer;
+
+    background: #322712;
+    color: #FFF;
+}
+
+.carrChild_Form_Btn > button > p {
+    font-size: 1.6em;
+}

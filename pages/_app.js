@@ -38,6 +38,11 @@ import '../styles/Career/careerMission.css'
 import '../styles/Career/careerBenefits.css'
 import '../styles/Career/careerOpenPosition.css'
 
+// Career Child css
+import '../styles/CareerChild/carrChildHero.css'
+import '../styles/CareerChild/carrChildInfo.css'
+import '../styles/CareerChild/carrChildForm.css'
+
 // Terms and Condition css
 import '../styles/T&C.css'
 
