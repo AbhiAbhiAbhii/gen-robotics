@@ -135,7 +135,6 @@ import Footer from '../components/Footer/footer'
  
 const Home = ({ page, navigation, settings }) => {
 
-
   const loaderLeftRef = useRef();
   const loaderRightRef = useRef();
   const loaderCurtainRef = useRef();
@@ -184,7 +183,7 @@ const Home = ({ page, navigation, settings }) => {
           <div ref={loaderRightRef} className='loaderRight_Reveal' style={{transition:`all 1s ${quart}`}} />
           <div ref={loaderCurtainRef} style={{height:'100vh', width:'100vw', background:'#FFF', zIndex:'250', position:'absolute', top:'0', left:'0'}} />
           {/*  */}
-          <SliceZone  slices={page.data.slices} components={components} />
+          <SliceZone quint={quint} quart={quart}  slices={page.data.slices} components={components} />
         </div>
         <Footer />
     {/* <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} texts={texts} /> */}

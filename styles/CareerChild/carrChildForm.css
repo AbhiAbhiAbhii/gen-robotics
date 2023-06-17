@@ -42,11 +42,12 @@
 .carrChild_Form_Input > input {
     padding: 1.5em 12em 1.5em 2em;
 
-    border: none;
+    /* border: none; */
+    outline: none;
     border-radius: 0.5em;
 }
 .carrChild_Form_Input.carrChild_Form_InputMobile > input {
-    padding: 1.5em 8em 1.5em 6em;
+    padding: 1.5em 7em 1.5em 7em;
 }
 .carrChild_Form_Btn > button {
     margin: 2em 0 1em 0;
@@ -62,4 +63,14 @@
 
 .carrChild_Form_Btn > button > p {
     font-size: 1.6em;
+}
+
+/* Focus */
+.focus {
+    border: 1px #E5D161 solid;
+    outline: none;
+}
+.notFocus {
+    border: none;
+    outline: none;
 }

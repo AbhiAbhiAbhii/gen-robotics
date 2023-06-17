@@ -19,6 +19,7 @@ export default function Page({ page }) {
   // Errors
   const [ errors, setErrors ] = useState({});
 
+  // Handle Change on input
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -41,6 +42,74 @@ export default function Page({ page }) {
     
   }
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const validationError = validate();
+
+    if(Object.keys(validationError).length === 0) {
+      console.log('Form Submitted')
+    }
+
+  }
+
+  //  Validate Form
+
+  const validate = () => {
+    let temp = {}
+    temp.fullName = fullName ? '' : 'This field is required'
+    temp.mobile = mobile ? '' : 'This field is required'
+    temp.email = email ? '' : 'This field is required'
+    temp.linkedIn = linkedIn ? '' : 'This field is required'
+
+    setErrors({
+      ...temp
+    })
+
+    return Object.values(temp).every(x => x === '')
+  }
+
+
+  // Focus and Blur
+
+  // Full Name focus & blur
+  const [ fullNameFocus, setFullNameFocus ] = useState(false);
+  const handleFullNameFocus = () => {
+    setFullNameFocus(true)
+  }
+
+  const handleFullNameBlur = () => {
+    setFullNameFocus(false)
+  }
+
+  // Mobile focus & blur
+  const [ mobileFocus, setMobileFocus] = useState(false)
+  const handleMobileFocus = () => {
+    setMobileFocus(true)
+  }
+
+  const handleMobileBlur = () => {
+    setMobileFocus(false)
+  }
+
+  // Email focus & blur
+  const [ emailFocus, setEmailFocus ] = useState(false)
+  const handleEmailFocus = () => {
+    setEmailFocus(true)
+  }
+
+  const handleEmailBlur = () => {
+    setEmailFocus(false)
+  }
+
+  // LinkedIn focus & blur
+  const [ linkedInFocus, setLinkedInFocus ] = useState(false)
+  const handleLinkedInFocus = () => {
+    setLinkedInFocus(true)
+  }
+
+  const handleLinkedInBlur = () => {
+    setLinkedInFocus(false)
+  }
 
  
   return (
@@ -55,7 +124,7 @@ export default function Page({ page }) {
             </p>
           </div>
           <div className='carrChild_Form_Div'>
-            <form className='carrChild_Form_form'>
+            <form className='carrChild_Form_form' onSubmit={ handleSubmit }>
 
               <div className='carrChild_Form_Input'>
                 <label>
@@ -64,8 +133,12 @@ export default function Page({ page }) {
                 <input
                   type='text'
                   id='fullName'
-                  // value={fullName}
-                  // onChange={handleChange}
+                  name='fullName'
+                  value={fullName}
+                  onChange={handleChange} 
+                  onFocus={handleFullNameFocus}
+                  onBlur={handleFullNameBlur}
+                  className={ fullNameFocus ? 'focus' : 'notFocus'}
                   placeholder='Elon Musk' />
                 {errors.fullName && <p className='form_Error'>{errors.fullName}</p>}
               </div>
@@ -74,8 +147,17 @@ export default function Page({ page }) {
                 <label>
                   Mobile*
                 </label>
-                <input placeholder='' />
-                <img src='/IN.png' style={{position:'absolute', left:'0%', bottom:'25%', height:'2em', width:'5em', scale:'0.7'}} alt='' /> 
+                <input 
+                  type='text'
+                  id='mobile'
+                  name='mobile'
+                  value={mobile}
+                  onChange={handleChange}
+                  onFocus={handleMobileFocus}
+                  onBlur={handleMobileBlur}
+                  className={ mobileFocus ? 'focus' : 'notFocus'}
+                />
+                <img src='/IN.png' style={{position:'absolute', left: '0%', bottom: errors.mobile ? '35.5%': mobileFocus ? '23%':'22%', height:'2em', width:'5em', scale:'0.65'}} alt='' /> 
                 {errors.mobile && <p className='form_Error'>{errors.mobile}</p>}
               </div>
 
@@ -83,7 +165,16 @@ export default function Page({ page }) {
                 <label>
                   Email*
                 </label>
-                <input placeholder='Elon Musk' />
+                <input 
+                  type='email'
+                  id='email'
+                  name='email'
+                  value={email}
+                  onChange={handleChange}
+                  onFocus={handleEmailFocus}
+                  onBlur={handleEmailBlur}
+                  className={ emailFocus ? 'focus' : 'notFocus'}
+                  placeholder='elonmusk@tesla.com' />
                 {errors.email && <p className='form_Error'>{errors.email}</p>}
               </div>
 
@@ -91,12 +182,21 @@ export default function Page({ page }) {
                 <label>
                   LinkedIn*
                 </label>
-                <input placeholder='Elon Musk' />
+                <input 
+                  type='text'
+                  id='linkedIn'
+                  name='linkedIn'
+                  value={linkedIn}
+                  onChange={handleChange}
+                  onFocus={handleLinkedInFocus}
+                  onBlur={handleLinkedInBlur}
+                  className={ linkedInFocus ? 'focus':'notFocus'}
+                  placeholder='Elon Musk' />
                 {errors.linkedIn && <p className='form_Error'>{errors.linkedIn}</p>}
               </div>
 
               <div className='carrChild_Form_Btn'>
-                <button>
+                <button type="submit"> 
                   <p>
                   Submit Application
                   </p>
