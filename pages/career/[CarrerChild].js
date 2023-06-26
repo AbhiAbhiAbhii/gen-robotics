@@ -6,7 +6,12 @@ import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices'
 import Header from '../../components/Header/header'
 import Footer from '../../components/Footer/footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
+
 
 
 export default function Page({ page }) {
@@ -111,6 +116,27 @@ export default function Page({ page }) {
     setLinkedInFocus(false)
   }
 
+
+  let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
+
+  useEffect(() => {
+
+
+  gsap.to('.carrChildForm_Left_Text', {
+    scrollTrigger: {
+        trigger: '.carrChild_Form',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: 0.1,
+        toggleActions: 'play none none reverse'
+    },
+    y: 500,
+    duration: 2,
+    ease: quart
+})
+
+  },[])
+
  
   return (
     <>
@@ -125,7 +151,6 @@ export default function Page({ page }) {
           </div>
           <div className='carrChild_Form_Div'>
             <form className='carrChild_Form_form' onSubmit={ handleSubmit }>
-
               <div className='carrChild_Form_Input'>
                 <label>
                   Full Name*

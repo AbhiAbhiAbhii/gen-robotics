@@ -1,5 +1,5 @@
 .news_Wrapper {
-    background: linear-gradient(360deg, #8C7024 0%, #171107 73.44%);;
+    background: linear-gradient(360deg, #8C7024 -10%, #171107 53.44%);
 }
 .news {
     padding: 10rem 2rem 2rem 2rem;
@@ -30,7 +30,6 @@
     font-size: 1.75em;
     line-height: 140%;
 }
-
 /* Item */
 .news_Articles_Container {
     display: flex;
