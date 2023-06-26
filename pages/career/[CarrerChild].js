@@ -157,7 +157,8 @@ export default function Page({ page }) {
                   onBlur={handleMobileBlur}
                   className={ mobileFocus ? 'focus' : 'notFocus'}
                 />
-                <img src='/IN.png' style={{position:'absolute', left: '0%', bottom: errors.mobile ? '35.5%': mobileFocus ? '23%':'22%', height:'2em', width:'5em', scale:'0.65'}} alt='' /> 
+                <img src='/IN.png' 
+                style={{position:'absolute', left: '0%', bottom: errors.mobile ? '35.5%': mobileFocus ? '23%':'22%', height:'2em', width:'5em', scale:'0.65'}} alt='img' /> 
                 {errors.mobile && <p className='form_Error'>{errors.mobile}</p>}
               </div>
 
@@ -193,6 +194,13 @@ export default function Page({ page }) {
                   className={ linkedInFocus ? 'focus':'notFocus'}
                   placeholder='Elon Musk' />
                 {errors.linkedIn && <p className='form_Error'>{errors.linkedIn}</p>}
+              </div>
+
+              <div className='' style={{border:'1px #EEEEEA solid', margin:'1em 0 0 0'}}>
+              <label>
+                Upload Resume
+              </label>
+              <input type="file" id="myFile" name="filename" style={{margin:'1em 0', width:'100%'}} />
               </div>
 
               <div className='carrChild_Form_Btn'>

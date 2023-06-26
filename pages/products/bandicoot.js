@@ -11,7 +11,7 @@ export default function BandicootII(){
 
     return(
         <>
-        {/* <Header /> */}
+        <Header />
         <ProductHero />
         <ProductOverviewEB />
         {/* image-sequence */}
@@ -19,7 +19,7 @@ export default function BandicootII(){
         {/* ------------------- */}
         <FeaturesScale />
         <ProductBottomShowcase />
-        {/* <Footer /> */}
+        <Footer />
         </>
     )
 }

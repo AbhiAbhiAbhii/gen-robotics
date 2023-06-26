@@ -1,0 +1,77 @@
+{
+  "id": "news_room",
+  "type": "SharedSlice",
+  "name": "NewsRoom",
+  "description": "NewsRoom",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "news_image": {
+          "type": "Image",
+          "config": {
+            "label": "News Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "news_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "News Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "date": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Date",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "source": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Source",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "news_link": {
+          "type": "Link",
+          "config": { "label": "News Link", "placeholder": "", "select": null }
+        }
+      }
+    }
+  ]
+}

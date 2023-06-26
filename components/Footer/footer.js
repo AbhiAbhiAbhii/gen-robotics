@@ -19,7 +19,7 @@ export default function Footer(){
         },
         {
             name: 'Newsroom',
-            link: '/'
+            link: '/newsroom'
         },
     ]
 

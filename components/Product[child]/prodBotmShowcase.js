@@ -139,8 +139,8 @@ export default function ProductBottomShowcase(){
                             <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/imgA.png" alt="" />
                         </div> */}
                         {/* Swiper */}
-                        <div className="prodBtmSC_B_Swiper_Container">
-                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'8em 0 8.35em 0',
+                        <div className="prodBtmSC_B_Swiper_Container" >
+                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0em 0 0em 0',
                                     "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "8%", "--swiper-theme-color": "white", background:'#8C7024', borderRadius:'0.625em'}}
                                     spaceBetween={40}
                                     speed={1000}
@@ -169,26 +169,21 @@ export default function ProductBottomShowcase(){
                                     testimonialData.map((data, i) => {
                                         return(
                                             <SwiperSlide style={{position:'relative', background:'#8C7024'}} key={i}>
-                                                {/* <div className='swiperImg_Div'>
-                                                    <img src={ data.src } alt='image' />
-                                                </div>
-                                                <div style={{position:'absolute', bottom:'6%', left:'4%'}}>
-                                                    <div><p style={{fontSize:'24px', color:'#FFFF'}}>Name here</p></div>
-                                                    <div><p style={{color:'rgba(255,255,255,0.5)'}}>Location or roll can go here</p></div>
-                                                </div> */}
                                                 <div className='testimonial_Container'>
                                                     <div className='testimonial_Img'>
                                                         <img src={data.src} alt='image' />
                                                     </div>
-                                                    <div className='testimonial_Title'>
-                                                        <p>
-                                                            { data.title }
-                                                        </p>
-                                                    </div>
-                                                    <div className='testimonial_description'>
-                                                        <p>
-                                                            { data.description }
-                                                        </p>
+                                                    <div className='testimonial_Title_Container'>
+                                                        <div className='testimonial_Title'>
+                                                            <p>
+                                                                { data.title }
+                                                            </p>
+                                                        </div>
+                                                        <div className='testimonial_description'>
+                                                            <p>
+                                                                { data.description }
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 
@@ -197,6 +192,12 @@ export default function ProductBottomShowcase(){
                                     })
                                 }
                             </Swiper>
+                        </div>
+                        <div className='prodBtmSC_B_Container_Vid_Container' style={{margin:'2.8em 0 0 0'}}>
+                        <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{height:'100%', width: '100%', objectFit:'cover', borderRadius:'10px'}}>
+                            <source src='/Products/Bandicoot_Splitup_4k.mp4'  type="video/mp4" />
+                            {/* <source src='/heroVideo.webm'  type="video/webm" />                 */}
+                        </video>
                         </div>
                     </div>
                 </div>

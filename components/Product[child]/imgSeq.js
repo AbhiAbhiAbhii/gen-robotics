@@ -102,7 +102,7 @@ export default function ProductImgSequence(){
 
     return(
         <>
-        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden', background:'#000', display:'none'}}>
+        <section className="prodImg_Seq_Container" style={{background:'#242423', padding:"2rem", height:'100vh', overflow:'hidden', background:'#000', display:''}}>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', height:'100%'}}>
                 <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 4em 2em', height:'100%'}}>
                     <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>
@@ -124,11 +124,11 @@ export default function ProductImgSequence(){
                 {/* <div className="testDivvvvvvvv" style={{width:'60%',}}>
                     <canvas className="prodImg_Seq_Item" id="prodImg_Seq" />
                 </div> */} 
-                <div className="IMAGEDUMMY" style={{width:'50%'}}>
-                    <div style={{height:'100%', width:'100%'}}>
+                <div className="IMAGEDUMMY" style={{width:'50%', height:'100%', display:'flex', justifyContent:'center'}}>
+                    <div style={{height:'100%', width:'100%', display:'flex', justifyContent:'center', alignItems:'center'}}>
                         {/* <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/dummySeq.png" alt="image" /> */}
-                        <video className="prodVideo" id='video' autoPlay="true" muted="true" disableRemotePlayback loop="true" playsInline="true"  style={{height:'85%', width:'85%', objectFit:'contain'}}>
-                            <source src="/Products/prod-bandicoot-vid.mp4" disableRemotePlayback type="video/mp4" />
+                        <video className="prodVideo" id='video' autoPlay="true" muted="true" disableRemotePlayback loop="true" playsInline="true"  style={{height:'85%', width:'85%', objectFit:'cover'}}>
+                            <source src="/Products/bandicootPro_Vid.mp4" disableRemotePlayback type="video/mp4" />
                         </video>
                     </div>
                     {/* video-insert-here */}

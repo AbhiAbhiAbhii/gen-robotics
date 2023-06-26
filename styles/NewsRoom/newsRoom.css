@@ -1,0 +1,126 @@
+.news_Wrapper {
+    background: linear-gradient(360deg, #8C7024 0%, #171107 73.44%);;
+}
+.news {
+    padding: 10rem 2rem 2rem 2rem;
+    font-size: 1rem;
+}
+.news_Container {
+    padding: 2em;
+}
+.news_Text_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.news_Title {
+    width: 30%;
+}
+.news_Title > h1 {
+    color: #FFF;
+    font-size: 7em;
+    line-height: 120%;
+    letter-spacing: 0.02rem;
+}
+.news_Description {
+    width: 60%;
+}
+.news_Description > p {
+    color: #EEEEEA;
+    font-size: 1.75em;
+    line-height: 140%;
+}
+
+/* Item */
+.news_Articles_Container {
+    display: flex;
+    height: auto;
+    margin: 6em 0;
+
+}
+.news_Articles_Container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.news_Article_Item {
+    width: 85%;
+    min-height: 26em;
+    margin: 0 0 3em 0;
+    border-radius: 0.3em;
+    background: #FFF;
+
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news_Articles_Item_Container {
+    margin: 0 0 1em 0;
+
+}
+.news_Article_Image {
+    height: 12em;
+    width: 100%;
+}
+.news_Article_Description {
+    width: 95%;
+    height: 8em;    
+    margin: 0 auto;
+}
+.news_Article_Description > p {
+    font-size: 1.6em;
+}
+.news_Article_Bottom {
+    border-top: 1px rgba(0, 0, 0, 0.35) solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.1em 1em;
+}
+.news_Article_Bottom_Left > p {
+    color: #7D7D7D;
+}
+.news_Article_Bottom_Right > p {
+    color: #7D7D7D;
+}
+
+/* .swiper-grid-column > .swiper-wrapper{ flex-direction: unset !important; } */
+.swiper-pagination-bullet {
+    color: #757575;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.swiper-pagination-bullet-active {
+    color: #000;
+    /* background: #E5D161; */
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    margin: 0 auto 0 auto;
+    padding: 1em 0;
+    position: relative;
+    transform: translate(0,35%);
+    
+
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets, .swiper-pagination-bullet {
+    height: 2em;
+    width: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #E5D161;
+}
+

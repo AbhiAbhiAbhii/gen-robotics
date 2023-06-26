@@ -15,11 +15,11 @@ export default function ProductHero(){
             </div>
             <div className="product_Container">
                 <div className="product_Title_Container">
-                    <div className="product_Eyebrow">
+                    {/* <div className="product_Eyebrow">
                         <p>
                             { eyebrow }
                         </p>
-                    </div>
+                    </div> */}
                     <div className="product_Title">
                         <p>
                             { productTitle }

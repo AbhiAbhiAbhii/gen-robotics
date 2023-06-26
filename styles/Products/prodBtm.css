@@ -121,9 +121,9 @@
 /* Testimonial Swiper */
 .testimonial_Container {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     position: relative;
 
@@ -131,12 +131,20 @@
 }
 .testimonial_Img {
     height: 20%;
-    width: 70%;
+    width: 40%;
+
 }
 .testimonial_Img > img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+.testimonial_Title_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 60%;
 }
 .testimonial_Title {
     padding: 2em 0;
@@ -146,11 +154,11 @@
     font-size: 2.4em;
 }
 .testimonial_description {
-    width: 90%;
+    width: 95%;
 }
 .testimonial_description > p {
     color: #FFF;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
 }
 /* Testimonial Progress Bar */

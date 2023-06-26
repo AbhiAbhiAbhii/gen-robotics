@@ -190,11 +190,46 @@ export type HomePageDocument<Lang extends string = string> =
     "home_page",
     Lang
   >;
+/** Content for News Room Page documents */
+interface NewsRoomPageDocumentData {
+  /**
+   * Slice Zone field in *News Room Page*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room_page.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<NewsRoomPageDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *News Room Page → Slice Zone*
+ *
+ */
+type NewsRoomPageDocumentDataSlicesSlice = NewsRoomSlice;
+/**
+ * News Room Page document from Prismic
+ *
+ * - **API ID**: `news_room_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NewsRoomPageDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithoutUID<
+    Simplify<NewsRoomPageDocumentData>,
+    "news_room_page",
+    Lang
+  >;
 export type AllDocumentTypes =
   | AboutPageDocument
   | CareerChildPageDocument
   | CareerPageDocument
-  | HomePageDocument;
+  | HomePageDocument
+  | NewsRoomPageDocument;
 /**
  * Primary content in BandicootImageSequence → Primary
  *
@@ -1079,6 +1114,118 @@ export type InvestorsSlice = prismicT.SharedSlice<
   InvestorsSliceVariation
 >;
 /**
+ * Primary content in NewsRoom → Primary
+ *
+ */
+interface NewsRoomSliceDefaultPrimary {
+  /**
+   * Title field in *NewsRoom → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Description field in *NewsRoom → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+}
+/**
+ * Item in NewsRoom → Items
+ *
+ */
+export interface NewsRoomSliceDefaultItem {
+  /**
+   * News Image field in *NewsRoom → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.items[].news_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  news_image: prismicT.ImageField<never>;
+  /**
+   * News Description field in *NewsRoom → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.items[].news_description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  news_description: prismicT.RichTextField;
+  /**
+   * Date field in *NewsRoom → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.items[].date
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  date: prismicT.RichTextField;
+  /**
+   * Source field in *NewsRoom → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.items[].source
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  source: prismicT.RichTextField;
+  /**
+   * News Link field in *NewsRoom → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news_room.items[].news_link
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  news_link: prismicT.LinkField;
+}
+/**
+ * Default variation for NewsRoom Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NewsRoomSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<NewsRoomSliceDefaultPrimary>,
+  Simplify<NewsRoomSliceDefaultItem>
+>;
+/**
+ * Slice variation for *NewsRoom*
+ *
+ */
+type NewsRoomSliceVariation = NewsRoomSliceDefault;
+/**
+ * NewsRoom Shared Slice
+ *
+ * - **API ID**: `news_room`
+ * - **Description**: `NewsRoom`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NewsRoomSlice = prismicT.SharedSlice<
+  "news_room",
+  NewsRoomSliceVariation
+>;
+/**
  * Primary content in OurSupport → Primary
  *
  */
@@ -1395,6 +1542,9 @@ declare module "@prismicio/client" {
       HomePageDocumentData,
       HomePageDocumentDataSlicesSlice,
       HomePageDocument,
+      NewsRoomPageDocumentData,
+      NewsRoomPageDocumentDataSlicesSlice,
+      NewsRoomPageDocument,
       AllDocumentTypes,
       BandicootImageSequenceSliceDefaultPrimary,
       BandicootImageSequenceSliceDefault,
@@ -1448,6 +1598,11 @@ declare module "@prismicio/client" {
       InvestorsSliceDefault,
       InvestorsSliceVariation,
       InvestorsSlice,
+      NewsRoomSliceDefaultPrimary,
+      NewsRoomSliceDefaultItem,
+      NewsRoomSliceDefault,
+      NewsRoomSliceVariation,
+      NewsRoomSlice,
       OurSupportSliceDefaultPrimary,
       OurSupportSliceDefaultItem,
       OurSupportSliceDefault,

@@ -1,0 +1,15 @@
+{
+  "id": "news_room_page",
+  "label": "News Room Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": { "choices": { "news_room": { "type": "SharedSlice" } } }
+      }
+    }
+  }
+}

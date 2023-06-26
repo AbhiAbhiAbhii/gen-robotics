@@ -43,6 +43,9 @@ import '../styles/CareerChild/carrChildHero.css'
 import '../styles/CareerChild/carrChildInfo.css'
 import '../styles/CareerChild/carrChildForm.css'
 
+// News Room css
+import '../styles/NewsRoom/newsRoom.css'
+
 // Terms and Condition css
 import '../styles/T&C.css'
 
