@@ -197,7 +197,10 @@ export default function BluePrint({ slice }) {
                 }
               </div>
               <div className='featureCarousel_ContentContainer' id='bluePrint' >
-                <div  className='featureCarousel_SliderContainer'>
+                <div onMouseEnter={() => {
+                  setAutoplay(false)
+                  console.log("FALSE")
+                }}  className='featureCarousel_SliderContainer'>
                   <Swiper  style={{height:'100%'}}
                     direction={'vertical'}
                     ref={slideRef}
@@ -210,7 +213,7 @@ export default function BluePrint({ slice }) {
                     // mousewheel={true}
                     slidesPerView={2.4}
                     onClick={() => setAutoplay(false)}
-                    onMouseEnter={() => setAutoplay(false)}
+                    onMouseEnter={() => console.log( "FALSE")}
                     onSlideChange={(i) => {
                       let SlideIndex = document.querySelectorAll('.featureCarousel_Swiper_idDiv');
                       let SlideTitle = document.querySelectorAll('.featureCarousel_Swiper_TitleDiv');
