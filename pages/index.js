@@ -172,24 +172,24 @@ const Home = ({ page, navigation, settings }) => {
   return(
     <>
     <Head />
-    {/* {
+    {
       loading ? (<Loader /> ):
       
-        <> */}
+        <>
         <Header />
         <div style={{position:'relative'}}>
           {/* LOADER REVEAL OVERLAY */}
-          {/* <div ref={loaderLeftRef} className='loaderLeft_Reveal' style={{transition:`all 1s ${quart}`}} />
-          <div ref={loaderRightRef} className='loaderRight_Reveal' style={{transition:`all 1s ${quart}`}} /> */}
+          <div ref={loaderLeftRef} className='loaderLeft_Reveal' style={{transition:`all 1s ${quart}`}} />
+          <div ref={loaderRightRef} className='loaderRight_Reveal' style={{transition:`all 1s ${quart}`}} />
           <div ref={loaderCurtainRef} style={{height:'100vh', width:'100vw', background:'#FFF', zIndex:'250', position:'absolute', top:'0', left:'0'}} />
           {/*  */}
           <SliceZone quint={quint} quart={quart}  slices={page.data.slices} components={components} />
         </div>
         <Footer />
     {/* <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} texts={texts} /> */}
-    {/* </>
+    </>
       
-    } */}
+    }
         
     </>
   )
