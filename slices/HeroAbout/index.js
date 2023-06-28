@@ -71,35 +71,35 @@ export default function HeroAbout({ slice }){
 
               setTimeout(() => {
                 titleRef.current.style.transform = 'translateY(0)';
-              }, 500)
+              }, 200)
               setTimeout(() => {
                 descriptARef.current.style.transform = 'translateY(0)';
-              },1000)
+              },600)
               setTimeout(() => {     
                 statARef.current.style.transform = 'translateY(0)';
-              }, 1500)
+              }, 800)
               setTimeout(() => {
                   statDescARef.current.style.transform = 'translateY(0)';
-                }, 1800)
+                }, 1000)
                 setTimeout(() => {
                 statBRef.current.style.transform = 'translateY(0)';
-              }, 2000)
+              }, 1200)
                 setTimeout(() => {
                 statDescBRef.current.style.transform = 'translateY(0)';
-              }, 2200)
+              }, 1400)
               setTimeout(() => {
                 statCRef.current.style.transform = 'translateY(0)';
-              }, 2500)
+              }, 1600)
                 setTimeout(() => {
                 statDescCRef.current.style.transform = 'translateY(0)';
-              }, 2800)
+              }, 1800)
 
               // Increment count
               // Stat A
 
               setTimeout(() => {
                 setVisibleStat(true)
-              }, 3500)
+              }, 2000)
             }  
         })
       })
@@ -142,12 +142,12 @@ export default function HeroAbout({ slice }){
           <div className='heroAbout_Content'>
             <div className='heroAbout_ContentA'>
               <div id='observingB' className='heroAbout_Title' style={{overflow:'hidden'}}>
-                  <p ref={titleRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                  <p ref={titleRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                     { title }
                   </p>
               </div>
               <div className='heroAbout_Description' style={{overflow:'hidden'}}>
-                  <p ref={descriptARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                  <p ref={descriptARef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                     { description }
                   </p>
               </div>
@@ -156,14 +156,14 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow:'hidden'}}>
-                    <p className='counterA' ref={statARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p className='counterA' ref={statARef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       {
                         countStatA
                       }
                     </p>
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow:'hidden'}}>
-                    <p ref={statDescARef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statDescARef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       { statADescription }
                     </p>
                   </div>
@@ -171,14 +171,14 @@ export default function HeroAbout({ slice }){
 
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
-                    <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statBRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       {
                         countStatB 
                       }+
                     </p>
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
-                    <p ref={statDescBRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statDescBRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       { statBDescription }
                     </p>
                   </div>
@@ -186,14 +186,14 @@ export default function HeroAbout({ slice }){
               {/* NEW CONTENT- CONNECT WITH PRISMIC LATER */}
               <div className='heroAbout_StatsContainer'>
                   <div className='heroAbout_Stats' style={{overflow: 'hidden'}}>
-                    <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statCRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                     {
                       countStatC
                     }+
                     </p>
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
-                    <p ref={statDescCRef} style={{transform:'translateY(100%)', transition:'all 1.6s cubic-bezier(0.85, 0, 0.15, 1)'}}>
+                    <p ref={statDescCRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
                       Robots
                     </p>
                   </div>

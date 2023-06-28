@@ -50,25 +50,25 @@ export default function OurSupport({ slice }){
       observer.observe(document.getElementById("Launch"));
 
     //second-observer
-    // const observerB = new IntersectionObserver((entries) => {
-    //     entries.forEach(entry => {
-    //         if(entry.isIntersecting) {
-    //             dateRef.current.style.transform = 'translateY(0%)'; 
-    //             anim for date
+    const observerB = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                dateRef.current.style.transform = 'translateY(0%)'; 
+                // anim for date
 
-    //             setTimeout(() => {
-    //                 newsTitleRef.current.style.transform = 'translateY(0%)'; 
-    //                 anim for news-title
-    //             }, 500);
+                setTimeout(() => {
+                    newsTitleRef.current.style.transform = 'translateY(0%)'; 
+                    // anim for news-title
+                }, 500);
                 
-    //             setTimeout(() => {
-    //                 newsDescripRef.current.style.transform = 'translateY(0%)'; 
-    //                 anim for news-description
-    //             }, 1000);
-    //         }
-    //     })
-    // })
-    // observerB.observe(document.getElementById("modi"));
+                setTimeout(() => {
+                    newsDescripRef.current.style.transform = 'translateY(0%)'; 
+                    // anim for news-description
+                }, 1000);
+            }
+        })
+    })
+    observerB.observe(document.getElementById("modi"));
     
   }, [])
 
@@ -114,16 +114,16 @@ export default function OurSupport({ slice }){
             </div>
                 
             {/* supporters showcase */}
-            {/* <div className='support_Supporters_Container' >
+            <div className='support_Supporters_Container' >
                 <div className='support_Supporters_Showcase'>
                     {
                     slice.items.map((data, i) => {
                         return(
                         <div className='support_Supporters_ImgContainer' key={i} 
                             style={{display: data.image.url == null ? 'none' : 'flex', flexDirection:'column', justifyContent:'center'}}> 
-                            image-container
+                            {/* image-container */}
                             <div onClick={() => setModi(i)} style={{ width: i == modi ? '30em':'20.3em', height:'30.6em', margin:'0 1em', cursor:'pointer', transition:'all 0.6s ease'}} key={i}>
-                                 image 
+                                 {/* image  */}
                                 <img 
                                     style={{height:'100%', width:'100%', objectFit:'cover', borderRadius:'0.6rem'}} 
                                     src={data.image.url} 
@@ -154,7 +154,7 @@ export default function OurSupport({ slice }){
                                     { newsDescription }
                                 </p>
                             </div>
-                            <div className='support_News_Read_Container'>
+                            <a href=' /newsroom ' className='support_News_Read_Container'>
                                 <div className='support_News_ReadDiv'>
                                     <p>
                                         Read more
@@ -163,11 +163,11 @@ export default function OurSupport({ slice }){
                                 <div style={{display:'flex', alignItems:'center', justifyContent:'center', height:'1.6rem', width:'1.6rem', borderRadius:'20rem', background:'#4D3300'}}>
                                     <img style={{height:'50%', width:'50%', objectFit:'contain'}} src='/solutions/arrow.svg' alt='arrow' />
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
       </section>
   )
 }

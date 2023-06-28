@@ -89,13 +89,36 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
         );  
     }
 
-
-    return <section ref={sectionRef} style={{ position: "relative" }} >
-        <canvas ref={canvasRef} ></canvas>
-        <div ref={textContainer} style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, display: "flex", justifyContent: "left", alignItems: "center" }} >
-            {
-                texts && texts.map((t, i) => <h1 id={t.id} key={i} >{t.text}</h1>)
+    // Gsap for reveal animation
+    gsap.to(".testDivB",
+        // {
+        //     borderRadius:'50%',
+        //     width:'30%',
+        //     height:'70%',
+        // },
+        {
+            borderRadius:'0%',
+            width: '100%',
+            height:'100%',
+            duration: 2,
+            scrollTrigger:{
+                trigger:'.testDivB',
+                start:'top top',
+                scrub: true,
+                toggleActions: 'restart none none none'
             }
+        }
+    )
+
+
+    return <section className="testDiv" ref={sectionRef} style={{ position: "relative" }} >
+        <div className="testDivB" style={{}}>
+            <canvas ref={canvasRef} ></canvas>
+            <div ref={textContainer} style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, display: "flex", justifyContent: "left", alignItems: "center" }} >
+                {
+                    texts && texts.map((t, i) => <h1 id={t.id} key={i} >{t.text}</h1>)
+                }
+            </div>
         </div>
     </section>
 }

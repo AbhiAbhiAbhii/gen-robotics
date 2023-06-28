@@ -1,8 +1,9 @@
 .bandicootImageSequence {
-    height: 600vh;
+    /* height: 600vh;
 
     position: relative;
-    background: #FFF;
+    background: black;
+    border: 1px red solid; */
 
 }
 .bandicoot_TitleContainer {
@@ -12,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .bandicoot_Title {
     /* padding: 0 0; */
@@ -21,45 +23,25 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
-.bandicoot_Bandicoot {
-    /* padding: 0 0; */
-}
 .bandicoot_Bandicoot > p {
     font-size: 7.375em;
 }
-/* positioning the canvas */
-.bandicoot-scrolling { /* in section */
-    position: absolute;
-    top: -1%;
-    left: 50%;
-    transform: translate(-50%, 0);
-
-    max-height: 100vh;
-    max-width: 100vw;
-
-    transition: all 1s ease;
+/* Test white div */
+.testDiv {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }
-/* bandicoot-inView */
-.bandicoot-scrolling-inview {
-    position: fixed;
-    top: -1%;
-    left: 50%;
-    transform: translate(-50%, 0);
+.testDivB {
+    width: 30%;
+    height: 70%;
+    border-radius: 50%;
 
-    max-height: 100vh;
-    max-width: 100vw;
-
-    transition: all 1s ease;
-}
-/* out of view */
-.bandicoot-scrolling-out-view { /* in section */
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-
-    max-height: 100vh;
-    max-width: 100vw;
-
-    transition: all 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
