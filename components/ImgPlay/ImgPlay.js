@@ -98,7 +98,6 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
                 height:'200%',
                 // scale:10,
                 scale: 2,
-                duration: 2,
                 scrollTrigger: {
                     trigger:'.testDivB',
                     start:'top top',
@@ -110,7 +109,7 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
 
         gsap.to(".myCanva",
         {
-            scale:0.5,
+            scale:0.48,
             scrollTrigger: {
                 trigger:'.testDiv',
                 start:'top top',
@@ -123,7 +122,7 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
 
     return <section className="testDiv" ref={sectionRef} style={{ position: "relative" }} >
         <div className="testDivB" style={{width:'40%', height:'80%', background:'#FFF', borderRadius:'50%', scale:'1'}}>
-            <canvas className="myCanva" ref={canvasRef} />
+            <canvas className="myCanva" style={{}} ref={canvasRef} />
             <div ref={textContainer} style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, display: "flex", justifyContent: "left", alignItems: "center" }} >
                 {
                     texts && texts.map((t, i) => <h1 id={t.id} key={i} >{t.text}</h1>)
