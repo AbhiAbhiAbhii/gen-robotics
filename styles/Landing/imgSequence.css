@@ -35,10 +35,11 @@
     justify-content: center;
 }
 .testDivB {
-    width: 30%;
-    height: 70%;
-    border-radius: 50%;
-
+    /* width: 40%;
+    height: 80%;
+    border-radius: 50%; */
+    /* scale: 1; */
+    /* border: 1px red solid; */
     display: flex;
     align-items: center;
     justify-content: center;

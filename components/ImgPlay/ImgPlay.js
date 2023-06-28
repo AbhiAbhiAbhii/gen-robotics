@@ -92,15 +92,12 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
     // Gsap for reveal animation
     useEffect(() => {
             gsap.to(".testDivB",
-            // {
-            //     borderRadius:'50%',
-            //     width:'30%',
-            //     height:'70%',
-            // },
             {
-                borderRadius:'0%',
+                // borderRadius:'0%',
                 width: '100%',
-                height:'100%',
+                height:'200%',
+                // scale:10,
+                scale: 2,
                 duration: 2,
                 scrollTrigger: {
                     trigger:'.testDivB',
@@ -110,12 +107,23 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
                 }
             }
         )
+
+        gsap.to(".myCanva",
+        {
+            scale:0.5,
+            scrollTrigger: {
+                trigger:'.testDiv',
+                start:'top top',
+                scrub: true,
+                toggleActions: 'restart none none none'
+            }
+        })
     })
 
 
     return <section className="testDiv" ref={sectionRef} style={{ position: "relative" }} >
-        <div className="testDivB" style={{}}>
-            <canvas ref={canvasRef} ></canvas>
+        <div className="testDivB" style={{width:'40%', height:'80%', background:'#FFF', borderRadius:'50%', scale:'1'}}>
+            <canvas className="myCanva" ref={canvasRef} />
             <div ref={textContainer} style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, display: "flex", justifyContent: "left", alignItems: "center" }} >
                 {
                     texts && texts.map((t, i) => <h1 id={t.id} key={i} >{t.text}</h1>)
