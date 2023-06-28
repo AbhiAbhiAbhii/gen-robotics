@@ -90,25 +90,27 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
     }
 
     // Gsap for reveal animation
-    gsap.to(".testDivB",
-        // {
-        //     borderRadius:'50%',
-        //     width:'30%',
-        //     height:'70%',
-        // },
-        {
-            borderRadius:'0%',
-            width: '100%',
-            height:'100%',
-            duration: 2,
-            scrollTrigger:{
-                trigger:'.testDivB',
-                start:'top top',
-                scrub: true,
-                toggleActions: 'restart none none none'
+    useEffect(() => {
+            gsap.to(".testDivB",
+            // {
+            //     borderRadius:'50%',
+            //     width:'30%',
+            //     height:'70%',
+            // },
+            {
+                borderRadius:'0%',
+                width: '100%',
+                height:'100%',
+                duration: 2,
+                scrollTrigger: {
+                    trigger:'.testDivB',
+                    start:'top top',
+                    scrub: true,
+                    toggleActions: 'restart none none none'
+                }
             }
-        }
-    )
+        )
+    })
 
 
     return <section className="testDiv" ref={sectionRef} style={{ position: "relative" }} >

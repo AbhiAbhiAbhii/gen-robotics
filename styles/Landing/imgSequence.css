@@ -28,12 +28,11 @@
 }
 /* Test white div */
 .testDiv {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 100;
 }
 .testDivB {
     width: 30%;
