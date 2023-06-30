@@ -12,6 +12,10 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
+// react-dropzone
+import { useCallback } from 'react'
+import { useDropzone } from 'react-dropzone'
+
 
 
 export default function Page({ page }) {
@@ -122,20 +126,38 @@ export default function Page({ page }) {
   useEffect(() => {
 
 
-  gsap.to('.carrChildForm_Left_Text', {
-    scrollTrigger: {
-        trigger: '.carrChild_Form',
-        start: 'top center',
-        end: 'bottom center',
-        scrub: 0.1,
-        toggleActions: 'play none none reverse'
-    },
-    y: 500,
-    duration: 2,
-    ease: quart
-})
+//   gsap.to('.carrChildForm_Left_Text', {
+//     scrollTrigger: {
+//         trigger: '.carrChild_Form',
+//         start: 'top center',
+//         end: 'bottom center',
+//         scrub: 0.1,
+//         toggleActions: 'play none none reverse'
+//     },
+//     y: 500,
+//     duration: 2,
+//     ease: quart
+// })
+
+// Event-handlers drag drop
+
+  // let DropArea = document.getElementById('drop-area');
+
+  // DropArea.addEventListener('dragenter', handlerFunction, false);
+  // DropArea.addEventListener('dragleave', handlerFunction, false);
+  // DropArea.addEventListener('dragover', handlerFunction, false);
+  // DropArea.addEventListener('drop', handlerFunction, false);
 
   },[])
+
+  // React-DropZone
+  const onDrop = useCallback((acceptedFiles) => {
+
+    console.log(acceptedFiles,"Accepted")
+  }, []);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  // ----------------
 
  
   return (
@@ -143,92 +165,104 @@ export default function Page({ page }) {
       <Header />
       <SliceZone slices={page.data.slices} components={components} />
       <section className='carrChild_Form'>
+        <div className='carrChildForm_Left_Text'>
+          <p>
+            Interested to join our team?
+          </p>
+        </div>
         <div className='carrChild_Form_Container'>
-          <div className='carrChildForm_Left_Text'>
+          {/* <div className='carrChildForm_Left_Text'>
             <p>
               Interested to join our team?
             </p>
-          </div>
+          </div> */}
           <div className='carrChild_Form_Div'>
             <form className='carrChild_Form_form' onSubmit={ handleSubmit }>
-              <div className='carrChild_Form_Input'>
+
+              <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+
+                <div className='carrChild_Form_Input' style={{width:'46%'}}>
+                  <label>
+                    Full Name*
+                  </label>
+                  <input
+                    type='text'
+                    id='fullName'
+                    name='fullName'
+                    value={fullName}
+                    onChange={handleChange} 
+                    onFocus={handleFullNameFocus}
+                    onBlur={handleFullNameBlur}
+                    className={ fullNameFocus ? 'focus' : 'notFocus'}
+                    placeholder='Elon Musk' />
+                  {errors.fullName && <p className='form_Error'>{errors.fullName}</p>}
+                </div>
+
+                <div style={{position:'relative', width:'46%' }} className='carrChild_Form_Input carrChild_Form_InputMobile'>
+                  <label>
+                    Mobile*
+                  </label>
+                  <input 
+                    type='text'
+                    id='mobile'
+                    name='mobile'
+                    value={mobile}
+                    onChange={handleChange}
+                    onFocus={handleMobileFocus}
+                    onBlur={handleMobileBlur}
+                    className={ mobileFocus ? 'focus' : 'notFocus'}
+                  />
+                  <img src='/IN.png' 
+                  style={{position:'absolute', left: '0%', bottom: errors.mobile ? '35.5%': mobileFocus ? '23%':'22%', height:'2em', width:'5em', scale:'0.65'}} alt='img' /> 
+                  {errors.mobile && <p className='form_Error'>{errors.mobile}</p>}
+                </div>
+
+              </div>
+
+              <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+                <div className='carrChild_Form_Input' style={{ width:'46%' }}>
+                  <label>
+                    Email*
+                  </label>
+                  <input 
+                    type='email'
+                    id='email'
+                    name='email'
+                    value={email}
+                    onChange={handleChange}
+                    onFocus={handleEmailFocus}
+                    onBlur={handleEmailBlur}
+                    className={ emailFocus ? 'focus' : 'notFocus'}
+                    placeholder='elonmusk@tesla.com' />
+                  {errors.email && <p className='form_Error'>{errors.email}</p>}
+                </div>
+
+                <div className='carrChild_Form_Input' style={{width:'46%'}}>
+                  <label>
+                    LinkedIn*
+                  </label>
+                  <input 
+                    type='text'
+                    id='linkedIn'
+                    name='linkedIn'
+                    value={linkedIn}
+                    onChange={handleChange}
+                    onFocus={handleLinkedInFocus}
+                    onBlur={handleLinkedInBlur}
+                    className={ linkedInFocus ? 'focus':'notFocus'}
+                    placeholder='Elon Musk' />
+                  {errors.linkedIn && <p className='form_Error'>{errors.linkedIn}</p>}
+                </div>
+              </div>
+
+              <div id="drop-area" className='' style={{border:'1px #EEEEEA solid', margin:'1em 0 0 0'}}>
                 <label>
-                  Full Name*
+                  Upload Resume
                 </label>
-                <input
-                  type='text'
-                  id='fullName'
-                  name='fullName'
-                  value={fullName}
-                  onChange={handleChange} 
-                  onFocus={handleFullNameFocus}
-                  onBlur={handleFullNameBlur}
-                  className={ fullNameFocus ? 'focus' : 'notFocus'}
-                  placeholder='Elon Musk' />
-                {errors.fullName && <p className='form_Error'>{errors.fullName}</p>}
+                <input type="file" id="myFile" name="filename" onChange="handleFiles(this.files)" style={{margin:'1em 0', width:'100%'}} />
               </div>
 
-              <div style={{position:'relative'}} className='carrChild_Form_Input carrChild_Form_InputMobile'>
-                <label>
-                  Mobile*
-                </label>
-                <input 
-                  type='text'
-                  id='mobile'
-                  name='mobile'
-                  value={mobile}
-                  onChange={handleChange}
-                  onFocus={handleMobileFocus}
-                  onBlur={handleMobileBlur}
-                  className={ mobileFocus ? 'focus' : 'notFocus'}
-                />
-                <img src='/IN.png' 
-                style={{position:'absolute', left: '0%', bottom: errors.mobile ? '35.5%': mobileFocus ? '23%':'22%', height:'2em', width:'5em', scale:'0.65'}} alt='img' /> 
-                {errors.mobile && <p className='form_Error'>{errors.mobile}</p>}
-              </div>
-
-              <div className='carrChild_Form_Input'>
-                <label>
-                  Email*
-                </label>
-                <input 
-                  type='email'
-                  id='email'
-                  name='email'
-                  value={email}
-                  onChange={handleChange}
-                  onFocus={handleEmailFocus}
-                  onBlur={handleEmailBlur}
-                  className={ emailFocus ? 'focus' : 'notFocus'}
-                  placeholder='elonmusk@tesla.com' />
-                {errors.email && <p className='form_Error'>{errors.email}</p>}
-              </div>
-
-              <div className='carrChild_Form_Input'>
-                <label>
-                  LinkedIn*
-                </label>
-                <input 
-                  type='text'
-                  id='linkedIn'
-                  name='linkedIn'
-                  value={linkedIn}
-                  onChange={handleChange}
-                  onFocus={handleLinkedInFocus}
-                  onBlur={handleLinkedInBlur}
-                  className={ linkedInFocus ? 'focus':'notFocus'}
-                  placeholder='Elon Musk' />
-                {errors.linkedIn && <p className='form_Error'>{errors.linkedIn}</p>}
-              </div>
-
-              <div className='' style={{border:'1px #EEEEEA solid', margin:'1em 0 0 0'}}>
-              <label>
-                Upload Resume
-              </label>
-              <input type="file" id="myFile" name="filename" style={{margin:'1em 0', width:'100%'}} />
-              </div>
-
-              <div className='carrChild_Form_Btn'>
+              <div  className='carrChild_Form_Btn'>
                 <button type="submit"> 
                   <p>
                   Submit Application
