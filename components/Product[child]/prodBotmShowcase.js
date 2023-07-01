@@ -216,7 +216,7 @@ export default function ProductBottomShowcase(){
                             </div> */}
                         </div>
                         {/* logos */}
-                        <div style={{width:'60%', position:'relative', transform:'translateX(10%)'}}>
+                        <div style={{width:'60%', position:'relative' }}>
                             <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
                                 {
                                     logo.map((data, i) => {

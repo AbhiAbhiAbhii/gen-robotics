@@ -511,7 +511,7 @@ export default function ProductImgSequence(){
             {/* <div style={{height:'40vh', width:'80%', overflow:'hidden', borderRadius:'3em'}}> */}
                 <ImagePlayProd 
                     title={title} texts={texts} 
-                    frameCount={420} travelPixel={4000} 
+                    frameCount={420} travelPixel={5000} 
                     imageLinks={imageLinks} />
             {/* </div> */}
         </section>
