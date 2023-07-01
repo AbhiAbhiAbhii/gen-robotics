@@ -9,7 +9,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
     let menuData = [{ content: 'Robotics & AI', link:'/about' },{ content: 'Medical & Mobility', link:'https://genroboticsmedical.com/', target:'_blank' },{ content: 'Newsroom', link:'/newsroom' },{ content: 'Contact us', link:'/contact' },{ content: 'Careers', link:'/career' }]
     let menuSocials = [{ socials: 'LI', link:'https://www.linkedin.com/company/genrobotics/' },{ socials: 'FB', link:'https://www.facebook.com/genrobotics.org/' },{ socials: 'TW', link:'https://twitter.com/genrobotic/' },{ socials: 'IN', link:'https://www.instagram.com/genroboticinnovations/?hl=en' }]
     let legal = [{ legal: 'Terms & Condition', link:'/terms&condition' },{ legal: 'Privacy Policy', link:'/privacypolicy' }]
-    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicoot'}, {products: 'Bandicoot Mini', link:'/'},{products:'Bandicoot Mobility+', link:'/'}, {products: 'Willboar', link:'/'}]
+    let ourProducts = [{products: 'Bandicoot', link:'/products/bandicoot'}, {products: 'Bandicoot Mini', link:'/products/bandicootmini'},{products:'Bandicoot Mobility+', link:'/products/bandicoot-mobilityplus'}, {products: 'Willboar', link:'/products/willboar'}]
 
 
     // state for menu

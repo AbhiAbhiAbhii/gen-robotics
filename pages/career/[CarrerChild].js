@@ -280,7 +280,6 @@ export default function Page({ page }) {
               {
                 files ? (
                   <div 
-                    // onClick={() => inputRef.current.click()}
                     className='drop-zone'
                     onDragOver={handleDragOver}
                     onDrop={handleDrop}

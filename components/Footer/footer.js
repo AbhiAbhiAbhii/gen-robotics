@@ -30,15 +30,15 @@ export default function Footer(){
         },
         {
             name: 'Bandicoot Mini',
-            link:'/'
+            link:'/products/bandicootmini'
         },
         {
             name: 'Bandicoot Mobility+',
-            link:'/'
+            link:'/products/bandicoot-mobilityplus'
         },
         {
             name: 'Willboar',
-            link:'/'
+            link:'/products/willboar'
         },
     ]
 

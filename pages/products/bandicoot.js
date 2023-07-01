@@ -12,7 +12,7 @@ export default function BandicootII(){
     return(
         <>
         <Header />
-        <ProductHero />
+        <ProductHero video="/Products/BandicootRevealHeroVid.mp4" />
         <ProductOverviewEB />
         {/* image-sequence */}
         <ProductImgSequence />
