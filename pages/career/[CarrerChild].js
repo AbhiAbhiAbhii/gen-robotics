@@ -6,7 +6,7 @@ import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices'
 import Header from '../../components/Header/header'
 import Footer from '../../components/Footer/footer'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -24,6 +24,10 @@ export default function Page({ page }) {
   const [ mobile, setMobile ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ linkedIn, setLinkedIn ] = useState('');
+  const [ files, setFiles ] = useState(null);
+
+  const inputRef = useRef();
+
 
   // Errors
   const [ errors, setErrors ] = useState({});
@@ -139,26 +143,37 @@ export default function Page({ page }) {
 //     ease: quart
 // })
 
-// Event-handlers drag drop
-
-  // let DropArea = document.getElementById('drop-area');
-
-  // DropArea.addEventListener('dragenter', handlerFunction, false);
-  // DropArea.addEventListener('dragleave', handlerFunction, false);
-  // DropArea.addEventListener('dragover', handlerFunction, false);
-  // DropArea.addEventListener('drop', handlerFunction, false);
-
   },[])
 
   // React-DropZone
-  const onDrop = useCallback((acceptedFiles) => {
+  // const onDrop = useCallback((acceptedFiles) => {
 
-    console.log(acceptedFiles,"Accepted")
-  }, []);
+  //   console.log(acceptedFiles,"Accepted")
+  // }, []);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+  // const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
   // ----------------
 
+
+  // Drag Drop
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  }
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    setFiles(event.dataTransfer.files)
+
+    console.log(event.dataTransfer.files)
+
+
+    // if(files) {
+    //   return(
+    //     <p>Uploaded</p>
+    //   )
+    // } else return <p>upload</p>
+
+  }
  
   return (
     <>
@@ -255,12 +270,62 @@ export default function Page({ page }) {
                 </div>
               </div>
 
-              <div id="drop-area" className='' style={{border:'1px #EEEEEA solid', margin:'1em 0 0 0'}}>
+              {/* <div id="drop-area" className='' style={{border:'1px #EEEEEA solid', margin:'1em 0 0 0'}}>
                 <label>
                   Upload Resume
                 </label>
                 <input type="file" id="myFile" name="filename" onChange="handleFiles(this.files)" style={{margin:'1em 0', width:'100%'}} />
-              </div>
+              </div> */}
+
+              {
+                files ? (
+                  <div 
+                    // onClick={() => inputRef.current.click()}
+                    className='drop-zone'
+                    onDragOver={handleDragOver}
+                    onDrop={handleDrop}
+                      >
+                    <div className='drop-zone-container'>
+                      <p>
+                        File has been uploaded
+                      </p>
+                      <input 
+                        type='file'
+                        onChange={(event) => setFiles(event.target.files)}
+                        hidden
+                        ref={inputRef}
+                      />
+                      <div onClick={() => setFiles(null)}>
+                        <p style={{fontSize:'0.9em'}}>Cancel</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : 
+                (
+                  <div 
+                    onClick={() => inputRef.current.click()}
+                    className='drop-zone'
+                    onDragOver={handleDragOver}
+                    onDrop={handleDrop}
+                      >
+                    <div className='drop-zone-container'>
+                      <p>
+                        Drag and Drop Files to Upload
+                      </p>
+                      <p>Or</p>
+                      <input 
+                        type='file'
+                        onChange={(event) => setFiles(event.target.files)}
+                        hidden
+                        ref={inputRef}
+                      />
+                      <div>
+                        <p style={{fontSize:'0.9em'}}>Select Files</p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
 
               <div  className='carrChild_Form_Btn'>
                 <button type="submit"> 
