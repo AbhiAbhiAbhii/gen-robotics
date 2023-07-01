@@ -95,7 +95,7 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
             {
                 // borderRadius:'0%',
                 width: '100%',
-                height:'200%',
+                height:'100%',
                 // scale:10,
                 scale: 2,
                 scrollTrigger: {
@@ -120,8 +120,8 @@ export default function ImagePlay({ frameCount, imageLinks, travelPixel, texts }
     })
 
 
-    return <section className="testDiv" ref={sectionRef} style={{ position: "relative" }} >
-        <div className="testDivB" style={{width:'40%', height:'80%', background:'#FFF', borderRadius:'50%', scale:'1'}}>
+    return <section className="testDiv" ref={sectionRef} style={{ position: "relative" , overflow:'hidden'}} >
+        <div className="testDivB" style={{width:'40%', height:'80%', background:'#FFF', borderRadius:'50%', scale:'1', zIndex:'-10'}}>
             <canvas className="myCanva" style={{}} ref={canvasRef} />
             <div ref={textContainer} style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, display: "flex", justifyContent: "left", alignItems: "center" }} >
                 {

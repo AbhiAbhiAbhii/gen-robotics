@@ -169,7 +169,7 @@ export default function BluePrint({ slice }) {
 
 
   return(
-    <section className='bluePrint' id='safe'>
+    <section className='bluePrint' id='safe' style={{zIndex:'999'}}>
         <div className='bluePrint_Container'>
 
           <div className='bluePrint_TitleContainer'>
