@@ -13,6 +13,7 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
     const firstLoad = useRef(false)
     const timeline = useRef(gsap.timeline())
     const textContainer = useRef()
+    const progressRef = useRef()
 
 
 
@@ -64,6 +65,23 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
                     .to(`#${t.id}`, { opacity: 0 })
                 })
             }
+
+
+            // Progress animation
+            const start = 0;
+            const end =  travelPixel + 100;
+
+            gsap.to(progressRef.current, 
+            {
+                width:'100%',
+                scrollTrigger: {
+                    trigger: textContainer.current,
+                    scrub: true,
+                    start: `${start}px top`,
+                    end: `${end}px top`,
+                }
+            })
+            
             
         }
 
@@ -110,7 +128,7 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
 
 
 
-    return <section className="productImgSeq" ref={sectionRef} style={{ position: "relative", display:'flex', alignItems:'center', justifyContent:'flex-end' }} >
+    return <section className="productImgSeq" ref={sectionRef} style={{ position: "relative", display:'flex', alignItems:'center', justifyContent:'flex-end', background:'#010005'}} >
             <canvas ref={canvasRef} style={{width:'62vw', height:'100vh', objectFit:'cover'}} />
             <div ref={textContainer} style={{ position: "absolute", top: 0, left: 0, height:'100%', width:'100%', padding:'4rem 2rem 2rem 3rem'}}>
                 <div style={{position:'relative', height:'100%', width:'100%'}}>
@@ -134,6 +152,9 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
                                                 t.text
                                             }
                                         </p>
+                                    </div>
+                                    <div style={{ background:'#757573', margin:'0.5em 0 0 0', width:'25%', height:'5px', position:'relative', borderRadius:'20em'}}>
+                                        <div ref={progressRef} style={{position:'absolute', top:'0', left:'0', height:'100%', width:'5%', background:'white', borderRadius:'20em'}} />
                                     </div>
                                 </div>
                             )

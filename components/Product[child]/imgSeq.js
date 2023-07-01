@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ImagePlayProd from "../ImgPlay/ImgPlayProd";
-// import ImagePlayProd from "../ImgPlay/ImgPlayProd";
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -473,6 +472,9 @@ export default function ProductImgSequence(){
     }
   ]
 
+
+
+
    {/* <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', height:'100%'}}>
                 <div style={{width:'35%', display:'flex', flexDirection:'column', justifyContent:'space-between', padding:'3em 0 4em 2em', height:'100%'}}>
                     <div><p style={{fontSize:'1.25em', color:'#FFF', lineHeight:'150%'}}>
@@ -505,11 +507,13 @@ export default function ProductImgSequence(){
 
     return(
         <>
-        <section className="prodImg_Seq_Container" style={{background:'#000'}}>
-            <ImagePlayProd 
-                title={title} texts={texts} 
-                frameCount={420} travelPixel={4000} 
-                imageLinks={imageLinks} />
+        <section className="prodImg_Seq_Container" style={{ background:'#FFF' }}>
+            {/* <div style={{height:'40vh', width:'80%', overflow:'hidden', borderRadius:'3em'}}> */}
+                <ImagePlayProd 
+                    title={title} texts={texts} 
+                    frameCount={420} travelPixel={4000} 
+                    imageLinks={imageLinks} />
+            {/* </div> */}
         </section>
         </>
     )
