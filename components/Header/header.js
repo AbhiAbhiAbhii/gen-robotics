@@ -118,7 +118,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
 
     return(
         <>
-        <nav ref={navRef} className="nav" style={style}>
+        <nav ref={navRef} className="nav" id="navigation-bar" style={style}>
             <div className="navContainer">
                 <div onClick={MenuTrigger} className="navMenu_Container">
                     <div className="navCircle" style={{border:`1px ${color} solid`}}>

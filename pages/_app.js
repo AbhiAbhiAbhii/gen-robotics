@@ -32,6 +32,9 @@ import '../styles/Products/prodOvEb.css'
 import '../styles/Products/featScale.css'
 import '../styles/Products/prodBtm.css'
 
+// Product Child Img Seq css
+  import '../styles/Products/prodImgSeq.css'
+
 // Career css
 import '../styles/Career/careerHero.css'
 import '../styles/Career/careerMission.css'

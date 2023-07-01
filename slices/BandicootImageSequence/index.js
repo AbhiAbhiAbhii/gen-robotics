@@ -845,7 +845,7 @@ export default function BandicootImageSequence(){
   return(
     <>
     <div style={{background:'#EEEEEA'}}>
-    <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} />
+      <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} />
     </div>
     </>
   )

@@ -1,0 +1,33 @@
+.productImgSeq {
+    font-size: 1rem;
+    /* padding: 2rem; */
+}
+.prodImg_Seq_Title {
+    width: 50%;
+}
+.prodImg_Seq_Title > h1 {
+    font-size: 1.25em;
+    line-height: 150%;
+    color: #E9E9E9;
+}
+.prodImg_Seq_MainText {
+    padding: 1em 0;
+}
+.prodImg_Seq_MainText > h1 {
+    color: #E9E9E9;
+    font-size: 2em;
+}
+.prodImg_Seq_Text {
+    width: 50%;
+    /* border: 1px red solid; */
+}
+.prodImg_Seq_Text > p {
+    color: #E9E9E9;
+    font-size: 1.1em;
+    line-height: 150%;
+}
+.prodImg_Seq_Overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+}
