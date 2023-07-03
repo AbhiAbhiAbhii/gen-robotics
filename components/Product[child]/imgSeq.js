@@ -7,13 +7,12 @@ import ImagePlayProd from "../ImgPlay/ImgPlayProd";
 gsap.registerPlugin(ScrollTrigger)
 
 
-export default function ProductImgSequence({imagelinks, frameCount, texts}){
+export default function ProductImgSequence({imagelinks, frameCount, texts, ImgSeqTitle}){
 
 
 
     let Bandicoot = "Bandicoot's"
 
-    let title = "Experience effortless cleaning with the Bandicoot Robot, combining a perfect blend of design and functionality for seamless operation, it revolutionizes the cleaning process, ensuring a hassle-free and highly efficient solution."
 
 
 //   const imageLinks = [
@@ -508,7 +507,7 @@ export default function ProductImgSequence({imagelinks, frameCount, texts}){
         <>
         <section className="prodImg_Seq_Container" style={{ background:'#FFF' }}>
             <ImagePlayProd 
-                title={title} texts={texts} 
+                ImgSeqTitle={ImgSeqTitle} texts={texts} 
                 frameCount={frameCount} travelPixel={5000} 
                 imageLinks={imagelinks} />
         </section>

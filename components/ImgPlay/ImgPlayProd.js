@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, texts, title }) {
+export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, texts, title, ImgSeqTitle }) {
     const sectionRef = useRef()
     const canvasRef = useRef()
     const imageObjects = useRef([])
@@ -129,12 +129,12 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
 
 
     return <section className="productImgSeq" ref={sectionRef} style={{ position: "relative", display:'flex', alignItems:'center', justifyContent:'flex-end', background:'#010005'}} >
-            <canvas ref={canvasRef} style={{width:'62vw', height:'100vh', objectFit:'cover'}} />
+            <canvas ref={canvasRef} style={{width:'60vw', height:'100vh', objectFit:'cover'}} />
             <div ref={textContainer} style={{ position: "absolute", top: 0, left: 0, height:'100%', width:'100%', padding:'4rem 2rem 2rem 3rem'}}>
                 <div style={{position:'relative', height:'100%', width:'100%'}}>
                     <div className="prodImg_Seq_Title">
                         <h1>
-                            { title }
+                            { ImgSeqTitle }
                         </h1>
                     </div>
                     {

@@ -466,15 +466,30 @@ export default function BandicootII(){
         }
       ]
 
+      let title = "Manhole cleaning safer than ever"
+
+      // Product Overview
+      let overviewEyebrow = "When engineering meets"
+      let colorText = "Compassion!"
+      let ovEbDescA = "We understand the challenges faced by sanitation workers, who often endure hazardous conditions while maintaining essential Services. Bandicoot - a cutting-edge solution that combines advanced engineering technology with compassion for these brave individuals. By leveraging robotics and artificial intelligence, the Bandicoot Robot enters and cleans manholes, eliminating the need for sanitation workers to expose themselves to dangerous environments."
+
+
+      // Img seq
+      let ImgSeqTitle = "Experience effortless cleaning with the Bandicoot Robot, combining a perfect blend of design and functionality for seamless operation, it revolutionizes the cleaning process, ensuring a hassle-free and highly efficient solution."
+
+      // FeaturesScale
+      let FTitleA = "Unmatched Feature for Unbeatable Efficiency:"
+      let FTitleB = "Discover Bandicoot"
+
     return(
         <>
         <Header />
-        <ProductHero video="/Products/BandicootRevealHeroVid.mp4" />
-        <ProductOverviewEB />
+        <ProductHero title={title} video="/Products/BandicootRevealHeroVid.mp4" />
+        <ProductOverviewEB ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
         {/* image-sequence */}
-        <ProductImgSequence texts={texts} frameCount={frameCount} imagelinks={imagelinks}  />
+        <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} frameCount={frameCount} imagelinks={imagelinks}  />
         {/* ------------------- */}
-        <FeaturesScale />
+        <FeaturesScale FTitleA={FTitleA} FTitleB={FTitleB} />
         <ProductBottomShowcase video="/Products/Bandicoot_Splitup_4k.mp4" />
         <Footer />
         </>

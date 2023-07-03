@@ -594,13 +594,29 @@ export default function BandicootMini() {
         }
       ]
 
+      let title = "Compact Size, Enhanced Safety";
+
+    // Product Overview
+    let overviewEyebrow = "Safer yet"
+    let colorText = "smaller"
+    let ovEbDescA = "Introducing Bandicoot Mini-Our compact and solar-powered version ensures efficient and eco-friendly operations, further enhancing the well-being of both workers and the environment. Providing a safer alternative that eliminates the need for sanitation workers to expose themselves to perilous environments"
+
+
+  // Img seq
+  let ImgSeqTitle = "Discover the ease of cleaning with the Bandicoot Mini Robot, a perfect fusion of sleek design and impeccable functionality. Harnessing robotics, artifical intelligence, and solar energy, this compact and battery-powered innovation transforms manhole cleaning, delivering seamless operation and effortless, highly efficient results"
+
+
+  // FeaturesScale
+  let FTitleA = "Unmatched Feature for Unbeatable Efficiency:"
+  let FTitleB = "Power in a Small Package!"
+
     return(
         <>
         <Header />
-        <ProductHero video="/Products/Bandicoot_Mini/Mini Bandicoot Heroic 4K.mp4" />
-        <ProductOverviewEB />
-        <ProductImgSequence texts={texts} imagelinks={imageLinks} frameCount ={frameCount} />
-        <FeaturesScale />
+        <ProductHero title={title} video="/Products/Bandicoot_Mini/Mini Bandicoot Heroic 4K.mp4" />
+        <ProductOverviewEB ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
+        <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} imagelinks={imageLinks} frameCount ={frameCount} />
+        <FeaturesScale FTitleA={FTitleA} FTitleB={FTitleB} />
         <ProductBottomShowcase video="/Products/Bandicoot_Mini/Splitup Mini Bandicoot 01.mp4" />
         <Footer />
         </>

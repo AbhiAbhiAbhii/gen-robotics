@@ -3,7 +3,7 @@
 import Image from "next/image"
 
 
-export default function FeaturesScale(){
+export default function FeaturesScale({ FTitleA, FTitleB}){
 
     let featShowcase = [
         {
@@ -40,7 +40,7 @@ export default function FeaturesScale(){
                     <div className="featureScale_Title">
                         <p>
                             {/* Introducing, <br />Features that scale. */}
-                            Unmatched Feature for Unbeatable Efficiency:<br /><span> Discover Bandicoot</span>
+                            {FTitleA}<br /><span>{FTitleB}</span>
                         </p>
                     </div>
                 </div>

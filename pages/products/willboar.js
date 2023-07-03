@@ -465,13 +465,26 @@ export default function Willboar() {
         }
       ]
 
+      // Product Overview
+      let overviewEyebrow = "When engineering meets"
+      let colorText = "Compassion!"
+      let ovEbDescA = "We understand the challenges faced by sanitation workers, who often endure hazardous conditions while maintaining essential Services. Bandicoot - a cutting-edge solution that combines advanced engineering technology with compassion for these brave individuals. By leveraging robotics and artificial intelligence, the Bandicoot Robot enters and cleans manholes, eliminating the need for sanitation workers to expose themselves to dangerous environments."
+
+
+      // Img seq
+      let ImgSeqTitle = "Experience effortless cleaning with the Bandicoot Robot, combining a perfect blend of design and functionality for seamless operation, it revolutionizes the cleaning process, ensuring a hassle-free and highly efficient solution."
+
+      // FeaturesScale
+      let FTitleA = "Unmatched Feature for Unbeatable Efficiency:"
+      let FTitleB = "Discover Bandicoot"
+
     return(
         <>
         <Header />
         <ProductHero img="/Products/bCoot_Hero.png" />
-        <ProductOverviewEB />
-        <ProductImgSequence texts={texts} frameCount={frameCount} imagelinks={imagelinks} />
-        <FeaturesScale />
+        <ProductOverviewEB overviewEyebrow={overviewEyebrow} colorText={colorText} ovEbDescA={ovEbDescA} />
+        <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} frameCount={frameCount} imagelinks={imagelinks} />
+        <FeaturesScale FTitleA={ FTitleA } FTitleB={ FTitleB } />
         <ProductBottomShowcase />
         <Footer />
         </>

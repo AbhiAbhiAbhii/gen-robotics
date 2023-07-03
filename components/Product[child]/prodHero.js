@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 
 
-export default function ProductHero({video, img}){
+export default function ProductHero({ video, img, title }){
     let eyebrow = "BANDICOOT"
     // let productTitle = "Making the  safer than ever"
-    let productTitle = "Manhole cleaning safer than ever"
+    
 
     return(
         <section className="product">   
@@ -23,7 +23,7 @@ export default function ProductHero({video, img}){
                     </div> */}
                     <div className="product_Title">
                         <p>
-                            { productTitle }
+                            { title }
                         </p>
                     </div>
                 </div>
