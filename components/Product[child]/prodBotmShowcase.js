@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import CTA from '../CTAComponent';
 
 
-export default function ProductBottomShowcase(){
+export default function ProductBottomShowcase({ video }){
 
 
     const testRef = useRef();
@@ -195,7 +195,7 @@ export default function ProductBottomShowcase(){
                         </div>
                         <div className='prodBtmSC_B_Container_Vid_Container' style={{margin:'2.8em 0 0 0'}}>
                         <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{height:'100%', width: '100%', objectFit:'cover', borderRadius:'10px'}}>
-                            <source src='/Products/Bandicoot_Splitup_4k.mp4'  type="video/mp4" />
+                            <source src={ video }  type="video/mp4" />
                             {/* <source src='/heroVideo.webm'  type="video/webm" />                 */}
                         </video>
                         </div>
