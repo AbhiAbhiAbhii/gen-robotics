@@ -434,12 +434,44 @@ export default function MobilityPlus() {
       ]
 
       let frameCount = 420;
+
+      const texts = [
+        {
+          id: "one",
+          mainText: "Bandicoot UI",
+          text: "Say goodbye to complexity and hello to simplicity. Bandicoot's intuitive user interface makes operating the system as easy as playing a mobile game. With its self-learning app, anyone can quickly learn to operate Bandicoot effortlessly.",
+          startFrame: 10,
+          endFrame: 100
+        },
+        {
+          id: "two",
+          mainText: "Robotic ARM",
+          text: "Bandicoot's robotic arm is a true game-changer. Designed for efficient waste retrieval, it effortlessly grabs and collects waste anywhere from the manholes. With Bandicoot’s robotic arm the waste retrieval becomes safer and more effective.",
+          startFrame: 110,
+          endFrame: 200
+        },
+        {
+          id: "three",
+          mainText: "Robotic Legs",
+          text: "Experience unrivaled stability and agility with Bandicoot's robotic legs. These advanced legs enable seamless movement within manholes, effortlessly navigating challenging environments. Bandicoot ensures smooth and efficient waste retrieval, no matter the conditions.",
+          startFrame: 210,
+          endFrame: 300
+        },
+        {
+            id: "four",
+            mainText: "Machine Vision",
+            text: "See the unseen with Bandicoot's machine vision technology. It provides operators with clear and detailed visuals of the inside of manholes, even in low-light or dark situations. With Bandicoot, you'll never miss a thing.",
+            startFrame: 310,
+            endFrame: 415
+        }
+      ]
+
     return(
         <>
         <Header />
         <ProductHero img="/Products/bCoot_Hero.png" />
         <ProductOverviewEB />
-        <ProductImgSequence imagelinks={imagelinks} frameCount={frameCount} />
+        <ProductImgSequence texts={texts} imagelinks={imagelinks} frameCount={frameCount} />
         <FeaturesScale />
         <ProductBottomShowcase />
         <Footer />
