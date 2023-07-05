@@ -14,6 +14,7 @@
 }
 .bluePrint_Title {
     padding: 3em 0 8em 0;
+    position: relative;
 }
 .bluePrint_Title > p {
     font-size: 6.2em;
@@ -74,6 +75,7 @@
 }
 .featureCarousel_Swiper_TitleDiv {
     width: 60%;
+
 }
 .featureCarousel_Swiper_TitleDiv > p {
     font-size: 2em;   
@@ -81,6 +83,7 @@
 .featureCarousel_Swiper_DescriptionDiv {
     padding: 1em 0;
     width: 80%;
+
 }
 .featureCarousel_Swiper_DescriptionDiv > p {
     font-size: 1.2em;
@@ -125,4 +128,74 @@
     /* margin: 2em 0; */
     height: 90%;
     width: 90%;
+}
+.featureSwiper_Div {
+    display: none;
+}
+
+.featureProgressBar {
+    display: none;
+}
+
+.featureCarousel_Container_Mob {
+    display: none;
+}
+
+/* media-query */
+@media( max-width: 780px ) {
+    .bluePrint_TitleContainer {
+        justify-content: flex-start;
+    }
+    .bluePrint_Title {
+        width: 80%;
+        padding: 30em 0 14em 3em;
+    }
+    .bluePrint_Title > p  {
+        font-size: 10em;
+        text-align: start;
+    }
+    .featureCarousel_Div {
+        display: none;
+    }
+    .featureCarousel_AssetDiv {
+        position: relative;
+        height: 70em;
+        width: 80%;
+
+    }
+    .featureCarousel_Swiper_TitleDiv {
+        width: 80%;
+        padding: 2em 0 3em 0;
+    }
+    .featureCarousel_Swiper_TitleDiv > p {
+        font-size: 6em;
+    }
+    .featureCarousel_Swiper_DescriptionDiv > p {
+        font-size: 3em;
+        line-height: 140%;
+    }
+    /* MOBILE-COMPONENT */
+    .featureCarousel_Container_Mob {
+        display: block;
+    }
+    .featureCarousel_Inner {
+        background: rgba(0, 0, 0, 0.85);
+        padding: 5em 0;
+        border-radius: 1em;
+    }
+    .featureProgressBar {
+        display: block;
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        height: 3px;
+        width: 80%;
+        background: rgba(214, 213, 213, 0.55);
+    }
+    .featureProgressBar_Inner {
+        height: 100%;
+        width: 20%;
+        background: rgba(146, 112, 44, 1);
+    }
+
 }

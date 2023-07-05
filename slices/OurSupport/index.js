@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { PrismicNextImage } from '@prismicio/next';
 import { useEffect, useRef, useState } from 'react'
 
 /**
@@ -10,6 +11,12 @@ export default function OurSupport({ slice }){
 
   //states
   const [modi, setModi] = useState(0);
+
+ 
+
+  let ModiImage = `${slice.items[0].image.url}`  
+
+  console.log(ModiImage,"MODI IMAGE")
 
   // data - prismic
   let title = `${ slice.primary.title[0].text }`;
@@ -81,8 +88,7 @@ export default function OurSupport({ slice }){
                     <div className='support_Title_Div' 
                         style={{ overflow:'hidden'}}>
                         <p ref={titleRef} style={{transform:'translateY(110%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                            {/* { title } */}
-                            { tempTitle}
+                            { tempTitle }
                         </p>
                     </div>
                     {/* <div className='support_Description_Div'
@@ -114,7 +120,8 @@ export default function OurSupport({ slice }){
             </div>
                 
             {/* supporters showcase */}
-            <div className='support_Supporters_Container' >
+            {/* Desktop Component */}
+            <div className='support_Supporters_Container'>
                 <div className='support_Supporters_Showcase'>
                     {
                     slice.items.map((data, i) => {
@@ -168,6 +175,44 @@ export default function OurSupport({ slice }){
                     </div>
                 </div>
             </div>
+            {/* Desktop Component End */}
+            {/* Mobile Component */}
+            <div className='support_Supporters_Container_Mobile'>
+                <div className='support_Supporters_Inner_Container'>
+                    <div className='support_Supporters_Img_Container'>
+                        <img 
+                            src={ModiImage} 
+                            alt='modiImg' />
+                    </div>
+                    <div className='support_Supporters_Text_Container'>
+                        <div className='support_News_DateDiv'>
+                            <p>
+                                { newsDate }
+                            </p>
+                        </div>
+                        <div className='support_Supporters_Text_ContainerB'>
+                            <div className='support_News_TitleDiv'>
+                                <p>
+                                    { newsTitle }
+                                </p>
+                            </div>
+                            <div className='support_News_CTA'>
+                                <a href=' /newsroom ' className='support_News_Read_Container'>
+                                    <div className='support_News_ReadDiv'>
+                                        <p>
+                                            Read more
+                                        </p>
+                                    </div>
+                                    <div style={{display:'flex', alignItems:'center', justifyContent:'center', height:'6em', width:'6em', borderRadius:'20rem', background:'#4D3300'}}>
+                                        <img style={{height:'50%', width:'50%', objectFit:'contain'}} src='/solutions/arrow.svg' alt='arrow' />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Mobile Component End */}
       </section>
   )
 }

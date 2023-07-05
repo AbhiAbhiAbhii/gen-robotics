@@ -5,6 +5,8 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
+import { PrismicRichText } from '@prismicio/react';
+import { PrismicNextImage } from '@prismicio/next';
 /**
  * @typedef {import("@prismicio/client").Content.ProductShowcaseSlice} ProductShowcaseSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<ProductShowcaseSlice>} ProductShowcaseProps
@@ -133,6 +135,9 @@ export default function ProductShowcase({ slice }){
           </div>
           {/*  */}
         </div>
+
+        {/* Desktop Component */}
+
         <div className='prodShowcase_SwiperContainer' id='shwCase' ref={shwcseRef} style={{transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)'}}>
           {/* Drag Component */}
           {/* <Drag className="DragContainer" /> */}
@@ -158,8 +163,12 @@ export default function ProductShowcase({ slice }){
               {
               slice.items.map((data, i) => {
                   return(
-                  <SwiperSlide className='prodShowcase_SwiperSlide'   onClick={() => setSolution(i)}
-                  style={{width:'fit-content',scrollSnapType:'x mandatory',scrollPadding:'0 24px'}} 
+                  <SwiperSlide 
+                  className='prodShowcase_SwiperSlide'   
+                  onClick={() => setSolution(i)}
+                  style={{
+                    width:'fit-content',scrollSnapType:'x mandatory',scrollPadding:'0 24px'
+                  }} 
                   key={i}>
                       <div className='prodShowcase_AssetDiv' 
                       style = {
@@ -216,6 +225,45 @@ export default function ProductShowcase({ slice }){
               }
           </Swiper>
         </div>
+        {/* Desktop Component End */}
+
+        {/* Mobile Component */}
+        <div className='prodShowcase_SwiperContainer_Mobile'>
+          <Swiper
+          slidesPerView={1}
+          spaceBetween={20}>
+            {
+              slice.items.map((data, i) => {
+                return(
+                  <SwiperSlide key={i}>
+                    <div className='prodShowcase_AssetDiv_Mobile'>
+                      {/* <div className='prodShowcase_AssetDiv_Inner'> */}
+                        <div className='prodShowcase_AssetDiv_Text_Container'>
+                          <div className='prodShowcase_Asset_TitleDiv'>
+                            <p>
+                              <PrismicRichText field={data.product_title} />
+                            </p>
+                          </div>
+                          <div className='prodShowcase_Asset_DescriptionDiv'>
+                            <p>
+                              <PrismicRichText field={data.product_description} />
+                            </p>
+                          </div>
+                        </div>
+                        <div className='prodShowcase_AssetModel'>
+                          <PrismicNextImage 
+                            style={{height:'100%', width:'80%', objectFit:'contain'}} 
+                            field={data.product_image} alt='Products' />
+                        </div>
+                      {/* </div> */}
+                    </div>
+                  </SwiperSlide>
+                )
+              })
+            }
+          </Swiper>
+        </div>
+        {/* Mobile End Component */}
       </div>
     </section>
   )

@@ -49,6 +49,7 @@
 
     margin: 6em 0;
     width: 100%;
+
 }
 .support_LogoShowcase_Container_Inner {
     display: flex;
@@ -124,4 +125,97 @@
 }
 .support_News_ReadDiv > p {
     font-weight: 600;
+}
+.support_Supporters_Container_Mobile {
+    display: none;
+}
+
+
+/* media-query */
+@media(max-width:780px) {
+    .support {
+        font-size: 1.4rem;
+    }
+    .support_Container {
+        padding: 2em 0;
+    }
+    .support_Title_Div {
+        width: 100%;
+    }
+    .support_LogoShowcase_Container_Inner {
+        width: 90%;
+    }
+    .support_Logo_Item {
+        height: 5em;
+    }
+    .support_LogoShowcase_Container {
+        margin: 4em 0;
+    }
+    .support_Supporters_Container {
+        display: none;
+    }
+    .support_Supporters_Container_Mobile {
+        display: block;
+        position: relative;
+        padding: 45em 0 30em 0;
+
+    }
+    .support_Supporters_Inner_Container {
+        position: absolute;
+        top: 10%; 
+
+    }
+    .support_Supporters_Img_Container {
+        height: 50em;
+        width: 100%;
+
+    }
+    .support_Supporters_Img_Container > img {
+        border-top-right-radius: 1em;    
+        border-top-left-radius: 1em;
+
+        height: 100%;
+        width: 100%;
+        object-fit: cover;    
+    }
+    .support_Supporters_Text_Container {
+        background: rgba(77, 51, 0, 1);
+        padding: 2em;
+
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+    .support_News_DateDiv {
+        padding: 4em 0 0 0;
+    }
+    .support_News_DateDiv > p {
+        color: #FFF;
+        font-size: 3.2em;
+        font-weight: 200;
+    }
+    .support_Supporters_Text_ContainerB {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 8em 0;
+    }
+    .support_News_TitleDiv {
+        width: 50%;
+    }
+    .support_News_TitleDiv > p {
+        font-size: 4em;
+        font-weight: 600;
+        color: #FFF;
+    }
+    .support_News_CTA {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .support_News_ReadDiv > p {
+        font-size: 3em;
+        font-weight: 200;
+        color: #FFF;
+    }
 }

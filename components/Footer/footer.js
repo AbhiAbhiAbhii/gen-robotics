@@ -85,12 +85,17 @@ export default function Footer(){
         }
     ]
 
+
+    let MobArray = nav.concat(products, contact);
+
+
     return(
         <>
         <footer className="footer">
             <div className="footer_Container">
                 <div className="footer_Container__left">
                     {/* Nav */}
+                    {/* Desktop Component */}
                     <div className="footer_Container_leftItems">
                         {
                             nav.map((data, i) => {
@@ -130,6 +135,22 @@ export default function Footer(){
                             })
                         }
                     </div>
+                    {/* Desktop Component End */}
+                    {/* Mobile Component */}
+                        <div className="mobFoot" style={{ flexDirection:'column', justifyContent:'space-between', flexWrap:'wrap', height:'50em', width:'100%'}}>
+                            {
+                                MobArray.map((data, i) => {
+                                    return(
+                                        <a style={{height:'20%', width:'50%', display:'flex', alignItems:'center', justifyContent:'flex-start'}} href={data.link} target={data.target} className="mobFooter" key={i}>
+                                            <p style={{fontSize:'5em', color:'#FFF'}}>
+                                                { data.name }
+                                            </p>
+                                        </a>
+                                    )
+                                })
+                            }
+                        </div>
+                    {/* Mobile Component End */}
                 </div>
                 <div className="footer_Container__right">
                     <div className="footer_Container_rightItems">

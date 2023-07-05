@@ -29,6 +29,9 @@ export default function HeroAbout({ slice }){
   let statB = `${ slice.primary.stats_b[0].text }`;
   let statBDescription = `${ slice.primary.stats_b_description[0].text }`;
 
+  let statC = `${ slice.primary.stats_c[0].text }`;
+  let statCDescription = `${ slice.primary.stats_c_description[0].text }`;
+
   // refs
   const titleRef = useRef();
   const descriptARef = useRef();
@@ -117,13 +120,13 @@ export default function HeroAbout({ slice }){
           for(counterB = countStatB; counterB < statB ; counterB++) {
             setCountStatB(countStatB + 100) 
           }
-        }, 40)
+        }, 30)
 
         setTimeout(() => {
-          for(counterC = countStatC; counterC < 300 ; counterC++) {
+          for(counterC = countStatC; counterC < statC ; counterC++) {
             setCountStatC(countStatC + 10) 
           }
-        }, 60)
+        }, 40)
       }
 
   })
@@ -194,7 +197,7 @@ export default function HeroAbout({ slice }){
                   </div>
                   <div className='heroAbout_StatsDescription' style={{overflow: 'hidden'}}>
                     <p ref={statDescCRef} style={{transform:'translateY(100%)', transition:'all 1s cubic-bezier(0.85, 0, 0.15, 1)'}}>
-                      Robots
+                      { statCDescription }
                     </p>
                   </div>
               </div>
@@ -211,8 +214,10 @@ export default function HeroAbout({ slice }){
                 {/* <p>
                   Bandicoot
                 </p> */}
-                <div style={{ height:'10em',width:'40em', display:'flex', alignItems:'center', justifyContent:'center' }}>
-                  <img style={{height:'100%', width:'100%', objectFit:'contain'}} src='/imgsequence/introBandicoot.svg' alt='logo' />
+                <div className='bandicoot_Logo'>
+                  <img 
+                    style={{height:'100%', width:'100%', objectFit:'contain'}} 
+                    src='/imgsequence/introBandicoot.svg' alt='logo' />
                 </div>
               </div>
             </div>

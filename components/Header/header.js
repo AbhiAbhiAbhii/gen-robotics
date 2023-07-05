@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link"
@@ -125,11 +126,11 @@ export default function Header({lenis, style, ref, color, pageId}) {
                         <div className="lOne" style={{backgroundColor:color}} /> {/* lineOne */}
                         <div className="lTwo" style={{backgroundColor:color}} /> {/* lineTwo */}
                     </div>
-                    <div style={{color:'#FFF'}}><p style={{color:color}}>Menu</p></div>
+                    <div className="navMenu_Text" style={{color:'#FFF'}}><p style={{color:color}}>Menu</p></div>
                 </div>
-                <div onClick={() => window.location.href='/'} style={{height:'4rem', width:'14.625rem', cursor:'pointer'}}>
+                <a className="navLogo" href="/" >
                     <img style={{height:'100%', width:'100%', objectFit:'cover'}} src="/logoGenRobo.svg" alt="logo" />
-                </div>
+                </a>
                 <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
                     <button onClick={() => window.location.href='/contact'} className="talkToUsBtn"  style={{border:`1px ${color} solid`, padding:'1rem 2.4rem', borderRadius:'0.63rem', color:color}}>Talk to us</button>
                 </div>

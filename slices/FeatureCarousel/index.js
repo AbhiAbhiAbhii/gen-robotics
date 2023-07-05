@@ -7,6 +7,8 @@ import { Autoplay,Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'sw
 import 'swiper/css';
 import "swiper/css/free-mode";
 import 'swiper/css/navigation';
+import { PrismicNextImage } from '@prismicio/next';
+import { PrismicRichText } from '@prismicio/react';
 /**
  * @typedef {import("@prismicio/client").Content.BluePrintSlice} BluePrintSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<BluePrintSlice>} BluePrintProps
@@ -16,6 +18,7 @@ export default function BluePrint({ slice }) {
 
 
   const [image, setImage] = useState(0);
+  const [ swipe, setSwipe ] = useState(0);
 
   // Transition
   let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
@@ -29,6 +32,8 @@ export default function BluePrint({ slice }) {
 
   // refs
   const saferRef = useRef();
+  const slideRef = useRef();
+  const featureProgRef = useRef();
   
 
   const [ autoplay, setAutoplay ] = useState(false);
@@ -165,7 +170,6 @@ export default function BluePrint({ slice }) {
   // }
 
 
-  const slideRef = useRef();
 
 
   return(
@@ -178,10 +182,18 @@ export default function BluePrint({ slice }) {
               <p>
                 { title }
               </p>
+                <div className='featureProgressBar'>
+                  <div 
+                    style={{
+                      width: swipe == 0 ? '20%': swipe == 1 ? '40%': swipe == 2 ? '60%': swipe == 3 ? '100%': null,
+                      transition: `all 0.3s ${quart}` }}
+                    className='featureProgressBar_Inner' />
+                </div>
             </div>
           </div>
 
           <div className='bluePrint_FeatureCarousel_Container'>
+            {/* Desktop Component */}
             <div className='featureCarousel_Div'>
               <div className='eyebrow_Container'>
                 {
@@ -204,13 +216,7 @@ export default function BluePrint({ slice }) {
                   <Swiper  style={{height:'100%'}}
                     direction={'vertical'}
                     ref={slideRef}
-                      // autoplay={{
-                      //   delay: 2000,
-                      //   disableOnInteraction: false,
-                      // }}
-                    //  loop='true'
                     modules={[Autoplay, Mousewheel ]}
-                    // mousewheel={true}
                     slidesPerView={2.4}
                     onClick={() => setAutoplay(false)}
                     onMouseEnter={() => console.log( "FALSE")}
@@ -280,14 +286,11 @@ export default function BluePrint({ slice }) {
                       }
                       
                     }}
-
-                    onSwiper={(i) => console.log(i, "hiiii")} 
-                    > 
+                    onSwiper={(i) => console.log(i, "hiiii")} > 
                     {
                       slice.items.map((data, i) => {
                         return(
                           <SwiperSlide  
-                          // onClick={() =>setSlideCount(i,console.log("SET SLIDE COUNT", i) )} 
                           className='singleSlide'
                           onClick={() => {
                             setAutoplay(false)
@@ -337,15 +340,15 @@ export default function BluePrint({ slice }) {
                 <div className='featureCarousel_AssetContainer'>
                   <div className='featureCarousel_AssetContainer_Inner'>
                     
-                    <div className='featureCarousel_Asset' style={{}}>
+                    <div className='featureCarousel_Asset'>
                       {
                         slice.items.map((data, i) => {
                           return(
                             <div className='featureCarousel_AssetDiv' key={i} 
                               style={{transition:'all 1.2s cubic-bezier(0.85, 0, 0.15, 1)', opacity: image == i ? '1':'0', transform:'translateY(-115%)'}}>
                                 <img
-                                style={{height:'100%', width:'100%', objectFit:'contain'}}
-                                src={data.blue_print_asset.url} alt={data.blue_print_asset.alt} />
+                                  style={{height:'100%', width:'100%', objectFit:'contain'}}
+                                  src={data.blue_print_asset.url} alt={data.blue_print_asset.alt} />
                             </div>
                           )
                         })
@@ -355,8 +358,43 @@ export default function BluePrint({ slice }) {
                 </div>
               </div>
             </div>
-
-            
+            {/* Desktop Component End */}
+            {/* Mobile Component */}
+            <div className='featureCarousel_Container_Mob'>
+              <Swiper 
+                onSlideChange={(i) => setSwipe(i.activeIndex)}
+                slidesPerView={1.15}
+                spaceBetween={20}>
+                {
+                  slice.items.map((data, i) => {
+                    return(
+                      <SwiperSlide key={i}>
+                        <div className='featureCarousel_Inner'>
+                          <div style={{height:'120em', display:'flex', alignItems:'center', justifyContent:'center', flexDirection:'column'}}>
+                            <div className='featureCarousel_AssetDiv'>
+                              <PrismicNextImage 
+                                style={{height:'100%', width:'100%', objectFit:'contain'}}
+                                field={data.blue_print_asset} alt={data.blue_print_asset.alt} />
+                            </div>
+                            <div className='featureCarousel_Swiper_TitleDiv'>
+                                <p style={{color:'#FFF'}}>
+                                  <PrismicRichText field={data.blue_print_title} />
+                                </p>
+                            </div>
+                            <div className='featureCarousel_Swiper_DescriptionDiv'>
+                              <p style={{color:"#8C8C8C"}}>
+                                <PrismicRichText field={data.blue_print_description} />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  })
+                }
+              </Swiper>
+            </div>
+            {/* Mobile Component End */}
           </div>
         </div>
       </section>

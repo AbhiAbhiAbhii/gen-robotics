@@ -29,7 +29,7 @@
     transition: all 2.6s cubic-bezier(0.85, 0, 0.15, 1);
 }
 /* border-animation */
-.heroContainer::after{
+.heroContainer::after {
     content: '';
     position: absolute;
     bottom: 8%;
@@ -132,7 +132,7 @@
     width: 0%;
     background-color: black;
     -webkit-transition: all 1.6s cubic-bezier(.42, 0, .58, 1);
-    transition: all 1.6s cubic-bezier(.42, 0, .58, 1);
+    transition: all 1.2s cubic-bezier(.42, 0, .58, 1);
   }
   
   .borderAnimatee::after {
@@ -143,5 +143,25 @@
     width: 100%;
     background-color: black;
     -webkit-transition: all 1.6s cubic-bezier(.42, 0, .58, 1);
-    transition: all 1.6s cubic-bezier(.42, 0, .58, 1);
+    transition: all 1.2s cubic-bezier(.42, 0, .58, 1);
   }
+
+  /* media-query */
+  @media( max-width: 780px ) {
+    .hero {
+        font-size: 3rem;
+        padding: 48rem 3rem 38rem 6rem;
+    }
+    .heroTitle > p {
+        line-height: 100%;
+    }
+    .heroContainer_AnimatedBorder::after {
+        width: 0%;
+    }
+    .heroScrollText {
+        display: none;
+    }
+    .heroTextContainer {
+        width: 80%;
+    }
+  } 
