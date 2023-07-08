@@ -1,0 +1,119 @@
+.aboutVM {
+    padding: 2rem;
+
+    font-size: 1rem;
+    background: #242423;
+}
+.aboutVM_Container {
+    padding: 2em 4em;
+}
+.aboutVM_Text_Container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 2em 0 5em 0;
+}
+.aboutVM_Title {
+    width: 45%;
+}
+.aboutVM_Title > p {
+    color: rgba(238, 238, 234, 1);
+    font-size: 4em;
+}
+.aboutVM_Description {
+    width: 45%;
+}
+.aboutVM_Description > p {
+    color: rgba(238, 238, 234, 1);
+    font-size: 1.5em;
+    line-height: 140%;
+}
+.aboutVM_Bottom_Container {
+
+}
+.aboutVM_Item_Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 0 4em 0;
+
+}
+.aboutVM_Item_Container:last-child {
+    flex-direction: row-reverse;
+}
+.aboutVM_Item_Left {
+    width: 45%;
+}
+.aboutVM_Item_Container:last-child .aboutVM_Item_Left {
+    position: relative;
+    transform: translateX(15%);
+}
+.aboutVM_Item_Title {
+    padding: 2em 0;
+}
+.aboutVM_Item_Title > p {
+    color: rgba(238, 238, 234, 1);
+    font-size: 2.4em;
+}
+.aboutVM_Item_Description{
+    width: 80%;
+}
+.aboutVM_Item_Description > p {
+    color: rgba(238, 238, 234, 1);
+    font-size: 1.2em;
+    line-height: 140%;
+}
+.aboutVM_Item_Right {
+    width: 35%;
+}
+.aboutVM_Item_Right_Img_Container {
+    height: 30em;
+    width: 100%;
+}
+
+/* media-query */
+@media(max-width: 780px) {
+    .aboutVM {
+        font-size: 3rem;
+    }
+    .aboutVM_Container {
+        padding: 2em 1em;
+    }
+    .aboutVM_Text_Container {
+        flex-direction: column;
+    }
+    .aboutVM_Title{
+        width: 100%;
+        padding: 2em 0;
+    }
+    .aboutVM_Description {
+        width: 100%;
+    }
+    .aboutVM_Item_Container {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        padding: 2em 0 4em 0;
+    }
+    .aboutVM_Item_Container:last-child  {
+        flex-direction: column-reverse;
+    }
+    .aboutVM_Item_Container:last-child .aboutVM_Item_Left {
+        transform: translateX(0);
+    }
+    .aboutVM_Item_Left {
+        width: 100%;
+
+        padding: 2em 0;
+    }
+    .aboutVM_Item_Title{
+        padding: 1em 0;
+    }
+    .aboutVM_Item_Right {
+        width: 80%;
+    }
+    .aboutVM_Item_Right_Img_Container {
+        height: 20em;
+    }
+}

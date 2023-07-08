@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .Investors_Eyebrow_Title > p {
     font-size: 6.3em;
@@ -65,6 +66,7 @@
 }
 .Investors_Showcase_Position {
     padding: 0.4em 0 0.6em 0;
+
 }
 .Investors_Showcase_Position > p {
     font-size: 1em;
@@ -76,4 +78,59 @@
     font-size: 1em;
     color: #AF9347;
     text-align: center;
+}
+
+.Investors_Showcase_Mob {
+    display: none;
+}
+
+/* media-query */
+@media(max-width:780px) {
+    .Investors {
+        font-size: 3rem;
+    }
+    .Investors_Showcase {
+        display: none;
+    }
+    .Investors_Container {
+        padding: 2em 1em;
+    }
+    .Investors_Eyebrow {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+    .Investors_Eyebrow_Title > p {
+        font-size: 4em;
+    }
+    .Investors_Eyebrow_Subtitle {
+        padding: 1em 0;
+    }
+    .Investors_Eyebrow_Subtitle > p {
+        font-size: 1.7em;
+    }
+    /* Mobile Component */
+    .Investors_Showcase_Mob {
+        display: block;
+    }
+    .Investors_Showcase_Mob_Img {
+        height: 12em;
+        width: 12em;
+
+    }
+    .Investors_Showcase_Mob_Img > img {
+        height: 100%;
+        width: 100%;
+    }
+    .Investors_Showcase_Mob_Text_Container {
+        padding: 1em 0;
+    }
+    .Investors_Showcase_Fullname > p {
+        text-align: left;
+    }
+    .Investors_Showcase_Position > p {
+        text-align: left;
+    }
+    .Investors_Showcase_CompanyName > p  {
+        text-align: left;
+    }
 }

@@ -12,10 +12,13 @@
 /* content-A */
 .Innovation_ContentA {
     width: 50%;
+    position: relative;
+
 }
 .Innovation_ContentA_SmallTitle {
     width: 60%;
     margin: 4em 0 0 0;
+
 }
 .Innovation_ContentA_SmallTitle > p {
     font-size: 1.2em;
@@ -34,6 +37,7 @@
 /* content-B */
 .Innovation_ContentB {
     width: 45%;
+
 }
 /* SwiperImg */
 .Innovation_SwiperImgContainer {
@@ -88,4 +92,86 @@
     justify-content: center;
 
     cursor: pointer;
+}
+
+.Innovation_ContentA_MainTitle > p:last-child {
+    display: none;
+}
+.Innovation_ContentB_Container {
+    display: block;
+}
+.Innovation_ContentB_Container_Mobile {
+    display: none;
+}
+.Innovation_Progress {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+
+    height: 3px;
+    width: 70%;
+    background: rgba(214, 213, 213, 0.55);
+
+    display: none;
+}
+
+/* media-query */
+@media(max-width: 780px) {
+    .Innovation {
+        font-size: 3rem;
+        padding: 120rem 0 0 0;
+    }
+    .customSwipNav_Container {
+        display: none;
+    }
+    .customLine{
+        border: none;
+    }
+    .customLine::after {
+        display: none;
+    }
+    .Innovation_Container {
+        flex-direction: column;
+    }
+    .Innovation_ContentA {
+        display: flex;
+        flex-direction: column-reverse;
+
+        width: 100%;
+    }
+    .Innovation_ContentA_MainTitle {
+        margin: 3em 0 0 0;
+    }
+    .Innovation_ContentA_MainTitle > p {
+        display: none;
+    }
+    .Innovation_ContentA_MainTitle > p:last-child {
+        display: block;
+        font-size: 3.4em;
+    }
+    .Innovation_ContentA_SmallTitle {
+        width: 90%;
+        margin: 1em 0 5em 0;
+    }
+    .Innovation_ContentA_SmallTitle > p {
+        font-size: 1.5em;
+    }
+    .Innovation_ContentB {
+        width: 100%;
+    }
+    .Innovation_ContentB_Container{
+        display: none;
+    }
+    .Innovation_ContentB_Container_Mobile{
+        display: block;
+
+
+    }
+    .Innovation_Progress {
+        display: block;
+    }
+    .Innovation_SwiperImgContainer {
+
+        width: 100%;
+    }
 }

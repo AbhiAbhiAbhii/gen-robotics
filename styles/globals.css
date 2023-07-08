@@ -111,6 +111,7 @@ a {
   margin: 0 0 0 16em;
 }
 
+
 /* PUT IN CORRECT FILE LATER dummy progress bar product child page */
 .dummyProgressBar {
   position: relative;
@@ -221,4 +222,45 @@ a {
   transition: all cubic-bezier(0.76, 0.00, 0.24, 1.00);
 }
 
+/* CTA Styling */
+/* CTA About */
+.CTA_About_A {
+  height: 5em;
+  width: 16em;
+}
+.CTA_About_B {
+  height: 5em;
+  width: 6em;
+}
+/* CTA Ready to Innovate with us */
+.CTA_Innovate_A {
+  height: 2em;
+  width: 14em;
+}
+.CTA_Innovate_B {
+  height: 2em;
+  width: 6em;
+}
+/* CTA About Media Query */
+@media(max-width: 780px) {
+
+  .CTA_About_A {
+    height: 4em;
+    width: 13em;
+  }
+  .CTA_About_B {
+    height: 4em;
+    width: 6em;
+  }
+
+  .CTA_Innovate_A {
+    height: 1em;
+    width: 12em;
+  }
+  .CTA_Innovate_B {
+    height: 1em;
+    width: 6em;
+  }
+
+}
 

@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  about_vision_mission: dynamic(() => import("./AboutVisionMission")),
   bandicoot_image_sequence: dynamic(() => import("./BandicootImageSequence")),
   blue_print: dynamic(() => import("./FeatureCarousel")),
   career_benefits: dynamic(() => import("./CareerBenefits")),

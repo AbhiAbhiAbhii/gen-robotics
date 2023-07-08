@@ -21,7 +21,8 @@
           "choices": {
             "custom_innovation": { "type": "SharedSlice" },
             "the_team": { "type": "SharedSlice" },
-            "investors": { "type": "SharedSlice" }
+            "investors": { "type": "SharedSlice" },
+            "about_vision_mission": { "type": "SharedSlice" }
           }
         }
       }

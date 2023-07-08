@@ -1,6 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { PrismicRichText } from "@prismicio/react"
 
+import {Swiper, SwiperSlide} from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper';
+import { useSwiper } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import "swiper/css/free-mode";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination'; 
+
 /**
  * @typedef {import("@prismicio/client").Content.InvestorsSlice} InvestorsSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<InvestorsSlice>} InvestorsProps
@@ -61,6 +70,7 @@ export default function Investors({slice}){
           </div>
         </div>
         <div className="Investors_Showcase_Container">
+          {/* Desktop Component */}
           <div className="Investors_Showcase" > 
             {
               dummyData.map((data, i) => {
@@ -93,6 +103,46 @@ export default function Investors({slice}){
               })
             }
           </div>
+          {/* Desktop Component End */}
+
+          {/* Mobile Component */}
+            <div className="Investors_Showcase_Mob">
+              <Swiper
+                slidesPerView={2.4}
+                spaceBetween={30}
+                >
+                {
+                  dummyData.map((data, i) => {
+                    return(
+                      <SwiperSlide key={i}>
+                          <div className="Investors_Showcase_Mob_Img">
+                              <img src={data.src} 
+                                  style={{objectFit: i == 3 ? 'contain': i == 4 ? 'contain':'cover'}} alt="Image" />
+                          </div>
+                          <div className="Investors_Showcase_Mob_Text_Container">
+                            <div className="Investors_Showcase_Fullname">
+                              <p>
+                                { data.fullName }
+                              </p>
+                            </div>
+                            <div className="Investors_Showcase_Position">
+                              <p>
+                                { data.position }
+                              </p>
+                            </div>
+                            <div className="Investors_Showcase_CompanyName">
+                              <p>
+                                { data.companyName }
+                              </p>
+                            </div>
+                          </div>
+                      </SwiperSlide>
+                    )
+                  })
+                }
+              </Swiper>
+            </div>
+          {/* Mobile Component End */}
         </div>
       </div>
     </section>

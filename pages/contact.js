@@ -233,7 +233,7 @@ export default function RegistrationForm() {
     formObserve.observe(document.querySelector('.contact_FormContainer_Pad'));
 
     //gsap
-    gsap.to('.contact_BottomContentA', {
+    gsap.to('.contact_BottomContentA.contact_BottomContentA_Desktop', {
         scrollTrigger: {
             trigger: '.contact_BottomContentA',
             start: 'top center',
@@ -431,7 +431,33 @@ export default function RegistrationForm() {
         </div>
         <div className='contact_BottomContainer'>
                 <div className='contact_BottomContent'>
-                    <div className='contact_BottomContentA ofh' style={{height:'fit-content'}}>
+                  {/* Mobile Component */}
+                  <div className='contact_BottomContentA contact_BottomContentA_Mob ofh' style={{height:'fit-content'}}>
+                      <div className='bottomContentAText ofh' >
+                        <p className='bottomTextAnim' style={{transform: hide, transition: `all 1s ${quart}`}}>
+                            { BottomText }
+                        </p>
+                      </div>
+                      <div style={{display:'flex',flexDirection:'column-reverse', width:'50%'}}>
+                        <div className='contactWhatsapp_Container'>
+                            <div className='contactWhatsapp'>
+                              <a href="https://api.whatsapp.com/send?phone=9074558551&text=Send20%a20%quote">
+                              <p style={{display:'flex', alignItems:'center'}}><span style={{marginRight:'0.5em'}}><img src='/contact/whatsappIcon.svg' alt='whatsapp' /></span>Whatsapp Us</p>
+                              </a>
+                            </div>
+                        </div>
+                        <div className='contactWhatsapp_Container callUs'>
+                            <div className='contactWhatsapp callUs'>
+                              <a href='tel: 1800-889-0316'>
+                              <p style={{display:'flex', alignItems:'center'}}><span style={{marginRight:'0.5em'}}><img src='/contact/phoneIcon.svg' alt='whatsapp' /></span> Reach us Via Call</p>
+                              </a>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  {/* Mobile Component End */}
+                  {/* Desktop Component */}
+                    <div className='contact_BottomContentA contact_BottomContentA_Desktop ofh' style={{height:'fit-content'}}>
                         <div className='bottomContentAText ofh' >
                           <p className='bottomTextAnim' style={{transform: hide, transition: `all 1s ${quart}`}}>
                               { BottomText }
@@ -452,6 +478,7 @@ export default function RegistrationForm() {
                             </div>
                         </div>
                     </div>
+                    {/* Desktop Component End */}
                     <div className='contact_BottomContentB'>
                         {
                             Address.map((data, i) => {

@@ -11,7 +11,21 @@ export default function Innovate(){
         <>
         <section className="Innovate" style={{background:'#242423'}}>
             <div className="Innovate_Container">
-                <div className="Innovate_Wrapper">  
+                 {/* Mob */}
+                 <div className="Innovate_TextContainer MobText">
+                    <div className="Innovate_Title">
+                        <p>
+                            Ready to <br />Innovate with us?
+                        </p>
+                    </div>
+                    <div className="Innovate_Subtitle">
+                        <p>
+                            {Subtitle}
+                        </p>
+                    </div>
+                    <CTA classNameA="CTA_Innovate_A" classNameB="CTA_Innovate_B" margin="1em 0 0 0" bg="#FFF" />
+                </div>
+                <div className="Innovate_Wrapper">
                     <div className="Innovate_AssetLeft">
                         <img src="/About/assetLeft.svg" alt="img" />
                     </div>
@@ -26,7 +40,7 @@ export default function Innovate(){
                                 {Subtitle}
                             </p>
                         </div>
-                        <CTA width="14em" widthB="6em" height="2em" margin="1em 0 0 0" bg="#FFF" />
+                        <CTA classNameA="CTA_Innovate_A" classNameB="CTA_Innovate_B" margin="1em 0 0 0" bg="#FFF" />
                     </div>
                     <div className="Innovate_AssetRight">
                         <img src="/About/assetRight.svg" alt="img" />

@@ -38,7 +38,8 @@ interface AboutPageDocumentData {
 type AboutPageDocumentDataSlicesSlice =
   | CustomInnovationSlice
   | TheTeamSlice
-  | InvestorsSlice;
+  | InvestorsSlice
+  | AboutVisionMissionSlice;
 /**
  * About Page document from Prismic
  *
@@ -230,6 +231,122 @@ export type AllDocumentTypes =
   | CareerPageDocument
   | HomePageDocument
   | NewsRoomPageDocument;
+/**
+ * Primary content in AboutVisionMission → Primary
+ *
+ */
+interface AboutVisionMissionSliceDefaultPrimary {
+  /**
+   * Title field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Description field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+  /**
+   * Vision Title field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.vision_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  vision_title: prismicT.RichTextField;
+  /**
+   * Vision Description field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.vision_description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  vision_description: prismicT.RichTextField;
+  /**
+   * Vision Image field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.vision_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  vision_image: prismicT.ImageField<never>;
+  /**
+   * Mission Title field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.mission_title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  mission_title: prismicT.RichTextField;
+  /**
+   * Mission Description field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.mission_description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  mission_description: prismicT.RichTextField;
+  /**
+   * Mission Image field in *AboutVisionMission → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_vision_mission.primary.mission_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  mission_image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for AboutVisionMission Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutVisionMissionSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<AboutVisionMissionSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *AboutVisionMission*
+ *
+ */
+type AboutVisionMissionSliceVariation = AboutVisionMissionSliceDefault;
+/**
+ * AboutVisionMission Shared Slice
+ *
+ * - **API ID**: `about_vision_mission`
+ * - **Description**: `AboutVisionMission`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutVisionMissionSlice = prismicT.SharedSlice<
+  "about_vision_mission",
+  AboutVisionMissionSliceVariation
+>;
 /**
  * Primary content in BandicootImageSequence → Primary
  *
@@ -1546,6 +1663,10 @@ declare module "@prismicio/client" {
       NewsRoomPageDocumentDataSlicesSlice,
       NewsRoomPageDocument,
       AllDocumentTypes,
+      AboutVisionMissionSliceDefaultPrimary,
+      AboutVisionMissionSliceDefault,
+      AboutVisionMissionSliceVariation,
+      AboutVisionMissionSlice,
       BandicootImageSequenceSliceDefaultPrimary,
       BandicootImageSequenceSliceDefault,
       BandicootImageSequenceSliceVariation,

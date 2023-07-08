@@ -6,17 +6,6 @@
     position: relative;
 
 }
-/* .aboutHero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
-    background: rgba(228, 228, 228, 0.01);
-    z-index: -10;
-} */
 .aboutHero_Container {
     padding: 2em 4em;
 
@@ -27,12 +16,14 @@
     position: relative;
 
     top: 12em;
+
 }
 .aboutHero_TextContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 .aboutHero_Title {
     width: 70%;
@@ -59,11 +50,11 @@
 
 .aboutHero_ImgContainer {
     margin: 3em 0 2em 0;
+
 }
 .aboutHero_Img {
     width: 40.56em;
     height: 40.56em;
-
 }
 /* .aboutHero_Img > img {
     height: 100%;
@@ -76,13 +67,13 @@
     /* background: #8C7024; */
     background: #AF9347;
     border-radius: 0.625em;
-    padding: 0 0 8em 0;
+    padding: 8em 0 0 0;
     position: relative;
 
     top: 20em;
-}
-.aboutInfo_Container {
-    padding: 0em 4em 0 4em;
+
+    display: flex;
+    flex-direction: column-reverse;
 }
 .aboutInfo_MainTextContainer {
     display: flex;
@@ -154,15 +145,19 @@
 }
 /* Content B */
 .aboutInfo_ContentB {
-    width: 80%;
+    width: 100%;
+    height: 35em;
+    margin: 4em 0 0 0;
+
     display: flex;
-    align-items: center;
     justify-content: center;
-    /* justify-content: flex-end; */
+
 }
 .aboutInfo_ContentBImg {
-    width: 90%;
-    height: 70%;
+    width: 40%;
+    height: 90%;
+
+
 }
 .aboutInfo_ContentBImg > img {
     height: 100%;
@@ -185,4 +180,64 @@
     line-height: 140%;
 
     color: #E4E4E4;
+}
+.CTA_About_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4em 0 0 0;
+}
+
+
+
+/* media-query */
+@media(max-width: 780px) {
+    .aboutHero {
+        font-size: 3rem;
+    }
+    .aboutHero_Container {
+        top: 14em;
+        padding: 1em 2em 1em 2em;
+    }
+    .aboutHero_TextContainer {
+        align-items: flex-start;
+    }
+    .aboutHero_Title{
+        width: 100%;
+    }
+    .aboutHero_Title > h1 {
+        text-align: left;
+        font-size: 5em;
+    }
+    .aboutHero_Subtitle{
+        width: 100%;
+    }
+    .aboutHero_Subtitle > p {
+        text-align: left;
+        font-size: 1.4em;
+    }
+    .aboutHero_ImgContainer {
+        margin: 3em 0 2em 0;
+    }   
+    .aboutHero_Img {
+        height: 28.56em;
+        width: 28.56em;
+    }
+    /*  */
+    .aboutInfo{
+        padding: 4em 0 0 0;
+    }
+    .aboutInfo_ContentB {
+        position: relative;
+        height: 8em;
+    }
+    .aboutInfo_ContentBImg {
+        position: absolute;
+        top: -16%;
+        width: 80%;
+        height: 25em;
+    }
+    .CTA_About_Container {
+        margin: 3em 0 0 0;
+    }
 }

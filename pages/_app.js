@@ -22,6 +22,7 @@ import '../styles/About/innovation.css'
 import '../styles/About/team.css'
 import '../styles/About/investors.css'
 import '../styles/About/innovate.css'
+import '../styles/About/visionmission.css'
 
 // Contact css
 import '../styles/contact.css'

@@ -11,8 +11,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
 .contact_Title {
     width: 80%;
@@ -47,11 +45,8 @@
     padding: 0 8em 0 12em;
 }
 .contact_Form {
-}
-/* input {
-    
 
-} */
+}
 textarea {
     outline: none;
     background: none;
@@ -72,7 +67,6 @@ label {
     display: flex;
     flex-direction: column;
     outline: none;
-
     margin: 1em 0;
 }
 .formFieldA {
@@ -170,14 +164,22 @@ label {
 .contact_BottomContainer {
     margin: 12em 0 2em 0;
     padding: 0 4em 0 4em;
+
 }
 .contact_BottomContent{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
 }
 .contact_BottomContentA {
     width: 35%;
+
+}
+.contact_BottomContentA.contact_BottomContentA_Mob {
+    display: none;
+} 
+.bottomContentAText{
 }
 .bottomContentAText > p {
     font-size: 7em;
@@ -243,6 +245,7 @@ label {
     align-items: center;
     justify-content: flex-start;
     margin: 4em 0 0 0;
+
 }
 .contactWhatsapp {
     border-radius: 20em;
@@ -253,6 +256,8 @@ label {
     justify-content: center;
     background: #FFFF;
     border: none;
+
+    border: 1px white solid;
 }
 /* Call us */
 .contactWhatsapp_Container.callUs {
@@ -277,4 +282,99 @@ label {
 }
 .brwnHover:hover {
     color: #8C7024;
+}
+
+/*  media-query */
+@media(max-width:780px) {
+    .contact {
+        font-size: 3rem;
+    }
+    .contact_Container {
+        padding: 12em 1em 3em 1em;
+    }
+    .contact_Title {
+        width: 100%;
+        padding: 1em 0;
+    }
+    .contact_Title > p {
+        font-size: 2.5em;
+        text-align: center;
+
+        scale: 1.21;
+    }
+    .contact_SubTitle {
+        width: 90%;
+        margin: 2em 0 4em 0;
+    }
+    .contact_SubTitle > p {
+        font-size: 1.2em;
+    }
+
+    /* Form */
+    .contact_FormContainer_Pad {
+        padding: 0;
+    }
+    .contact_FormContainer {
+        padding: 2em;
+    }
+    .focused {
+        padding: 1em;
+    }
+    .notFocused {
+        padding: 1em;
+    }
+    .form_Btn {
+        padding: 1.4em;
+    }
+    .form_Btn > p {
+        font-size: 1.4em;
+    }
+    .form_Terms {
+        padding: 1.4em 0 0.5em 0;
+    }
+    .form_Terms > p {
+        text-align: center;
+        font-size: 1em;
+        line-height: 150%;
+    }
+    /* Contact Bottom */
+    /* Bottom A */
+    .contact_BottomContainer {
+        padding: 0 0.5em;
+        margin: 5em 0 2em 0;
+    }
+    .contact_BottomContent {
+        flex-direction: column;
+    }
+    .contact_BottomContentA {
+        display: none;
+    }
+    .contact_BottomContentA.contact_BottomContentA_Mob {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .bottomContentAText {
+        width: 50%;
+        scale: 0.95;
+    }
+    .bottomContentAText > p {
+        font-size: 3em;
+    }
+    .contactWhatsapp_Container {
+        margin: 1em 0 0 0;
+    }
+    .contactWhatsapp {
+        width: 100%;
+        padding: 0.5em 0;
+    }
+    /* Bottom B */
+    .contact_BottomContentB {
+        width: 100%;
+        margin: 4em 0 2em 0;
+    }
+    .contact_AddressItemAddress {
+        width: 100%;
+    }
 }
