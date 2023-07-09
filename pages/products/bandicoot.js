@@ -10,7 +10,7 @@ import ProductOverviewEB from "../../components/Product[child]/prodOvEb"
 export default function BandicootII(){
 
     const imagelinks = [
-        '/imgsequence/productPage/0000.webp',
+      '/imgsequence/productPage/0000.webp',
       '/imgsequence/productPage/0001.webp',
       '/imgsequence/productPage/0002.webp',
       '/imgsequence/productPage/0003.webp',

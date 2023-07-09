@@ -23,3 +23,22 @@
     font-size: 1.4em;
     line-height: 140%;
 }
+
+/* media-query */
+@media(max-width:780px) {
+    .product_Overview_Eyebrow {
+        font-size: 3rem;
+        padding: 0 2rem 2rem 2rem;
+    }
+    .product_Overview_Eyebrow_Container {
+        flex-direction: column;
+        padding: 1em 2em 2em 2em;
+    }
+    .product_Overview_Eyebrow_Left {
+        width: 100%;
+    }
+    .product_Overview_Eyebrow_Right {
+        width: 100%;
+        padding: 2em 0 0 0;
+    }
+}
