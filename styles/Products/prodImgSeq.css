@@ -63,9 +63,10 @@
     .canavsImgSeq {
         position: relative;
         top: -2%;
-        height: 50vh;
-        /* width: 100em; */
+        height: 60vh;
+        width: 60vw;
         object-fit: contain;
+
     }
     .prodImg_Seq_Title {
         width: 85%;
