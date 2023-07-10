@@ -54,14 +54,15 @@
 @media(max-width:780px) {
     .productImgSeq {
         height: 100vh;
+        width: 100vw;
         align-items: center;
         justify-content: center;
     }
     .canavsImgSeq {
-        height: 70vh;
         position: relative;
-        top: 2.6%;
-        width: 100%;
+        top: -6%;
+        height: 80em;
+        width: 50em;
         object-fit: contain;
     }
     .prodImg_Seq_Title {
@@ -72,7 +73,7 @@
         font-weight: 200;
     }
     .prodImg_Seq_Overlay {
-        bottom: 2%;
+        bottom: 8%;
     }
     .prodImg_Seq_MainText > h1 {
         font-size: 5em;
