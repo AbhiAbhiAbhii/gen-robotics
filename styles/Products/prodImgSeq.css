@@ -75,6 +75,7 @@
     .prodImg_Seq_Title > h1 {
         font-size:3em;
         font-weight: 200;
+        display: none;
     }
     .prodImg_Seq_Overlay {
         bottom: 8%;
