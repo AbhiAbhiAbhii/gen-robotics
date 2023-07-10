@@ -37,7 +37,6 @@
 }
 .prodImg_Seq_Text {
     width: 35%;
-    /* border: 1px red solid; */
 }
 .prodImg_Seq_Text > p {
     color: #E9E9E9;
@@ -48,6 +47,9 @@
     position: absolute;
     bottom: 10%;
     left: 0%;
+}
+.prodImg_Seq_Progress {
+    width: 25%;
 }
 
 /* media-query */
@@ -60,16 +62,17 @@
     }
     .canavsImgSeq {
         position: relative;
-        top: -6%;
-        height: 80em;
-        width: 50em;
+        top: -2%;
+        height: 50vh;
+        /* width: 100em; */
         object-fit: contain;
     }
     .prodImg_Seq_Title {
-        width: 80%;
+        width: 85%;
+        padding: 1em 0 0 0;
     }
     .prodImg_Seq_Title > h1 {
-        font-size: 2.75em;
+        font-size:3em;
         font-weight: 200;
     }
     .prodImg_Seq_Overlay {
@@ -79,9 +82,12 @@
         font-size: 5em;
     }
     .prodImg_Seq_Text {
-        width: 70%;
+        width: 90%;
     }
     .prodImg_Seq_Text > p {
-        font-size: 2.5em;
+        font-size: 3em;
+    }
+    .prodImg_Seq_Progress {
+        width: 50%;
     }
 }

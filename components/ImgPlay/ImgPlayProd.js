@@ -153,7 +153,7 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
                                             }
                                         </p>
                                     </div>
-                                    <div style={{ background:'#757573', margin:'0.5em 0 0 0', width:'25%', height:'5px', position:'relative', borderRadius:'20em'}}>
+                                    <div className="prodImg_Seq_Progress" style={{ background:'#757573', margin:'0.5em 0 0 0',  height:'2px', position:'relative', borderRadius:'20em'}}>
                                         <div ref={progressRef} style={{position:'absolute', top:'0', left:'0', height:'100%', width:'2%', background:'#D1BD55', borderRadius:'20em'}} />
                                     </div>
                                 </div>
