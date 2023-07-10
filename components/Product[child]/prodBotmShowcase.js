@@ -116,6 +116,35 @@ export default function ProductBottomShowcase({ video }){
                         </div>
                     </div>
                 </div>
+                {/* Mobile Component(Supported By) */}
+                <div className='prodBtmSC_C_Mob_Container'>
+                    <div className='prodBtmSC_C_Mob_Title'>
+                        <p>
+                            Supported by
+                        </p>
+                    </div>
+                    <div className="prodBtmSC_C prodBtmSC_C_Mob">
+                        <div className="prodBtmSC_C_Container">
+                            
+                            {/* logos */}
+                            <div className='prodBtmSC_C_Mob_Logo_Container'>
+                                <div className='prodBtmSC_C_Mob_Logo_Inner_Container'>
+                                    {
+                                        logo.map((data, i) => {
+                                            return(
+                                                <div className='prodBtmSC_C_Mob_Logo_Item' key={i}>
+                                                    <img src={data.src} style={{height:'100%', width:'100%', objectFit:'contain'}} alt="logo" />
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Mobile Component End */}
+                {/* Bottom B */}
                 <div className="prodBtmSC_B">
                     <div className="prodBtmSC_B_ImgContainer">
                         <div className="prodBtmSC_B_TextContainer">
@@ -135,9 +164,6 @@ export default function ProductBottomShowcase({ video }){
                         </div>
                     </div>
                     <div className="prodBtmSC_B_ContainerB" style={{width:'48%', height:'100%', display:'flex', flexDirection:'column'}}>
-                        {/* <div className="prodBtmSC_B_ImgB" style={{margin:'0 0 0.6em 0'}}>
-                            <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/imgA.png" alt="" />
-                        </div> */}
                         {/* Swiper */}
                         <div className="prodBtmSC_B_Swiper_Container" >
                             <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0em 0 0em 0',
@@ -196,25 +222,18 @@ export default function ProductBottomShowcase({ video }){
                         <div className='prodBtmSC_B_Container_Vid_Container' style={{margin:'2.8em 0 0 0'}}>
                         <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{height:'100%', width: '100%', objectFit:'cover', borderRadius:'10px'}}>
                             <source src={ video }  type="video/mp4" />
-                            {/* <source src='/heroVideo.webm'  type="video/webm" />                 */}
+                            {/* <source src='/heroVideo.webm'  type="video/webm" />*/}
                         </video>
                         </div>
                     </div>
                 </div>
 
                 {/* supported-by */}
-                <div className="prodBtmSC_C" style={{padding:'2rem 2rem 2rem 2rem', margin:'2rem 0 2rem 0', fontSize:'1rem', background:'#EEEEEE', borderRadius:'0.625em', overflow:'hidden'}}>
-                    <div className="prodBtmSC_C_Container" style={{display:'flex', alignItems:'center'}}>
-                        <div style={{width:'40%'}}>
-                            <div>
+                <div className="prodBtmSC_C">
+                    <div className="prodBtmSC_C_Container">
+                            <div style={{width:'38%'}}>
                                 <p style={{fontSize:'2.5em'}}>Supported By</p>
                             </div>
-                            {/* <div style={{width:'85%', padding:'1em 0'}}>
-                                <p style={{fontSize:'1.1em'}}>
-                                    Commited to deliver our solutions to work with extreme and unsafe environments universally 
-                                </p>
-                            </div> */}
-                        </div>
                         {/* logos */}
                         <div style={{width:'60%', position:'relative' }}>
                             <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
