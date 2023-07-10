@@ -1,5 +1,6 @@
 .featureScale {
     padding: 6rem 2rem 2rem 2rem;
+    margin: 8rem 0;
 
     font-size: 1rem;
 }
@@ -10,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .featureScale_Title > p {
     font-size: 3em;
@@ -78,4 +80,95 @@
     width: 70%;
 
     object-fit: contain;
+}
+.featureScale_Showcase_Item_Container_Mob {
+    display: none;
+}
+
+
+/* media-query */
+@media(max-width:780px) {
+    .featureScale {
+         padding:  2rem 0;
+         margin: 0em 0;
+         background: #EEEEEA;
+    }
+    .featureScale_Container {
+        padding: 0 1em 2em 1em;
+    }
+    .featureScale {
+        font-size: 3rem;
+    }
+    .featureScale_Showcase_Item_Container {
+        display: none;
+    }
+    .featureScale_Title {
+        padding: 5em 0 0 0;
+    }
+    .featureScale_Title > p {
+        font-size: 0.9em;
+        scale: 1.2;
+        line-height: 230%;
+    }
+    .featureScale_Title > p > span {
+        font-size: 2.4em;
+        padding: 1em 0 0 0;
+    }
+    /*  Mobile Component */
+    .featureScale_Showcase_Item_Container_Mob {
+        display: block;
+        position: relative;
+    }
+    .featureScale_Showcase_Item_Mob {
+        display: flex;
+        justify-content: space-between;
+        background: #FFF;
+        /* height: 20em; */
+        padding: 1.76em 1.25em;
+
+        border-radius: 0.625em;
+    }
+    .featureScale_Showcase_Item_Mob_Left {
+        width: 52%;
+    }
+    .featureScale_Showcase_Item_Title {
+        width: 100%;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+    .featureScale_Showcase_Item_Title > p {
+        font-size: 1.8em;
+    }
+    .featureScale_Showcase_Item_Desc {
+        width: 100%;
+        padding: 0.5em 0 0 0;
+    }
+    .featureScale_Showcase_Item_Desc > p {
+        font-size: 1.1em;
+        line-height: 150%;
+    }
+    .featureScale_Showcase_Item_Mob_Right {
+        width: 42%;
+        display: flex;
+        align-items: center;
+    }
+    .featureScale_Showcase_Item_AssetBg {
+        height: 70%;
+        width: 100%;
+    }
+    .featureScale_Showcase_Item_AssetBg > img {
+        height: 80%;
+        width: 80%;
+    }
+    /* Progress */
+    .prodProgress_Mob {
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90%;
+        height: 2px;
+
+        background: rgba(214, 213, 213, 0.55);
+    }
 }
