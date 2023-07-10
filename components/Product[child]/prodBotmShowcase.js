@@ -251,18 +251,26 @@ export default function ProductBottomShowcase({ video }){
                     </div>
                 </div>
                 {/*  */}
-                <div style={{display:'flex', flexDirection:'column', padding:'4rem 0', alignItems:'center', justifyContent:'center'}}>
-                    <div >
-                        <p style={{textAlign:'center', color:'#322712', fontSize:'4.6em'}}>
-                            {/* Ready to <br /> Innovate with us? */}
+                <div className='prodBtmSC_D'>
+                    <div className='prodBtmSC_D_Title'>
+                        <p>
                             Bring<br /> Bandicoot to your City!
                         </p>
+                        <p>
+                            Bring Bandicoot to your City!
+                        </p>
                     </div>
-                    <div style={{display:'flex', alignItems:'center', margin:'2em 0 0 0'}}>
-                        <CTA height="4.4em" width="12em" widthB="6em" margin="0 2em 0 0" bg="#EEEEEA" />
-                        <a href="https://mkp.gem.gov.in/advanced-manufacturing-robotics/bandicoot/p-5116877-4090503505-cat.html" target='_blank' style={{border:'1px rgba(50, 39, 18, 0.33) solid', display:'flex', alignItems:'center', padding:'0.4em 1em', borderRadius:'0.6em', cursor:'pointer'}}>
-                            <div style={{height:'3em', width:'3em'}}><img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/purchaseBCoot.png" alt="image" /></div>
-                            <div><p>Purchase Bandicoot</p></div>
+                    <div className='prodBtmSC_D_CTA_Container'>
+                        <CTA classNameA="prodBtmSC_D_CTA_A_A" classNameB="prodBtmSC_D_CTA_A_B" classNameC="prodBtmSC_D_CTA_A_C" bg="#FFF" />
+                        <a  className='prodBtmSC_D_CTA_B' 
+                            href="https://mkp.gem.gov.in/advanced-manufacturing-robotics/bandicoot/p-5116877-4090503505-cat.html" 
+                            target='_blank' >
+                            <div className='prodBtmSC_D_CTA_B_Img'>
+                                <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/Products/purchaseBCoot.png" alt="image" />
+                            </div>
+                            <div>
+                                <p>Purchase Bandicoot</p>
+                            </div>
                         </a>
                     </div>
                 </div>

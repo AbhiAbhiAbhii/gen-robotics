@@ -241,6 +241,18 @@ a {
   height: 2em;
   width: 6em;
 }
+/* CTA Product Child page */
+.prodBtmSC_D_CTA_A_A {
+  height: 4.4em;
+  width: 12em;
+}
+.prodBtmSC_D_CTA_A_B {
+  height: 4.4em;
+  width: 6em;
+}
+.prodBtmSC_D_CTA_A_C {
+  margin: 0 2em 0 0;
+}
 /* CTA About Media Query */
 @media(max-width: 780px) {
 
@@ -261,6 +273,16 @@ a {
     height: 1em;
     width: 6em;
   }
-
+  .prodBtmSC_D_CTA_A_A {
+    height: 4em;
+    width: 11em;
+  }
+  .prodBtmSC_D_CTA_A_B {
+    height: 4em;
+    width: 5em;
+  }
+  .prodBtmSC_D_CTA_A_C {
+    margin: 0;
+  }
 }
 

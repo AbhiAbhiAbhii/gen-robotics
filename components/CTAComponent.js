@@ -8,9 +8,9 @@ let quint = 'cubic-bezier(0.85, 0, 0.15, 1)';
 let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
 
 
-export default function CTA({ width, widthB, height, margin, bg, classNameA, classNameB }){
+export default function CTA({ width, widthB, height, margin, bg, classNameA, classNameB, classNameC }){
     return(
-        <div style={{margin: margin, transition: `all 1.5s ${quint}`}}>
+        <div className={classNameC} style={{margin: margin, transition: `all 1.5s ${quint}`}}>
             <a href="/contact">
                 <button style={{cursor:'pointer', background:'none', outline:'none', display:'flex', alignItems:'center', border:'none', borderRadius:'0.625em'}}>
                     <div className={ classNameA } style={{background: bg, height: height, width: width, padding:'2em 0em', display:'flex', alignItems:'center', justifyContent:'center', borderBottomLeftRadius:'0.625em', borderTopLeftRadius:'0.625em'}}>
