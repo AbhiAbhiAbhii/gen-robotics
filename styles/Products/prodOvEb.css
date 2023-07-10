@@ -1,5 +1,6 @@
 .product_Overview_Eyebrow {
     padding: 2rem;
+    margin: 10rem 0;
 
     font-size: 1rem
 }
@@ -36,6 +37,7 @@
     .product_Overview_Eyebrow_Container {
         flex-direction: column;
         padding: 1em 1em 2em 1em;
+        margin: 5em 0 0 0;
     }
     .product_Overview_Eyebrow_Left {
         width: 100%;
@@ -48,7 +50,7 @@
         font-size: 3.4em;
     }
     .product_Overview_Eyebrow_Right > p {
-        font-size: 1.1em;
+        font-size: 1.3em;
         line-height: 160%;
     }
 

@@ -86,7 +86,7 @@
     background: #F7F1D7;
     border-radius: 0.65em;
 
-    padding: 4em 4em;
+    padding: 4em;
 }
 .prodBtmSC_B_TextContainer {
     height: 100%;
@@ -212,10 +212,11 @@
         padding: 2em 1em;
     }
     .prodBtmSC_Title {
-        width: 95%;
+        width: 100%;
         padding: 2em 0 0 0;
     }
     .prodBtmSC_Title > p {
+        font-size: 3.1em;
         text-align: left;
         width: 100%;
     }
@@ -283,5 +284,8 @@
     }
     .prodBtmSC_B_ImgContainer {
         width: 100%;
+
+        border: 1px green solid;
+        padding: 0;
     }
 }

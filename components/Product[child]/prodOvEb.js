@@ -4,7 +4,7 @@ export default function ProductOverviewEB({ ovEbDescA, overviewEyebrow, colorTex
 
     return(
         <>
-        <section className="product_Overview_Eyebrow" style={{margin:'10em 0'}}>
+        <section className="product_Overview_Eyebrow">
             <div className="product_Overview_Eyebrow_Container">
                 <div className="product_Overview_Eyebrow_Left">
                     <p>
