@@ -163,10 +163,10 @@ export default function ProductBottomShowcase({ video }){
                             </div>
                         </div>
                     </div>
-                    <div className="prodBtmSC_B_ContainerB" style={{width:'48%', height:'100%', display:'flex', flexDirection:'column'}}>
+                    <div className="prodBtmSC_B_ContainerB">
                         {/* Swiper */}
                         <div className="prodBtmSC_B_Swiper_Container" >
-                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px', padding:'0em 0 0em 0',
+                            <Swiper ref={testRef} style={{cursor:'grab',scrollSnapType:'x mandatory',scrollPadding:'0 24px',
                                     "--swiper-navigation-size":'2rem', "--swiper-pagination-bottom" : "8%", "--swiper-theme-color": "white", background:'#8C7024', borderRadius:'0.625em'}}
                                     spaceBetween={40}
                                     speed={1000}
@@ -219,7 +219,7 @@ export default function ProductBottomShowcase({ video }){
                                 }
                             </Swiper>
                         </div>
-                        <div className='prodBtmSC_B_Container_Vid_Container' style={{margin:'2.8em 0 0 0'}}>
+                        <div className='prodBtmSC_B_Container_Vid_Container'>
                         <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{height:'100%', width: '100%', objectFit:'cover', borderRadius:'10px'}}>
                             <source src={ video }  type="video/mp4" />
                             {/* <source src='/heroVideo.webm'  type="video/webm" />*/}
