@@ -12,6 +12,14 @@
     height: 100vh;
     object-fit: cover;
 }
+.productImgSeq_TextContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 2rem 2rem 3rem;
+}
 .prodImg_Seq_Title {
     width: 35%;
 }
@@ -46,11 +54,33 @@
 @media(max-width:780px) {
     .productImgSeq {
         height: 100vh;
+        align-items: center;
         justify-content: center;
     }
     .canavsImgSeq {
-        height: 60%;
+        height: 70vh;
+        position: relative;
+        top: 2.6%;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
+    }
+    .prodImg_Seq_Title {
+        width: 80%;
+    }
+    .prodImg_Seq_Title > h1 {
+        font-size: 2.75em;
+        font-weight: 200;
+    }
+    .prodImg_Seq_Overlay {
+        bottom: 2%;
+    }
+    .prodImg_Seq_MainText > h1 {
+        font-size: 5em;
+    }
+    .prodImg_Seq_Text {
+        width: 70%;
+    }
+    .prodImg_Seq_Text > p {
+        font-size: 2.5em;
     }
 }

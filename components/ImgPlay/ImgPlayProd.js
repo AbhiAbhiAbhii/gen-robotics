@@ -130,7 +130,7 @@ export default function ImagePlayProd({ frameCount, imageLinks, travelPixel, tex
 
     return <section className="productImgSeq" ref={sectionRef} >
             <canvas className="canavsImgSeq" ref={canvasRef} />
-            <div ref={textContainer} style={{ position: "absolute", top: 0, left: 0, height:'100%', width:'100%', padding:'4rem 2rem 2rem 3rem'}}>
+            <div className="productImgSeq_TextContainer" ref={textContainer}>
                 <div style={{position:'relative', height:'100%', width:'100%'}}>
                     <div className="prodImg_Seq_Title">
                         <h1>
