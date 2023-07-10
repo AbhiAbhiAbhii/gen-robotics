@@ -262,7 +262,7 @@ export default function ProductBottomShowcase({ video }){
                     </div>
                     <div className='prodBtmSC_D_CTA_Container'>
                         <CTA classNameA="prodBtmSC_D_CTA_A_A" classNameB="prodBtmSC_D_CTA_A_B" classNameC="prodBtmSC_D_CTA_A_C" bg="#FFF" />
-                        <a  className='prodBtmSC_D_CTA_B' 
+                        <a className='prodBtmSC_D_CTA_B' 
                             href="https://mkp.gem.gov.in/advanced-manufacturing-robotics/bandicoot/p-5116877-4090503505-cat.html" 
                             target='_blank' >
                             <div className='prodBtmSC_D_CTA_B_Img'>

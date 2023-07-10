@@ -1,9 +1,19 @@
 .productImgSeq {
     font-size: 1rem;
-    /* padding: 2rem; */
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: #010005;
+}
+.canavsImgSeq {
+    width: 60vw;
+    height: 100vh;
+    object-fit: cover;
 }
 .prodImg_Seq_Title {
-    width: 40%;
+    width: 35%;
 }
 .prodImg_Seq_Title > h1 {
     font-size: 1.25em;
@@ -30,4 +40,17 @@
     position: absolute;
     bottom: 10%;
     left: 0%;
+}
+
+/* media-query */
+@media(max-width:780px) {
+    .productImgSeq {
+        height: 100vh;
+        justify-content: center;
+    }
+    .canavsImgSeq {
+        height: 60%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
