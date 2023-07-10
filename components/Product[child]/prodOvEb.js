@@ -11,6 +11,11 @@ export default function ProductOverviewEB({ ovEbDescA, overviewEyebrow, colorTex
                         { overviewEyebrow } <span className="mustard-dark">{ colorText }</span>
                     </p>
                 </div>
+                <div className="product_Overview_Eyebrow_Left product_Overview_Eyebrow_Left_Mob">
+                    <p>
+                       When <br/>Engineering meets<br/> <span className="mustard-dark">{ colorText }</span>
+                    </p>
+                </div>
                 <div className="product_Overview_Eyebrow_Right">
                     <p>
                         { ovEbDescA }
