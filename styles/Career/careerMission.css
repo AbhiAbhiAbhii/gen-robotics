@@ -63,8 +63,8 @@
         font-size: 3rem;
     }
    .carrMission_Content_Container {
-    height: 100vh;
-    padding: 6em 2em;
+    height: auto;
+    padding: 6em 2em 22em 2em;
    } 
    .carrMission_Text_Container {
     flex-direction: column;

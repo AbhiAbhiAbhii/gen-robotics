@@ -13,6 +13,8 @@
 }
 .carrOP_Items_Container{
     margin: 4.4em 0 4em 0;
+
+    border: 1px red solid;
 }
 .carrOP_Item {
 
@@ -43,6 +45,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: 1px green solid;
 }
 .carrOP_Item_Position_Type > p {
     color: #FFF;
@@ -96,5 +100,18 @@
     width: 100%;
 
     background: #FFF;
+}
+
+/* media-query */
+@media(max-width:780px) {
+    .carrOP {
+        font-size: 3rem;
+    }
+    .carrOP_Title > h2 {
+        font-size: 3em;
+    }
+    .carrOP_Item {
+        background: rgba(140, 112, 36, 1);
+    }
 }
 
