@@ -208,7 +208,7 @@
         padding: 0;
 
         position: relative;
-        top: 6%;
+        top: 4%;
     }
     /* menu-middle-line */
     .menu_Line {
@@ -252,13 +252,22 @@
         font-size: 2em;
     }
     .menu_Left_Container {
-        margin: 1em 0 0 0;
+        /* margin: 1em 0 0 0; */
+    }
+    .menu_Left_Container.menu_Left_Container_Company {
+        margin: 2em 0 0 0;
     }
     .menu_Item_Container.menu_Item_Container_Socials {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-around;
+    }
+    .menu_Left_Content.menu_Left_Content_Socials {
+        padding: 0;
+    }
+    .menu_Left_Container.menu_Left_Container_Legal {
+        margin: 0.5em 0 0 0;
     }
     .menu_Item.menu_Item_Socials {
         width: 15%;
@@ -285,6 +294,6 @@
         justify-content: space-around;
     }
     .menu_Left_Container.menu_Left_Container_Socials {
-        margin: 0.5em 0 0 0;
+        margin: 1em 0 0 0;
     }
 }

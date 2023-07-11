@@ -152,7 +152,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                             <div className="menu_Line" />
                             {/* ---- */}
                             {/* company */}
-                            <div className="menu_Left_Container">
+                            <div className="menu_Left_Container menu_Left_Container_Company">
                                 <div className="menu_title">
                                     <p>
                                         Company
@@ -179,7 +179,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         Socials
                                     </p>
                                 </div>
-                                <div className="menu_Left_Content">
+                                <div className="menu_Left_Content menu_Left_Content_Socials">
                                     <div className="menu_Item_Container menu_Item_Container_Socials">
                                         {
                                             menuSocials.map((data, i) => {
@@ -194,7 +194,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                 </div>
                             </div>
                             {/* Legal */}
-                            <div className="menu_Left_Container">
+                            <div className="menu_Left_Container menu_Left_Container_Legal">
                                 <div className="menu_title">
                                     <p>
                                         Legal
