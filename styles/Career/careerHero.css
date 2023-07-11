@@ -18,3 +18,18 @@
     font-size: 7em;
     line-height: 110%;
 }
+
+/* media-query */
+@media(max-width:780px) {
+    .carrHero {
+        font-size: 3rem;
+        padding: 34rem 4rem 50rem 4rem;
+    }
+    .carrHero_Title {
+        width: 90%;
+    }
+    .carrHero_Title > h1 {
+        font-size: 4em;
+        text-align: left;
+    }
+}

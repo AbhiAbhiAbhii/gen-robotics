@@ -39,13 +39,13 @@ export default function CareerBenefits({slice}){
             </p>
           </div>
         </div>
-        <div className="carrBenefit_IconContainer">
+        <div className="carrBenefit_IconContainer" style={{}}>
             {
               TempData.map((data, i) => {
                 return(
                   <div className="carrBenefit_Icon_Main_Wrap" key={i}>
                     <div className="carrBenefit_Icon_Item">
-                      <div className="" style={{height:'9em', width:'9em', borderRadius:'50%', background:'#D9D9D9'}} >
+                      <div className="carrBenefit_Temp_Icon">
                       </div>
                       <div className="carrBenefit_Icon_Description">
                         <p>

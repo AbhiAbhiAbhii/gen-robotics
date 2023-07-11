@@ -25,7 +25,7 @@
     width: 75%;
     padding: 1.5em 0 1em 0;
 }
-.carrBenefit_Description> p {
+.carrBenefit_Description > p {
     font-size: 1.4em;
     color: rgba(238, 238, 234, 0.72);
     line-height: 150%;
@@ -40,6 +40,12 @@
     flex-wrap: wrap;
     width: 90%;
     margin: 6em auto 2em auto;
+}
+.carrBenefit_Temp_Icon {
+    height: 9em;
+    width: 9em;
+    border-radius: 50%;
+    background: #D9D9D9;
 }
 .carrBenefit_Icon_Main_Wrap {
     width: 25%;
@@ -57,3 +63,42 @@
     color: #FFF;
     font-size: 1.2em;
 }
+
+/* media-query */
+@media(max-width:780px) {
+    .carrBenefit {
+        font-size: 3rem;
+    }
+    .carrBenefit_Container {
+        padding: 4rem 0;
+    }
+    .carrBenefit_Text_Container {
+        justify-content: flex-start;
+        padding: 0 1.25em;
+    }
+    .carrBenefit_Title {
+        width: 100%;
+    }
+    .carrBenefit_Title > h2 {
+        font-size: 3em;
+    }
+    .carrBenefit_Description {
+        width: 100%;
+    }
+    .carrBenefit_Description> p {
+        text-align: left;
+    }
+    .carrBenefit_IconContainer {
+        width: 100%;
+        margin: 2em 0;
+        justify-content: space-between;
+    }
+    .carrBenefit_Icon_Main_Wrap {
+        width: 50%;
+        margin: 1em 0 0 0;
+    }
+    .carrBenefit_Temp_Icon {
+        height: 10em;
+        width: 10em;
+    }
+} 

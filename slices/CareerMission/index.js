@@ -31,7 +31,9 @@ export default function CareerMission({slice}){
             </div>
             {/* Image */}
             <div className="carrMission_Img_Container">
-              <PrismicNextImage style={{height:'100%', width:'100%', objectFit:'contain'}} field={slice.primary.image} />
+              <PrismicNextImage 
+                style={{height:'100%', width:'100%', objectFit:'contain'}} 
+                field={slice.primary.image} />
             </div>
           </div>
         </div>

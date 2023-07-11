@@ -17,7 +17,13 @@ export default function CareerHero({slice}) {
           <PrismicRichText field={slice.primary.title} />
         </h1>
       </div>
-      <PositionCTA margin="4em 0 0 0" width="18em" widthB="6em" bg="#FFFF"  height="5em" />
+      <div className="carr_CTA_Container">
+        <PositionCTA 
+          classNameA="career_CTA_A" 
+          classNameB="career_CTA_B"  
+          classNameC="career_CTA_C"
+          bg="#FFFF" />
+      </div>
     </section>
   )
 }
