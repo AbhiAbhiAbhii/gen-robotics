@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 
 
-export default function Footer(){
+export default function Footer({ context }){
+
 
     let nav = [
         {
@@ -92,7 +93,7 @@ export default function Footer(){
     return(
         <>
         <footer className="footer">
-            <div className="footer_Container">
+            <div className={ context === "home_page" ? "footer_Container footer_Container_Mob": "footer_Container"}>
                 <div className="footer_Container__left">
                     {/* Nav */}
                     {/* Desktop Component */}
@@ -137,12 +138,12 @@ export default function Footer(){
                     </div>
                     {/* Desktop Component End */}
                     {/* Mobile Component */}
-                        <div className="mobFoot" style={{ flexDirection:'column', justifyContent:'space-between', flexWrap:'wrap', height:'50em', width:'100%'}}>
+                        <div className="mobFoot">
                             {
                                 MobArray.map((data, i) => {
                                     return(
-                                        <a style={{height:'20%', width:'50%', display:'flex', alignItems:'center', justifyContent:'flex-start'}} href={data.link} target={data.target} className="mobFooter" key={i}>
-                                            <p style={{fontSize:'5em', color:'#FFF'}}>
+                                        <a href={data.link} target={data.target} className="mobFooter" key={i}>
+                                            <p>
                                                 { data.name }
                                             </p>
                                         </a>
@@ -173,17 +174,26 @@ export default function Footer(){
                         <div className="footerBottom_leftItem Allrights">
                             <p>{ footerBottom }</p>
                         </div>
-                        {
-                            privacy.map((data, i) => {
-                                return(
-                                    <div className="footerBottom_leftItem privacy" href={data.link} key={i}>
-                                        <p>
-                                            { data.name }
-                                        </p>
-                                    </div>
-                                )
-                            })
-                        }
+                        <div className="footerBottom_rightItem_Container footerBottom_rightItem_Container_Mob">
+                            <a href="https://www.neovibe.in/" target="_blank" style={{cursor:'pointer'}} className="footerBottom_rightItem">
+                                <p>
+                                    Powered by Neovibe
+                                </p>
+                            </a>
+                        </div>
+                        <div className="footer_Bottom_Privacy">
+                            {
+                                privacy.map((data, i) => {
+                                    return(
+                                        <div className="footerBottom_leftItem privacy" href={data.link} key={i}>
+                                            <p>
+                                                { data.name }
+                                            </p>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <div className="footerBottom_rightItem_Container">
                         <a href="https://www.neovibe.in/" target="_blank" style={{cursor:'pointer'}} className="footerBottom_rightItem">

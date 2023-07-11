@@ -135,6 +135,9 @@ import Footer from '../components/Footer/footer'
  
 const Home = ({ page, navigation, settings }) => {
 
+  let context = page.type;
+
+
   const loaderLeftRef = useRef();
   const loaderRightRef = useRef();
   const loaderCurtainRef = useRef();
@@ -185,7 +188,7 @@ const Home = ({ page, navigation, settings }) => {
           {/*  */}
           <SliceZone quint={quint} quart={quart}  slices={page.data.slices} components={components} />
         </div>
-        <Footer />
+        <Footer context={ context }  />
     {/* <ImagePlay frameCount={100} travelPixel={3000} imageLinks={imageLinks} texts={texts} /> */}
     </>
       

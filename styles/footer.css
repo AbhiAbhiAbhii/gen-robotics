@@ -40,6 +40,7 @@
 }
 .footer_Container_rightItems {
     display: flex;
+
 }
 .footer_rightItem  {
     margin: 0 1em 0 1em;
@@ -56,11 +57,18 @@
 /* footerBottom */
 .footerBottom{
     padding: 2em 0;
+    font-size: 1rem;
 }
 .footerBottom_Container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.footerBottom_rightItem_Container.footerBottom_rightItem_Container_Mob {
+    display: none;
+}
+.footer_Bottom_Privacy {
+    display: flex;
 }
 .footerBottom_left {
 }
@@ -102,6 +110,10 @@
 @media(max-width:780px) {
     .footer_Container {
         border-bottom: none;
+        padding: 10em 0;
+    }
+    .footer_Container.footer_Container_Mob {
+        border-bottom: none;
         padding: 34em 0 10em 0;
     }
     .footer_Container {
@@ -122,5 +134,79 @@
     }
     .mobFoot {
         display: flex;
+    }
+    /*  */
+    .footer_Container__right {
+        width: 100%;
+        justify-content: center;
+    }
+    .footer_Container_rightItems {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer_rightItem > a {
+        font-size: 6em;
+    }
+    .mobFoot {
+        display: flex;
+        flex-wrap: wrap;
+        height: 60em;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .mobFoot > a {
+        height: 20%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 0 0 1.6em;
+    }
+    .mobFoot > a > p {
+        font-size: 5em;
+        color: #FFF;
+    }
+    .footerBottom {
+        font-size: 3rem;
+        padding: 0 0 2em 0;
+    }
+    .footerBottom_rightItem_Container {
+        display: none;
+    }
+    .footerBottom_rightItem_Container.footerBottom_rightItem_Container_Mob {
+        display: flex;
+        padding: 0.5em 0 1em 0.75em;
+    }
+    .footerBottom_left {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer_Bottom_Privacy {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        margin: 1em 0 0 0;
+    }
+    .footerBottom_leftItem.Allrights {
+        padding: 0 0 0.5em 0.5em;
+    }
+    .footerBottom_leftItem.Allrights > p {
+        font-size: 1.2em;
+    }
+    .footerBottom_rightItem > p {
+        font-size: 1.2em;
+    }
+    .footerBottom_rightItem {
+        padding: 0 0 1em 0;
+    }
+    .footerBottom_rightItem > p {
+        color: rgba(192, 191, 191, 0.63);
+    }
+    .footerBottom_leftItem.privacy > p {
+        font-size: 1em;
     }
 }
