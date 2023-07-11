@@ -67,7 +67,7 @@
 /* media-query */
 @media(max-width:780px) {
     .carrMission {
-        height: auto;
+        /* height: auto; */
     }
     .carrBenefit {
         font-size: 3rem;

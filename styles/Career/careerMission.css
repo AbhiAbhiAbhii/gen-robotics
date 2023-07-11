@@ -1,9 +1,9 @@
 .carrMission {
     background: #242423;
-    height: 100vh;
 
     position: relative;
     font-size: 1rem;
+    padding: 42rem 0 0 0;
 }
 .carrMission_Container {
     padding: 2rem 4rem;
@@ -61,10 +61,12 @@
 @media(max-width:780px) {
     .carrMission {
         font-size: 3rem;
+        padding: 175rem 0 0 0;
     }
    .carrMission_Content_Container {
     height: auto;
     padding: 6em 2em 22em 2em;
+    top: -5%;
    } 
    .carrMission_Text_Container {
     flex-direction: column;
