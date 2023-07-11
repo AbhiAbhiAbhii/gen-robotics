@@ -142,15 +142,15 @@ export default function Header({lenis, style, ref, color, pageId}) {
         {/* {
             displayMenu && */}
              <div className="menu" ref={menuRef} style={{top:'-100vh'}}>
-            <div className="menu_Container" style={{width:'100%', height:'100%', display:'flex', alignItems:'flex-end'}}>
-                <div className="menu_InnerContainer" style={{width: '100%', height:'82%', padding:'0 4em'}}>
+            <div className="menu_Container">
+                <div className="menu_InnerContainer">
                     {/* menu content */}
-                    <div className="menu_Content" style={{ height:'100%', padding:'2em 0em 2em 3em', display:'flex', justifyContent:'space-between'}}>
+                    <div className="menu_Content">
                         {/* menuLeft */}
-                        <div className="menu_Left" style={{position:'relative'}}> 
-                        {/* middle line */}
-                        <div className="menu_Line" />
-                        {/* ---- */}
+                        <div className="menu_Left"> 
+                            {/* middle line */}
+                            <div className="menu_Line" />
+                            {/* ---- */}
                             {/* company */}
                             <div className="menu_Left_Container">
                                 <div className="menu_title">
@@ -159,7 +159,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                     </p>
                                 </div>
                                 <div className="menu_Left_Content">
-                                    <div className="menu_Item_Container" style={{display:'flex', flexWrap:'wrap'}}>
+                                    <div className="menu_Item_Container menu_Item_Container_Company">
                                         {
                                             menuData.map((data, i) => {
                                                 return(
@@ -173,18 +173,18 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                 </div>
                             </div>
                             {/* Socials */}
-                            <div className="menu_Left_Container">
-                                <div className="menu_title">
+                            <div className="menu_Left_Container menu_Left_Container_Socials">
+                                <div className="menu_title menu_title_Socials">
                                     <p>
                                         Socials
                                     </p>
                                 </div>
                                 <div className="menu_Left_Content">
-                                    <div className="menu_Item_Container" style={{display:'flex', flexWrap:'wrap'}}>
+                                    <div className="menu_Item_Container menu_Item_Container_Socials">
                                         {
                                             menuSocials.map((data, i) => {
                                                 return(
-                                                    <a href={data.link} target="_blank"  key={i} className="menu_Item" style={{display:'flex', alignItems:'center', marginRight:'2rem'}}>
+                                                    <a href={data.link} target="_blank"  key={i} className="menu_Item menu_Item_Socials">
                                                         <p>{data.socials}</p>
                                                     </a>
                                                 )
@@ -201,11 +201,11 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                     </p>
                                 </div>
                                 <div className="menu_Left_Content">
-                                    <div className="menu_Item_Container" style={{display:'flex'}}>
+                                    <div className="menu_Item_Container menu_Item_NoWrap menu_Item_Container_Legal">
                                         {
                                             legal.map((data, i) => {
                                                 return(
-                                                    <a key={i} href={data.link} className="menu_Item" style={{marginRight:'2rem'}}>
+                                                    <a key={i} href={data.link} className="menu_Item menu_Item_Legal">
                                                         <p>{data.legal}</p>
                                                     </a>
                                                 )
@@ -217,26 +217,29 @@ export default function Header({lenis, style, ref, color, pageId}) {
                         </div>
                         {/* menu left end */}
                         {/* menu right */}
-                        <div className="menu_Right" style={{width:'50%', padding:'0 0 0 8em'}}>
-                            <div className="menu_Right_Container" style={{display:'flex', height:'100%'}}>
-                                <div className="menu_Right_Content" style={{display:'flex', flexDirection:'column', justifyContent:'space-between'}}>
+                        <div className="menu_Right">
+                            <div className="menu_Right_Container">
+                                <div className="menu_Right_Content">
                                     {/* prismic */}
                                     <div>
-                                        <div className="menu_title">
+                                        <div className="menu_title menu_title_Products">
                                             <p>Our products</p>
                                         </div>
-                                        <div className="menu_Item_Container">
+                                        <div className="menu_Item_Container menu_Item_Container_NoWrap_NoFlex">
                                             {
                                                 ourProducts.map((data, i) => {
 
                                                     return(
-                                                        <div onClick={() => window.location.href= data.link} key={i} style={{padding:'0.2em 0', margin:'0.2em 0', display:'flex', alignItems:'center'}} className="menu_Item dataProd">
+                                                        <div 
+                                                            onClick={() => window.location.href= data.link} 
+                                                            key={i} 
+                                                            className="menu_Item dataProd">
                                                             <p>
                                                                 {data.products}
                                                             </p>
                                                             <span 
-                                                                style={{display: i == 1 ? '': i == 2 ? '': 'none', marginLeft:'0.5em'}}>
-                                                                <img src="/menu/temp.svg" alt='img' />
+                                                                style={{display: i == 1 ? '': i == 2 ? '': 'none'}}>
+                                                                <img style={{height:'100%', width:'100%', objectFit:'contain'}} src="/menu/temp.svg" alt='img' />
                                                             </span>
                                                         </div>
                                                     )
@@ -245,27 +248,11 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         </div>
                                     </div>
                                     {/* ---- */}
-                                    {/* <div className="featured">
-                                        {
-                                            [
-                                                {src: '/menu/featuredDummy.png', title:'Bandicoot II', description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each '}
-                                            ].map((data, i) => {
-                                                return(
-                                                    <div className="featured_Container" style={{display:'flex', alignItems:'flex-end'}} key={i}>
-                                                        <div>
-                                                            <img src={data.src} alt="image" />
-                                                        </div>
-                                                        <div style={{margin: '0 0 0 1em'}}>
-                                                            <div style={{color:'#FFF', textTransform:'uppercase', padding: '0.2em 0'}}>
-                                                                <p style={{fontSize:'2em'}}>{data.title}</p>
-                                                            </div>
-                                                            <div style={{width:'70%'}}><p style={{fontSize:'1em', lineHeight:'120%', color:'#898989'}}>{data.description}</p></div>
-                                                        </div>
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </div> */}
+                                    <div className="menu_Right_CTA_Mob">
+                                        <button>
+                                            Talk to us
+                                        </button>
+                                   </div>
                                 </div>
                             </div>
                         </div>
