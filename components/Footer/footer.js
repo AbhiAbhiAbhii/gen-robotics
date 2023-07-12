@@ -102,7 +102,7 @@ export default function Footer({ context }){
                             nav.map((data, i) => {
                                 return(
                                     <div className="footer_Item" key={i}>
-                                        <a href={data.link} target={data.target}>{ data.name }</a>
+                                        <a  rel="preconnect" href={data.link} target={data.target}>{ data.name }</a>
                                     </div>
                                 )
                             })
@@ -159,7 +159,7 @@ export default function Footer({ context }){
                             socials.map((data, i) => {
                                 return(
                                     <div className="footer_rightItem" key={i}>
-                                        <a href={data.link} target="_blank">{ data.name }</a>
+                                        <a  rel="preconnect" href={data.link} target="_blank">{ data.name }</a>
                                     </div>
                                 )
                             })

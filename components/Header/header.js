@@ -163,7 +163,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         {
                                             menuData.map((data, i) => {
                                                 return(
-                                                    <a onClick={MenuTrigger} href={data.link} target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
+                                                    <a onClick={MenuTrigger} href={data.link}  rel="preconnect" target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
                                                         <p>{data.content}</p>
                                                     </a>
                                                 )
@@ -184,7 +184,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         {
                                             menuSocials.map((data, i) => {
                                                 return(
-                                                    <a href={data.link} target="_blank"  key={i} className="menu_Item menu_Item_Socials">
+                                                    <a href={data.link} target="_blank"  rel="preconnect"  key={i} className="menu_Item menu_Item_Socials">
                                                         <p>{data.socials}</p>
                                                     </a>
                                                 )
