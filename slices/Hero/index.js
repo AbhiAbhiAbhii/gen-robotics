@@ -64,7 +64,7 @@ export default function Hero({ slice }){
   return(
     <>
       <main id="observing" className='hero ag-reg'>
-        <video autoPlay="true" muted="true" loop="true" playsInline="true" height="100%" width="100%" style={{position:'absolute', top:'0', left:'0', height:'100%', width: '100%', objectFit:'cover'}}>
+        <video autoPlay="true" muted="true" loop="true" preload="auto" playsInline="true" height="100%" width="100%" style={{position:'absolute', top:'0', left:'0', height:'100%', width: '100%', objectFit:'cover'}}>
             <source src='/heroVideo.mp4'   type="video/mp4" />
             <source src='/heroVideo.webm'  type="video/webm" />                
             {/* <source src={src} type={type} style={{border:'1px red solid'}} /> */}
