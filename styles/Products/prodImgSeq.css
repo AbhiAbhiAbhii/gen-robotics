@@ -50,6 +50,8 @@
 }
 .prodImg_Seq_Progress {
     width: 25%;
+    margin: 0.5em 0 0 0;
+    height: 2px;
 }
 
 /* media-query */
@@ -59,6 +61,7 @@
         width: 100vw;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
     .canavsImgSeq {
         position: relative;
@@ -66,7 +69,20 @@
         height: 100vh;
         width: 100vw;
         object-fit: cover;
-
+    }
+    .productImgSeq::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        /*
+        * Created with https://www.css-gradient.com
+        * Gradient link: https://www.css-gradient.com/?c1=131413&c2=ffffff&gt=l&gd=dbb
+        */
+        background: rgba(19, 20, 19, 0.01);
+        background: linear-gradient(0deg, rgba(19, 20, 19, 0.77), rgba(255, 255, 255, 0.02));
     }
     .prodImg_Seq_Title {
         width: 85%;
@@ -78,18 +94,21 @@
         display: none;
     }
     .prodImg_Seq_Overlay {
-        bottom: 8%;
+        bottom: 11%;
     }
     .prodImg_Seq_MainText > h1 {
-        font-size: 5em;
+        font-size: 7em;
     }
     .prodImg_Seq_Text {
-        width: 90%;
+        width: 100%;
+        padding: 1em 0 1.25em 0;
     }
     .prodImg_Seq_Text > p {
-        font-size: 3em;
+        font-size: 3.4em;
     }
     .prodImg_Seq_Progress {
         width: 50%;
+        margin: 0 0 1em 0;
+        height: 3px;
     }
 }
