@@ -44,9 +44,7 @@
 .contact_FormContainer_Pad {
     padding: 0 8em 0 12em;
 }
-.contact_Form {
 
-}
 textarea {
     outline: none;
     background: none;
@@ -179,8 +177,6 @@ label {
 .contact_BottomContentA.contact_BottomContentA_Mob {
     display: none;
 } 
-.bottomContentAText{
-}
 .bottomContentAText > p {
     font-size: 7em;
     font-weight: 500;
@@ -192,18 +188,14 @@ label {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
-
     align-items: center;
     justify-content: space-between;
-
 }
 .contact_AddressItem {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 45%;
-
     margin: 0 0 6em 0;
 }
 .contact_AddressItemCountry {
@@ -220,7 +212,6 @@ label {
 .contact_AddressItemAddress > p {
     font-size: 1em;
     color: #ffff;
-
     line-height: 130%;
 }
 .contact_AddressItemMail {
@@ -230,14 +221,12 @@ label {
 .contact_AddressItemMail > p {
     font-size: 0.9em;
     color: #FFFF;
-
     line-height: 130%;
 }
 .contact_AddressItemTel > p {
     font-size: 0.9em;
     color: #FFF;
 }
-
 /* whatsapp */
 .contactWhatsapp_Container {
     width: 100%;
@@ -245,7 +234,6 @@ label {
     align-items: center;
     justify-content: flex-start;
     margin: 4em 0 0 0;
-
 }
 .contactWhatsapp {
     border-radius: 20em;
@@ -256,7 +244,6 @@ label {
     justify-content: center;
     background: #FFFF;
     border: none;
-
     border: 1px white solid;
 }
 /* Call us */
@@ -268,7 +255,6 @@ label {
     color: #FFFF;
     border: 1px white solid;
 }
-
 /* HOVER */
 .goldHover{
     transition: all 0.3s cubic-bezier(0.76, 0.00, 0.24, 1.00);
@@ -283,7 +269,6 @@ label {
 .brwnHover:hover {
     color: #8C7024;
 }
-
 /*  media-query */
 @media(max-width:780px) {
     .contact {
