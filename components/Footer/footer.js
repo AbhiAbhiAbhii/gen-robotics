@@ -102,7 +102,7 @@ export default function Footer({ context }){
                             nav.map((data, i) => {
                                 return(
                                     <div className="footer_Item" key={i}>
-                                        <a rel="preload" href={data.link} target={data.target}>{ data.name }</a>
+                                        <a rel="dns-prefetch" href={data.link} target={data.target}>{ data.name }</a>
                                     </div>
                                 )
                             })
@@ -114,7 +114,7 @@ export default function Footer({ context }){
                             products.map((data, i) => {
                                 return(
                                     <div className="footer_Item" style={{display:'flex', alignItems:'center'}} key={i}>
-                                        <a rel="preload" href={data.link}>{ data.name }</a>
+                                        <a rel="dns-prefetch" href={data.link}>{ data.name }</a>
                                         <span 
                                         style={{display: i == 1 ? '': i == 2 ? '': 'none', marginLeft:'0.5em'}}>
                                             <img src="/menu/temp.svg" alt='img' />
@@ -130,7 +130,7 @@ export default function Footer({ context }){
                             contact.map((data, i) => {
                                 return(
                                     <div className="footer_Item" key={i}>
-                                        <a rel="preload" href={data.link}>{ data.name }</a>
+                                        <a rel="dns-prefetch" href={data.link}>{ data.name }</a>
                                     </div>
                                 )
                             })
@@ -142,7 +142,7 @@ export default function Footer({ context }){
                             {
                                 MobArray.map((data, i) => {
                                     return(
-                                        <a rel="preload" href={data.link} target={data.target} className="mobFooter" key={i}>
+                                        <a rel="dns-prefetch" href={data.link} target={data.target} className="mobFooter" key={i}>
                                             <p>
                                                 { data.name }
                                             </p>
@@ -159,7 +159,7 @@ export default function Footer({ context }){
                             socials.map((data, i) => {
                                 return(
                                     <div className="footer_rightItem" key={i}>
-                                        <a rel="preload" href={data.link} target="_blank">{ data.name }</a>
+                                        <a rel="dns-prefetch" href={data.link} target="_blank">{ data.name }</a>
                                     </div>
                                 )
                             })
@@ -175,7 +175,7 @@ export default function Footer({ context }){
                             <p>{ footerBottom }</p>
                         </div>
                         <div className="footerBottom_rightItem_Container footerBottom_rightItem_Container_Mob">
-                            <a rel="preload" href="https://www.neovibe.in/" target="_blank" style={{cursor:'pointer'}} className="footerBottom_rightItem">
+                            <a rel="dns-prefetch" href="https://www.neovibe.in/" target="_blank" style={{cursor:'pointer'}} className="footerBottom_rightItem">
                                 <p>
                                     Powered by Neovibe
                                 </p>

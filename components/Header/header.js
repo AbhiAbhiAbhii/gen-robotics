@@ -163,7 +163,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         {
                                             menuData.map((data, i) => {
                                                 return(
-                                                    <a onClick={MenuTrigger} href={data.link} rel="preload" target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
+                                                    <a onClick={MenuTrigger} href={data.link} rel="dns-prefetch" target={data.target} key={i} className="menu_Item" style={{width:'50%'}}>
                                                         <p>{data.content}</p>
                                                     </a>
                                                 )
@@ -184,7 +184,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         {
                                             menuSocials.map((data, i) => {
                                                 return(
-                                                    <a href={data.link} target="_blank"  rel="preload" key={i} className="menu_Item menu_Item_Socials">
+                                                    <a href={data.link} target="_blank"  rel="dns-prefetch"  key={i} className="menu_Item menu_Item_Socials">
                                                         <p>{data.socials}</p>
                                                     </a>
                                                 )
@@ -205,7 +205,7 @@ export default function Header({lenis, style, ref, color, pageId}) {
                                         {
                                             legal.map((data, i) => {
                                                 return(
-                                                    <a key={i} href={data.link} rel="preload" className="menu_Item menu_Item_Legal">
+                                                    <a key={i} href={data.link} rel="dns-prefetch" className="menu_Item menu_Item_Legal">
                                                         <p>{data.legal}</p>
                                                     </a>
                                                 )
