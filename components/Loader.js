@@ -41,7 +41,7 @@ export default function Loader(){
                     Innovation Beyond Technology
                 </p>
             </div>
-            <div ref={loaderBarRef} style={{height:'3px', background:'#D4D4D4',margin:'1em 0', width:'20%', transition:`all 1s ${quint}`, opacity:'0'}}>
+            <div className="LOADER_PROGRESS_BAR" ref={loaderBarRef} style={{height:'3px', background:'#D4D4D4',margin:'1em 0', transition:`all 1s ${quint}`, opacity:'0'}}>
                 <div ref={loaderFillRef} className="LoaderProgress" style={{height:'100%'}}></div>
             </div>
         </div>

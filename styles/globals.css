@@ -140,6 +140,19 @@ a {
 .LOADER {
   animation: reveal 1s ease-in-out infinite;
   position: relative;
+  font-size: 1rem;
+}
+.LOADER_PROGRESS_BAR {
+  width: 20%;
+}
+/* media-query [ Loader ] */
+@media(max-width: 780px) {
+  .LOADER {
+    font-size: 3.6rem;
+  }
+  .LOADER_PROGRESS_BAR {
+    width: 80%;
+  }
 }
 .LOADER::after {
   content: '';
