@@ -2,14 +2,15 @@
 import CTA from "../CTAComponent"
 
 
-export default function Innovate(){
+export default function Innovate({ context }){
 
     let Subtitle = "Genrobotics, the leading Robotics company in India, primarily focusing on designing and development of Robotic."
-    let ArrowBg = "#322712"
+
+    let background = "#242423"
 
     return(
         <>
-        <section className="Innovate" style={{background:'#242423'}}>
+        <section className="Innovate" style={{background: context === "news_room_page" ? 'none': `${ background }`}}>
             <div className="Innovate_Container">
                  {/* Mob */}
                  <div className="Innovate_TextContainer MobText">

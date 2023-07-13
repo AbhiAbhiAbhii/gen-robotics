@@ -10,36 +10,40 @@ import Image from "next/image"
 import { useState } from 'react';
 
 
-export default function FeaturesScale({ FTitleA, FTitleB}){
+export default function FeaturesScale({ FTitleA, FTitleB, featShowcase }){
 
     const [ swipeProgress, setSwipeProgress ] = useState(0);
 
-    let featShowcase = [
-        {
-            index: '01',
-            title: 'More Reachablilty To Every Corner',
-            description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
-            src: '/Products/moreReachability.svg'
-        },
-        {
-            index: '02',
-            title: 'Precise and Surgical Cleaning',
-            description: "Powerful Precision: Bandicoot's Extendable Robotic Arm for Surgical Cleaning with Picking, Grabbing, and Shovelling Abilities",
-            src: '/Products/precise.svg'
-        },
-        {
-            index: '03',
-            title: 'More Grabbing Area',
-            description: "Bandicoot comes with the combination of expandable bucket system and robotic arm that can move to all the corners, enabling more grabbing area, resulting in 100% efficient cleaning.",
-            src: '/Products/moreGrabbingArea.svg'
-        },
-        {
-            index: '04',
-            title: 'Compact Design for Portability',
-            description: "Bandicoot is the only solution that is portable and easy to manoeuvre in urban, gully regions and narrow roads, creating zero traffic congestion, making it the most accessible robotic scavenger in the world.",
-            src: '/Products/compactDesign.svg'
-        },
-    ]
+    console.log(featShowcase,"Test")
+
+    // let featShowcase = [
+    //     {
+    //         index: '01',
+    //         title: 'More Reachablilty To Every Corner',
+    //         description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
+    //         src: '/Products/moreReachability.svg'
+    //     },
+    //     {
+    //         index: '02',
+    //         title: 'Precise and Surgical Cleaning',
+    //         description: "Powerful Precision: Bandicoot's Extendable Robotic Arm for Surgical Cleaning with Picking, Grabbing, and Shovelling Abilities",
+    //         src: '/Products/precise.svg'
+    //     },
+    //     {
+    //         index: '03',
+    //         title: 'More Grabbing Area',
+    //         description: "Bandicoot comes with the combination of expandable bucket system and robotic arm that can move to all the corners, enabling more grabbing area, resulting in 100% efficient cleaning.",
+    //         src: '/Products/moreGrabbingArea.svg'
+    //     },
+    //     {
+    //         index: '04',
+    //         title: 'Compact Design for Portability',
+    //         description: "Bandicoot is the only solution that is portable and easy to manoeuvre in urban, gully regions and narrow roads, creating zero traffic congestion, making it the most accessible robotic scavenger in the world.",
+    //         src: '/Products/compactDesign.svg'
+    //     },
+    // ]
+
+    let data = featShowcase;
 
     let quart = 'cubic-bezier(0.76, 0.00, 0.24, 1.00)';
 
@@ -62,7 +66,7 @@ export default function FeaturesScale({ FTitleA, FTitleB}){
                         {/* Desktop Component */}
                         <div className="featureScale_Showcase_Item_Container">
                             {
-                                featShowcase.map((data, i) => {
+                                data.map((data, i) => {
                                     return(
                                         <div className="featureScale_Showcase_Item" key={i} style={{display:'flex', flexDirection: i % 2 == 0 ? 'row':'row-reverse', margin:'12em 0',}}>
                                             <div className="featureScale_Showcase_Item_TextContainer" style={{display:'flex', flexDirection:'column', position:'relative', transform: i % 2 == 0 ? '':'translateX(18%)'}}>

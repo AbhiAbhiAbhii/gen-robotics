@@ -479,14 +479,65 @@ export default function MobilityPlus() {
     let FTitleA = "Unmatched Feature for Unbeatable Efficiency:"
     let FTitleB = "Discover Bandicoot"
 
+
+    // 
+    let featShowcase = [
+      {
+          index: '01',
+          title: 'More Reachablilty To Every Corner',
+          description: 'Bandicoot comes with 4 Robotic Legs to improve stabilization by adjusting each leg, creating more reachability and 100% efficiency.',
+          src: '/Products/moreReachability.svg'
+      },
+      {
+          index: '02',
+          title: 'Precise and Surgical Cleaning',
+          description: "Powerful Precision: Bandicoot's Extendable Robotic Arm for Surgical Cleaning with Picking, Grabbing, and Shovelling Abilities",
+          src: '/Products/precise.svg'
+      },
+      {
+          index: '03',
+          title: 'More Grabbing Area',
+          description: "Bandicoot comes with the combination of expandable bucket system and robotic arm that can move to all the corners, enabling more grabbing area, resulting in 100% efficient cleaning.",
+          src: '/Products/moreGrabbingArea.svg'
+      },
+      {
+          index: '04',
+          title: 'Compact Design for Portability',
+          description: "Bandicoot is the only solution that is portable and easy to manoeuvre in urban, gully regions and narrow roads, creating zero traffic congestion, making it the most accessible robotic scavenger in the world.",
+          src: '/Products/compactDesign.svg'
+      },
+  ]
+
+  let BottomTitle = "Engineered to Outperform, Setting a New Standard";
+
+
+  let info = [
+    {
+        item: "CFRP",
+        src:'/Products/cfrp.svg'
+    },
+    {
+        item: "IP68 Resistant",
+        src:'/Products/ip68.svg'
+    },
+    {
+        item: "Machine Vision",
+        src:'/Products/machinevision.svg'
+    },
+    {
+        item: "Pnemuatics",
+        src:'/Products/pneumatics.svg'
+    },
+  ]
+
     return(
         <>
         <Header />
         <ProductHero img="/Products/bCoot_Hero.png" />
         <ProductOverviewEB overviewEyebrow={overviewEyebrow} colorText={colorText} ovEbDescA={ovEbDescA} />
         <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} frameCount={frameCount} imagelinks={imagelinks} />
-        <FeaturesScale FTitleA={ FTitleA } FTitleB={ FTitleB } />
-        <ProductBottomShowcase />
+        <FeaturesScale featShowcase={featShowcase} FTitleA={ FTitleA } FTitleB={ FTitleB } />
+        <ProductBottomShowcase BottomTitle={BottomTitle} info={info} />
         <Footer />
         </>
     )

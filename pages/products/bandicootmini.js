@@ -566,40 +566,40 @@ export default function BandicootMini() {
     const texts = [
         {
           id: "one",
-          mainText: "Bandicoot UI",
-          text: "Say goodbye to complexity and hello to simplicity. Bandicoot's intuitive user interface makes operating the system as easy as playing a mobile game. With its self-learning app, anyone can quickly learn to operate Bandicoot effortlessly.",
+          mainText: "Minimalistic UI",
+          text: "The user-friendly interface of Bandicoot Mini ensures that operating the system is as simple as playing a mobile game. Thanks to its self-learning application, anyone can easily grasp the operation of Bandicoot Mini with less effort.",
           startFrame: 10,
           endFrame: 120
         },
         {
           id: "two",
-          mainText: "Robotic Wheel",
-          text: "Bandicoot's robotic arm is a true game-changer. Designed for efficient waste retrieval, it effortlessly grabs and collects waste anywhere from the manholes. With Bandicoot’s robotic arm the waste retrieval becomes safer and more effective.",
+          mainText: "Multi Terrain Wheels",
+          text: "The Bandicoot Mini features versatile tires that excel in any terrain. From bustling cities to sandy shores, icy landscapes to mountainous ghats, the Mini effortlessly navigates through diverse environments. Its multi-terrain capability simplifies cleaning processes, making it the ideal choice for any location.",
           startFrame: 130,
           endFrame: 260
         },
         {
           id: "three",
-          mainText: "Robotic Eye",
-          text: "Experience unrivaled stability and agility with Bandicoot's robotic legs. These advanced legs enable seamless movement within manholes, effortlessly navigating challenging environments. Bandicoot ensures smooth and efficient waste retrieval, no matter the conditions.",
+          mainText: "Machine Vision",
+          text: "The New Bandicoot Mini is equipped with IP68 Machine Vision Technology, providing a clear visual experience inside manholes, day or night. Its advanced capabilities ensure seamless inspection, even in low-light conditions.",
           startFrame: 262,
           endFrame: 405
         },
         {
             id: "four",
-            mainText: "Stability",
-            text: "See the unseen with Bandicoot's machine vision technology. It provides operators with clear and detailed visuals of the inside of manholes, even in low-light or dark situations. With Bandicoot, you'll never miss a thing.",
+            mainText: "Compact Size",
+            text: "The Bandicoot Mini boasts a compact and small size, enabling unparalleled maneuverability even in the most challenging and inaccessible locations. Its streamlined design effortlessly navigates tight spaces, revolutionizing the way tasks are completed in various industries.",
             startFrame: 410,
             endFrame: 550
         }
       ]
 
-      let title = "Compact Size, Enhanced Safety";
+      let title = "Minmised, Maximised Efficiency";
 
     // Product Overview
-    let overviewEyebrow = "Safer yet"
-    let colorText = "smaller"
-    let ovEbDescA = "Introducing Bandicoot Mini-Our compact and solar-powered version ensures efficient and eco-friendly operations, further enhancing the well-being of both workers and the environment. Providing a safer alternative that eliminates the need for sanitation workers to expose themselves to perilous environments"
+    let overviewEyebrow = "Green Engineering for Greener and"
+    let colorText = "Cleaner Cities"
+    let ovEbDescA = "Introducing Bandicoot Mini, our compact and solar-powered version ensures efficient and eco-friendly operations, further enhancing the well-being of both workers and the environment. Providing a safer alternative that eliminates the need for sanitation workers to expose themselves to perilous environments."
 
 
   // Img seq
@@ -607,8 +607,58 @@ export default function BandicootMini() {
 
 
   // FeaturesScale
-  let FTitleA = "Unmatched Feature for Unbeatable Efficiency:"
-  let FTitleB = "Power in a Small Package!"
+  let FTitleA = "Ultimate Compact Solution with "
+  let FTitleB = "Ultimate Technologies!"
+
+   // 
+   let featShowcase = [
+    {
+        index: '01',
+        title: 'Bandicoot Mini - Standard',
+        description: 'The Standard variant of the Bandicoot Mini comes powered by an in-built generator, offering reliable and efficient sewer cleaning capabilities with its compact form factor. The in-built generator ensures optimal performance in any environment, providing a convenient and effective solution for maintaining cleanliness and safety in manholes.',
+        src: '/Products/moreReachability.svg'
+    },
+    {
+        index: '02',
+        title: 'Bandicoot Mini - Hybrid',
+        description: "The Bandicoot Mini Hybrid combines the power of our in-built generator and solar panels to charge its battery, ensuring a reliable and sustainable energy source for efficient sewer cleaning. With this innovative solution, an uninterrupted and eco-friendly energy supply is guaranteed for seamless sewer cleaning operations",
+        src: '/Products/precise.svg'
+    },
+    {
+        index: '03',
+        title: 'Bandicoot Mini - Electric',
+        description: "The Electric variant of Bandicoot Mini is the most efficient manhole-cleaning robot ever made in India. Powered by batteries, it is green-engineered to harness solar energy using solar panels. The Bandicoot Mini Electric is the most affordable and reliable choice for efficient, sustainable sanitation practices",
+        src: '/Products/moreGrabbingArea.svg'
+    },
+]
+
+
+let BottomTitle = "Sustainable Engineering for a Sustainable Future";
+
+// Info
+let info = [
+  {
+      item: "Stainless Steel",
+      src:'/Products/cfrp.svg'
+  },
+  {
+      item: "Weather-proof",
+      src:'/Products/ip68.svg'
+  },
+  {
+      item: "Compact",
+      src:'/Products/machinevision.svg'
+  },
+  {
+      item: "Light weight",
+      src:'/Products/pneumatics.svg'
+  },
+]
+
+  let TitleA = "Build a Sustainable ";
+  let TitleB = "City through Bandicoot Mini";
+
+  let TitleMob = "Build a Sustainable City through Bandicoot Mini";
 
     return(
         <>
@@ -616,8 +666,8 @@ export default function BandicootMini() {
         <ProductHero title={title} video="/Products/Bandicoot_Mini/Mini Bandicoot Heroic 4K.mp4" />
         <ProductOverviewEB ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
         <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} imagelinks={imageLinks} frameCount ={frameCount} />
-        <FeaturesScale FTitleA={FTitleA} FTitleB={FTitleB} />
-        <ProductBottomShowcase video="/Products/Bandicoot_Mini/Splitup Mini Bandicoot 01.mp4" />
+        <FeaturesScale featShowcase={featShowcase} FTitleA={FTitleA} FTitleB={FTitleB} />
+        <ProductBottomShowcase TitleA={TitleA} TitleB={TitleB} TitleMob={TitleMob} info={info} BottomTitle={BottomTitle} video="/Products/Bandicoot_Mini/Splitup Mini Bandicoot 01.mp4" />
         <Footer />
         </>
     )

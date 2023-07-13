@@ -9,30 +9,30 @@ import 'swiper/css/pagination';
 import CTA from '../CTAComponent';
 
 
-export default function ProductBottomShowcase({ video }){
+export default function ProductBottomShowcase({ video, BottomTitle, info, TitleA, TitleB, TitleMob }){
 
 
     const testRef = useRef();
     const progressRef = useRef();
 
-    let info = [
-        {
-            item: "CFRP",
-            src:'/Products/cfrp.svg'
-        },
-        {
-            item: "IP68 Resistant",
-            src:'/Products/ip68.svg'
-        },
-        {
-            item: "Machine Vision",
-            src:'/Products/machinevision.svg'
-        },
-        {
-            item: "Pnemuatics",
-            src:'/Products/pneumatics.svg'
-        },
-    ]
+    // let info = [
+    //     {
+    //         item: "CFRP",
+    //         src:'/Products/cfrp.svg'
+    //     },
+    //     {
+    //         item: "IP68 Resistant",
+    //         src:'/Products/ip68.svg'
+    //     },
+    //     {
+    //         item: "Machine Vision",
+    //         src:'/Products/machinevision.svg'
+    //     },
+    //     {
+    //         item: "Pnemuatics",
+    //         src:'/Products/pneumatics.svg'
+    //     },
+    // ]
 
     let logo = [
         {
@@ -86,7 +86,10 @@ export default function ProductBottomShowcase({ video }){
         <section className="prodBtmSC">
             <div className="prodBtmSC_container">
                 <div className="prodBtmSC_Title">
-                    <p>Engineered to Outperform, Setting a New Standard</p>
+                    {/* <p>Engineered to Outperform, Setting a New Standard</p> */}
+                    <p>
+                        { BottomTitle }
+                    </p>
                 </div>
                 <div className="prodBtmSC_A">
                     <div className="prodBtmSC_A_BluePrint_Container">
@@ -254,10 +257,10 @@ export default function ProductBottomShowcase({ video }){
                 <div className='prodBtmSC_D'>
                     <div className='prodBtmSC_D_Title'>
                         <p>
-                            Bring<br /> Bandicoot to your City!
+                            {TitleA}<br /> {TitleB}
                         </p>
                         <p>
-                            Bring Bandicoot to your City!
+                            {TitleMob}
                         </p>
                     </div>
                     <div className='prodBtmSC_D_CTA_Container'>
