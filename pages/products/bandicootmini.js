@@ -594,7 +594,7 @@ export default function BandicootMini() {
         }
       ]
 
-      let title = "Minmised, Maximised Efficiency";
+    let title = "Minimised size, Maximised Efficiency";
 
     // Product Overview
     let overviewEyebrow = "Green Engineering for Greener and"
@@ -667,9 +667,16 @@ let info = [
     return(
         <>
         <Header />
-        <ProductHero title={title} video="/Products/Bandicoot_Mini/Mini Bandicoot Heroic 4K.mp4" />
-        <ProductOverviewEB A={A} B={B} ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
-        <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} imagelinks={imageLinks} frameCount ={frameCount} />
+        <ProductHero 
+          title={title} 
+          video="/Products/Bandicoot_Mini/Mini Bandicoot Heroic 4K.mp4" />
+        <ProductOverviewEB 
+          A={A} B={B} 
+          ovEbDescA={ovEbDescA} 
+          overviewEyebrow={overviewEyebrow} 
+          colorText={colorText} />
+        <ProductImgSequence 
+          ImgSeqTitle={ImgSeqTitle} texts={texts} imagelinks={imageLinks} frameCount ={frameCount} />
         <FeaturesScale featShowcase={featShowcase} FTitleA={FTitleA} FTitleB={FTitleB} />
         <ProductBottomShowcase TitleA={TitleA} TitleB={TitleB} TitleMob={TitleMob} info={info} BottomTitle={BottomTitle} video="/Products/Bandicoot_Mini/Splitup Mini Bandicoot 01.mp4" />
         <Footer />
