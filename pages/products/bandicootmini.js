@@ -616,19 +616,19 @@ export default function BandicootMini() {
         index: '01',
         title: 'Bandicoot Mini - Standard',
         description: 'The Standard variant of the Bandicoot Mini comes powered by an in-built generator, offering reliable and efficient sewer cleaning capabilities with its compact form factor. The in-built generator ensures optimal performance in any environment, providing a convenient and effective solution for maintaining cleanliness and safety in manholes.',
-        src: '/Products/moreReachability.svg'
+        src: '/Products/Bandicoot_Mini/Mini.png'
     },
     {
         index: '02',
         title: 'Bandicoot Mini - Hybrid',
         description: "The Bandicoot Mini Hybrid combines the power of our in-built generator and solar panels to charge its battery, ensuring a reliable and sustainable energy source for efficient sewer cleaning. With this innovative solution, an uninterrupted and eco-friendly energy supply is guaranteed for seamless sewer cleaning operations",
-        src: '/Products/precise.svg'
+        src: '/Products/Bandicoot_Mini/Mini.png'
     },
     {
         index: '03',
         title: 'Bandicoot Mini - Electric',
         description: "The Electric variant of Bandicoot Mini is the most efficient manhole-cleaning robot ever made in India. Powered by batteries, it is green-engineered to harness solar energy using solar panels. The Bandicoot Mini Electric is the most affordable and reliable choice for efficient, sustainable sanitation practices",
-        src: '/Products/moreGrabbingArea.svg'
+        src: '/Products/Bandicoot_Mini/Mini.png'
     },
 ]
 
