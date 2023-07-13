@@ -531,11 +531,16 @@ export default function BandicootII(){
     },
   ]
 
+
+  // Overview
+  let A = "When"
+  let B = "Engineering meets"
+
     return(
         <>
         <Header />
         <ProductHero title={title} video="/Products/BandicootRevealHeroVid.mp4" />
-        <ProductOverviewEB ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
+        <ProductOverviewEB A={A} B={B} ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
         {/* image-sequence */}
         <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} frameCount={frameCount} imagelinks={imagelinks}  />
         {/* ------------------- */}

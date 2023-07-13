@@ -660,11 +660,15 @@ let info = [
 
   let TitleMob = "Build a Sustainable City through Bandicoot Mini";
 
+  // Overview
+  let A = "Green Engineering"
+  let B = "for Greener and"
+
     return(
         <>
         <Header />
         <ProductHero title={title} video="/Products/Bandicoot_Mini/Mini Bandicoot Heroic 4K.mp4" />
-        <ProductOverviewEB ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
+        <ProductOverviewEB A={A} B={B} ovEbDescA={ovEbDescA} overviewEyebrow={overviewEyebrow} colorText={colorText} />
         <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} imagelinks={imageLinks} frameCount ={frameCount} />
         <FeaturesScale featShowcase={featShowcase} FTitleA={FTitleA} FTitleB={FTitleB} />
         <ProductBottomShowcase TitleA={TitleA} TitleB={TitleB} TitleMob={TitleMob} info={info} BottomTitle={BottomTitle} video="/Products/Bandicoot_Mini/Splitup Mini Bandicoot 01.mp4" />

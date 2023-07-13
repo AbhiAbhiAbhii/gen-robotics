@@ -537,11 +537,16 @@ export default function Willboar() {
 
   let TitleMob = "Bring Bandicoot to your City!";
 
+  // Overview
+  let A = "When"
+  let B = "Engineering meets"
+
+
     return(
         <>
           <Header />
           <ProductHero title={title} video="/Products/WillBoar/Wilboar Reveal.mp4" />
-          <ProductOverviewEB overviewEyebrow={overviewEyebrow} colorText={colorText} ovEbDescA={ovEbDescA} />
+          <ProductOverviewEB A={A} B={B} overviewEyebrow={overviewEyebrow} colorText={colorText} ovEbDescA={ovEbDescA} />
           <ProductImgSequence ImgSeqTitle={ImgSeqTitle} texts={texts} frameCount={frameCount} imagelinks={imagelinks} />
           <FeaturesScale featShowcase={featShowcase} FTitleA={ FTitleA } FTitleB={ FTitleB } />
           <ProductBottomShowcase TitleA={TitleA} TitleB={TitleB} TitleMob={TitleMob} BottomTitle={BottomTitle} info={info} video="/Products/Bandicoot_Mini/Splitup Mini Bandicoot 01.mp4" />

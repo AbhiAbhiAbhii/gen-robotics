@@ -1,6 +1,6 @@
 
 
-export default function ProductOverviewEB({ ovEbDescA, overviewEyebrow, colorText }) {
+export default function ProductOverviewEB({ ovEbDescA, overviewEyebrow, colorText, A, B }) {
 
     return(
         <>
@@ -13,7 +13,7 @@ export default function ProductOverviewEB({ ovEbDescA, overviewEyebrow, colorTex
                 </div>
                 <div className="product_Overview_Eyebrow_Left product_Overview_Eyebrow_Left_Mob">
                     <p>
-                       When <br/>Engineering meets<br/> <span className="mustard-dark">{ colorText }</span>
+                       { A } <br/>{ B }<br/> <span className="mustard-dark">{ colorText }</span>
                     </p>
                 </div>
                 <div className="product_Overview_Eyebrow_Right">
